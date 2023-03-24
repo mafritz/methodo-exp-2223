@@ -1,0 +1,53 @@
+---
+title: "Titre"
+author:
+  - Mattia A. Fritz
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+lang: fr
+linestretch: 1.15
+output:
+  pdf_document:
+    toc: false
+    toc_depth: 1
+    number_sections: true
+    latex_engine: xelatex
+    extra_dependencies: ["flafter"]
+    includes:
+      in_header: "assets/settings/preamble.tex"
+      before_body: "assets/settings/before-body.tex"
+      #after_body: "doc-suffix.tex"
+bibliography: bib/references.bib
+csl: settings/apa.csl
+#abstract: "This is my abstract."
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+Sys.setlocale("LC_ALL", "French")
+source(here::here("assets", "settings", "custom.R"))
+```
+
+```{r}
+n <- 200
+data <- tibble(
+  id = paste0("P", 1:n),
+  age = sample(18:65, n, replace = TRUE),
+  time = rnorm(n, 60, 10),
+  condition = sample(c("Control", "Treatment", "Alternative"), n, replace = TRUE)
+)
+
+data |> 
+  custom_table(caption_text = "What happens in here?")
+```
+
+```{r}
+ggplot(data, aes(x = condition, y = time, color = condition)) +
+  geom_jitter(alpha = 0.4) +
+  stat_summary(fun.data = mean_cl_normal, geom = "errorbar", aes(group = condition, color = condition), width = 0.4) +
+  stat_summary(fun = mean, geom = "point", aes(group = condition, color = condition), size = 3, shape = 15) +
+  theme(
+    legend.position = "none"
+  ) +
+  NULL
+```
+

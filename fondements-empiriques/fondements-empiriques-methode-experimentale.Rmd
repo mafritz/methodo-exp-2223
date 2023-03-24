@@ -1,0 +1,405 @@
+---
+title: "Fondements empiriques de la méthode expérimentale en technologie éducative"
+author:
+  - Mattia A. Fritz
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+lang: fr
+linestretch: 1.2
+fontsize: 12pt
+output:
+  pdf_document:
+    toc: false
+    toc_depth: 1
+    number_sections: true
+    latex_engine: xelatex
+    extra_dependencies: ["flafter"]
+    includes:
+      in_header: "../assets/settings/preamble.tex"
+      before_body: "../assets/settings/before-body.tex"
+      #after_body: "doc-suffix.tex"
+bibliography: ../assets/bib/references.bib
+csl: ../assets/settings/apa.csl
+abstract: |
+  La recherche expérimentale est l'une des méthodes de recherche utilisées en technologie éducative. Son intérêt principal réside dans la tentative d'expliquer ou prédire l'effet d'une intervention, pondérée et planifiée, sur un ou plusieurs phénomènes d'intérêt. Pour obtenir ce résultat, la méthode expérimentale utilise un *micro-monde* dans lequel les chercheurs *manipulent* une ou plusieurs variables dites indépendantes, pour en établir l'effet sur une mesure, dite variable dépendante, représentative d'un phénomène d'intérêt. Ce document propose l'illustration de la méthode expérimentale en quatre étapes : justification, explication causale potentielle, processus génératif des données, et inférence. Les avantages et limites de cette méthode sont enfin analysés de manière critique. Ce document est complété par un autre document qui s'intéresse plus spécifiquement au rapport entre méthode expérimentale et analyse statistique.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+Sys.setlocale("LC_ALL", "French")
+source(here::here("assets", "settings", "custom.R"))
+```
+
+# Introduction {.unnumbered}
+
+Ce document offre un survol des fondements empiriques de la méthode expérimentale appliqués à la recherche en technologie éducative. D'abord, les différentes sources de connaissance issues de la recherche empirique -- observations, simulations et expériences -- sont brièvement comparées. Le document s'intéresse ensuite aux expériences, en identifiant quatre étapes principales dans un processus de recherche expérimentale : la justification, l'explication causale potentielle, le processus génératif des données, et l'inférence. Chaque étape sera illustrée à l'aide de concepts et exemples. En guise de conclusion, la méthode expérimentale sera analysée en fonction de ses avantages et désavantages épistémologiques.
+
+Ce document est destiné à des étudiant-es sans une expérience préalable en recherche expérimentale. Il s'intéresse principalement aux fondements empiriques de la méthode expérimentale, c'est-à-dire la logique épistémologique qui confère aux expériences la capacité -- sous certaines conditions et lorsque plusieurs expériences sont cumulées -- d'évaluer/expliquer/prédire l'effet d'une intervention sur un phénomène d'intérêt.
+
+Le document est complété par trois autres ressources :
+
+-   Fondements statistiques de la méthode expérimentale
+
+-   Lire et interpréter des contributions expérimentales \*primaires\*
+
+-   Introduction au pré-enregistrement d'une recherche expérimentale
+
+# Sources de la connaissance empirique
+
+Les connaissances empiriques sont basées sur trois sources :
+
+1.  **Les observations**\
+    La « réalité » est observée de manière plutôt passive, en exploitant des phénomènes qui se manifestent spontanément
+2.  **Les simulations**\
+    La « réalité » est (re)construite à travers des mécanismes computationnels qui illustrent l'évolution d'un phénomène
+3.  **Les expériences**\
+    La « réalité » est sollicitée par une intervention active, pondérée et planifiée, dont l'effet est évalué sur un phénomène d'intérêt
+
+Il y a eu dans le passé la tendance à séparer nettement les trois sources, notamment au niveau de la distinction entre observations et expériences selon le principe "*correlation is not causation"*. Dans ce sens, les expériences sont identifiées comme le *golden standard* pour établir des mécanismes causales. Plus récemment, il y a la tendance à voir la causalité comme un effet émergent qui peut être établi également lorsque l'intervention n'est pas effectuée de manière active, mais inférer depuis des situations qui répondent à des critères spécifiques [@pearl2000; @pearl2016; @pearl2018book; @rohrer2018].
+
+De plus, il existe des recouvrements entre les trois sources qui sont souvent utilisées de manière complémentaires pour maximiser la connaissance qu'on peut avoir sur un sujet. Le reste de cette section s'intéresse néanmoins aux expériences de manière plutôt *classique* [@maxwell2017], afin de fournir un aperçu conceptuel qui peut être ensuite décliné dans des *formats hybrides* plus complexes.
+
+# Les étapes d'une expérience
+
+On peut identifier 4 étapes principales dans une expérience :
+
+1.  La **justification** qui consiste à établir la *raison d'être* d'une intervention active pour en étudier l'effet sur un ou plusieurs phénomènes d'intérêt
+
+2.  L'**explication causale potentielle** qui consiste à émettre des hypothèses --avec différents niveaux de précision possibles -- sur le mécanisme causale qui détermine/explique l'effet de l'intervention
+
+3.  Le **processus génératif de données** qui consiste à créer un micro-monde dans lequel l'intervention puisse être menée dans des conditions qui visent à exclure, idéalement, toute autre source de variabilité potentielle
+
+4.  L'**inférence** qui combine des outils statistiques et des connaissances dans le domaine pour déterminer à quel point le processus génératif de données (le micro-monde) fourni des éléments utiles et fiables qu'on peut généraliser au contexte plus large (le macro-monde/la réalité)
+
+![Les 4 étaptes d'une recherche expérimentale](images/etapes-methode-experimentale.png "Les 4 étaptes d'une recherche expérimentale"){width="13.2cm"}
+
+# Justification
+
+Les expériences impliquent une forme d'action -- l'intervention -- qui est susceptible d'avoir un effet sur la réalité à travers au moins un phénomène identifiable :
+
+-   Par **intervention**, on se réfère de manière très flexible à une action qui modifie la « réalité », y compris de manière épistémique (i.e. ce que l'on sait sur un sujet). L'action peut être concrète et appliquée (e.g. introduire une technologie en salle de classe, proposer un scénario pédagogique innovant, mettre à jour une interface utilisateur, ...) ou plus abstraite et théorique (e.g. un principe ou une théorie pédagogique, un référentiel de compétences, un plan d'études, ...).
+
+-   Par **phénomène**, on se réfère de manière très fléxible à un pattern d'événements qui se répète de manière congruente, par exemple dans des conditions similaires. Le pattern peut être concret et appliqué (e.g. la rétention mnésique d'éléments dans une liste, la perception d'utilité d'un artefact technologique, ...) ou plus abstrait et théorique (e.g. la compréhension de texte, la collaboration, le bien-être des étudiant-es, ...).
+
+De ce fait, les expériences doivent être planifiées et pondérées attentivement selon au moins deux principes phares :
+
+-   Quel serait le bénéfice à appliquer l'intervention, comparé à ne pas l'appliquer
+
+-   Quel serait la perte potentielle à appliquer l'intervention, comparé à ne pas l'appliquer
+
+Si on prend l'exemple de l'introduction d'une technologie éducative pendant un cours, les deux questions à se poser seront donc (1) qu'est-ce que les étudiant-es obtiennent *en plus* par l'introduction de la technologie ; et (2) qu'est-ce que les étudiant-es *risquent de perdre* à cause de l'introduction de la technologie. Les étudiant-es pourraient gagner en interactivité, collaboration, maîtrise technique, etc. ; et en même temps risquer de perdre en termes de temps nécessaire pour apprendre à utiliser la technologie, en charge cognitive pour articuler plusieurs environnements de travail, etc.
+
+Dans le domaine de la recherche, en plus, l'introduction d'une intervention doit aussi respecter une double justification :
+
+1.  **Scientifique** : est-ce que l'intervention est pertinente par rapport aux connaissances disponibles dans le domaine de référence ?
+
+2.  **Éthique** : est-ce que l'intervention considère attentivement le rapport entre bénéfices et risques potentiels, notamment au niveau des participant-es ?
+
+La combinaison entre les deux justifications jettent les bases pour une question de recherche à laquelle on peut essayer de répondre à travers une expérience.
+
+## Justification scientifique
+
+La justification scientifique est représentée dans un article ou contributions scientifiques en général par l'introduction et le cadre théorique.
+
+L'introduction illustre la problématique, sa pertinence par rapport aux connaissances actuelles ou phénomènes émergents. La problématique peut être abordée idéalement dans un espace défini par deux continuum :
+
+1.  **Exploratoire vs. Confirmatoire\
+    **Dans une expérience exploratoire, les connaissances actuelles sont jugées encore incomplètes ou trop fragiles/contradictoires pour formuler une explication causale potentielle précise (voir point suivant). L'objectif de l'expérience est principalement celui de mettre en relief des effets potentiels qui pourraient justifier l'intérêt pour des recherches ultérieurs. Au contraire, les expériences confirmatoires cibles de manière précise une intervention, qui peut être aussi une théorie, avec l'objectif d'en corroborer la validité ou d'en remettre en question la pertinence (e.g. la rejeter). Ce mécanisme en technologie éducative -- et plus en général dans les sciences sociales -- est très complèxe, car les phénomènes sont souvent articulés [@meehlAppraisingAmendingTheories1990; @scheel2020].
+
+2.  **Fondamentale vs. Appliquée\
+    **La recherche fondamentale s'intéresse à la compréhension de phénomènes de manière transversale et indépendante à des applications concrètes, tandis que la recherche appliquée vise généralement un contexte et un cadre d'intervention plus spécifique. La distinction est néanmoins délicate et avec plusieurs recouvrements possibles. On peut retenir généralement l'intention de la recherche : est-ce qu'elle vise à apporter des contributions sur un large domaine d'application ou plutôt sur un cadre plus restreint et spécifique ?
+
+Le cadre théorique articule ce que la communauté scientifique connait (ou ne connait pas encore) à propos d'un sujet et comment ces connaissances ont été acquises : observations, simulations, expériences, mais aussi raisonnement, argumentation, synthèse de connaissances actuelles avec des revues de la littérature ou méta-analyses. Le cadre théorique met en général en relief des manques ou évidences ambivalentes qui justifient la nécessité de proposer une nouvelle expérience ou de répliquer une expérience déjà menée afin de *contrôler* la fiabilité et robustesse des résultats.
+
+La justification scientifique dépend des connaissances du domaine spécifique duquel l'intervention s'inspire et/ou dans lequel elle s'applique.
+
+## Justification éthique
+
+La justification éthique considère l'ensemble des implications internes et externes à l'expérience, surtout d'un point de vue des entités impliquées (e.g. les participant-es, les écoles, ...). Outre à la sensibilité de données recueillies qui est partagée aussi avec les études de type observation, les expériences sont caractérisées par une intervention active, décidée en amont par les chercheurs, qui peut par exemple être appliquée seulement à une partie des participant-es. Il faut donc pondérer à quel point l'intervention peut produire des effets *objectivement* ou *subjectivement* négatifs pour les participant-es.
+
+De plus, les implications éthiques ne concernent pas seulement ce qui est fait, mais également ce qui n'est pas fait (et aurait pu être fait). Si on imagine une intervention techno-pédagogique qui est censée apporter des avantages énormes au groupe qui peut en bénéficier, est-il acceptable d'un point de vue éthique d'avoir un *groupe contrôle* sous forme d'une classe qui n'aura pas accès à cette technologie ?
+
+Ce type de dilemmes étant très délicats, les expériences doivent être acceptées par une commission éthique, à laquelle les chercheurs doivent fournir toute information utile, comme par exemple le public cible, le type d'intervention envisagée, la présence d'éventuels mécanismes cachés aux participant-es, etc.
+
+## Question de recherche expérimentale
+
+La combinaison entre la justification scientifique (qu'est-ce qui est pertinent par rapport aux connaissances actuelles) et la justification éthique (qu'est-ce qui est raisonnable tester en respectant l'intégrité de toutes les parties prenantes) détermine la question de recherche expérimentale.
+
+Comparé à une question de recherche scientifique au sens plus large, une question de recherche expérimentale se caractérise généralement par la prédisposition à identifier précisement l'intervention et le(s) phénomène(s) d'intérêt souvent déjà à partir du titre de la contribution ou de l'article scientifique. Ce mécanisme est d'ailleurs illustré par exemple dans ces sujets de mémoire du Master MALTT appliquant la méthode expérimentale :
+
+-   *The influence of background music on learning from text* ([Adam, 2019](https://tecfa.unige.ch/tecfa/maltt/memoire/Adam2019.pdf))
+-   Collaboration en environnement médiatisé par ordinateur : Des usages et de l'impact d'un outil de feedback émotionnel ([Perrier, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Perrier2017.pdf))
+-   Étude de l'effet de l'esthétique sur l'utilisabilité d'une interface lors d'une tâche de recherche d'informations sur un site Internet ([Venni, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Venni2017.pdf))
+
+La recherche expérimentale se traduit souvent par des formulations qui suggèrent -- avec différents degrés de *précaution* selon le caractère exploratoire ou confirmatoire vu plus haut -- des mécanismes causales potentiels entre l'intervention et l'évolution du phénomène d'intérêt.
+
+# Explication causale potentielle
+
+L'explication causale potentielle est la seule étape du processus qui n'est pas formellement indispensable à la méthode expérimentale. On peut tout à fait imaginer de mener des expériences dans lesquelles les chercheurs n'émettent pas d'hypothèses sur les mécanismes qui déterminent l'effet de l'intervention sur le phénomène d'intérêt. Cette utilisation non-explicative ou a-théorique s'applique notamment dans certaines type de test A/B utilisés en expérience utilisateur (est-ce que le bouton vert génère plus d'inscriptions du bouton bleu ?). Cependant, même lorsqu'une hypothèse causale n'est pas formellement testée dans une expérience, l'expérience en elle-même est soutenue au moins par une réflexion de causalité potentielle (j'imagine que le bouton vert peut attirer d'avantage le regard, ou avoir une meilleure lisibilité, ou les deux en même temps). Si ce n'était pas le cas, alors on devrait tester indistinctement toutes les combinaisons potentielles entre éléments, avec des coûts et pertes de temps exorbitants.
+
+## L'effet de *X* sur *Y*
+
+La plupart des recherches qui adoptent la méthode expérimentale s'intéressent donc à des mécanismes causales potentiels qui pourraient expliquer/prédire l'effet de l'intervention *X* sur un phénomène *Y*.
+
+$$
+X \rightarrow Y
+$$
+
+D'un point de vue logique, on essaie d'établir une *fonction causale* selon laquelle le phénomène Y *écoute* l'intervention X pour déterminer son état. Nous avons donc une sorte de *fonction* similaire au principe de Input-Output en programmation :
+
+$$Y = f(X)$$La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique [@pearl2016; @pearl2000; @rodgersEpistemologyMathematicalStatistical2010; @maxwell2017], sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène Y (e.g. le résultat à un examen) est une *fonction* de l'intervention X (e.g. est-ce que l'étudiant-e a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel ?). En d'autres termes, on peut s'attendre à un *pattern* dans la *distribution* du phénomène Y qui dépend/est fonction de l'intervention X. Par exemple : on s'attend à un effet de la modalité avec laquelle les notes d'un cours sont résumées (carte conceptuelle vs. résumé textuel) sur les notes obtenus à l'examen. Le *pattern* attendu consiste dans une distribution des notes obtenues par les étudiant-es ayant utilisé les cartes conceptuelles autour d'une moyenne plus élevée par rapport à la distribution des notes obtenus par les étudiant-es ayant utilisé le résumé textuel.
+
+D'un point de vue logique, la fonction causale est simple à déclarer en termes formels. En revanche, dans la pratique, déterminer un effet causal dans un environnement complexe est très difficile.
+
+## Causalité en technologie éducative
+
+Le contexte de la technologie éducative est particulièrement sensible à cette complexité, car il regroupe plusieurs types d'interaction entre les technologies éducatives, les processus d'apprentissage, et des facteurs qui peuvent influencer les unes, les autres ou les deux en même temps. On peut néanmoins essayer de synthétiser la recherche en technologie éducative d'un point de vue causale comme l'investigation des effets des technologies éducatives sur les processus d'apprentissage, avec des facteurs qui peuvent intervenir dans cette relation causale, comme illustré dans l'image ci-dessous.
+
+![Relation causale entre technologies éducatives et processus d'apprentissage, avec des facteurs qui peuvent intervenir dans la relation.](images/techno-educative-apprentissage.png "Relation causale entre technologies éducatives et processus d'apprentissage, avec des facteurs qui peuvent intervenir dans la relation."){width="15.6cm"}
+
+Du côté des technologies éducatives on peut trouver les *Learning Management Systems*, les principes multimédia, les jeux vidéos pédagogiques, etc. L'apprentissage peut être à son tour divisé dans des processus tels que la compréhension, la capacité a collaborer, la résolution de problèmes, etc. Parmi les facteurs qui peuvent intervenir dans cette relation figurent les connaissances préalables, l'expérience utilisateur dans l'appropriation et utilisation des technologies, le niveau d'expertise, et ainsi de suite.
+
+La recherche expérimentale en technologie éducative consiste donc principalement à formuler des hypothèses sur les relations causales entre les technologie éducatives et les processus d'apprentissage, ainsi que sur les effets de facteurs qui peuvent faciliter, entraver ou modérer ces effets.
+
+## Difficulté à établir des relations causales
+
+À l'intérieur d'un système complexe, dans lequel les relations entre concepts peuvent s'influencer mutuellement, réussir à détecter un mécanisme causale qui détermine la direction d'un effet (i.e. c'est l'intervention X qui détermine le phénomène Y) s'avère très difficile [@mackieCausesConditions1965; @pearl2000; @pearl2016; @pearl2018book]. Il existe différentes mécanismes qui peuvent rendre la détection d'une mécanisme de cause à effet compliquée. Cette liste, adaptée des travaux de Pearl [@pearl2000; @pearl2016; @pearl2018book] -- voir aussi @mcelreathStatisticalRethinkingBayesian2020 -- en propose 4 : un mécanisme de relation inverse, la présence d'une cause commune, la présence d'un médiateur, et la présence d'un effet de *collision*.
+
+### Un mécanisme de relation inverse
+
+Ce phénomène s'avère si on attribut un effet de X sur Y, lorsqu'en vérité c'est Y qui a un effet sur X.
+
+$$X \leftarrow Y$$
+
+On peut imaginer que l'utilisation de technologies de conception et fabrication assistées par ordinateur (CFAO) -- imprimantes 3D, broderie numérique, ... -- ont un effet sur la créativité des étudiant-es, mais il peut également être le cas que des étudiant-es avec à la base une créativité plus prononcée s'intéressent davantage à ce type de technologies.
+
+### La présence d'une cause commune
+
+Ce phénomène s'avère si on attribut un effet de X sur Y, lorsqu'en vérité X et Y n'est sont pas en relation causale, mais l'illusion d'un effet émerge à cause de la présence d'un troisième facteur qui influence à la fois X et Y.
+
+$$X \leftarrow Z \rightarrow Y$$
+
+Par exemple, le fait qu'un-e étudiant-e ait ou pas des stickers sur son ordinateur portable ($X$) n'a en soi aucun effet sur ses capacités en programmation ($Y$). Cependant, les programmateurs, qui ont donc des connaissances en programmation, ont souvent la tendance à mettre sur leurs propres ordinateurs des stickers des technologies ou langages de programmation adoptés ($Z$).
+
+$$
+Stickers \leftarrow Programmeur \rightarrow  Compétences
+$$
+
+Le fait d'avoir des stickers et d'avoir des compétences en programmation dérivent de la même cause : être programmeur. En revanche, si on ne considère pas cette cause commune et on se limite à observer que les étudiant-es avec les stickers ont des bonnes compétences en programmation, on pourrait faire l'hypothèse que les stickers ont un effet sur les connaissances en programmation (e.g. motivation, rappel, ...).
+
+### La présence d'un médiateur
+
+Ce phénomène s'avère quand X et Y sont vraiment dans une relation causale, mais le mécanisme est transmis à travers un troisième facteur Z. À ce moment, le risque est que l'effet causale entre X et Y peut disparaître si le facteur Z n'est pas représenté correctement.
+
+$$X \rightarrow Z \rightarrow Y$$
+
+Imaginons que les responsables d'une formation en technologie éducative se questionnent sur l'opportunité d'assigner aux étudiant-es des livrables intensifs d'un point de vue computationnel comme par exemple le montage vidéo, le rendering 3D, ou la modélisation de phénomène complexe avec des simulations Markov Chain Monte-Carlo ($X$). Ces livrables risque d'augmenter le temps de latence que les étudiant-es passe en attendant la fin des processus computationnels, ce qui les obligent à diminuer leur temps libre ($Y$). Cette relation est néanmoins médiée par la puissance des ordinateurs des étudiant-es ($Z$).
+
+$$
+Livrable \rightarrow Puissance \rightarrow Temps
+$$
+
+Or, si les responsables de la formation prenaient en considération dans un test/sondage/entretien seulement des étudiant-es avec des ordinateurs très performants, cette médiation pourrait donner l'illusion qu'il n'y a pas de mécanisme de cause à effet entre les livrables intensifs d'un point de vue computationnel et le temps libre des étudiant-es.
+
+### La présence d'un effet de *collision*
+
+Ce phénomène s'avère lorsque X et Y ne sont pas en relation causale, mais les deux influencent le même facteur. Il peut s'avérer que sous certaines conditions spécifiques de Z, X et Y résultent associés.
+
+$$X \rightarrow Z \leftarrow Y$$
+
+Imaginons que pour être accepté-es dans un Master ($Z$) il faut soit avoir suivi un bachelor ($X$) ou avoir une idée de projet pertinente avec le type de formation dispensée ($Y$). Les deux variables ne sont pas liées : on peut avoir une bonne idée avec ou sans bachelor, et on peut avoir un bachelor avec ou sans une bonne idée de projet.
+
+$$
+Bachelor \rightarrow Admission \leftarrow Projet
+$$
+
+Imaginons que les responsables du Master émettent l'hypothèse que l'obtention du bachelor détermine la qualité du projet proposé. Pour cela ils ne prennent en considération que les étudiant-es qui ont été admis-es. À ce moment, les responsables vont croire qu'il y a en réalité un effet. Lorsque deux phénomène sont indépendants, la probabilité que l'un **et** l'autre se manifestent est plus faible par rapport à la manifestation de l'un **ou** l'autre individuellement. Si l'étudiant-e a un Bachelor, il/elle est admis-e même sans un projet intéressant. Il y a donc plus de chances que les étudiant-es avec bachelor aient proposé un projet pas très intéressant. La même chose s'applique par reflet aux étudiant-es admis-es avec un projet intéressant : ils ont moins de chances d'avoir un bachelor. En combinant les deux choses, il semble émerger un effet négatif du bachelor sur la qualité du projet, mais qui est dû à la sélection seulement des étudiant-es admis-es.
+
+## L'échelle de causalité
+
+Dans ces travaux à propos de la causalité, Pearl [@pearl2000; @pearl2016; @pearl2018book] propose d'imaginer une échelle avec trois marches nommées dans l'ordre depuis le bas de l'échelle **association**, **intervention**, et **contre-factuels**. Chaque marche qui est montée permet de s'approcher davantage à l'explication d'un mécanisme causale à travers des activités, questions et réponses potentielles différentes, comme illustré dans l'image ci-dessous.
+
+![L'échelle de causalité avec trois marches. Adapté de @pearl2018book](images/echelle-causalite.png "L'échelle de causalité avec trois marches. Adapté de @pearl2018book"){width="11cm"}
+
+### Association
+
+La première marche en bas de l'échelle consiste dans l'association de deux (ou plusieurs) phénomènes qui ont la tendance à se manifester selon des patterns récurrents. Comme indiqué plus haut dans la section consacrée aux difficultés dans l'établissement d'un mécanisme causale, une *simple* association ne permet cependant pas ni de déterminer si un phénomène est la cause de l'autre ou vice-versa, ni d'exclure d'autres facteurs potentiels qui pourraient expliquer l'association (e.g. cause commune, médiateur ou effet de *collision*).
+
+Une association peut être déterminé de manière systématique par exemple à travers un sondage, comme dans l'exemple de l'image : 6 étudiant-es sur 10 demandent l'enregistrement vidéo des cours. On peut inférer depuis cette information que les étudiant-es associent l'enregistrement vidéo du cours à quelques formes de bénéfices pour leur apprentissage.
+
+Une autre manière de déterminer systématiquement une association consiste dans les études dites *corrélationnelles*, dans lesquelles le terme *association* est remplacé justement par le terme *corrélation* qui présente une connotation statistique précise. On peut en effet calculer la corrélation entre deux phénomènes mesurés quantitativement sur une échelle dans laquelle :
+
+-   Un score s'approchant de -1 témoigne d'une corrélation *négative*, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière opposée : une valeur élevé de $X$ est associé à une faible valeur de $Y$ (ou vice-versa) ; ou une valeur faible de $X$ est associée à une valeur élevée de $Y$ (ou vice-versa).
+
+-   Un score s'approchant de 0 témoigne l'absence d'une corrélation, c'est-à-dire que les deux phénomène ont la tendance à varier sans un pattern identifiable (e.g. si l'un est élevé, l'autre peut être parfois élevé aussi, parfois faible, et parfois moyen).
+
+-   Un score s'approchant de 1 témoigne d'une corrélation *positive*, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière spéculaire : une valeur élevé de $X$ est associé à une valeur élevé de $Y$ (ou vice-versa) et une faible valeur de $X$ est associé à une faible valeur de $Y$ (ou vice-versa).
+
+```{r correlations-examples, fig.height=3, fig.width=6, fig.cap="Exemple de corrélations"}
+set.seed(3)
+library(scales)
+negative <- tibble(
+  type = "Negative",
+  x = 1:100,
+  y = rescale((100 - x)  + rnorm(100, 0, 15), to = c(1, 100))
+)
+
+absence <- tibble(
+  type = "Absence",
+  x =  rescale(rnorm(100, 0, 15), to = c(1, 100)),
+  y =  rescale(rnorm(100, 0, 15), to = c(1, 100))
+)
+
+positive <- tibble(
+  type = "Positive",
+  x = 1:100,
+  y = rescale(x + rnorm(100, 0, 15), to = c(1, 100))
+)
+
+correlations <- bind_rows(negative, absence, positive) |> 
+  mutate(
+    type = factor(type, levels = c("Negative", "Absence", "Positive"))
+  )
+
+ggplot(correlations, aes(x = x, y = y)) +
+  geom_point(color = "lightblue") +
+  geom_smooth(formula = y ~ x, method = "lm", se = FALSE) +
+  labs(x = "X", y = "Y") +
+  facet_wrap(~type)
+
+```
+
+À ce stade stade, l'activité typique du chercheur est d'observer/regarder attentivement le contexte ou les phénomènes d'intérêt et se poser des questions telles que :
+
+-   Que se passe-t-il si je vois/observe ... ?
+-   De quelle manière les phénomènes sont-ils reliées ?
+-   Comment voir $X$ permet de savoir quelques chose ou changer d'avis sur $Y$ ?
+
+### Intervention
+
+La deuxième marche de l'échelle concerne les intervenions. Une intervention est une action pondérée et planifiée qui est exécutée sur la réalité afin de produire un effet sur le phénomène d'intérêt. Contrairement à l'association qui peut être potentiellement *bi-directionnelle*, l'intervention vise à séparer ce qui relève du mécanisme causale (l'intervention $X$) et ce qui relève du phénomène causé/déterminé (le phénomène d'intérêt $Y$).
+
+Comme indiqué plus haut, l'intervention peut-être interprétée de manière très flexible : elle peut concerner des aspects très spécifiques et localisée (e.g. la position d'une image dans un document de texte) ou des aspects plus généraux et holistiques (e.g. une théorie de l'apprentissage).
+
+En reprenant les exemples dans l'image de l'échelle proposée plus haut, on peut imaginer qu'un-e enseignant-e décide de mettre à disposition de étudiant-es l'enregistrement de l'intégralité de ses cours. Cette intervention est une action, pondérée et planifiée, qui vise modifier la réalité, c'est-à-dire obtenir un effet d'intérêt -- dans ce cas, faciliter l'apprentissage des contenus du cours.
+
+On peut imaginer que l'enseignant-e essaie d'évaluer l'effet de l'intervention en utilisant l'un des questionnaires standard d'évaluation des cours qui demandent aux étudiant-es de quantifier leurs connaissances avant et après le cours. On peut considérer en effet le cours comme une forme d'intervention.
+
+```{r intervention-before-after, fig.height=2.5, fig.width=4, fig.cap="Données simulées sur les connaissances avant et après le cours (intervention). Les barres représentent des intervalles de confiance à 95%."}
+before_after <- tibble(
+  participant = paste0("P", 1:50),
+  avant = rnorm(50, 3, 3),
+  apres = avant + rnorm(50, 4, 2)
+)
+
+before_after |>
+  pivot_longer(-participant, names_to = "quand", values_to = "evaluation") |>
+  mutate(
+    quand = factor(quand, levels = c("avant", "apres"), labels = c("Avant", "Après")),
+    evaluation = round(rescale(evaluation, to = c(1,7)))
+  ) |> 
+  ggplot(aes(x = quand, y = evaluation, color = quand)) +
+    geom_jitter(alpha = 0.2) +
+    stat_summary(fun.data = mean_cl_normal, geom = "errorbar", width = 0.3, position = position_dodge(width = 0.1)) +
+  stat_summary(fun = mean, geom = "point", size = 3, shape = 15, position = position_dodge(width = 0.6)) +
+  labs(x = NULL, y = "Connaissances") +
+  theme(legend.position = "none")
+    
+```
+
+Les deux distributions de données suggèrent qu'il existe un effet entre avant et après. Cependant, il n'est pas possible de déterminer si cet effet est dû à l'intervention *mettre à disposition l'enregistrement des cours*. En effet, on ne peut pas distinguer l'intervention d'autres facteurs. Le gain de connaissance pourrait être dû au cours en général, mais également à d'autres cours dans la même formation. On ne peut paradoxalement même pas écarter la possibilité que l'effet aurait été plus grand si les enregistrement vidéos n'étaient pas à disposition. Les étudiant-es auraient pu perdre du temps à regarder l'intégralité des enregistrement au lieu d'utiliser ce temps pour faire d'autres activités plus propice à l'apprentissage.
+
+L'intervention est l'élément centrale de la méthode expérimentale, mais elle n'est en soi pas suffisante pour établir un mécanisme de cause à effet. Cette marche de l'échelle est caractérisée par l'action planifiée et pondérée. Les questions qu'on peut se poser à ce stade sont par example :
+
+-   Comment je peux obtenir $Y$ ?
+
+-   Que se passe-t-il si je fais ... ?
+
+-   Est-ce que si je modifie *X*, *Y* va être affecté par cette modification ?
+
+### Contre-Factuels
+
+La dernière marche de l'échelle, celle qui s'approche le plus à l'explication d'un mécanisme causale, concerne les contre-factuels. Les conte-factuels exploitent la capacité de la pensée humaine à imaginer des scénarios alternatifs à ceux qui se sont déroulés. La question commune aux contre-factuels est *que se serait-il passé si j'avais fait ... ?*
+
+En maintenant l'exemple de l'enseignant-e qui met à disposition l'enregistrement vidéo de ses cours, des questions contre-factuels à se poser à la fin du cours pourraient être :
+
+-   Qu'est-ce qui se serait passé si les étudiant-es n'avaient pas accès aux enregistrement du tout ?
+
+-   Qu'est-ce qui se serait passé si les étudiant-es avaient accès à des capsules vidéos plutôt que à l'intégralité des enregistrement ?
+
+On ne peut pas répondre à ces questions directement avec des faits, car les étudiant-es ont terminé leur cours avec l'enregistrement intégrale et donc on ne peut pas savoir comment *ces étudiant-es là* auraient réagit dans des conditions différentes. Les expériences peuvent aider à créer ces *mondes parallèles/imaginaires* lorsqu'elles sont associés à des théories ou modèles théoriques. En effet, on aurait pu avoir l'idée de diviser les étudiant-es de la prochaine volée en trois groupes différents : (1) aucun accès à l'enregistrement vidéo ; (2) accès à l'intégralité de l'enregistrement ; (3) accès à des capsules vidéos. Cependant, cette expérience aurait les limitations suivantes :
+
+1.  D'un point de vue éthique, cette répartition serait contraire au principe d'égalité de traitement des étudiant-es ;
+
+2.  D'un point de vue scientifique, on ne pourrait pas généraliser les résultats obtenus dans le cours en dehors du cadre spécifique. Par exemple, il serait difficile d'évaluer des éléments comme : est-ce que le matériel du cours est bien fait ? Est-ce qu'il permet vraiment d'apprendre quelque chose ? Est-ce le système de notation de l'enseignant-e est fiable et objectif ? Etc.
+
+Ce qui serait utile à cet effet serait plutôt un *principe* qui nous indique si et sous quelles conditions les capsules vidéos sont plus propices à l'apprentissage par rapport à un enregistrement vidéos d'un cours ex-cathedra ou à pas de vidéos de support du tout. Pour obtenir ce type de principe, une manière de procéder est celle de mener une expérience *idéalisée* qui soit (1) représentative de la problématique qu'on veut aborder, et (2) présente des éléments *prototypiques* qui puissent être généralisés à un maximum de situations similaires.
+
+La question contre-factuel à laquelle ce type d'expérience essaie de répondre peut se synthétiser de la manière suivante : est-ce que **la même** personne bénéficie davantage d'une intervention plutôt que d'une autre par rapport au phénomène d'intérêt ? Ou est-ce que les interventions s'équivaut, dans le sens ou le phénomène d'intérêt se manifesterait *exactement* de la même manière -- ou avec des différences négligeables -- sur **la même** personne, indépendamment du type d'intervention qu'elle aurait reçu ?
+
+À ce stade de l'échelle de causalité, donc, les activités impliquées sont *imaginer*, *penser de manière rétrospective*, et *comprendre*. Les questions qu'on peut se poser à ce stade sont :
+
+-   Que serait-il passé si j'avais fait différemment ?
+
+-   Est-ce que c'est vraiment $X$ qui a causé $Y$ ?
+
+-   Sans $X$, est-ce $Y$ se serait manifesté également ?
+
+## Hypothèses théoriques/causales
+
+L'échelle de causalité permet de penser en termes d'effets.
+
+L'échelle de causalité permet de penser en termes d'effets et maximise donc la possibilité de pouvoir distinguer des mécanismes causales. En même temps, il sedonner une explication qui illustre les raisons à la base du pattern de données obtenues. À cet effet, les chercheurs émettent souvent -- mais pas toujours -- des hypothèses théoriques/causales.
+
+Pour mettre en place une expérience *idéalisée* et essayer de répondre à ce type de questions contre-factuels, les chercheurs créent un *micro-monde* dans lequel générer, récolter et analyser des données de manière instrumentale aux objectifs de recherche. L'accumulation d'expériences *idéalisées* est censée permettre d'atteindre une meilleure capacité d'expliquer/prédire les effets des interventions sur les phénomènes d'intérêt. En même temps, un *micro-monde* est par nécessité une *simplification/réduction* de toute la complexité présente dans la réalité/le *macro-monde*. Les choix épistémologiques et méthodologiques prises par les chercheurs individuellement et les communautés de recherche dans leur ensemble, ainsi que la reconnaissance des limites du *micro-monde* sont donc déterminantes.
+
+# Processus génératif des données
+
+### Analyse des données et hypothèses opérationnelles
+
+L'analyse des données sera traitée de manière plus détaillée dans les fondements statistiques de la méthode expérimentale. Mais d'un point de vue empirique, l'analyse des données est également liée à ce qu'on appelle des hypothèses opérationnelles. Ces hypothèses sont l'application au *micro-monde* des éventuelles explications causales potentielles exprimées à travers les hypothèses théoriques. La différence concerne le fait que les hypothèses opérationnelles sont exprimées sur la base des variables indépendantes et dépandantes retenues pour représenter l'intervention et le phénomène d'intérêt.
+
+Donc dans l'exemple sur l'effet du support vidéo sur l'apprentissage, l'hypothèse théorique sera exprimée sur la base de l'effet des modalités/conditions de la VI (lecture d'un texte, enregistrement d'un cours ex-cathedra de 30 minutes, et vision de 3 capsules vidéos de 5 minutes chaque) sur la mesure de l'apprentissage identifiée comme le score à un quizz sur le contenu du support. Une hypothèse opérationnelle possible consisterait par exemple à avancer prévoir/s'attendre à distribution des scores au test de compréhension (VD) autour de moyennes ordonnées de la manière suivante :
+
+-   La moyenne des scores de compréhension dans la modalité *capsules* est plus élevée de la moyenne dans la modalités *texte*
+
+-   La moyenne des scores de compréhension dans la modalité *texte* est plus élevée de la moyenne dans la modalité *enregistrement*
+
+-   La moyenne des scores de compréhension dans la modalité *capsules* est plus élevée de la moyenne dans la modalité *texte*
+
+```{r idealized-experiment, fig.height=3, fig.width=5, fig.cap="Données simulées sur une potentielle expérience idéalisée. Les barres représentent des intervalles de confiance à 95%."}
+sans <- tibble(
+  condition = "Texte",
+  apprentissage = rnorm(200, 80, 35)
+)
+
+playback <- tibble(
+  condition = "Enregistrement",
+  apprentissage = rnorm(200, 60, 20)
+)
+
+capsules <- tibble(
+  condition = "Capsules",
+  apprentissage = rnorm(200, 100, 40)
+)
+
+idealized_experiment <- bind_rows(sans, playback, capsules) |> 
+  mutate(
+    condition = factor(condition, levels = c("Texte", "Enregistrement", "Capsules")),
+    apprentissage = rescale(apprentissage, to = c(0, 100))
+  )
+
+ggplot(idealized_experiment, aes(x = condition, y = apprentissage, color = condition)) +
+  geom_jitter(alpha = 0.1) +
+    stat_summary(fun.data = mean_cl_normal, geom = "errorbar", width = 0.3, position = position_dodge(width = 0.1)) +
+  stat_summary(fun = mean, geom = "point", size = 3, shape = 15, position = position_dodge(width = 0.6)) +
+  labs(x = "Conditions idéalisées", y = "Apprentissage idéalisé") +
+  theme(legend.position = "none")
+  
+
+```
+
+Le type d'analyse statistique à mener dépend de plusieurs facteurs, notamment le plan expérimental choisi, le nombre des VI et de modalités à l'intérieur de chaque VI, la présence d'autres mesures corollaires, ainsi que la distribution attendue de la VD.
+
+# Inférence
+
+# Références {.unnumbered}

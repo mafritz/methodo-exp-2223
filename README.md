@@ -47,7 +47,7 @@ En combinant les deux parties du cours, vous allez acquérir les compétences et
 -   Comprendre les enjeux et limites dans la génération des données expérimentales en fonction des choix épistémologiques et méthodologiques (échantillon, plan expérimental, matériel, procédure, mesures valides, ...)
 -   Identifier des mécanismes d'inférence statistique et *pratique*, ainsi que la difficile articulation entre les deux
 -   S'initier à la lecture et interprétation des articles scientifiques reportant des expériences
--   Être sensibilisé-es à l'importance de la reproductibilité, réplicabilité et généralisation des expériences dans une perspective *Open Science*
+-   Être sensibilisé-es à l'importance de la reproductibilité, applicabilité et généralisation des expériences dans une perspective *Open Science*
 
 ### Productions
 
@@ -69,7 +69,7 @@ Pour atteindre les objectifs pédagogiques du cours, vous allez produire les él
 
 # Programme
 
-Le cours est organisé sur deux périodes du Master MALTT (P5 et P6), avec deux demi-journées de cours en présence et deux périodes de travail à distance. Ici vous trouverez les contenus et activités des séances snychrones du cours. Pour le travail à distance, référez-vous à la section sur les livrables.
+Le cours est organisé sur deux périodes du Master MALTT (P5 et P6), avec deux demi-journées de cours en présence et deux périodes de travail à distance. Ici vous trouverez les contenus et activités des séances synchrones du cours. Pour le travail à distance, référez-vous à la section sur les livrables.
 
 ## Mardi 28 mars 2023
 
@@ -192,7 +192,7 @@ Matériel de support utilisé dans cette partie :
 
 ### Workshop statistiques avec R
 
-Pour mieux comprendre et consolider les informations sur les fondements statistiques de la méthode expérimentale, cette partie du cours propose une activité *hands-on* à effectuer par binômes. L'activité consiste à decouvrir/manipuler des concepts statistiques à travers le langage de programmation R et le logiciel RStudio Desktop.
+Pour mieux comprendre et consolider les informations sur les fondements statistiques de la méthode expérimentale, cette partie du cours propose une activité *hands-on* à effectuer par binômes. L'activité consiste à découvrir/manipuler des concepts statistiques à travers le langage de programmation R et le logiciel RStudio Desktop.
 
 L'activité est divisée dans une série de scripts/fichiers R déjà codés qui sont accompagnés par des informations/instructions sur leur utilisation et manipulation. Des questions de compréhension complètent l'activité sur chaque script.
 

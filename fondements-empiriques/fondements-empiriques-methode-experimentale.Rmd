@@ -350,7 +350,7 @@ La question contre-factuel à laquelle ce type d'expérience essaie de répondre
 
 -   Sans $X$, est-ce $Y$ se serait manifesté également ?
 
-## Hypothèses théoriques/causales et *Directed Acyclic Graphs*
+## Hypothèses théoriques/causales et modèles structurels causaux
 
 L'échelle de causalité permet de penser en termes d'effets et maximise donc la possibilité de pouvoir distinguer des mécanismes causales. Dans cette perspective, les chercheurs émettent souvent -- mais pas toujours -- des hypothèses théoriques/causales qui essayent d'expliquer pourquoi et comment l'intervention peut avoir un effet sur le phénomène. Il s'agit d'identifier des mécanismes, comme par exemple des principes, qui s'appliquent dans des conditions, idéalement les plus généralisées possibles, et qui permettent à l'effet de se manifester.
 
@@ -370,7 +370,7 @@ Il existe donc différents éléments à prendre en ligne de compte pour tester 
 
 -   **Modérer l'effet de la vidéo sur les apprentissage**. Un effet de modération s'avère lorsque l'effet de l'intervention sur un phénomène dépend de la valeur d'un autre phénomène (i.e. d'une autre variable). Par exemple, on peut imaginer que les étudiant-es plus en difficulté dans le cours peuvent bénéficier de manière plus conséquente de la présence des vidéos par rapport aux étudiant-es qui ont déjà bien compris les contenus du cours pendant les leçons synchrones. En termes concrets, on peut imaginer que la note d'une étudiant-e en difficulté puisse s'améliorer de 1 points (e.g. passer de 3 à 4) grâce à la vidéo, tandis que le gain pour un-e étudiant-e sans difficulté soit plus faible (e.g. passer de 5.25 à 5.5).
 
-Une manière de prendre en considération les différents facteurs qui peuvent influencer l'effet d'une intervention sur un ou plusieurs phénomène d'intérêt consiste à utiliser un *Directed Acyclic Graphs* (DAG), c'est-à-dire une représentation graphique de la relation entre variables appelée [@pearl2016; @pearl2018book; @rohrer2018; @mcelreathStatisticalRethinkingBayesian2020]. Un DAG, représenté dans l'image ci-dessous, consiste dans une série de nœuds (les variables), reliés ou pas à travers des flèches directionnelles (les relations).
+Une manière de prendre en considération les différents facteurs qui peuvent influencer l'effet d'une intervention sur un ou plusieurs phénomène d'intérêt consiste à utiliser un **Modèle Structurel Causal**, notamment sous la forme d'un ***Directed Acyclic Graphs*** (DAG), c'est-à-dire une représentation graphique de la relation entre variables appelée [@pearl2016; @pearl2018book; @rohrer2018; @mcelreathStatisticalRethinkingBayesian2020]. Un DAG, représenté dans l'image ci-dessous, consiste dans une série de nœuds (les variables), reliés ou pas à travers des flèches directionnelles (les relations).
 
 ```{r example-dag}
 #| fig.cap="General example of Direct Acyclic Graph (DAG)",
@@ -406,13 +406,13 @@ $$
 X \rightarrow Y \Longleftrightarrow f(X) = Y
 $$
 
-En d'autres termes, on s'attend à ce que la valeur de $Y$ soit **conditionnelle** à la valeur de $X$. En termes formelles, cela peut être représenté ainsi :
+En d'autres termes, on s'attend à ce que la valeur de $Y$ soit **conditionnelle** à la valeur de $X$, car $X$ est une cause directe de $Y$. En termes formelles, cela peut être représenté ainsi :
 
 $$
 \mathbb{P}(Y|X) \neq \mathbb{P}(Y)
 $$
 
-En langage courant, cela s'interprète de la manière suivante : la probabilité (distribution) des valeurs de la variable $Y$ en sachant la valeur de la variable $X$ qui est associée à la même observation n'est pas la même que si on ne connaissait pas la valeur de $X$. Cela signifie par exemple que en sachant qu'un-e étudiant-e a passé beaucoup de temps à étudier pour un examen, on peut avoir une meilleure idée de la note obtenue par rapport à si l'information sur le temps passé à étudier n'était pas disponible.
+En langage courant, cela s'interprète de la manière suivante : la probabilité (distribution) des valeurs de la variable $Y$ en sachant la valeur de la variable $X$ n'est pas la même que si on ne connaissait pas la valeur de $X$. Cela signifie, par exemple, que en sachant qu'un-e étudiant-e a passé beaucoup de temps à étudier pour un examen, on peut avoir une meilleure idée de la note obtenue par rapport à si l'information sur le temps passé à étudier n'était pas disponible.
 
 Au contraire, si deux variables ne sont pas reliés par une flèche, cela signifie que leurs valeurs sont **indépendants**. En terme formels, cela se représente ainsi :
 
@@ -422,9 +422,9 @@ $$
 
 Dans ce cas, même en sachant la valeur de la variable $B$, nous n'arrivons pas à en savoir davantage sur la probabilité d'obtenir une certaine valeur pour la variable $A$. Par exemple, même si on connaissait la taille d'un-e étudiant-e adulte, cela nous ne permettrait très probablement pas d'avoir une meilleure estimation de la note à un examen.
 
-L'avantage d'un DAG consiste à combiner une représentation graphique intuitive des rapports entre variables avec des dérivations mathématiques axiomatiques qui permettent d'inférer les facteurs qui peuvent influencer le rapport entre deux variables d'intérêt. Dans l'exemple de DAG proposé plus haut, par exemple, on s'intéresse à l'effet de la variable $X$ sur la variable $Y$. Grâce à la structure spécifique du DAG en question, on peut par exemple savoir que les variables $A$, $F$, et $M$ influencent l'effet direct $X \rightarrow Y$. Au contraire, les variables $C$ et $B$ n'influencent pas cet effet direct.
+L'avantage d'un DAG consiste à combiner une représentation graphique intuitive des rapports entre variables avec des dérivations mathématiques axiomatiques qui permettent d'inférer les facteurs qui peuvent influencer le rapport entre deux variables d'intérêt. Dans l'exemple de DAG proposé plus haut, par exemple, on s'intéresse à l'effet direct de la variable $X$ sur la variable $Y$. Grâce à la structure spécifique du DAG en question, on peut par exemple savoir que les variables $A$, $F$, et $M$ influencent l'effet direct $X \rightarrow Y$. Au contraire, les variables $C$ et $B$ n'influencent pas cet effet direct.
 
-Les potentialités et le fonctionnement d'un DAG dépasse le cadre introductif de ce cours. Mais il est important de savoir qu'un DAG peut contribuer énormément à savoir quel type de variable il est nécessaire de prendre en compte dans une expérience afin de pouvoir détecter l'effet d'une intervention sur un phénomène d'intérêt. En effet, un DAG permet :
+Les potentialités et le fonctionnement d'un DAG dépasse le cadre introductif de ce cours. Mais il est important de savoir qu'un DAG peut contribuer énormément à savoir quel type de variable il est nécessaire de prendre en compte dans une expérience afin de pouvoir détecter l'effet d'une intervention sur un phénomène d'intérêt. En particulier, un DAG permet :
 
 1.  De définir une hypothèse théorique/causale en termes explicites et non ambigus. Dans l'exemple du DAG on émet explicitement l'hypothèse que la variable $X$ détermine de manière causale la variable $Y$.
 2.  De manifester les potentiels facteurs qui peuvent neutraliser, médier ou modérer cette relation causale. Ceci est très utile notamment pour savoir si on doit contrôler/ajuster empiriquement ou statistiquement pour certains variables afin d'éviter des potentiels facteurs parasites dans la chaîne causale qu'on veut tester. (Nous verrons plus bas la définition formelle d'un facteur parasite.)
@@ -443,14 +443,13 @@ La partie probablement la plus importante du processus de génération des donn�
 
 1.  La variable indépendante (VI)
 2.  La variable dépendante (VD)
-3.  La variable bloquée/neutralisée
-4.  La variable contrôlée
+3.  Les variable bloquées/neutralisées ou contrôlées/ajustées
 
 Une expérience doit *à minima* proposer une variable indépendante et une variable dépendante, avec potentiellement un nombre de VIs et VDs infini. Les variables bloquées/neutralisées et contrôlées sont par contre optionnelles et souvent déclarées de manière implicite (par exemple à travers la sélection des participantes selon des critères spécifiques). La distinction entre variable bloquée/neutralisée et contrôlée n'est parfois pas explicitée ou est traitée de manière différente selon les manuels de méthode. Au contraire, la VI et la VD sont toujours traitées.
 
-### Variable indépendante (VI) : l'*explenans*
+### Variable indépendante : l'*explenans*
 
-Dans le *micro-monde* expérimental, la variable indépendante (VI) représente l'intervention dont on souhaite évaluer l'effet. Contrairement à la phase de justification et de l'explication causale potentielle dans lesquelles l'intervention est traitée de manière abstraite ou en forme de *principe*, dans le *micro-monde* la VI est **opérationnalisée**. Ce terme, très cher surtout aux psychologues, est parfois considéré de manière négative car retenu par certains une vestige de la période positiviste dans les sciences. Ce qu'il faut retenir de ce terme est tout simplement que l'intervention est implémentée concrètement dans un format qui permet de la manifester dans le *micro-monde* expérimental.
+Dans le *micro-monde* expérimental, la variable indépendante (**VI**) représente l'intervention dont on souhaite évaluer l'effet. Contrairement à la phase de justification et de l'explication causale potentielle dans lesquelles l'intervention est traitée de manière abstraite ou en forme de *principe*, dans le *micro-monde* la VI est **opérationnalisée**. Ce terme, très cher surtout aux psychologues, est parfois considéré de manière négative car retenu par certains une vestige de la période positiviste dans les sciences. Ce qu'il faut retenir de ce terme est tout simplement que l'intervention est implémentée concrètement dans un format qui permet de la manifester dans le *micro-monde* expérimental.
 
 La variable est dite indépendante car sa valeur n'est pas contrainte par autre chose si ce n'est le choix des chercheurs. En d'autres termes, les chercheurs peuvent manipuler de manière indépendante les valeurs de cette variable, sans avoir à se soumettre à des contraintes extérieures, si ce n'est au niveau de la justification éthique. À travers la manipulation, les chercheurs essaient d'expliquer l'effet de la VI sur la VD, pour cette raison la VI est aussi appelée ***explenans***, depuis le latin, c'est-à-dire *ce qui explique*.
 
@@ -481,13 +480,60 @@ Lorsqu'on implémente deux ou plusieurs VIs on à faire à un plan dit **factori
 
 : Les quatre conditions d'un plan factoriel 2x2
 
-### Variable dépendante (VD) : l'*explenandum*
+### Variable dépendante : l'*explenandum*
 
-Dans le *micro-monde* expérimental, la variable dépendante (VD) représente le phénomène d'intérêt qui est causé par la VI. Pour cette raison, la VD est aussi appellée ***explenandum***, c'est-à-dire *ce qu'on veut expliquer*.
+Dans le *micro-monde* expérimental, la variable dépendante (**VD**) représente le phénomène d'intérêt qui est causé par la VI. Pour cette raison, la VD est aussi appellée ***explenandum***, c'est-à-dire *ce qu'on veut expliquer*.
 
-### Variable neutralisée
+Une expérience peut proposer une ou plusieurs VD. Tout comme la VI, aussi la VD doit être opérationnalisée. Cependant, contrairement à la VI sur laquelle les chercheurs peuvent agir de manière indépendante, la VD est déterminée par le déroulement de l'expérience. En d'autres termes, la VD est la mesure du phénomène suite au déclenchement de celui-ci par la VI. Pour cette raison elle est dite **dépendante**. Ce terme possède une double perspective :
 
-### Variable contrôlée
+1.  Elle est dépendante du déroulement de l'expérience, donc en dehors de la possibilité de manipulation du chercheur une fois qu'elle a été opérationnalisée
+2.  Elle est dépendante de la VI, car dans la plupart des cas on s'attend à une distribution de la VD qui est conditionnelle à la VI. En termes formels, comme indiqué plus haut, on pose donc l'hypothèse que $\mathbb{P}(VD | VI) \neq \mathbb{P}(VD)$. On verra plus bas qu'on peut également poser l'hypothèse contraire, c'est-à-dire qu'il n'y a pas d'effet de la VI sur la VD, et donc que la VD est indépendante de la VI. Malheureusement dans la littérature sur la méthode expérimentale les termes se croisent souvent et il faut faire attention à bien comprendre le mécanisme plus que mémoriser les termes.
+
+Pour que la VD soit représentative du phénomène d'intérêt, elle doit respecter trois critères fondamentaux :
+
+-   **La sensibilité**\
+    Elle concerne la capacité de la VD à discriminer des valeurs différentes sur l'échelle. Par exemple, un test sur la pensée computationnelle dans lequel tout le monde obtient le maximum (effet plafond) ou le minimum (effet plancher) des points possibles ne serait pas sensible. La sensibilité est donc étroitement liée au type de mesure choisi. On peut en effet avoir des mesures discrètes (qualitatives ou ordinales) ou des mesures continues [@williams2021]. Le type de mesure choisi détermine aussi la distribution qu'on peut s'attendre de la VD est, par reflet, aussi le type d'analyse statistique à mener.
+
+-   **La fiabilité**\
+    Elle concerne la stabilité de la mesure, c'est-à-dire la capacité de la VD a mesurer de la même manière deux mêmes instances du phénomène. Par exemple, si on utilise un chronomètre pour mesurer le temps nécessaire pour résoudre un problème, il faut que le chronomètre affiche exactement le même temps si deux personnes, ou la même personne dans deux situations différentes, nécessitent exactement du même temps pour la résolution du même problème.
+
+-   **La validité**\
+    Elle concerne la capacité de la VD a représenté vraiment le phénomène d'intérêt. Cet aspect est particulièrement compliqué lorsqu'on s'intéresse à des phénomènes qui sont difficiles, voire impossibles à observer directement. Par exemple, une déterminante importante dans l'apprentissage avec la technologie éducative est le *sentiment d'auto-efficacité*. Or, ce sentiment est subjectif et il n'y a donc pas manière de l'observer/mesurer depuis l'*extérieur*. Il faut l'inter-médiation de la personne elle-même qui doit, par exemple, évaluer le sentiment sur une série de questions à choix multiples. Or, il faut être sûr que ces questions permettent vraiment de mesurer le sentiment d'auto-efficacité et non pas un autre phénomène, comme la motivation à utiliser une technologie éducative. La validation d'une mesure nécessite donc un processus complexe et articulé, raison pour laquelle il existe dans la littérature des mesures dites **validées empiriquement** qui augmentent les chances de mesurer vraiment le phénomène d'intérêt [@flakeMeasurementSchmeasurementQuestionable2020].
+
+### Variables bloquées/neutralisées ou contrôlées/ajustées
+
+Dans le *micro-monde* expérimental, un enjeu principal consiste à créer les conditions nécessaires et suffisantes pour potentiellement créer l'effet de la VI sur la VD. Cela signifie que toute autre source potentielle d'influence sur la VD doit être de quelque sorte *désactivé*. Cette fonction est prise en charge par deux techniques : (1) la randomisation (traitée plus bas dans la partie sur le plan ou design expérimental), et (2) le blocage/neutralisation ou contrôle d'autres variables.
+
+Comme nous l'avons vu plus haut avec l'introduction d'un modèle structural causal sous forme d'un DAG, il existe potentiellement un large nombre de facteurs qui peuvent jouer un rôle important dans la relation entre deux variables. En d'autres termes, il existe d'autres variables indépendantes potentielles en plus de celle ou celles qui sont en visées par les chercheurs de manière particulière dans une expérience.
+
+Surtout en psychologie on utilise souvent cette formule pour définir ce concept : il faut déterminer l'effet de la VI sur la VD, *toutes choses étant égales par ailleurs*. En d'autres termes, pour s'assurer que c'est la variation sur la VI qui produit un effet sur la VD, il faut que toute autre source potentielle de variation soit *inhibée*. Pour ce faire, il existe principalement deux techniques :
+
+-   **Bloquer/neutraliser une variable en amont**\
+    Avec cette technique, les chercheurs décident de ne prendre en considération que les instances d'une seule valeur d'une autre variable. En d'autres termes, cette variable est *fixée* à une valeur spécifique. Par exemple, on peut imaginer que les compétences techniques préalables des étudiant-es jouent un rôle important sur leur sentiment d'auto-efficacité dans l'utilisation d'une technologie éducative. Lorsque les chercheurs s'intéressent à comparer deux technologies éducative différentes pour déterminer si l'une produit un meilleur sentiment d'auto-efficacité comparé à l'autre, les chercheurs peuvent décider d'obtenir une estimation plus fiable si seulement des étudiant-es avec des bonnes compétences techniques participent à l'expérience. De ce fait, la variable *compétence technique* est bloquée/neutralisé en amont de l'expérience par un filtre qui *laisse passer* seulement des participant-es qu'on peut juger équivalents au niveau de leurs compétences techniques préalables. Il en suit qu'il faut de quelque manière un mécanisme de *screening* sensible, fiable et valide (voir plus haut pour la VD) pour s'assurer que les participant-es puissent vraiment être considérées comme équivalents. Une autre technique de neutralisation/blocage d'une variable consiste à utiliser un nombre équivalent de participant-es sur une variable donnée. Par exemple, si on s'intéresse l'effet d'une technologie éducative introduite dans un Master commun entre Sciences de l'Éducation et Psychologie, mais on soupçonne que les étudiant-es vont réagir différemment à cette technologie selon leur background académique, on peut *filtrer* les participant-es pour avoir exactement le même nombre d'étudiant-es provenant d'un cursus ou de l'autre.
+-   **Contrôler/ajuster une variable en aval\
+    **Souvent il est néanmoins pas possible de *filtrer* par rapport à une autre variable en amont. C'est le cas, par exemple, d'une deuxième variable qui peut être déclenchée directement par l'expérience en elle-même, ou qu'on ne peut pas mesurer en amont sans dévoiler des informations sensibles au niveau des objectifs de la recherche. Imaginons que les chercheurs s'intéressent à l'efficacité de deux jeux vidéos pédagogiques sur le développement des compétences langagières des adolescents entre 14 et 16 ans. Or, les chercheurs veulent évaluer l'efficacité des deux jeux indépendamment de l'intérêt des adolescents pour les jeux vidéos. Ils ne peuvent donc pas insérer cette information dans l'affiche de recrutement, car cela risquerait d'attirer seulement des adolescents intéressé-es par les jeux vidéos. À ce moment, ces chercheurs peuvent faire recours à une technique statistique qui permet de contrôler/ajuster l'effet de la VI sur la VD par rapport aux valeurs d'une troisième variable (et potentiellement d'autres variables encore). Pour ce faire, cependant, ils doivent non seulement obtenir une mesure des compétences langagières (i.e. la VD), mais également de l'intérêt des participant-es pour les jeux vidéos.
+
+De manière plus abstraite, @meehlAppraisingAmendingTheories1990 propose une formule logique lorsque le test d'une théorie/hypothèse est effectué :
+
+$$
+(T/H \cdot A_t \cdot C_p \cdot A_i \cdot C_n) \Longrightarrow (O_1 \subset O_2) 
+$$
+
+Dans cette formule :
+
+-   $T/H$ représente la théorie ou l'hypothèse d'intérêt du chercheur dans l'expérience en question
+
+-   $A_t$ représente un set de théories auxiliaires dont l'existence est nécessaire à la théorie/hypothèse en question. Par exemple, on ne peut pas formuler une hypothèse sur l'efficacité d'une technologie éducative par rapport à une autre sur l'apprentissage s'il n'existait pas une ou plusieurs théories qui déterminent que l'apprentissage est possible en premier lieu
+
+-   $C_p$ concerne le *ceteris paribus*, c'est à dire l'équivalent en latin de la formule *toutes choses étant égales par ailleurs*
+
+-   $A_i$ définit les instruments auxiliaires nécessaire à l'expérience, comme par exemple l'équipement technique
+
+-   $C_n$ concerne les conditions spécifiques de l'expérience, comme par exemple les participant-es ou la procédure (voir plus bas)
+
+-   $O_1 \subset O_2$ signifie qu'on s'attend à une série d'observations qui sont logiquement liés entre elles, comme c'est le cas des observations dans une expérience qui sont liées par le même *micro-monde* dans lequel elles ont été générées
+
+Le message à tirer de cette formule est que pour établir l'effet de la théorie/hypothèse en question, il faut un complexe emboîtement entre différents éléments. Ceci comporte également la difficulté de *falsifier* une théorie, c'est-à-dire qu'elle ne produit pas les observations/phénomènes attendus. En effet, si on n'obtient pas ce que l'on s'attend, on peut toujours attribuer la *faute* à une autre élément de la formule sur la gauche.
 
 ## Plan ou design expérimental
 

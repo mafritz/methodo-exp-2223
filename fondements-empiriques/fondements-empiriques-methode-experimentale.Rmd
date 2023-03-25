@@ -66,7 +66,7 @@ De plus, il existe des recouvrements entre les trois sources qui sont souvent ut
 
 # Les étapes d'une expérience
 
-On peut identifier 4 étapes principales dans une expérience:
+Une expérience est un écosystème complexe d'éléments qui doivent coexister et s'influence mutuellement. On peut identifier 4 étapes principales dans une expérience:
 
 1.  La **justification** qui consiste à établir la *raison d'être* d'une intervention active pour en étudier l'effet sur un ou plusieurs phénomènes d'intérêt
 
@@ -76,7 +76,9 @@ On peut identifier 4 étapes principales dans une expérience:
 
 4.  L'**inférence** qui combine des outils statistiques et des connaissances dans le domaine pour déterminer à quel point le processus génératif de données (le micro-monde) fourni des éléments utiles et fiables qu'on peut généraliser au contexte plus large (le macro-monde/la réalité)
 
-![Les 4 étapes d'une recherche expérimentale](images/etapes-methode-experimentale.png "Les 4 étaptes d'une recherche expérimentale"){width="13.2cm"}
+L'image suivante illustre le 4 étapes en signalant la présence de *rétro-feedback* depuis la dernière étape de l'inférence aux étapes précédentes. En effet, après l'étape d'inférence les étapes précédentes sont réévaluées de manière critique suite à l'inférence qui est tirée depuis les résultats de l'expérience.
+
+![Les 4 étapes d'une recherche expérimentale](images/etapes-methode-experimentale.png "Les 4 étaptes d'une recherche expérimentale"){width="80%"}
 
 # Justification
 

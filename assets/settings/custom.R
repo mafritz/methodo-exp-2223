@@ -30,3 +30,12 @@ custom_table <- function(data = NULL, caption_text = NULL, col_names = NULL, dig
     ) %>%
     kable_styling(latex_options = c("striped", "repeat_header"))
 }
+
+## Functions
+
+collapse_m_sd <- function(m, sd) {
+  m_print = printnum(m)
+  sd_print = paste0("(", printnum(sd), ")")
+  text_print = paste(m_print, sd_print)
+  return(text_print)
+}

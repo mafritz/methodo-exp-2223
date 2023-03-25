@@ -27,10 +27,12 @@ abstract: |
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 Sys.setlocale("LC_ALL", "French")
 source(here::here("assets", "settings", "custom.R"))
+source(here::here("fondements-empiriques", "sim_data.R"))
 library(dagitty)
 library(ggdag)
 library(papaja)
 library(here)
+library(kableExtra)
 ```
 
 # Introduction {.unnumbered}
@@ -579,9 +581,61 @@ Dans le design quasi-expérimental, il existe au moins deux modalités d'une VI,
 
 Cette condition non-optimale est néanmoins parfois nécessaires, notamment lorsqu'il n'est pas possible d'attribuer aléatoirement les entités/participant-es à une modalité spécifique de la VI. À ce moment, il est souvent nécessaire de faire recours au contrôle/ajustement en aval des variables évoqué plus haut dans le texte. On pourrait en effet imaginer de faire passer un test de connaissance sur le sujet et utiliser ce score dans le modèle statistique pour tenir compte de cette source de variabilité extrinsèque aux scénarios techno-pédagogiques. Mais ce type de contrôle en aval nécessite d'une définition précise et non ambigüe d'un modèle structure causal comme illustré plus haut [@pearlCausalInferenceStatistics2016; @pearl2018book; @rohrer2018].
 
-La situation quasi-expérimentale la plus difficile à gérer s'avère lorsque les entités/participant-es décident volontairement de s'attribuer à une modalité spécifique de la VI. Par exemple, on peut imaginer de laisser aux étudiant-es d'une classe le choix d'utiliser ou pas un logiciel de support à l'argumentation. À ce moment, le choix de s'auto-attribuer à la condition $X_0$ (sans logiciel) ou $X_1$ (avec logiciel) est très probablement dictée, au moins en partie, par l'intérêt ou les capacités préalables en argumentation de l'étudiant-e. De ce fait, même en présence d'une meilleure efficacité des étudiant-es en $X_1$ lors du test d'argumentation (VD), il ne sera pas possible de départager l'effet induit par le logiciel de l'effet *statique* dû aux caractéristiques des étudiant-es.
+La situation quasi-expérimentale la plus difficile à gérer s'avère lorsque les entités/participant-es décident volontairement de s'attribuer à une modalité spécifique de la VI. Par exemple, on peut imaginer de laisser aux étudiant-es d'une classe le choix d'utiliser ou pas un logiciel de support à l'argumentation. À ce moment, le choix de s'auto-attribuer à la condition $X_0$ (sans logiciel) ou $X_1$ (avec logiciel) est très probablement dictée, au moins en partie, par l'intérêt ou les capacités préalables en argumentation de l'étudiant-e. De ce fait, même en présence d'une meilleure efficacité des étudiant-es en $X_1$ lors du test d'argumentation (VD), il ne sera pas possible de départager l'effet *induit* par le logiciel de l'effet *statique* dû aux caractéristiques des étudiant-es.
 
 ### Design expérimental *complet*
+
+Dans le design expérimental *complet*, les entités/participant-es sont attribués aléatoirement aux modalités de la VI. L'attribution aléatoire présente l'avantage de bloquer, contrôler ou balancer tous les potentiels facteurs qui peuvent influencer la VI. De ce fait, on peut isoler seulement le lien entre la variable indépendante et la variable dépendante, c'est-à-dire le parcours $X \rightarrow Y$.
+
+Il faut noter, cependant, que des éventuels facteurs qui peuvent influencer la VD -- comme la variable $Z$ dans le schéma -- ne sont pas touchés directement par la randomisation. Ces facteurs peuvent par exemple expliquer une partie de la variance dans la VD et il faudra donc de toute manière le gérer d'une manière différente (i.e. neutraliser/bloquer ou contrôler/ajuster) pour avoir une meilleure estimation de l'effet de $X$ sur $Y$ [@cinelliCrashCourseGood2020a; @pearlCausalInferenceStatistics2016; @maxwell2017].
+
+On peut apprécier l'effet de la randomisation avec une simulation de données. Avec du code dans le langage R, 500 partipant-es ont été simulés avec les caractéristiques suivantes :
+
+1.  Un âge aléatoire, tiré d'une distribution uniforme de 18 à 65 ans (chaque âge a la même probabilité d'être tiré)
+2.  Un intérêt potentiel pour l'intervention $X_0$ sur une échelle de 1 à 7. La simulation donne plus de probabilité à des chiffres entre 2 et 4 pour cette variable.
+3.  Un intérêt potentiel pour l'intervention $X_1$ sur la même échelle de la variable précédente, mais cette fois-ci la simulation donne plus de probabilité à des chiffres entre 4 et 7
+
+Le tableau suivant montre les premières 10 participants.
+
+```{r table-participants}
+sim_data |>
+  head(10) |> 
+  custom_table(caption_text = "Aperçu des 10 premiers participants dans un jeu de données de 500", digits = 2)
+```
+
+Par conséquent, les participantes ont la tendance à privilégier naturellement l'intervention $X_1$ comparé à l'intervention $X_0$. À ce point, on peut simuler l'attribution de chaque participante à une modalité de la VI selon deux mécanismes :
+
+-   Dans le premier mécanisme, les participant-es choisissent volontairement si *s'auto-attribuer* à la modalité $X_0$ ou $X_1$ selon leur propre prédisposition. En d'autres termes, si leur intérêt pour $X_0$ est majeur ou égale à l'intérêt pour $X_1$, alors ils sont attribué à $X_0$. Si par contre leur intérêt est majeur pour $X_1$ comparé à $X_0$, alors ils sont attribués à $X_1$.
+
+-   Dans le deuxième mécanisme, chaque participant à exactement 50% de chances d'être attribué à $X_0$ ou $X_1$ indépendamment de sa prédisposition pour l'une ou pour l'autre modalité. Il s'agit en d'autres termes d'une attribution totalement randomisée.
+
+Le tableau suivant montre les moyennes et l'écart type des variables âge, interest_X0 et interest_X1 pour l'auto-attribution préférentielle des participant-es. On peut noter comme déjà il y a plus de participant-es qui ont choisi l'intervention $X_1$ et que la moyenne d'intérêt pour cette modalité est plus élevée par rapport à $X_0$.
+
+```{r average-auto-attribution}
+average_data_preference |> 
+  custom_table(
+    caption_text = "Répartition des variables avec auto-attribution préférentielle.", digits = 2
+  )
+```
+
+Cet autre tableau montre les même résultats, mais lorsque l'attribution est faite avec le deuxième mécanisme totalement aléatoire. On peut remarquer que tous les valeurs des variables sont plus proches les uns aux autres, notamment au niveau de la répartition de l'intérêt prédisposé pour $X_0$ et $X_1$.
+
+```{r average-random}
+average_data_random |> 
+  custom_table(
+    caption_text = "Répartition des variables avec attribution totalement aléatoire.", digits = 2
+  )
+```
+
+Il en suit que, grâce à la randomisation, l'intérêt préalable pour les deux interventions est automatiquement balancé entre les deux modalités de la VI. Les deux groupes peuvent donc être considérés équivalents et on peut par conséquent être plus confiants qu'une éventuelle différence sur une VD serait induite par la manipulation expérimentale.
+
+Cet exemple permet également d'aborder un autre argument relatif à la randomisation, c'est-à-dire qu'il existe différents techniques de randomisation.
+
+**Randomisation avec remplacement**. L'exemple a utilisé une randomisation totalement aléatoire, aussi indiquée souvent comme une randomisation dans réplacement. Cette technique implique que à chaque nouvelle attribution d'une entité/participant-e à une modalité de la VI, chaque modalité à toujours la même possibilité d'être tirée. Il en suit qu'on peut avoir des variations plus au moins élevées au niveau du nombre total d'attributions, comme il a été le cas ici avec 269 attributions à $X_0$ et 231 à $X_1$. On peut en effet identifier plusieurs techniques de randomisation.
+
+**Randomisation sans remplacement.** Au contraire, on aurait pu utiliser une technique qui établi en amont le nombre précis d'entités/participant-es à attribuer à chaque modalités de la VI. Par exemple, on aurait pu envisager d'attribuer exactement 250 participant-es pour chaque modalité. À ce moment, on utilise une technique qui randomise l'ordre d'attribution de 500 participant-es pour garantir l'équilibre. À ce moment, chaque fois qu'une modalité est attribuée, elle est effacée de la liste *sans être remplacée*. Par conséquent, le nombre de modalités à assigner diminue avec le nombre de participant-es. À la dernière attribution, le décompte sera donc forcément de 249 participant-es dans une modalité et 250 dans l'autre, et l'équilibre sera atteint justement avec cette dernière attribution.
+
+Randomisation bloquée avec ou sans remplacement. Dans une randomisation bloquée, les entités/participant-es sont d'abord séparée par rapport à une caractéristique/variable spécifique, et seulement une fois cette séparation effectuée, l'attribution aux modalités.
 
 ### Design inter-sujet, intra-sujet ou mixte
 

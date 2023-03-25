@@ -527,7 +527,7 @@ Dans cette formule :
 
 -   $C_p$ concerne le *ceteris paribus*, c'est à dire l'équivalent en latin de la formule *toutes choses étant égales par ailleurs*
 
--   $A_i$ définit les instruments auxiliaires nécessaire à l'expérience, comme par exemple l'équipement technique
+-   $A_i$ définit les instruments auxiliaires nécessaire à l'expérience, comme par exemple l'équipement technique ou les instruments de mesure
 
 -   $C_n$ concerne les conditions spécifiques de l'expérience, comme par exemple les participant-es ou la procédure (voir plus bas)
 

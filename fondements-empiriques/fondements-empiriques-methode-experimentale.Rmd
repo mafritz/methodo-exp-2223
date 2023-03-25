@@ -20,7 +20,7 @@ output:
 bibliography: ../assets/bib/references.bib
 csl: ../assets/settings/apa.csl
 abstract: |
-  La recherche expérimentale est l'une des méthodes de recherche utilisées en technologie éducative. Son intérêt principal réside dans la tentative d'expliquer l'effet d'une intervention, pondérée et planifiée, sur un ou plusieurs phénomènes d'intérêt. Pour obtenir ce résultat, la méthode expérimentale utilise un *micro-monde* dans lequel les chercheurs *manipulent* une ou plusieurs variables dites indépendantes, pour en établir l'effet sur une mesure, dite variable dépendante, représentative d'un phénomène d'intérêt. Ce document propose l'illustration de la méthode expérimentale en quatre étapes : justification, explication causale potentielle, processus génératif des données, et inférence. Les avantages et limites de cette méthode sont enfin analysés de manière critique. Ce document est complété par un autre document qui s'intéresse plus spécifiquement au rapport entre méthode expérimentale et analyse statistique.
+  La recherche expérimentale est l'une des méthodes de recherche utilisées en technologie éducative. Son intérêt principal réside dans la tentative d'expliquer l'effet d'une intervention, pondérée et planifiée, sur un ou plusieurs phénomènes d'intérêt. Pour obtenir ce résultat, la méthode expérimentale utilise un *micro-monde* dans lequel les chercheurs *manipulent* une ou plusieurs variables dites indépendantes, pour en établir l'effet sur une mesure, dite variable dépendante, représentative d'un phénomène d'intérêt. Ce document propose l'illustration de la méthode expérimentale en quatre étapes: justification, explication causale potentielle, processus génératif des données, et inférence. Les avantages et limites de cette méthode sont enfin analysés de manière critique. Ce document est complété par un autre document qui s'intéresse plus spécifiquement au rapport entre méthode expérimentale et analyse statistique.
 ---
 
 ```{r setup, include=FALSE}
@@ -35,11 +35,11 @@ library(here)
 
 # Introduction {.unnumbered}
 
-Ce document offre un survol des fondements empiriques de la méthode expérimentale appliqués à la recherche en technologie éducative. D'abord, les différentes sources de connaissance issues de la recherche empirique -- observations, simulations et expériences -- sont brièvement comparées. Le document s'intéresse ensuite aux expériences, en identifiant quatre étapes principales dans un processus de recherche expérimentale : la justification, l'explication causale potentielle, le processus génératif des données, et l'inférence. Chaque étape sera illustrée à l'aide de concepts et exemples. En guise de conclusion, la méthode expérimentale sera analysée en fonction de ses avantages et désavantages épistémologiques.
+Ce document offre un survol des fondements empiriques de la méthode expérimentale appliqués à la recherche en technologie éducative. D'abord, les différentes sources de connaissance issues de la recherche empirique -- observations, simulations et expériences -- sont brièvement comparées. Le document s'intéresse ensuite aux expériences, en identifiant quatre étapes principales dans un processus de recherche expérimentale: la justification, l'explication causale potentielle, le processus génératif des données, et l'inférence. Chaque étape sera illustrée à l'aide de concepts et exemples. En guise de conclusion, la méthode expérimentale sera analysée en fonction de ses avantages et désavantages épistémologiques.
 
 Ce document est destiné à des étudiant-es sans une expérience préalable en recherche expérimentale. Il s'intéresse principalement aux fondements empiriques de la méthode expérimentale, c'est-à-dire la logique épistémologique qui confère aux expériences la capacité -- sous certaines conditions et lorsque plusieurs expériences sont cumulées -- d'évaluer/expliquer l'effet d'une intervention sur un phénomène d'intérêt.
 
-Le document est complété par trois autres ressources :
+Le document est complété par trois autres ressources:
 
 -   Fondements statistiques de la méthode expérimentale
 
@@ -49,7 +49,7 @@ Le document est complété par trois autres ressources :
 
 # Sources de la connaissance empirique
 
-Les connaissances empiriques sont basées sur trois sources :
+Les connaissances empiriques sont basées sur trois sources:
 
 1.  **Les observations**\
     La « réalité » est observée de manière plutôt passive, en exploitant des phénomènes qui se manifestent spontanément
@@ -64,7 +64,7 @@ De plus, il existe des recouvrements entre les trois sources qui sont souvent ut
 
 # Les étapes d'une expérience
 
-On peut identifier 4 étapes principales dans une expérience :
+On peut identifier 4 étapes principales dans une expérience:
 
 1.  La **justification** qui consiste à établir la *raison d'être* d'une intervention active pour en étudier l'effet sur un ou plusieurs phénomènes d'intérêt
 
@@ -78,13 +78,13 @@ On peut identifier 4 étapes principales dans une expérience :
 
 # Justification
 
-Les expériences impliquent une forme d'action -- l'intervention -- qui est susceptible d'avoir un effet sur la réalité à travers au moins un phénomène identifiable :
+Les expériences impliquent une forme d'action -- l'intervention -- qui est susceptible d'avoir un effet sur la réalité à travers au moins un phénomène identifiable:
 
 -   Par **intervention**, on se réfère de manière très flexible à une action qui modifie la « réalité », y compris de manière épistémique (i.e. ce que l'on sait sur un sujet). L'action peut être concrète et appliquée (e.g. introduire une technologie en salle de classe, proposer un scénario pédagogique innovant, mettre à jour une interface utilisateur, ...) ou plus abstraite et théorique (e.g. un principe ou une théorie pédagogique, un référentiel de compétences, un plan d'études, ...).
 
 -   Par **phénomène**, on se réfère de manière très fléxible à un pattern d'événements qui se répète de manière congruente, par exemple dans des conditions similaires. Le pattern peut être concret et appliqué (e.g. la rétention mnésique d'éléments dans une liste, la perception d'utilité d'un artefact technologique, ...) ou plus abstrait et théorique (e.g. la compréhension de texte, la collaboration, le bien-être des étudiant-es, ...).
 
-De ce fait, les expériences doivent être planifiées et pondérées attentivement selon au moins deux principes phares :
+De ce fait, les expériences doivent être planifiées et pondérées attentivement selon au moins deux principes phares:
 
 -   Quel serait le bénéfice à appliquer l'intervention, comparé à ne pas l'appliquer
 
@@ -92,11 +92,11 @@ De ce fait, les expériences doivent être planifiées et pondérées attentivem
 
 Si on prend l'exemple de l'introduction d'une technologie éducative pendant un cours, les deux questions à se poser seront donc (1) qu'est-ce que les étudiant-es obtiennent *en plus* par l'introduction de la technologie ; et (2) qu'est-ce que les étudiant-es *risquent de perdre* à cause de l'introduction de la technologie. Les étudiant-es pourraient gagner en interactivité, collaboration, maîtrise technique, etc. ; et en même temps risquer de perdre en termes de temps nécessaire pour apprendre à utiliser la technologie, en charge cognitive pour articuler plusieurs environnements de travail, etc.
 
-Dans le domaine de la recherche, en plus, l'introduction d'une intervention doit aussi respecter une double justification :
+Dans le domaine de la recherche, en plus, l'introduction d'une intervention doit aussi respecter une double justification:
 
-1.  **Scientifique** : est-ce que l'intervention est pertinente par rapport aux connaissances disponibles dans le domaine de référence ?
+1.  **Scientifique**: est-ce que l'intervention est pertinente par rapport aux connaissances disponibles dans le domaine de référence ?
 
-2.  **Éthique** : est-ce que l'intervention considère attentivement le rapport entre bénéfices et risques potentiels, notamment au niveau des participant-es ?
+2.  **Éthique**: est-ce que l'intervention considère attentivement le rapport entre bénéfices et risques potentiels, notamment au niveau des participant-es ?
 
 La combinaison entre les deux justifications jettent les bases pour une question de recherche à laquelle on peut essayer de répondre à travers une expérience.
 
@@ -104,15 +104,15 @@ La combinaison entre les deux justifications jettent les bases pour une question
 
 La justification scientifique est représentée dans les articles ou contributions scientifiques en général par l'introduction et le cadre théorique.
 
-L'introduction illustre la problématique, sa pertinence par rapport aux connaissances actuelles ou phénomènes émergents. La problématique peut être abordée idéalement dans un espace défini par deux continuum :
+L'introduction illustre la problématique, sa pertinence par rapport aux connaissances actuelles ou phénomènes émergents. La problématique peut être abordée idéalement dans un espace défini par deux continuum:
 
 1.  **Exploratoire vs. Confirmatoire\
     **Dans une expérience exploratoire, les connaissances actuelles sont jugées encore incomplètes ou trop fragiles/contradictoires pour formuler une explication causale potentielle précise (voir point suivant). L'objectif de l'expérience est principalement celui de mettre en relief des effets potentiels qui pourraient justifier l'intérêt pour des recherches ultérieurs. Au contraire, les expériences confirmatoires cibles de manière précise une intervention, qui peut être aussi une théorie, avec l'objectif d'en corroborer la validité ou d'en remettre en question la pertinence (e.g. la rejeter). Ce mécanisme en technologie éducative -- et plus en général dans les sciences sociales -- est très complèxe, car les phénomènes sont souvent articulés [@meehlAppraisingAmendingTheories1990; @scheel2020].
 
 2.  **Fondamentale vs. Appliquée\
-    **La recherche fondamentale s'intéresse à la compréhension de phénomènes de manière transversale et indépendante à des applications concrètes, tandis que la recherche appliquée vise généralement un contexte et un cadre d'intervention plus spécifique. La distinction est néanmoins délicate et avec plusieurs recouvrements possibles. On peut retenir généralement l'intention de la recherche : est-ce qu'elle vise à apporter des contributions sur un large domaine d'application ou plutôt sur un cadre plus restreint et spécifique ?
+    **La recherche fondamentale s'intéresse à la compréhension de phénomènes de manière transversale et indépendante à des applications concrètes, tandis que la recherche appliquée vise généralement un contexte et un cadre d'intervention plus spécifique. La distinction est néanmoins délicate et avec plusieurs recouvrements possibles. On peut retenir généralement l'intention de la recherche: est-ce qu'elle vise à apporter des contributions sur un large domaine d'application ou plutôt sur un cadre plus restreint et spécifique ?
 
-Le cadre théorique articule ce que la communauté scientifique connait (ou ne connait pas encore) à propos d'un sujet et comment ces connaissances ont été acquises : observations, simulations, expériences, mais aussi raisonnement, argumentation, synthèse de connaissances actuelles avec des revues de la littérature ou méta-analyses. Le cadre théorique met en général en relief des manques ou évidences ambivalentes qui justifient la nécessité de proposer une nouvelle expérience ou de répliquer une expérience déjà menée afin de *contrôler* la fiabilité et robustesse des résultats.
+Le cadre théorique articule ce que la communauté scientifique connait (ou ne connait pas encore) à propos d'un sujet et comment ces connaissances ont été acquises: observations, simulations, expériences, mais aussi raisonnement, argumentation, synthèse de connaissances actuelles avec des revues de la littérature ou méta-analyses. Le cadre théorique met en général en relief des manques ou évidences ambivalentes qui justifient la nécessité de proposer une nouvelle expérience ou de répliquer une expérience déjà menée afin de *contrôler* la fiabilité et robustesse des résultats.
 
 La justification scientifique dépend des connaissances du domaine ou des domaines spécifiques desquels l'intervention s'inspire et/ou dans lesquels elle s'applique.
 
@@ -128,10 +128,10 @@ Ce type de dilemmes étant très délicats, les expériences doivent être accep
 
 La combinaison entre la justification scientifique (qu'est-ce qui est pertinent par rapport aux connaissances actuelles) et la justification éthique (qu'est-ce qui est raisonnable tester en respectant l'intégrité de toutes les parties prenantes) détermine la question de recherche expérimentale.
 
-Comparé à une question de recherche scientifique au sens plus large, une question de recherche expérimentale se caractérise généralement par la prédisposition à identifier précisément l'intervention et le(s) phénomène(s) d'intérêt souvent déjà à partir du titre de la contribution ou de l'article scientifique. Ce mécanisme est d'ailleurs illustré par exemple dans ces sujets de mémoire du Master MALTT appliquant la méthode expérimentale :
+Comparé à une question de recherche scientifique au sens plus large, une question de recherche expérimentale se caractérise généralement par la prédisposition à identifier précisément l'intervention et le(s) phénomène(s) d'intérêt souvent déjà à partir du titre de la contribution ou de l'article scientifique. Ce mécanisme est d'ailleurs illustré par exemple dans ces sujets de mémoire du Master MALTT appliquant la méthode expérimentale:
 
 -   *The influence of background music on learning from text* ([Adam, 2019](https://tecfa.unige.ch/tecfa/maltt/memoire/Adam2019.pdf))
--   Collaboration en environnement médiatisé par ordinateur : Des usages et de l'impact d'un outil de feedback émotionnel ([Perrier, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Perrier2017.pdf))
+-   Collaboration en environnement médiatisé par ordinateur: Des usages et de l'impact d'un outil de feedback émotionnel ([Perrier, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Perrier2017.pdf))
 -   Étude de l'effet de l'esthétique sur l'utilisabilité d'une interface lors d'une tâche de recherche d'informations sur un site Internet ([Venni, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Venni2017.pdf))
 
 La recherche expérimentale se traduit souvent par des formulations qui suggèrent -- avec différents degrés de *précaution* selon le caractère exploratoire ou confirmatoire vu plus haut -- des mécanismes causales potentiels entre l'intervention et l'évolution du phénomène d'intérêt.
@@ -148,9 +148,9 @@ $$
 X \rightarrow Y
 $$
 
-D'un point de vue logique, on essaie d'établir une *fonction causale* selon laquelle le phénomène Y *écoute* l'intervention X pour déterminer son état. Nous avons donc une sorte de *fonction* similaire au principe de Input-Output en programmation :
+D'un point de vue logique, on essaie d'établir une *fonction causale* selon laquelle le phénomène Y *écoute* l'intervention X pour déterminer son état. Nous avons donc une sorte de *fonction* similaire au principe de Input-Output en programmation:
 
-$$Y = f(X)$$La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique [@pearl2016; @pearl2000; @rodgersEpistemologyMathematicalStatistical2010; @maxwell2017], sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène Y (e.g. le résultat à un examen) est une *fonction* de l'intervention X (e.g. est-ce que l'étudiant-e a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel ?). En d'autres termes, on peut s'attendre à un *pattern* dans la *distribution* du phénomène Y qui dépend/est fonction de l'intervention X. Par exemple : on s'attend à un effet de la modalité avec laquelle les notes d'un cours sont résumées (carte conceptuelle vs. résumé textuel) sur les notes obtenus à l'examen. Le *pattern* attendu consiste dans une distribution des notes obtenues par les étudiant-es ayant utilisé les cartes conceptuelles autour d'une moyenne plus élevée par rapport à la distribution des notes obtenues par les étudiant-es ayant utilisé le résumé textuel.
+$$Y = f(X)$$La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique [@pearl2016; @pearl2000; @rodgersEpistemologyMathematicalStatistical2010; @maxwell2017], sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène Y (e.g. le résultat à un examen) est une *fonction* de l'intervention X (e.g. est-ce que l'étudiant-e a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel ?). En d'autres termes, on peut s'attendre à un *pattern* dans la *distribution* du phénomène Y qui dépend/est fonction de l'intervention X. Par exemple: on s'attend à un effet de la modalité avec laquelle les notes d'un cours sont résumées (carte conceptuelle vs. résumé textuel) sur les notes obtenus à l'examen. Le *pattern* attendu consiste dans une distribution des notes obtenues par les étudiant-es ayant utilisé les cartes conceptuelles autour d'une moyenne plus élevée par rapport à la distribution des notes obtenues par les étudiant-es ayant utilisé le résumé textuel.
 
 D'un point de vue logique, la fonction causale est simple à déclarer en termes formels. En revanche, dans la pratique, déterminer un effet causal dans un environnement complexe est très difficile.
 
@@ -166,7 +166,7 @@ La recherche expérimentale en technologie éducative consiste donc principaleme
 
 ## Difficulté à établir des relations causales
 
-À l'intérieur d'un système complexe, dans lequel les relations entre concepts peuvent s'influencer mutuellement, réussir à détecter un mécanisme causal qui détermine la direction d'un effet (i.e. c'est l'intervention X qui détermine le phénomène Y) s'avère très difficile [@mackieCausesConditions1965; @pearl2000; @pearl2016; @pearl2018book]. Il existe différents mécanismes qui peuvent rendre la détection d'une mécanisme de cause à effet compliquée. Cette liste, adaptée des travaux de Pearl [@pearl2000; @pearl2016; @pearl2018book] -- voir aussi @mcelreathStatisticalRethinkingBayesian2020 -- en propose 4 : un mécanisme de relation inverse, la présence d'une cause commune, la présence d'un médiateur, et la présence d'un effet de *collision*.
+À l'intérieur d'un système complexe, dans lequel les relations entre concepts peuvent s'influencer mutuellement, réussir à détecter un mécanisme causal qui détermine la direction d'un effet (i.e. c'est l'intervention X qui détermine le phénomène Y) s'avère très difficile [@mackieCausesConditions1965; @pearl2000; @pearl2016; @pearl2018book]. Il existe différents mécanismes qui peuvent rendre la détection d'une mécanisme de cause à effet compliquée. Cette liste, adaptée des travaux de Pearl [@pearl2000; @pearl2016; @pearl2018book] -- voir aussi @mcelreathStatisticalRethinkingBayesian2020 -- en propose 4: un mécanisme de relation inverse, la présence d'une cause commune, la présence d'un médiateur, et la présence d'un effet de *collision*.
 
 ### Un mécanisme de relation inverse
 
@@ -188,7 +188,7 @@ $$
 Stickers \leftarrow Programmeur \rightarrow  Compétences
 $$
 
-Le fait d'avoir des stickers et d'avoir des compétences en programmation dérivent de la même cause : être programmeur. En revanche, si on ne considère pas cette cause commune et on se limite à observer que les étudiant-es avec les stickers ont des bonnes compétences en programmation, on pourrait faire l'hypothèse que les stickers ont un effet sur les connaissances en programmation (e.g. motivation, rappel, ...).
+Le fait d'avoir des stickers et d'avoir des compétences en programmation dérivent de la même cause: être programmeur. En revanche, si on ne considère pas cette cause commune et on se limite à observer que les étudiant-es avec les stickers ont des bonnes compétences en programmation, on pourrait faire l'hypothèse que les stickers ont un effet sur les connaissances en programmation (e.g. motivation, rappel, ...).
 
 ### La présence d'un médiateur
 
@@ -210,13 +210,13 @@ Ce phénomène s'avère lorsque X et Y ne sont pas en relation causale, mais les
 
 $$X \rightarrow Z \leftarrow Y$$
 
-Imaginons que pour être accepté-es dans un Master ($Z$) il faut soit avoir suivi un bachelor ($X$) ou avoir une idée de projet pertinente avec le type de formation dispensée ($Y$). Les deux variables ne sont pas liées : on peut avoir une bonne idée avec ou sans bachelor, et on peut avoir un bachelor avec ou sans une bonne idée de projet.
+Imaginons que pour être accepté-es dans un Master ($Z$) il faut soit avoir suivi un bachelor ($X$) ou avoir une idée de projet pertinente avec le type de formation dispensée ($Y$). Les deux variables ne sont pas liées: on peut avoir une bonne idée avec ou sans bachelor, et on peut avoir un bachelor avec ou sans une bonne idée de projet.
 
 $$
 Bachelor \rightarrow Admission \leftarrow Projet
 $$
 
-Imaginons que les responsables du Master émettent l'hypothèse que l'obtention du bachelor détermine la qualité du projet proposé. Pour cela ils ne prennent en considération que les étudiant-es qui ont été admis-es. À ce moment, les responsables vont croire qu'il y a en réalité un effet. Lorsque deux phénomène sont indépendants, la probabilité que l'un **et** l'autre se manifestent est plus faible par rapport à la manifestation de l'un **ou** l'autre individuellement. Si l'étudiant-e a un Bachelor, il/elle est admis-e même sans un projet intéressant. Il y a donc plus de chances que les étudiant-es avec bachelor aient proposé un projet pas très intéressant. La même chose s'applique par reflet aux étudiant-es admis-es avec un projet intéressant : ils ont moins de chances d'avoir un bachelor. En combinant les deux choses, il semble émerger un effet négatif du bachelor sur la qualité du projet, mais qui est dû à la sélection seulement des étudiant-es admis-es.
+Imaginons que les responsables du Master émettent l'hypothèse que l'obtention du bachelor détermine la qualité du projet proposé. Pour cela ils ne prennent en considération que les étudiant-es qui ont été admis-es. À ce moment, les responsables vont croire qu'il y a en réalité un effet. Lorsque deux phénomène sont indépendants, la probabilité que l'un **et** l'autre se manifestent est plus faible par rapport à la manifestation de l'un **ou** l'autre individuellement. Si l'étudiant-e a un Bachelor, il/elle est admis-e même sans un projet intéressant. Il y a donc plus de chances que les étudiant-es avec bachelor aient proposé un projet pas très intéressant. La même chose s'applique par reflet aux étudiant-es admis-es avec un projet intéressant: ils ont moins de chances d'avoir un bachelor. En combinant les deux choses, il semble émerger un effet négatif du bachelor sur la qualité du projet, mais qui est dû à la sélection seulement des étudiant-es admis-es.
 
 ## L'échelle de causalité
 
@@ -230,15 +230,15 @@ Nous proposons par la suite une description simplifiée des trois marches de l'�
 
 La première marche en bas de l'échelle consiste dans l'association de deux (ou plusieurs) phénomènes qui ont la tendance à se manifester selon des patterns récurrents. Comme indiqué plus haut dans la section consacrée aux difficultés dans l'établissement d'un mécanisme causale, une *simple* association ne permet cependant pas ni de déterminer si un phénomène est la cause de l'autre (ou vice-versa), ni d'exclure d'autres facteurs potentiels qui pourraient expliquer l'association (e.g. cause commune, médiateur ou effet de *collision*).
 
-Une association peut être déterminée de manière systématique par exemple à travers un sondage, comme dans l'exemple de l'image : 6 étudiant-es sur 10 demandent l'enregistrement vidéo des cours. On peut inférer depuis cette information que les étudiant-es associent l'enregistrement vidéo du cours à quelques formes de bénéfices pour leur apprentissage.
+Une association peut être déterminée de manière systématique par exemple à travers un sondage, comme dans l'exemple de l'image: 6 étudiant-es sur 10 demandent l'enregistrement vidéo des cours. On peut inférer depuis cette information que les étudiant-es associent l'enregistrement vidéo du cours à quelques formes de bénéfices pour leur apprentissage.
 
-Une autre manière de déterminer systématiquement une association consiste dans les études dites *corrélationnelles*, dans lesquelles le terme *association* est remplacé justement par le terme *corrélation* qui présente une connotation statistique précise. On peut en effet calculer la corrélation entre deux phénomènes mesurés quantitativement sur une échelle dans laquelle :
+Une autre manière de déterminer systématiquement une association consiste dans les études dites *corrélationnelles*, dans lesquelles le terme *association* est remplacé justement par le terme *corrélation* qui présente une connotation statistique précise. On peut en effet calculer la corrélation entre deux phénomènes mesurés quantitativement sur une échelle dans laquelle:
 
--   Un score s'approchant de -1 témoigne d'une corrélation *négative*, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière opposée : une valeur élevée de $X$ est associée à une faible valeur de $Y$ (et vice-versa) ; ou une valeur faible de $X$ est associée à une valeur élevée de $Y$ (et vice-versa).
+-   Un score s'approchant de -1 témoigne d'une corrélation *négative*, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière opposée: une valeur élevée de $X$ est associée à une faible valeur de $Y$ (et vice-versa) ; ou une valeur faible de $X$ est associée à une valeur élevée de $Y$ (et vice-versa).
 
 -   Un score s'approchant de 0 témoigne l'absence d'une corrélation, c'est-à-dire que les deux phénomène ont la tendance à varier sans un pattern identifiable (e.g. si l'un est élevé, l'autre peut être parfois élevé aussi, parfois faible, et parfois moyen).
 
--   Un score s'approchant de 1 témoigne d'une corrélation *positive*, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière spéculaire : une valeur élevée de $X$ est associée à une valeur élevée de $Y$ (et vice-versa) et une faible valeur de $X$ est associée à une faible valeur de $Y$ (et vice-versa).
+-   Un score s'approchant de 1 témoigne d'une corrélation *positive*, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière spéculaire: une valeur élevée de $X$ est associée à une valeur élevée de $Y$ (et vice-versa) et une faible valeur de $X$ est associée à une faible valeur de $Y$ (et vice-versa).
 
 ```{r correlations-examples, fig.height=3, fig.width=6, fig.cap="Exemple de corrélations"}
 set.seed(3)
@@ -274,7 +274,7 @@ ggplot(correlations, aes(x = x, y = y)) +
 
 ```
 
-À ce stade stade, l'activité typique du chercheur est d'observer/regarder attentivement le contexte ou les phénomènes d'intérêt et se poser des questions telles que :
+À ce stade stade, l'activité typique du chercheur est d'observer/regarder attentivement le contexte ou les phénomènes d'intérêt et se poser des questions telles que:
 
 -   Que se passe-t-il si je vois/observe ... ?
 -   De quelle manière les phénomènes sont-ils reliées ?
@@ -284,7 +284,7 @@ ggplot(correlations, aes(x = x, y = y)) +
 
 La deuxième marche de l'échelle concerne les intervenions. Une intervention est une action pondérée et planifiée qui est exécutée sur la réalité afin de produire un effet sur le phénomène d'intérêt. Contrairement à l'association qui peut être potentiellement *bi-directionnelle*, l'intervention vise à séparer ce qui relève du mécanisme causale (l'intervention $X$) et ce qui relève du phénomène causé/déterminé (le phénomène d'intérêt $Y$).
 
-Comme indiqué plus haut, l'intervention peut-être interprétée de manière très flexible : elle peut concerner des aspects très spécifiques et localisés (e.g. la position d'une image dans un document de texte) ou des aspects plus généraux et holistiques (e.g. une théorie de l'apprentissage).
+Comme indiqué plus haut, l'intervention peut-être interprétée de manière très flexible: elle peut concerner des aspects très spécifiques et localisés (e.g. la position d'une image dans un document de texte) ou des aspects plus généraux et holistiques (e.g. une théorie de l'apprentissage).
 
 En reprenant les exemples dans l'image de l'échelle proposée plus haut, on peut imaginer qu'un-e enseignant-e décide de mettre à disposition des étudiant-es l'enregistrement de l'intégralité de ses cours. Cette intervention est une action, pondérée et planifiée, qui vise modifier la réalité, c'est-à-dire obtenir un effet d'intérêt -- dans ce cas, faciliter l'apprentissage des contenus du cours.
 
@@ -314,7 +314,7 @@ before_after |>
 
 Les deux distributions de données suggèrent qu'il existe un effet entre avant et après. Cependant, il n'est pas possible de déterminer si cet effet est dû à l'intervention *mettre à disposition l'enregistrement des cours*. On ne peut en réalité pas distinguer l'intervention d'autres facteurs. Le gain de connaissance pourrait être dû au cours en général, mais également à d'autres cours dans la même formation. On ne peut paradoxalement même pas écarter la possibilité que l'effet aurait été plus grand si les enregistrements vidéos n'étaient pas à disposition. Les étudiant-es auraient pu perdre du temps à regarder l'intégralité des enregistrement au lieu d'utiliser ce temps pour faire d'autres activités plus propices à l'apprentissage.
 
-L'intervention est l'élément centrale de la méthode expérimentale, mais elle n'est en soi pas suffisante pour établir un mécanisme de cause à effet. Cette marche de l'échelle est caractérisée par l'action planifiée et pondérée. Les questions qu'on peut se poser à ce stade sont par exemple :
+L'intervention est l'élément centrale de la méthode expérimentale, mais elle n'est en soi pas suffisante pour établir un mécanisme de cause à effet. Cette marche de l'échelle est caractérisée par l'action planifiée et pondérée. Les questions qu'on peut se poser à ce stade sont par exemple:
 
 -   Comment je peux obtenir $Y$ ?
 
@@ -326,23 +326,23 @@ L'intervention est l'élément centrale de la méthode expérimentale, mais elle
 
 La dernière marche de l'échelle, celle qui s'approche le plus à l'explication d'un mécanisme causale, concerne les contre-factuels. Les conte-factuels exploitent la capacité de la pensée humaine à imaginer des scénarios alternatifs à ceux qui se sont déroulés. La question commune aux contre-factuels est *que se serait-il passé si j'avais fait ... ?*
 
-En maintenant l'exemple de l'enseignant-e qui met à disposition l'enregistrement vidéo de ses cours, des questions contre-factuels à se poser à la fin du cours pourraient être :
+En maintenant l'exemple de l'enseignant-e qui met à disposition l'enregistrement vidéo de ses cours, des questions contre-factuels à se poser à la fin du cours pourraient être:
 
 -   Qu'est-ce qui se serait passé si les étudiant-es n'avaient pas accès aux enregistrement du tout ?
 
 -   Qu'est-ce qui se serait passé si les étudiant-es avaient accès à des capsules vidéos plutôt que à l'intégralité des enregistrement ?
 
-On ne peut pas répondre à ces questions directement avec des faits, car les étudiant-es ont terminé leur cours avec l'enregistrement intégrale et donc on ne peut pas savoir comment *ces étudiant-es là* auraient réagi dans des conditions différentes. On pourrait donc imaginer de diviser les étudiant-es de la prochaine volée en trois groupes différents : (1) aucun accès à l'enregistrement vidéo ; (2) accès à l'intégralité de l'enregistrement ; (3) accès à des capsules vidéos. Cependant, cette expérience aurait les limitations suivantes :
+On ne peut pas répondre à ces questions directement avec des faits, car les étudiant-es ont terminé leur cours avec l'enregistrement intégrale et donc on ne peut pas savoir comment *ces étudiant-es là* auraient réagi dans des conditions différentes. On pourrait donc imaginer de diviser les étudiant-es de la prochaine volée en trois groupes différents: (1) aucun accès à l'enregistrement vidéo ; (2) accès à l'intégralité de l'enregistrement ; (3) accès à des capsules vidéos. Cependant, cette expérience aurait les limitations suivantes:
 
 1.  D'un point de vue éthique, cette répartition serait contraire au principe d'égalité de traitement des étudiant-es ;
 
-2.  D'un point de vue scientifique, on ne pourrait pas généraliser les résultats obtenus dans le cours en dehors du cadre spécifique. Par exemple, il serait difficile d'évaluer des éléments comme : est-ce que le matériel du cours est bien fait ? Est-ce qu'il permet vraiment d'apprendre quelque chose ? Est-ce le système de notation de l'enseignant-e est fiable et objectif ? Etc.
+2.  D'un point de vue scientifique, on ne pourrait pas généraliser les résultats obtenus dans le cours en dehors du cadre spécifique. Par exemple, il serait difficile d'évaluer des éléments comme: est-ce que le matériel du cours est bien fait ? Est-ce qu'il permet vraiment d'apprendre quelque chose ? Est-ce le système de notation de l'enseignant-e est fiable et objectif ? Etc.
 
 Ce qui serait utile à cet effet serait plutôt un *principe* qui nous indique si et sous quelles conditions les capsules vidéos sont plus propices à l'apprentissage par rapport à un enregistrement vidéos d'un cours ex-cathedra ou à pas de vidéos de support du tout. Pour obtenir ce type de principe, une manière de procéder est celle de mener une expérience *idéalisée* qui soit (1) représentative de la problématique qu'on veut aborder, et (2) présente des éléments *prototypiques* qui puissent être généralisés à un maximum de situations similaires.
 
-La question contre-factuel à laquelle ce type d'expérience essaie de répondre peut se synthétiser de la manière suivante : est-ce que **la même** personne bénéficie davantage d'une intervention plutôt que d'une autre par rapport au phénomène d'intérêt ? Ou est-ce que les interventions peuvent être jugées équivalentes, dans le sens ou le phénomène d'intérêt se manifesterait *exactement* de la même manière -- ou avec des différences négligeables -- sur **la même** personne, indépendamment du type d'intervention qu'elle aurait reçue ?
+La question contre-factuel à laquelle ce type d'expérience essaie de répondre peut se synthétiser de la manière suivante: est-ce que **la même** personne bénéficie davantage d'une intervention plutôt que d'une autre par rapport au phénomène d'intérêt ? Ou est-ce que les interventions peuvent être jugées équivalentes, dans le sens ou le phénomène d'intérêt se manifesterait *exactement* de la même manière -- ou avec des différences négligeables -- sur **la même** personne, indépendamment du type d'intervention qu'elle aurait reçue ?
 
-À ce stade de l'échelle de causalité, donc, les activités impliquées sont *imaginer*, *penser de manière rétrospective*, et *comprendre*. Les questions qu'on peut se poser à ce stade sont :
+À ce stade de l'échelle de causalité, donc, les activités impliquées sont *imaginer*, *penser de manière rétrospective*, et *comprendre*. Les questions qu'on peut se poser à ce stade sont:
 
 -   Que serait-il passé si j'avais fait différemment ?
 
@@ -354,7 +354,7 @@ La question contre-factuel à laquelle ce type d'expérience essaie de répondre
 
 L'échelle de causalité permet de penser en termes d'effets et maximise donc la possibilité de pouvoir distinguer des mécanismes causales. Dans cette perspective, les chercheurs émettent souvent -- mais pas toujours -- des hypothèses théoriques/causales qui essayent d'expliquer pourquoi et comment l'intervention peut avoir un effet sur le phénomène. Il s'agit d'identifier des mécanismes, comme par exemple des principes, qui s'appliquent dans des conditions, idéalement les plus généralisées possibles, et qui permettent à l'effet de se manifester.
 
-Dans l'exemple utilisé plus haut sur la mise à disposition des vidéos aux étudiant-es, on peut s'appuyer notamment sur des [principes de design multimédia applicables à la vidéo](https://edutechwiki.unige.ch/fr/Principes_de_design_multim%C3%A9dia_applicables_%C3%A0_la_vid%C3%A9o). Ces principes visent à maximiser l'efficacité de la vidéo comme instrument pédagogique en identifiant trois axes sur lesquels les caractéristiques de la vidéo peuvent agir :
+Dans l'exemple utilisé plus haut sur la mise à disposition des vidéos aux étudiant-es, on peut s'appuyer notamment sur des [principes de design multimédia applicables à la vidéo](https://edutechwiki.unige.ch/fr/Principes_de_design_multim%C3%A9dia_applicables_%C3%A0_la_vid%C3%A9o). Ces principes visent à maximiser l'efficacité de la vidéo comme instrument pédagogique en identifiant trois axes sur lesquels les caractéristiques de la vidéo peuvent agir:
 
 1.  Gérer la charge cognitive
 2.  Engager l'étudiant-e
@@ -362,7 +362,7 @@ Dans l'exemple utilisé plus haut sur la mise à disposition des vidéos aux ét
 
 Ces principes ont été dérivés empiriquement grâce à des expériences dans lesquelles des caractéristiques relatives aux trois axes ont été manipulées. Cependant, ces principes peuvent *fonctionner* à différents degrés (ou même ne pas fonctionner) selon certaines conditions ou caractéristiques des élèves. Par exemple, on n'engage pas de la même manière un-e étudiant-e novice sur un argument par rapport à un-e étudiant-e qui souhaite perfectionner ses connaissances déjà acquises.
 
-Il existe donc différents éléments à prendre en ligne de compte pour tester si une intervention peut avoir l'effet souhaité. En effet, on peut identifier des conditions ou facteurs externes qui peuvent :
+Il existe donc différents éléments à prendre en ligne de compte pour tester si une intervention peut avoir l'effet souhaité. En effet, on peut identifier des conditions ou facteurs externes qui peuvent:
 
 -   **Neutraliser l'effet de la vidéo sur les apprentissage**. Par exemple, si les étudiant-es n'ont pas le temps de regarder les vidéos chez eux, leur qualité intrinsèque n'aura aucun effet.
 
@@ -400,21 +400,21 @@ ggdag(example_dag) +
   theme_dag_blank()
 ```
 
-Si deux variables sont liées par une flèche, cela signifie qu'on s'attend à ce que la variable vers laquelle pointe la flèche est une fonction de la variable depuis laquelle démarre la flèche :
+Si deux variables sont liées par une flèche, cela signifie qu'on s'attend à ce que la variable vers laquelle pointe la flèche est une fonction de la variable depuis laquelle démarre la flèche:
 
 $$
 X \rightarrow Y \Longleftrightarrow f(X) = Y
 $$
 
-En d'autres termes, on s'attend à ce que la valeur de $Y$ soit **conditionnelle** à la valeur de $X$, car $X$ est une cause directe de $Y$. En termes formelles, cela peut être représenté ainsi :
+En d'autres termes, on s'attend à ce que la valeur de $Y$ soit **conditionnelle** à la valeur de $X$, car $X$ est une cause directe de $Y$. En termes formelles, cela peut être représenté ainsi:
 
 $$
 \mathbb{P}(Y|X) \neq \mathbb{P}(Y)
 $$
 
-En langage courant, cela s'interprète de la manière suivante : la probabilité (distribution) des valeurs de la variable $Y$ en sachant la valeur de la variable $X$ n'est pas la même que si on ne connaissait pas la valeur de $X$. Cela signifie, par exemple, que en sachant qu'un-e étudiant-e a passé beaucoup de temps à étudier pour un examen, on peut avoir une meilleure idée de la note obtenue par rapport à si l'information sur le temps passé à étudier n'était pas disponible.
+En langage courant, cela s'interprète de la manière suivante: la probabilité (distribution) des valeurs de la variable $Y$ en sachant la valeur de la variable $X$ n'est pas la même que si on ne connaissait pas la valeur de $X$. Cela signifie, par exemple, que en sachant qu'un-e étudiant-e a passé beaucoup de temps à étudier pour un examen, on peut avoir une meilleure idée de la note obtenue par rapport à si l'information sur le temps passé à étudier n'était pas disponible.
 
-Au contraire, si deux variables ne sont pas reliés par une flèche, cela signifie que leurs valeurs sont **indépendants**. En terme formels, cela se représente ainsi :
+Au contraire, si deux variables ne sont pas reliés par une flèche, cela signifie que leurs valeurs sont **indépendants**. En terme formels, cela se représente ainsi:
 
 $$
 \mathbb{P}(A|B) = \mathbb{P}(A)
@@ -424,7 +424,7 @@ Dans ce cas, même en sachant la valeur de la variable $B$, nous n'arrivons pas 
 
 L'avantage d'un DAG consiste à combiner une représentation graphique intuitive des rapports entre variables avec des dérivations mathématiques axiomatiques qui permettent d'inférer les facteurs qui peuvent influencer le rapport entre deux variables d'intérêt. Dans l'exemple de DAG proposé plus haut, par exemple, on s'intéresse à l'effet direct de la variable $X$ sur la variable $Y$. Grâce à la structure spécifique du DAG en question, on peut par exemple savoir que les variables $A$, $F$, et $M$ influencent l'effet direct $X \rightarrow Y$. Au contraire, les variables $C$ et $B$ n'influencent pas cet effet direct.
 
-Les potentialités et le fonctionnement d'un DAG dépasse le cadre introductif de ce cours. Mais il est important de savoir qu'un DAG peut contribuer énormément à savoir quel type de variable il est nécessaire de prendre en compte dans une expérience afin de pouvoir détecter l'effet d'une intervention sur un phénomène d'intérêt. En particulier, un DAG permet :
+Les potentialités et le fonctionnement d'un DAG dépasse le cadre introductif de ce cours. Mais il est important de savoir qu'un DAG peut contribuer énormément à savoir quel type de variable il est nécessaire de prendre en compte dans une expérience afin de pouvoir détecter l'effet d'une intervention sur un phénomène d'intérêt. En particulier, un DAG permet:
 
 1.  De définir une hypothèse théorique/causale en termes explicites et non ambigus. Dans l'exemple du DAG on émet explicitement l'hypothèse que la variable $X$ détermine de manière causale la variable $Y$.
 2.  De manifester les potentiels facteurs qui peuvent neutraliser, médier ou modérer cette relation causale. Ceci est très utile notamment pour savoir si on doit contrôler/ajuster empiriquement ou statistiquement pour certains variables afin d'éviter des potentiels facteurs parasites dans la chaîne causale qu'on veut tester. (Nous verrons plus bas la définition formelle d'un facteur parasite.)
@@ -433,37 +433,55 @@ Grâce à un DAG bien défini, les chercheurs se mettent dans une meilleure posi
 
 # Processus génératif des données
 
-Le processus génératif des données est l'étape *concrète* d'une expérience. Jusqu'à maintenant, l'expérience a été d'abord justifiée d'un point de vue scientifique et éthique, et ensuite définie en termes de relations causales et hypothèses théoriques. En d'autres termes, pour l'instant l'expérience reste dans le domaine de l'imagé ou de l'idéalisé : selon les connaissances dont nous disposons et une chaîne de dérivations causales sur les relations entre une intervention et un phénomène d'intérêt, nous nous attendons à ce que l'intervention produit un certain effet.
+Le processus génératif des données est l'étape *concrète* d'une expérience. Jusqu'à maintenant, l'expérience a été d'abord justifiée d'un point de vue scientifique et éthique, et ensuite définie en termes de relations causales et hypothèses théoriques. En d'autres termes, pour l'instant l'expérience reste dans le domaine de l'imagé ou de l'idéalisé: selon les connaissances dont nous disposons et une chaîne de dérivations causales sur les relations entre une intervention et un phénomène d'intérêt, nous nous attendons à ce que l'intervention produit un certain effet.
 
-À ce moment, il faut tester si ce raisonnement imagé et idéalisé peut se produire dans la réalité. Pour ce faire, les chercheurs crée un *micro-monde* dans lequel produire les **conditions nécessaires et suffisantes** à déclencher d'abord et mesurer ensuite l'effet de l'intervention sur le phénomène d'intérêt. Ce micro-monde se compose principalement des éléments suivants : (1) l'opéralisation des variables concernées; (2) le plan ou le design expérimental; (3) les entités observées, c'est-à-dire les participant-es dans la plupart des cas en technologie éducative; (4) le matériel expérimental; (5) le protocole ou la procédure expérimentale; et (6) l'analyse des données à mener pour déterminer la présence, la direction, la magnitude et l'incertitude autour de l'effet envisagé.
+À ce moment, il faut tester si ce raisonnement imagé et idéalisé peut se produire dans la réalité. Pour ce faire, les chercheurs créent un *micro-monde* dans lequel produire les **conditions nécessaires et suffisantes** à déclencher d'abord et mesurer ensuite l'effet de l'intervention sur le phénomène d'intérêt. Le *micro-monde* vise à trouver un équilibre entre la représentativité de la *réalité* d'une parte, et la réduction de la complexité nécessaire pour pouvoir isoler l'effet de l'intervention d'autres effets potentiels.
+
+![Le micro-monde vise à produire les conditions nécessaires et suffisantes aux objectifs de l'expérience.](images/macro-vs-micro-monde.png){width="70%"}
+
+C'est au niveau du micro-monde qui sont générées, récoltées et analysées les données empiriques. Le micro-monde se compose des choix épistémologiques et méthodologiques des chercheurs qui s'articulent principalement dans les éléments suivants:
+
+1.  l'opéralisation des variables concernées;
+
+2.  le design expérimental;
+
+3.  les entités observées, c'est-à-dire les participant-es dans la plupart des cas en technologie éducative;
+
+4.  le matériel expérimental;
+
+5.  le protocole ou la procédure expérimentale;
+
+6.  l'analyse des données à mener pour déterminer la présence, la direction, la magnitude et l'incertitude autour de l'effet envisagé.
 
 ## Variables
 
-La partie probablement la plus importante du processus de génération des données consiste dans les choix des variables. Ce sont les variables qui déterminent les caractéristiques toutes les autres éléments du *micro-monde*. On identifie en général quatre types de variables :
+La partie probablement la plus importante du processus de génération des données consiste dans le choix des variables. Ce sont les variables qui déterminent les caractéristiques des autres éléments du *micro-monde*. On identifie en général trois types de variables:
 
 1.  La variable indépendante (VI)
 2.  La variable dépendante (VD)
-3.  Les variable bloquées/neutralisées ou contrôlées/ajustées
+3.  La variable bloquée/neutralisée ou contrôlée/ajustée
 
-Une expérience doit *à minima* proposer une variable indépendante et une variable dépendante, avec potentiellement un nombre de VIs et VDs infini. Les variables bloquées/neutralisées et contrôlées sont par contre optionnelles et souvent déclarées de manière implicite (par exemple à travers la sélection des participantes selon des critères spécifiques). La distinction entre variable bloquée/neutralisée et contrôlée n'est parfois pas explicitée ou est traitée de manière différente selon les manuels de méthode. Au contraire, la VI et la VD sont toujours traitées.
+Une expérience doit *à minima* proposer une variable indépendante et une variable dépendante, avec potentiellement un nombre de VIs et VDs infini. Les variables bloquées/neutralisées ou contrôlées/ajustées sont par contre optionnelles et souvent déclarées de manière implicite (par exemple à travers la sélection des participantes selon des critères spécifiques). La distinction entre variable bloquée/neutralisée et contrôlée/ajustée n'est parfois pas explicitée ou est traitée de manière différente selon les manuels de méthode. Au contraire, la VI et la VD sont toujours traitées.
 
-### Variable indépendante : l'*explenans*
+### Variable indépendante: l'*explenans*
 
-Dans le *micro-monde* expérimental, la variable indépendante (**VI**) représente l'intervention dont on souhaite évaluer l'effet. Contrairement à la phase de justification et de l'explication causale potentielle dans lesquelles l'intervention est traitée de manière abstraite ou en forme de *principe*, dans le *micro-monde* la VI est **opérationnalisée**. Ce terme, très cher surtout aux psychologues, est parfois considéré de manière négative car retenu par certains une vestige de la période positiviste dans les sciences. Ce qu'il faut retenir de ce terme est tout simplement que l'intervention est implémentée concrètement dans un format qui permet de la manifester dans le *micro-monde* expérimental.
+Dans le *micro-monde* expérimental, la variable indépendante (**VI**) représente l'intervention dont on souhaite évaluer l'effet. Contrairement à la phase de justification et de l'explication causale potentielle dans lesquelles l'intervention est traitée de manière abstraite ou en forme de *principe*, dans le *micro-monde* la VI est **opérationnalisée**. Ce terme, très cher surtout aux psychologues, est parfois considéré de manière négative car retenu par certains une vestige de la période positiviste dans les sciences [@godfrey-smithTheoryRealityIntroduction2003; @meehlPhilosophyScienceHelp2006]. Ce qu'il faut retenir de ce terme est tout simplement que l'intervention est implémentée concrètement dans un format qui permet de la manifester dans le *micro-monde* expérimental.
 
-La variable est dite indépendante car sa valeur n'est pas contrainte par autre chose si ce n'est le choix des chercheurs. En d'autres termes, les chercheurs peuvent manipuler de manière indépendante les valeurs de cette variable, sans avoir à se soumettre à des contraintes extérieures, si ce n'est au niveau de la justification éthique. À travers la manipulation, les chercheurs essaient d'expliquer l'effet de la VI sur la VD, pour cette raison la VI est aussi appelée ***explenans***, depuis le latin, c'est-à-dire *ce qui explique*.
+La variable est dite indépendante car sa valeur n'est pas contrainte par autre chose si ce n'est le choix des chercheurs. En d'autres termes, les chercheurs peuvent manipuler de manière indépendante les valeurs de cette variable, sans avoir à se soumettre à des contraintes extérieures, si ce n'est au niveau de la justification éthique. À travers la manipulation, les chercheurs essaient d'expliquer l'effet de la VI sur la VD. Pour cette raison, la VI est aussi appelée ***explenans***, du latin: *ce qui explique*.
 
-Même s'il serait potentiellement possible de manipuler une variable sur un nombre de valeurs très large (e.g. faire étudier une personne 1 seconds, une autre personne 2 second, ... etc.), cela n'est pas imaginable d'un point de vue pratique. Pour cette raison, une variable indépendante assume généralement un nombre limité de valeurs qui sont dites **modalités ou niveaux de la VI**. Le nombre minimal de modalités/niveaux est de 2, ce qui permet notamment de comparer deux interventions potentielles, comme dans le cas célèbre des essais **contrôle/treatement** utilisés en médecine ou psychologie clinique. Dans ce type d'expérience, on compare deux groupes qui varient sur une seule variable indépendante : un groupe est sujet au traitement clinique, tandis que l'autre ne l'est pas et représente donc le groupe contrôle ou groupe de référence.
+Même s'il serait potentiellement possible de manipuler une variable sur un nombre de valeurs très large (e.g. faire étudier une personne 1 seconds, une autre personne 2 second, ... etc.), cela n'est pas imaginable d'un point de vue pratique. Pour cette raison, une variable indépendante assume généralement un nombre limité de valeurs qui sont dites **modalités ou niveaux de la VI**. Le nombre minimal de modalités/niveaux est de 2, ce qui permet notamment de comparer deux interventions potentielles, comme dans le cas célèbre des essais **contrôle/treatement** utilisés en médecine ou psychologie clinique. Dans ce type d'expérience, on compare deux groupes qui varient sur une seule variable indépendante: un groupe $X_1$ est sujet au traitement clinique, tandis que l'autre groupe $X_0$ ne l'est pas et représente donc le groupe contrôle ou groupe de référence.
 
-Lorsqu'on implémente deux ou plusieurs VIs on à faire à un plan dit **factoriel**, car le plan implique l'étude de l'effet de différents facteurs chacun avec au moins deux modalités/niveaux différents. Par exemple, un plan factoriel très célèbre est le plan factoriel 2x2, dans lequel on étudie l'effet de deux VIs chacune avec deux modalités/niveaux. Le croisement des quatre modalités/niveaux crée ce plan 2x2 avec 4 **conditions** différentes. Par exemple, les chercherus peuvent manipuler simultanément :
+![Une variable indépendante représente l'intervention $X$ et possède au moins deux modalités $X_0$ et $X_1$ et son effet est évalué sur le phénomène d'intérêt $Y$.](images/variable-independante.png){width="60%"}
 
-1.  VI1 = support de lecture, avec modalités :
+Lorsqu'on implémente deux ou plusieurs VIs on à faire à un design dit **factoriel**, car le plan implique l'étude de l'effet de différents facteurs chacun avec au moins deux modalités/niveaux différents. Un plan factoriel très célèbre est le plan 2x2, dans lequel on étudie l'effet de deux VIs chacune avec deux modalités/niveaux. Le croisement des quatre modalités/niveaux crée ce plan 2x2 avec 4 **conditions expérimentales** différentes. Par exemple, les chercheurs peuvent manipuler simultanément:
+
+1.  VI1 = support de lecture, avec modalités:
 
     1.  Livre papier
 
     2.  E-book
 
-2.  VI2 = difficulté du texte, avec modalités :
+2.  VI2 = difficulté du texte, avec modalités:
 
     1.  Facile
 
@@ -480,16 +498,18 @@ Lorsqu'on implémente deux ou plusieurs VIs on à faire à un plan dit **factori
 
 : Les quatre conditions d'un plan factoriel 2x2
 
-### Variable dépendante : l'*explenandum*
+### Variable dépendante: l'*explenandum*
 
-Dans le *micro-monde* expérimental, la variable dépendante (**VD**) représente le phénomène d'intérêt qui est causé par la VI. Pour cette raison, la VD est aussi appellée ***explenandum***, c'est-à-dire *ce qu'on veut expliquer*.
+Dans le *micro-monde* expérimental, la variable dépendante (**VD**) représente le phénomène d'intérêt qui est causé par la VI. Pour cette raison, la VD est aussi appelée ***explenandum***, du latin: *ce qu'on veut expliquer*.
 
-Une expérience peut proposer une ou plusieurs VD. Tout comme la VI, aussi la VD doit être opérationnalisée. Cependant, contrairement à la VI sur laquelle les chercheurs peuvent agir de manière indépendante, la VD est déterminée par le déroulement de l'expérience. En d'autres termes, la VD est la mesure du phénomène suite au déclenchement de celui-ci par la VI. Pour cette raison elle est dite **dépendante**. Ce terme possède une double perspective :
+![La variable dépendante représente le phénomène $Y$. Dans une expérience, on peut avoir une ou plusieurs VD](images/variable-dependante.png){width="70%"}
 
-1.  Elle est dépendante du déroulement de l'expérience, donc en dehors de la possibilité de manipulation du chercheur une fois qu'elle a été opérationnalisée
-2.  Elle est dépendante de la VI, car dans la plupart des cas on s'attend à une distribution de la VD qui est conditionnelle à la VI. En termes formels, comme indiqué plus haut, on pose donc l'hypothèse que $\mathbb{P}(VD | VI) \neq \mathbb{P}(VD)$. On verra plus bas qu'on peut également poser l'hypothèse contraire, c'est-à-dire qu'il n'y a pas d'effet de la VI sur la VD, et donc que la VD est indépendante de la VI. Malheureusement dans la littérature sur la méthode expérimentale les termes se croisent souvent et il faut faire attention à bien comprendre le mécanisme plus que mémoriser les termes.
+Une expérience peut proposer une ou plusieurs VDs. Tout comme la VI, aussi la VD doit être opérationnalisée. Cependant, contrairement à la VI sur laquelle les chercheurs peuvent agir de manière indépendante, la VD est déterminée par le déroulement de l'expérience. En d'autres termes, la VD est la mesure du phénomène suite au déclenchement de celui-ci par la VI. Pour cette raison elle est dite **dépendante**. Ce terme possède une double perspective:
 
-Pour que la VD soit représentative du phénomène d'intérêt, elle doit respecter trois critères fondamentaux :
+1.  La variable est dépendante du déroulement de l'expérience, donc en dehors de la possibilité de manipulation du chercheur une fois qu'elle a été opérationnalisée
+2.  La variable est dépendante de la VI, car dans la plupart des cas on s'attend à une distribution de la VD qui est conditionnelle à la VI. En termes formels, comme indiqué plus haut, on pose donc l'hypothèse que $\mathbb{P}(VD | VI) \neq \mathbb{P}(VD)$. On verra plus bas qu'on peut également poser l'hypothèse contraire, c'est-à-dire qu'il n'y a pas d'effet de la VI sur la VD, et donc que la VD est indépendante de la VI. Malheureusement dans la littérature sur la méthode expérimentale les termes se croisent souvent et il faut faire attention à bien comprendre le mécanisme plus que mémoriser les termes.
+
+Pour que la VD soit représentative du phénomène d'intérêt, elle doit respecter trois critères fondamentaux:
 
 -   **La sensibilité**\
     Elle concerne la capacité de la VD à discriminer des valeurs différentes sur l'échelle. Par exemple, un test sur la pensée computationnelle dans lequel tout le monde obtient le maximum (effet plafond) ou le minimum (effet plancher) des points possibles ne serait pas sensible. La sensibilité est donc étroitement liée au type de mesure choisi. On peut en effet avoir des mesures discrètes (qualitatives ou ordinales) ou des mesures continues [@williams2021]. Le type de mesure choisi détermine aussi la distribution qu'on peut s'attendre de la VD est, par reflet, aussi le type d'analyse statistique à mener.
@@ -502,24 +522,24 @@ Pour que la VD soit représentative du phénomène d'intérêt, elle doit respec
 
 ### Variables bloquées/neutralisées ou contrôlées/ajustées
 
-Dans le *micro-monde* expérimental, un enjeu principal consiste à créer les conditions nécessaires et suffisantes pour potentiellement créer l'effet de la VI sur la VD. Cela signifie que toute autre source potentielle d'influence sur la VD doit être de quelque sorte *désactivé*. Cette fonction est prise en charge par deux techniques : (1) la randomisation (traitée plus bas dans la partie sur le plan ou design expérimental), et (2) le blocage/neutralisation ou contrôle d'autres variables.
+Dans le *micro-monde* expérimental, un enjeu principal consiste à créer les conditions nécessaires et suffisantes pour potentiellement créer l'effet de la VI sur la VD. Cela signifie que toute autre source potentielle d'influence sur la VD doit être de quelque sorte *désactivé*. Cette fonction est prise en charge par deux techniques: (1) la randomisation (traitée plus bas dans la partie sur le design expérimental), et (2) le blocage/neutralisation ou contrôle d'autres variables.
 
 Comme nous l'avons vu plus haut avec l'introduction d'un modèle structural causal sous forme d'un DAG, il existe potentiellement un large nombre de facteurs qui peuvent jouer un rôle important dans la relation entre deux variables. En d'autres termes, il existe d'autres variables indépendantes potentielles en plus de celle ou celles qui sont en visées par les chercheurs de manière particulière dans une expérience.
 
-Surtout en psychologie on utilise souvent cette formule pour définir ce concept : il faut déterminer l'effet de la VI sur la VD, *toutes choses étant égales par ailleurs*. En d'autres termes, pour s'assurer que c'est la variation sur la VI qui produit un effet sur la VD, il faut que toute autre source potentielle de variation soit *inhibée*. Pour ce faire, il existe principalement deux techniques :
+Surtout en psychologie on utilise souvent cette formule pour définir ce concept: il faut déterminer l'effet de la VI sur la VD, *toutes choses étant égales par ailleurs*. En d'autres termes, pour s'assurer que c'est la variation sur la VI qui produit un effet sur la VD, il faut que toute autre source potentielle de variation soit *inhibée*. Pour ce faire, il existe principalement deux techniques:
 
 -   **Bloquer/neutraliser une variable en amont**\
     Avec cette technique, les chercheurs décident de ne prendre en considération que les instances d'une seule valeur d'une autre variable. En d'autres termes, cette variable est *fixée* à une valeur spécifique. Par exemple, on peut imaginer que les compétences techniques préalables des étudiant-es jouent un rôle important sur leur sentiment d'auto-efficacité dans l'utilisation d'une technologie éducative. Lorsque les chercheurs s'intéressent à comparer deux technologies éducative différentes pour déterminer si l'une produit un meilleur sentiment d'auto-efficacité comparé à l'autre, les chercheurs peuvent décider d'obtenir une estimation plus fiable si seulement des étudiant-es avec des bonnes compétences techniques participent à l'expérience. De ce fait, la variable *compétence technique* est bloquée/neutralisé en amont de l'expérience par un filtre qui *laisse passer* seulement des participant-es qu'on peut juger équivalents au niveau de leurs compétences techniques préalables. Il en suit qu'il faut de quelque manière un mécanisme de *screening* sensible, fiable et valide (voir plus haut pour la VD) pour s'assurer que les participant-es puissent vraiment être considérées comme équivalents. Une autre technique de neutralisation/blocage d'une variable consiste à utiliser un nombre équivalent de participant-es sur une variable donnée. Par exemple, si on s'intéresse l'effet d'une technologie éducative introduite dans un Master commun entre Sciences de l'Éducation et Psychologie, mais on soupçonne que les étudiant-es vont réagir différemment à cette technologie selon leur background académique, on peut *filtrer* les participant-es pour avoir exactement le même nombre d'étudiant-es provenant d'un cursus ou de l'autre.
 -   **Contrôler/ajuster une variable en aval\
     **Souvent il est néanmoins pas possible de *filtrer* par rapport à une autre variable en amont. C'est le cas, par exemple, d'une deuxième variable qui peut être déclenchée directement par l'expérience en elle-même, ou qu'on ne peut pas mesurer en amont sans dévoiler des informations sensibles au niveau des objectifs de la recherche. Imaginons que les chercheurs s'intéressent à l'efficacité de deux jeux vidéos pédagogiques sur le développement des compétences langagières des adolescents entre 14 et 16 ans. Or, les chercheurs veulent évaluer l'efficacité des deux jeux indépendamment de l'intérêt des adolescents pour les jeux vidéos. Ils ne peuvent donc pas insérer cette information dans l'affiche de recrutement, car cela risquerait d'attirer seulement des adolescents intéressé-es par les jeux vidéos. À ce moment, ces chercheurs peuvent faire recours à une technique statistique qui permet de contrôler/ajuster l'effet de la VI sur la VD par rapport aux valeurs d'une troisième variable (et potentiellement d'autres variables encore). Pour ce faire, cependant, ils doivent non seulement obtenir une mesure des compétences langagières (i.e. la VD), mais également de l'intérêt des participant-es pour les jeux vidéos.
 
-De manière plus abstraite, @meehlAppraisingAmendingTheories1990 propose une formule logique lorsque le test d'une théorie/hypothèse est effectué :
+De manière plus abstraite, @meehlAppraisingAmendingTheories1990 propose une formule logique lorsque le test d'une théorie/hypothèse est effectué:
 
 $$
 (T/H \cdot A_t \cdot C_p \cdot A_i \cdot C_n) \Longrightarrow (O_1 \subset O_2) 
 $$
 
-Dans cette formule :
+Dans cette formule:
 
 -   $T/H$ représente la théorie ou l'hypothèse d'intérêt du chercheur dans l'expérience en question
 
@@ -535,7 +555,37 @@ Dans cette formule :
 
 Le message à tirer de cette formule est que pour établir l'effet de la théorie/hypothèse en question, il faut un complexe emboîtement entre différents éléments. Ceci comporte également la difficulté de *falsifier* une théorie, c'est-à-dire qu'elle ne produit pas les observations/phénomènes attendus. En effet, si on n'obtient pas ce que l'on s'attend, on peut toujours attribuer la *faute* à une autre élément de la formule sur la gauche.
 
-## Plan ou design expérimental
+## Design expérimental
+
+Le design (ou plan) expérimental articule les relations entre la ou les variables indépendantes et la ou les variables dépendantes. Pour illustrer l'importance du plan expérimental d'un point de vue de l'explication causale potentielle, cette partie propose la comparaison entre trois types de plans ou designs:
+
+1.  Le design non-expérimental
+2.  Le design quasi-expérimental
+3.  Le design expérimental *complet*
+
+Ensuite, les variantes de design inter-sujets, intra-sujets ou mixte, ainsi que le design à mesure répétée seront également abordés brièvement.
+
+### Design non-expérimental
+
+Dans ce type de design, toutes les entités observées (e.g. les participant-es) sont exposés à la même intervention. En d'autres termes, ce comme si la variable indépendante n'avait qu'une seule et même modalité $X_1$. À ce moment, l'effet de l'intervention est mesurée sur une ou plusieurs variables dépendantes.
+
+Un exemple de design non-expérimental est représenté tout simplement par n'importe quel cours. L'intervention $X_1$ consiste à exposer les étudiant-es à des contenus et activités pédagogiques qui sont censées produire un effet sur les compétences et connaissances finales de l'étudiant-e. Pour des raisons d'équité, les étudiant-es participent d'une manière qui est jugée équivalente indépendamment de leurs caractéristiques. Même dans le cas de la pédagogie par projet, on évalue que les conditions des travaux (e.g. travaux par groupes) sont équivalentes pour l'ensemble des étudiant-es.
+
+Comme il a déjà été brièvement abordé plus haut, lorsque tout-e étudiant-e est exposé-e exactement à la même intervention $X_1$, il n'est pas possible de déterminer si c'est cette intervention spécifique qui produit l'effet sur les apprentissages. En effet, les étudiant-es pourraient améliorer leurs connaissances et compétences grâce à un autre cours dans le même cursus qui traite de sujets similaires ou complémentaires. Paradoxalement, il n'est même pas possible d'écarter la possibilité que les compétences ou connaissances des étudiant-es seraient même majeurs sans l'intervention $X_1$. Il se peut que le cours freine l'apprentissage des étudiant-es par exemple en les privant de temps à consacrer à des activités pédagogiques plus propices ou en interférant avec les contenus ou activités d'autres cours.
+
+### Design quasi-expérimental
+
+Dans le design quasi-expérimental, il existe au moins deux modalités d'une VI, mais les entités/participant-es sont attribués à chaque modalité selon un critère pré-établi. Par exemple, deux classes d'une école peuvent être attribués à deux scénarios techno-pédagogiques différents, mais l'attribution de chaque élève au scénario est donc dépendant de son appartenance à la classe. De ce fait, il n'est pas possible d'exclure que les deux classes diffèrent sur d'autres facteurs qui pourraient expliquer, influencer, ou même masquer l'efficacité des deux scénarios pédagogiques sur le phénomène d'intérêt. Une classe pourrait en effet être plus avancée de l'autre dans le programme sur un sujet en relation avec les scénarios.
+
+Cette condition non-optimale est néanmoins parfois nécessaires, notamment lorsqu'il n'est pas possible d'attribuer aléatoirement les entités/participant-es à une modalité spécifique de la VI. À ce moment, il est souvent nécessaire de faire recours au contrôle/ajustement en aval des variables évoqué plus haut dans le texte. On pourrait en effet imaginer de faire passer un test de connaissance sur le sujet et utiliser ce score dans le modèle statistique pour tenir compte de cette source de variabilité extrinsèque aux scénarios techno-pédagogiques. Mais ce type de contrôle en aval nécessite d'une définition précise et non ambigüe d'un modèle structure causal comme illustré plus haut [@pearlCausalInferenceStatistics2016; @pearl2018book; @rohrer2018].
+
+La situation quasi-expérimentale la plus difficile à gérer s'avère lorsque les entités/participant-es décident volontairement de s'attribuer à une modalité spécifique de la VI. Par exemple, on peut imaginer de laisser aux étudiant-es d'une classe le choix d'utiliser ou pas un logiciel de support à l'argumentation. À ce moment, le choix de s'auto-attribuer à la condition $X_0$ (sans logiciel) ou $X_1$ (avec logiciel) est très probablement dictée, au moins en partie, par l'intérêt ou les capacités préalables en argumentation de l'étudiant-e. De ce fait, même en présence d'une meilleure efficacité des étudiant-es en $X_1$ lors du test d'argumentation (VD), il ne sera pas possible de départager l'effet induit par le logiciel de l'effet *statique* dû aux caractéristiques des étudiant-es.
+
+### Design expérimental *complet*
+
+### Design inter-sujet, intra-sujet ou mixte
+
+### Design expérimental à mesure répetée
 
 ## Participant-es
 
@@ -547,7 +597,7 @@ Le message à tirer de cette formule est que pour établir l'effet de la théori
 
 L'analyse des données sera traitée de manière plus détaillée dans les fondements statistiques de la méthode expérimentale. Mais d'un point de vue empirique, l'analyse des données est également liée à ce qu'on appelle des hypothèses opérationnelles. Ces hypothèses sont l'application au *micro-monde* des éventuelles explications causales potentielles exprimées à travers les hypothèses théoriques. La différence concerne le fait que les hypothèses opérationnelles sont exprimées sur la base des variables indépendantes et dépandantes retenues pour représenter l'intervention et le phénomène d'intérêt.
 
-Donc dans l'exemple sur l'effet du support vidéo sur l'apprentissage, l'hypothèse théorique sera exprimée sur la base de l'effet des modalités/conditions de la VI (lecture d'un texte, enregistrement d'un cours ex-cathedra de 30 minutes, et vision de 3 capsules vidéos de 5 minutes chaque) sur la mesure de l'apprentissage identifiée comme le score à un quizz sur le contenu du support. Une hypothèse opérationnelle possible consisterait par exemple à avancer prévoir/s'attendre à distribution des scores au test de compréhension (VD) autour de moyennes ordonnées de la manière suivante :
+Donc dans l'exemple sur l'effet du support vidéo sur l'apprentissage, l'hypothèse théorique sera exprimée sur la base de l'effet des modalités/conditions de la VI (lecture d'un texte, enregistrement d'un cours ex-cathedra de 30 minutes, et vision de 3 capsules vidéos de 5 minutes chaque) sur la mesure de l'apprentissage identifiée comme le score à un quizz sur le contenu du support. Une hypothèse opérationnelle possible consisterait par exemple à avancer prévoir/s'attendre à distribution des scores au test de compréhension (VD) autour de moyennes ordonnées de la manière suivante:
 
 -   La moyenne des scores de compréhension dans la modalité *capsules* est plus élevée de la moyenne dans la modalités *texte*
 

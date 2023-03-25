@@ -1,10 +1,8 @@
 \usepackage{fancyhdr}
+\usepackage{truncate}
 \pagestyle{fancy}
-\fancyhf{}
-\fancyhead[LE,RO]{\thepage}
-\usepackage[fit]{truncate}
-\fancyhead[LO]{\nouppercase{\truncate{0.9\headwidth}{\leftmark}}}
-\fancyhead[RE]{\nouppercase{\truncate{0.9\headwidth}{\leftmark}}}
+
+\usepackage[font=small,labelfont=bf,width=0.8\textwidth,justification=centering]{caption}
 
 \renewcommand{\topfraction}{.85}
 \renewcommand{\bottomfraction}{.7}

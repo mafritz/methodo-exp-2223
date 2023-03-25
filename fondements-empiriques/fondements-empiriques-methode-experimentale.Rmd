@@ -448,29 +448,29 @@ La partie probablement la plus importante du processus de génération des donn�
 
 Une expérience doit *à minima* proposer une variable indépendante et une variable dépendante, avec potentiellement un nombre de VIs et VDs infini. Les variables bloquées/neutralisées et contrôlées sont par contre optionnelles et souvent déclarées de manière implicite (par exemple à travers la sélection des participantes selon des critères spécifiques). La distinction entre variable bloquée/neutralisée et contrôlée n'est parfois pas explicitée ou est traitée de manière différente selon les manuels de méthode. Au contraire, la VI et la VD sont toujours traitées.
 
-### Variable indépendante (VI)
+### Variable indépendante (VI) : l'*explenans*
 
-Dans le *micro-monde* expérimental, la variable indépendante (VI) représente l'intervention dont on souhaite évaluer l'effet. Contrairement à la phase de justification et de l'explication causale potentielle dans lesquelles l'intervention est traitée de manière abstraite ou en forme de *principe*, dans le *micro-monde* la VI est **opérationnalisée**, un terme très cher surtout aux psychologues, mais qui est parfois considéré de manière négative car retenu par certains une vestige de la période positiviste dans les sciences. Ce qu'il faut retenir de ce terme est tout simplement que l'intervention est implémenté concrètement dans un format qui permet de la manifester dans le *micro-monde* expérimental.
+Dans le *micro-monde* expérimental, la variable indépendante (VI) représente l'intervention dont on souhaite évaluer l'effet. Contrairement à la phase de justification et de l'explication causale potentielle dans lesquelles l'intervention est traitée de manière abstraite ou en forme de *principe*, dans le *micro-monde* la VI est **opérationnalisée**. Ce terme, très cher surtout aux psychologues, est parfois considéré de manière négative car retenu par certains une vestige de la période positiviste dans les sciences. Ce qu'il faut retenir de ce terme est tout simplement que l'intervention est implémentée concrètement dans un format qui permet de la manifester dans le *micro-monde* expérimental.
 
-La variable est dite indépendante car sa valeur n'est pas contrainte par autre chose si ce n'est le choix des chercheurs. En d'autres termes, les chercheurs peuvent manipuler des manière indépendante les valeurs de cette variable, sans avoir à se soumettre à des contraintes extérieures, si ce n'est au niveau de la justification éthique.
+La variable est dite indépendante car sa valeur n'est pas contrainte par autre chose si ce n'est le choix des chercheurs. En d'autres termes, les chercheurs peuvent manipuler de manière indépendante les valeurs de cette variable, sans avoir à se soumettre à des contraintes extérieures, si ce n'est au niveau de la justification éthique. À travers la manipulation, les chercheurs essaient d'expliquer l'effet de la VI sur la VD, pour cette raison la VI est aussi appelée ***explenans***, depuis le latin, c'est-à-dire *ce qui explique*.
 
-Même s'il serait potentiellement possible de manipuler une variable sur un nombre de valeurs très large (e.g. faire étudier une personne 1 seconds, une autre personne 2 second, ... etc.), cela n'est pas pratiquement imaginable. Pour cette raison, une variable indépendante peut assumer un nombre limité de valeurs qui sont dites **modalités ou niveaux de la VI**. Le nombre minimal de modalités/niveaux est de 2, ce qui permet notamment de comparer deux interventions potentielles, comme dans le cas célèbre des essais **contrôle/treatement** utilisés en médecine ou psychologie clinique. Dans ce type d'expérience, on compare deux groupes qui varient sur une seule variable indépendante : un groupe est sujet au traitement clinique, tandis que l'autre ne l'est pas et représente donc le groupe contrôle ou groupe de référence.
+Même s'il serait potentiellement possible de manipuler une variable sur un nombre de valeurs très large (e.g. faire étudier une personne 1 seconds, une autre personne 2 second, ... etc.), cela n'est pas imaginable d'un point de vue pratique. Pour cette raison, une variable indépendante assume généralement un nombre limité de valeurs qui sont dites **modalités ou niveaux de la VI**. Le nombre minimal de modalités/niveaux est de 2, ce qui permet notamment de comparer deux interventions potentielles, comme dans le cas célèbre des essais **contrôle/treatement** utilisés en médecine ou psychologie clinique. Dans ce type d'expérience, on compare deux groupes qui varient sur une seule variable indépendante : un groupe est sujet au traitement clinique, tandis que l'autre ne l'est pas et représente donc le groupe contrôle ou groupe de référence.
 
 Lorsqu'on implémente deux ou plusieurs VIs on à faire à un plan dit **factoriel**, car le plan implique l'étude de l'effet de différents facteurs chacun avec au moins deux modalités/niveaux différents. Par exemple, un plan factoriel très célèbre est le plan factoriel 2x2, dans lequel on étudie l'effet de deux VIs chacune avec deux modalités/niveaux. Le croisement des quatre modalités/niveaux crée ce plan 2x2 avec 4 **conditions** différentes. Par exemple, les chercherus peuvent manipuler simultanément :
 
-1.  VI1 = support de lecture
+1.  VI1 = support de lecture, avec modalités :
 
     1.  Livre papier
 
     2.  E-book
 
-2.  VI2 = difficulté du texte
+2.  VI2 = difficulté du texte, avec modalités :
 
     1.  Facile
 
     2.  Difficile
 
-À ce moment, on obtient quatre conditions expérimentales, représentée dans le tableau ci-dessous.
+À ce moment, on obtient quatre conditions expérimentales, représentées dans le tableau ci-dessous.
 
 | Condition | Support de lecture | Difficulté du texte |
 |-----------|--------------------|---------------------|
@@ -481,7 +481,9 @@ Lorsqu'on implémente deux ou plusieurs VIs on à faire à un plan dit **factori
 
 : Les quatre conditions d'un plan factoriel 2x2
 
-### Variable dépendante
+### Variable dépendante (VD) : l'*explenandum*
+
+Dans le *micro-monde* expérimental, la variable dépendante (VD) représente le phénomène d'intérêt qui est causé par la VI. Pour cette raison, la VD est aussi appellée ***explenandum***, c'est-à-dire *ce qu'on veut expliquer*.
 
 ### Variable neutralisée
 

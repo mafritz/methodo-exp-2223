@@ -7,6 +7,7 @@ library(afex)
 library(emmeans)
 library(scales)
 library(performance)
+library(papaja)
 theme_set(theme_modern())
 
 
@@ -124,7 +125,8 @@ nice(model)
 pre_post_plot <- afex_plot(model, x = "pre_post", trace = "VI") +
   theme(
     axis.title.x = element_blank()
-  )
+  ) +
+  theme_apa(box = TRUE)
 
 
 # Comparaisons/contrasts Pre effet de l'interaction ----------------------

@@ -422,7 +422,7 @@ En langage courant, cela s'interprète de la manière suivante: la probabilité 
 Au contraire, si deux variables ne sont pas reliés par une flèche, cela signifie que leurs valeurs sont **indépendants**. En terme formels, cela se représente ainsi:
 
 $$
-\mathbb{P}(A|B) = \mathbb{P}(A)
+\mathbb{P}({A}\space|\space{B}) = \mathbb{P}(A)
 $$
 
 Dans ce cas, même en sachant la valeur de la variable $B$, nous n'arrivons pas à en savoir davantage sur la probabilité d'obtenir une certaine valeur pour la variable $A$. Par exemple, même si on connaissait la taille d'un-e étudiant-e adulte, cela nous ne permettrait très probablement pas d'avoir une meilleure estimation de la note à un examen.
@@ -440,23 +440,23 @@ Grâce à un DAG bien défini, les chercheurs se mettent dans une meilleure posi
 
 Le processus génératif des données est l'étape *concrète* d'une expérience. Jusqu'à maintenant, l'expérience a été d'abord justifiée d'un point de vue scientifique et éthique, et ensuite définie en termes de relations causales et hypothèses théoriques. En d'autres termes, pour l'instant l'expérience reste dans le domaine de l'imagé ou de l'idéalisé: selon les connaissances dont nous disposons et une chaîne de dérivations causales sur les relations entre une intervention et un phénomène d'intérêt, nous nous attendons à ce que l'intervention produit un certain effet.
 
-À ce moment, il faut tester si ce raisonnement imagé et idéalisé peut se produire dans la réalité. Pour ce faire, les chercheurs créent un *micro-monde* dans lequel produire les **conditions nécessaires et suffisantes** à déclencher d'abord et mesurer ensuite l'effet de l'intervention sur le phénomène d'intérêt. Le *micro-monde* vise à trouver un équilibre entre la représentativité de la *réalité* d'une parte, et la réduction de la complexité nécessaire pour pouvoir isoler l'effet de l'intervention d'autres effets potentiels.
+À ce moment, il faut tester si ce raisonnement imagé et idéalisé peut se produire dans la réalité. Pour ce faire, les chercheurs créent un *micro-monde* dans lequel produire les **conditions nécessaires et suffisantes** à déclencher d'abord et mesurer ensuite l'effet de l'intervention sur le phénomène d'intérêt. Le *micro-monde* vise à trouver un équilibre entre la représentativité de la *réalité* d'une parte, et la réduction de la complexité nécessaire pour pouvoir isoler l'effet de l'intervention d'autres effets potentiels. La réduction de la compéxité ne concerne pas, en effet, seulement le fait qu'on a accès, souvent, seulement à un petit échantillon par rapport à la *population* de référence (e.g. les êtres humains en général, les étudiant-es en technologie éducative, les enseignant-es du primaire, etc.). La réduction consiste également des tâches définies ou simplifiées; des processus cognitifs, sociaux ou affectifs délimités; des interactions pré-établies; etc. Les choix concernant le *micro-monde* sont donc essentielles aux finalités de la recherche (validité interne), mais également à la possibilité de généraliser les résultats aux *macro-monde* (validité externe).
 
-![Le micro-monde vise à produire les conditions nécessaires et suffisantes aux objectifs de l'expérience.](images/macro-vs-micro-monde.png){width="70%"}
+![Le micro-monde vise à produire les conditions nécessaires et suffisantes aux objectifs de l'expérience.](images/macro-vs-micro-monde.png){width="80%"}
 
-C'est au niveau du micro-monde qui sont générées, récoltées et analysées les données empiriques. Le micro-monde se compose des choix épistémologiques et méthodologiques des chercheurs qui s'articulent principalement dans les éléments suivants:
+Le rôle concret du *micro-monde* consiste dans la génération, la récolté et analysé des données empiriques. Le micro-monde est donc le résultat des choix épistémologiques et méthodologiques des chercheurs qui s'articulent principalement dans les éléments suivants:
 
-1.  l'opéralisation des variables concernées;
+1.  l'*opéralisation* des variables concernées;
 
 2.  le design expérimental;
 
-3.  les entités observées, c'est-à-dire les participant-es dans la plupart des cas en technologie éducative;
+3.  les entités observées;
 
 4.  le matériel expérimental;
 
-5.  le protocole ou la procédure expérimentale;
+5.  la procédure expérimentale;
 
-6.  l'analyse des données à mener pour déterminer la présence, la direction, la magnitude et l'incertitude autour de l'effet envisagé.
+6.  l'analyse des données.
 
 ## Variables
 
@@ -466,7 +466,7 @@ La partie probablement la plus importante du processus de génération des donn�
 2.  La variable dépendante (VD)
 3.  La variable bloquée/neutralisée ou contrôlée/ajustée
 
-Une expérience doit *à minima* proposer une variable indépendante et une variable dépendante, avec potentiellement un nombre de VIs et VDs infini. Les variables bloquées/neutralisées ou contrôlées/ajustées sont par contre optionnelles et souvent déclarées de manière implicite (par exemple à travers la sélection des participantes selon des critères spécifiques). La distinction entre variable bloquée/neutralisée et contrôlée/ajustée n'est parfois pas explicitée ou est traitée de manière différente selon les manuels de méthode. Au contraire, la VI et la VD sont toujours traitées.
+Une expérience doit *à minima* proposer une variable indépendante et une variable dépendante. Le nombre totale de VI et VD et ensuite potentiellement infini, même s'il faut bien évidemment se heurter à des critères de faisabilité de la recherche. Les variables bloquées/neutralisées ou contrôlées/ajustées sont par contre optionnelles et souvent présentes de manière implicite, par exemple à travers la sélection des participantes selon des critères spécifiques. La distinction entre variable bloquée/neutralisée et contrôlée/ajustée n'est parfois pas explicitée ou est traitée de manière différente selon les manuels de méthode. Au contraire, la VI et la VD sont toujours traitées.
 
 ### Variable indépendante: l'*explenans*
 
@@ -512,7 +512,7 @@ Dans le *micro-monde* expérimental, la variable dépendante (**VD**) représent
 Une expérience peut proposer une ou plusieurs VDs. Tout comme la VI, aussi la VD doit être opérationnalisée. Cependant, contrairement à la VI sur laquelle les chercheurs peuvent agir de manière indépendante, la VD est déterminée par le déroulement de l'expérience. En d'autres termes, la VD est la mesure du phénomène suite au déclenchement de celui-ci par la VI. Pour cette raison elle est dite **dépendante**. Ce terme possède une double perspective:
 
 1.  La variable est dépendante du déroulement de l'expérience, donc en dehors de la possibilité de manipulation du chercheur une fois qu'elle a été opérationnalisée
-2.  La variable est dépendante de la VI, car dans la plupart des cas on s'attend à une distribution de la VD qui est conditionnelle à la VI. En termes formels, comme indiqué plus haut, on pose donc l'hypothèse que $\mathbb{P}(VD | VI) \neq \mathbb{P}(VD)$. On verra plus bas qu'on peut également poser l'hypothèse contraire, c'est-à-dire qu'il n'y a pas d'effet de la VI sur la VD, et donc que la VD est indépendante de la VI. Malheureusement dans la littérature sur la méthode expérimentale les termes se croisent souvent et il faut faire attention à bien comprendre le mécanisme plus que mémoriser les termes.
+2.  La variable est dépendante de la VI, car dans la plupart des cas on s'attend à une distribution de la VD qui est conditionnelle à la VI. En termes formels, comme indiqué plus haut, on pose donc l'hypothèse que $\mathbb{P}({VD}\space|\space{VI}) \neq \mathbb{P}({VD})$. On verra plus bas qu'on peut également poser l'hypothèse contraire, c'est-à-dire qu'il n'y a pas d'effet de la VI sur la VD, et donc que la VD est indépendante de la VI. Malheureusement dans la littérature sur la méthode expérimentale les termes se croisent souvent et il faut faire attention à bien comprendre le mécanisme plus que mémoriser les termes.
 
 Pour que la VD soit représentative du phénomène d'intérêt, elle doit respecter trois critères fondamentaux.
 
@@ -662,7 +662,9 @@ pre_post_plot
 
 On peut noter comme les deux groupes $X_0$ et $X_1$ sont plutôt équivalente en pré-test, avec une moyenne autour de 100. Au contraire, dans le post-test la performance du groupe $X_1$ augmente de manière plus prononcée par rapport au groupe $X_0$. On parle à ce moment d'un effet d'interaction.
 
-## Participant-es
+## Entités/Participant-es
+
+Un autre élément très important du *micro-monde* concerne les entités qui sont observées. Souvent, ces entités dans les sciences sociales -- et par extension en technologie éducative -- consiste dans des personnes/participant-es. Cependant, on peut avoir des observations au niveau des classes, ou on peut également étudier la performance d\'artéfacts technologiques. Par exemple, on pourrait imaginer de lancer la même application web sur deux serveurs différents et récolter la vitesse de réponse sur chaque serveur pour voir si une machine est plus performante de l'autre. Dans le reste de cette partie, les entités seront néanmoins considérées en tant que participant-es. Ceci est non seulement plus représentatif de la réalité de la recherche en technologie éducative, mais requière aussi une attention plus prononcée sur les enjeux éthiques et de représentativités de l'échantillon.
 
 ## Matériel
 

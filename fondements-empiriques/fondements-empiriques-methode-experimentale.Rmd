@@ -6,6 +6,7 @@ date: "`r format(Sys.time(), '%d/%m/%Y')`"
 lang: fr
 linestretch: 1.2
 fontsize: 12pt
+urlcolor: blue
 output:
   pdf_document:
     toc: false
@@ -21,27 +22,6 @@ bibliography: ../assets/bib/references.bib
 csl: ../assets/settings/apa.csl
 abstract: |
   La recherche expérimentale est l'une des méthodes de recherche utilisées en technologie éducative. Son intérêt principal réside dans la tentative d'expliquer l'effet d'une intervention, pondérée et planifiée, sur un ou plusieurs phénomènes d'intérêt. Pour obtenir ce résultat, la méthode expérimentale utilise un *micro-monde* dans lequel les chercheurs *manipulent* une ou plusieurs variables dites indépendantes, pour en établir l'effet sur une mesure, dite variable dépendante, représentative d'un phénomène d'intérêt. Ce document propose l'illustration de la méthode expérimentale en quatre étapes: justification, explication causale potentielle, processus génératif des données, et inférence. Les avantages et limites de cette méthode sont enfin analysés de manière critique. Ce document est complété par un autre document qui s'intéresse plus spécifiquement au rapport entre méthode expérimentale et analyse statistique.
----De manière plus abstraite, @meehlAppraisingAmendingTheories1990 propose une formule logique lorsque le test d'une théorie/hypothèse est effectué:
-
-$$
-(T/H \cdot A_t \cdot C_p \cdot A_i \cdot C_n) \Longrightarrow (O_1 \subset O_2) 
-$$
-
-Dans cette formule:
-
-$T/H$ représente la théorie ou l'hypothèse d'intérêt du chercheur dans l'expérience en question
-
-$A_t$ représente un set de théories auxiliaires dont l'existence est nécessaire à la théorie/hypothèse en question. Par exemple, on ne peut pas formuler une hypothèse sur l'efficacité d'une technologie éducative par rapport à une autre sur l'apprentissage s'il n'existait pas une ou plusieurs théories qui déterminent que l'apprentissage est possible en premier lieu
-
-$C_p$ concerne le ceteris paribus, c'est à dire l'équivalent en latin de la formule toutes choses étant égales par ailleurs
-
-$A_i$ définit les instruments auxiliaires nécessaire à l'expérience, comme par exemple l'équipement technique ou les instruments de mesure
-
-$C_n$ concerne les conditions spécifiques de l'expérience, comme par exemple les participant-es ou la procédure (voir plus bas)
-
-$O_1 \subset O_2$ signifie qu'on s'attend à une série d'observations qui sont logiquement liés entre elles, comme c'est le cas des observations dans une expérience qui sont liées par le même micro-monde dans lequel elles ont été générées
-
-Le message à tirer de cette formule est que pour établir l'effet de la théorie/hypothèse en question, il faut un complexe emboîtement entre différents éléments. Ceci comporte également la difficulté de falsifier une théorie, c'est-à-dire qu'elle ne produit pas les observations/phénomènes attendus. En effet, si on n'obtient pas ce que l'on s'attend, on peut toujours attribuer la faute à une autre élément de la formule sur la gauche.
 ---
 
 ```{r setup, include=FALSE}
@@ -376,7 +356,7 @@ La question contre-factuel à laquelle ce type d'expérience essaie de répondre
 
 -   Sans $X$, est-ce $Y$ se serait manifesté également ?
 
-## Hypothèses théoriques/causales et modèles structurels causaux
+## Hypothèses théoriques et modèles structurels causaux
 
 L'échelle de causalité permet de penser en termes d'effets et maximise donc la possibilité de pouvoir distinguer des mécanismes causales. Dans cette perspective, les chercheurs émettent souvent -- mais pas toujours -- des hypothèses théoriques/causales qui essayent d'expliquer pourquoi et comment l'intervention peut avoir un effet sur le phénomène. Il s'agit d'identifier des mécanismes, comme par exemple des principes, qui s'appliquent dans des conditions, idéalement les plus généralisées possibles, et qui permettent à l'effet de se manifester.
 
@@ -473,11 +453,9 @@ Le rôle concret du *micro-monde* consiste dans la génération, la récolté et
 
 3.  les entités observées;
 
-4.  le matériel expérimental;
+4.  la procédure et le matériel;
 
-5.  la procédure expérimentale;
-
-6.  l'analyse des données.
+5.  l'analyse des données.
 
 ## Variables
 
@@ -667,7 +645,7 @@ Un autre élément important du *micro-monde* concerne les entités qui sont obs
 
 Comme il a été indiqué dans la partie sur la justification éthique, la recherche menée avec la participations d'êtres humains est réglée par des lois (par exemple, en Suisse, la [Loi fédérale relative à la recherche sur l'être humain](https://www.fedlex.admin.ch/eli/cc/2013/617/fr)) et doit être soumise en amont à l'approbation d'une commission éthique. Les droits des participant-es s'expriment surtout -- mais pas exclusivement -- au niveau du *micro-monde* dans lequel la recherche aura lieu. Ce *micro-monde* peut être plus ou moins étendu, plus proche d'une expérience standardisé en *laboratoire* ou appliquée à un contexte écologique. Dans tous les cas, les actions demandées aux participant-es, ainsi que la manière dont les données sont récoltées, analysées et par la suite utilisées doit être bien communiquée aux participant-es.
 
-Sur le plan de la composition de l'échantillon qui participe à la recherche, il y a au moins deux aspects qu'il faut considérer attentivement: (1) le nombre de participant-es, et (2) les critères de recrutement ou sélection. Ces deux aspects s'influencent mutuellement, car par exemple la difficulté à trouver des participant-es qui répondent à certaines critères de sélection peut contribuer à limiter le nombre de participant-es envisagés. Dans cette partie, les deux aspects sont néanmoins abordés de manière distincte pour faciliter l'exposition.
+Sur le plan de la composition de l'échantillon qui participe à la recherche, il y a au moins deux aspects qu'il faut considérer attentivement: (1) le nombre de participant-es, et (2) la modalité de recrutement et les critères de sélection. Ces deux aspects s'influencent mutuellement, car par exemple la difficulté à trouver des participant-es qui répondent à certaines critères de sélection peut contribuer à limiter le nombre de participant-es envisagés. Dans cette partie, les deux aspects sont néanmoins abordés de manière distincte pour faciliter l'exposition.
 
 ### Nombre de participant-es
 
@@ -685,13 +663,27 @@ Combien de participant-es sont nécessaires pour mener une recherche ? C'est l'u
 
 6.  **Pas de justification**. Il peut s'avérer aussi que les chercheurs ne disposent pas d'informations suffisantes pour s'exprimer sur le nombre de participant-es nécessaires. À ce moment, ils l'annoncent de manière transparente et honnête.
 
-### Critères de recrutement ou sélection
+### Modalité de recrutement et critères sélection
 
 Il existe à présent plusieurs possibilités pour mener une recherche expérimentale, notamment grâce aux plateformes de recrutement en ligne qui permettent non seulement d'avoir accès à un plus large nombre de personnes et de diminuer temps et coûts, mais également pour les possibilités de *screening* proposées. La décision sur les participant-es à prendre en compte pour une recherche peut être divisée en deux parties: (1) la modalité de recrutement, et (2) les critères de sélection. Encore une fois, les deux parties s'influencent mutuellement, car par exemple selon les profils des participant-es il se peut qu'un recrutement en ligne ne soit pas adapté (e.g. personnes avec peu d'expérience avec les applications web). Mais la distinction est utilisée pour faciliter l'exposition.
 
-## Matériel
+La modalité de recrutement définit les conditions dans lesquelles les participant-es rentrent en contact avec la recherche. Dans la plupart des cas, le recrutement est fait de manière volontaire, c'est-à-dire que les participant-es prennent connaissance de la recherche à travers un moyen de communication à large échelle, tel qu'une affiche dans le hall de l'université ou une annonce en ligne. Plus rarement, les participant-es sont visé-es spécifiquement par une modalité de contact, par exemple lorsque la personne appartient à une base de données à laquelle les chercheurs ont accès. À ce moment, le recrutement peut être fait sur l'ensemble des personnes visées par la recherche ou un échantillon généré aléatoirement.
 
-## Procédure
+Lorsqu'une recherche est menée dans une école, le recrutement se fait en amont et les participant-es sont donc définis en fonction par exemple à une classe ou un établissement qui a donné son accord de participer à la recherche. Dans ces situations, il faut faire une distinction entre la participation à la recherche et la participation à l'intervention pédagogique qui est menée dans les écoles. Toute personne doit être libre de donner son accord (ou pas) pour l'utilisation des données dans une recherche. À cet effet il faut donc créer la possibilité que des élèves/étudiant-es participent aux séquences pédagogiques comme partie obligatoire de la formation, mais peuvent refuser que leurs données soient utilisées pour la recherche.
+
+Les critères de sélection déterminent les raisons pour lesquelles les participant-es sont retenu-es ou écarté-es à priori d'une recherche. Dans le passé, l'explication la plus fréquente des critères de sélection implique le concept de *représentativité* de l'échantillon de la *population* visée. Cette ressource partage l'avis d'autres chercheurs qui mettent en question l'utilité et l'adéquation du terme *population*. Plus que sur la représentativité d'un-e participant-e d'une hypothétique *population* avec des caractéristiques bien définies, cette contribution suggère de penser plutôt en termes de **processus de génération des données**. En d'autres termes, la sélection des participant-es n'est pas une activité qui est faite seulement pour des caractéristiques représentatives du participant (e.g. âge, sexe, profession, ...), mais implique l'interaction générale dans le *micro-monde* expérimental. Un-e participant-e est donc retenu-e pour la recherche en fonction de comment et pourquoi on veut générer les données expérimentales utiles à la recherche. Ce changement de perspective ne réfute certainement pas la nécessité d'appliquer des *filtres* pour garantir la qualité et la fiabilité des données générées à travers l'expérience. Au contraire, l'objectif est plutôt d'augmenter la transparence des critères de sélection qui ne peuvent plus se cacher derrière l'appartenance à un groupe de référence souvent très floue.
+
+Ceci dit, des critères de sélections pour une recherche peuvent concerner :
+
+-   Des limitations physiques des participant-es à effectuer des actions ou déceler certains stimuli. Par exemple une recherche qui s'intéresse à l'effet des couleurs sur la perception de la qualité du matériel pédagogique pourrait exclure a priori des participant-es présentant une forme de daltonisme, car leur perception des couleurs ne serait pas comparable aux autres participant-es.
+
+-   Les connaissances ou compétences préalables dans un domaine ou sur un sujet. Surtout dans des expériences portant sur l'apprentissage, il est souvent nécessaire que les participant-es possède certaines connaissances ou compétences pour pouvoir comprendre le déroulement de la recherche.
+
+-   Familiarité avec des artéfact technologiques ou pré-requis techniques. Les recherches en technologie éducative s'appuient souvent sur la manipulation directe de dispositifs technologiques, dont l'utilisation *de base* ou *avancée* peuvent être requises de la part des participant-es. Il peut également y avoir des critères très techniques, comme par exemple la résolution minimale de l'écran qui permet d'afficher l'ensemble d'une interface utilisateur.
+
+D'autres aspects concernant la modalité de recrutement et les critères de sélection mériteraient d'être abordés, comme par exemple les biais relatifs à une participation volontaire ou à l'utilisation d'un échantillon de convenance. L'utilisation des plateformes en ligne pour mener une expérience est aussi un sujet qui nécessiterait un approfondissement sur les implications scientifiques et éthiques.
+
+## Procédure et matériel
 
 ## Analyse des données et hypothèses opérationnelles
 

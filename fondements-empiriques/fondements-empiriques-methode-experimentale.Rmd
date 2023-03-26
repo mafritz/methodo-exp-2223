@@ -21,6 +21,27 @@ bibliography: ../assets/bib/references.bib
 csl: ../assets/settings/apa.csl
 abstract: |
   La recherche expérimentale est l'une des méthodes de recherche utilisées en technologie éducative. Son intérêt principal réside dans la tentative d'expliquer l'effet d'une intervention, pondérée et planifiée, sur un ou plusieurs phénomènes d'intérêt. Pour obtenir ce résultat, la méthode expérimentale utilise un *micro-monde* dans lequel les chercheurs *manipulent* une ou plusieurs variables dites indépendantes, pour en établir l'effet sur une mesure, dite variable dépendante, représentative d'un phénomène d'intérêt. Ce document propose l'illustration de la méthode expérimentale en quatre étapes: justification, explication causale potentielle, processus génératif des données, et inférence. Les avantages et limites de cette méthode sont enfin analysés de manière critique. Ce document est complété par un autre document qui s'intéresse plus spécifiquement au rapport entre méthode expérimentale et analyse statistique.
+---De manière plus abstraite, @meehlAppraisingAmendingTheories1990 propose une formule logique lorsque le test d'une théorie/hypothèse est effectué:
+
+$$
+(T/H \cdot A_t \cdot C_p \cdot A_i \cdot C_n) \Longrightarrow (O_1 \subset O_2) 
+$$
+
+Dans cette formule:
+
+$T/H$ représente la théorie ou l'hypothèse d'intérêt du chercheur dans l'expérience en question
+
+$A_t$ représente un set de théories auxiliaires dont l'existence est nécessaire à la théorie/hypothèse en question. Par exemple, on ne peut pas formuler une hypothèse sur l'efficacité d'une technologie éducative par rapport à une autre sur l'apprentissage s'il n'existait pas une ou plusieurs théories qui déterminent que l'apprentissage est possible en premier lieu
+
+$C_p$ concerne le ceteris paribus, c'est à dire l'équivalent en latin de la formule toutes choses étant égales par ailleurs
+
+$A_i$ définit les instruments auxiliaires nécessaire à l'expérience, comme par exemple l'équipement technique ou les instruments de mesure
+
+$C_n$ concerne les conditions spécifiques de l'expérience, comme par exemple les participant-es ou la procédure (voir plus bas)
+
+$O_1 \subset O_2$ signifie qu'on s'attend à une série d'observations qui sont logiquement liés entre elles, comme c'est le cas des observations dans une expérience qui sont liées par le même micro-monde dans lequel elles ont été générées
+
+Le message à tirer de cette formule est que pour établir l'effet de la théorie/hypothèse en question, il faut un complexe emboîtement entre différents éléments. Ceci comporte également la difficulté de falsifier une théorie, c'est-à-dire qu'elle ne produit pas les observations/phénomènes attendus. En effet, si on n'obtient pas ce que l'on s'attend, on peut toujours attribuer la faute à une autre élément de la formule sur la gauche.
 ---
 
 ```{r setup, include=FALSE}
@@ -536,28 +557,6 @@ Surtout en psychologie on utilise souvent cette formule pour définir ce concept
 
 **Contrôler/ajuster une variable en aval.** Souvent il est néanmoins pas possible de *filtrer* par rapport à une autre variable en amont. C'est le cas, par exemple, d'une deuxième variable qui peut être déclenchée directement par l'expérience en elle-même, ou qu'on ne peut pas mesurer en amont sans dévoiler des informations sensibles au niveau des objectifs de la recherche. Imaginons que les chercheurs s'intéressent à l'efficacité de deux jeux vidéos pédagogiques sur le développement des compétences langagières des adolescents entre 14 et 16 ans. Or, les chercheurs veulent évaluer l'efficacité des deux jeux indépendamment de l'intérêt des adolescents pour les jeux vidéos. Ils ne peuvent donc pas insérer cette information dans l'affiche de recrutement, car cela risquerait d'attirer seulement des adolescents intéressé-es par les jeux vidéos. À ce moment, ces chercheurs peuvent faire recours à une technique statistique qui permet de contrôler/ajuster l'effet de la VI sur la VD par rapport aux valeurs d'une troisième variable (et potentiellement d'autres variables encore). Pour ce faire, cependant, ils doivent non seulement obtenir une mesure des compétences langagières (i.e. la VD), mais également de l'intérêt des participant-es pour les jeux vidéos.
 
-De manière plus abstraite, @meehlAppraisingAmendingTheories1990 propose une formule logique lorsque le test d'une théorie/hypothèse est effectué:
-
-$$
-(T/H \cdot A_t \cdot C_p \cdot A_i \cdot C_n) \Longrightarrow (O_1 \subset O_2) 
-$$
-
-Dans cette formule:
-
--   $T/H$ représente la théorie ou l'hypothèse d'intérêt du chercheur dans l'expérience en question
-
--   $A_t$ représente un set de théories auxiliaires dont l'existence est nécessaire à la théorie/hypothèse en question. Par exemple, on ne peut pas formuler une hypothèse sur l'efficacité d'une technologie éducative par rapport à une autre sur l'apprentissage s'il n'existait pas une ou plusieurs théories qui déterminent que l'apprentissage est possible en premier lieu
-
--   $C_p$ concerne le *ceteris paribus*, c'est à dire l'équivalent en latin de la formule *toutes choses étant égales par ailleurs*
-
--   $A_i$ définit les instruments auxiliaires nécessaire à l'expérience, comme par exemple l'équipement technique ou les instruments de mesure
-
--   $C_n$ concerne les conditions spécifiques de l'expérience, comme par exemple les participant-es ou la procédure (voir plus bas)
-
--   $O_1 \subset O_2$ signifie qu'on s'attend à une série d'observations qui sont logiquement liés entre elles, comme c'est le cas des observations dans une expérience qui sont liées par le même *micro-monde* dans lequel elles ont été générées
-
-Le message à tirer de cette formule est que pour établir l'effet de la théorie/hypothèse en question, il faut un complexe emboîtement entre différents éléments. Ceci comporte également la difficulté de *falsifier* une théorie, c'est-à-dire qu'elle ne produit pas les observations/phénomènes attendus. En effet, si on n'obtient pas ce que l'on s'attend, on peut toujours attribuer la *faute* à une autre élément de la formule sur la gauche.
-
 ## Design expérimental
 
 Le design (ou plan) expérimental articule les relations entre la ou les variables indépendantes et la ou les variables dépendantes. Pour illustrer l'importance du plan expérimental d'un point de vue de l'explication causale potentielle, cette partie propose la comparaison entre trois types de plans ou designs:
@@ -664,7 +663,29 @@ On peut noter comme les deux groupes $X_0$ et $X_1$ sont plutôt équivalente en
 
 ## Entités/Participant-es
 
-Un autre élément très important du *micro-monde* concerne les entités qui sont observées. Souvent, ces entités dans les sciences sociales -- et par extension en technologie éducative -- consiste dans des personnes/participant-es. Cependant, on peut avoir des observations au niveau des classes, ou on peut également étudier la performance d\'artéfacts technologiques. Par exemple, on pourrait imaginer de lancer la même application web sur deux serveurs différents et récolter la vitesse de réponse sur chaque serveur pour voir si une machine est plus performante de l'autre. Dans le reste de cette partie, les entités seront néanmoins considérées en tant que participant-es. Ceci est non seulement plus représentatif de la réalité de la recherche en technologie éducative, mais requière aussi une attention plus prononcée sur les enjeux éthiques et de représentativités de l'échantillon.
+Un autre élément important du *micro-monde* concerne les entités qui sont observées. Souvent, ces entités dans les sciences sociales -- et par extension en technologie éducative -- consiste dans des personnes/participant-es. Cependant, on peut avoir des observations au niveau des classes, ou on peut également étudier la performance d'artéfacts technologiques. Par exemple, on pourrait imaginer de lancer la même application web sur deux serveurs différents et récolter la vitesse de réponse sur chaque serveur pour voir si une machine est plus performante de l'autre. Dans le reste de cette partie, les entités seront néanmoins considérées en tant que participant-es. Ceci est non seulement plus représentatif de la réalité de la recherche en technologie éducative, mais requière aussi une attention plus prononcée sur les enjeux éthiques et sur la composition de l'échantillon.
+
+Comme il a été indiqué dans la partie sur la justification éthique, la recherche menée avec la participations d'êtres humains est réglée par des lois (par exemple, en Suisse, la [Loi fédérale relative à la recherche sur l'être humain](https://www.fedlex.admin.ch/eli/cc/2013/617/fr)) et doit être soumise en amont à l'approbation d'une commission éthique. Les droits des participant-es s'expriment surtout -- mais pas exclusivement -- au niveau du *micro-monde* dans lequel la recherche aura lieu. Ce *micro-monde* peut être plus ou moins étendu, plus proche d'une expérience standardisé en *laboratoire* ou appliquée à un contexte écologique. Dans tous les cas, les actions demandées aux participant-es, ainsi que la manière dont les données sont récoltées, analysées et par la suite utilisées doit être bien communiquée aux participant-es.
+
+Sur le plan de la composition de l'échantillon qui participe à la recherche, il y a au moins deux aspects qu'il faut considérer attentivement: (1) le nombre de participant-es, et (2) les critères de recrutement ou sélection.
+
+### Nombre de participant-es
+
+Combien de participant-es sont nécessaires pour mener une recherche ? C'est l'une des questions les plus fréquentes qui sont posées au sujet de la recherche expérimentale. @lakens2022 identifie six approches différentes pour répondre à cette question :
+
+1.  **Prendre en compte l'ensemble de la *population* de référence**. Même si cette option n'est pas très fréquente, il est possible qu'une expérience s'intéresse à une ensemble de personnes bien défini, sans la vocation de généraliser en dehors des participant-es à la recherche. Dans ce cas, la justification du nombre de participant-es ainsi que les critères de recrutement ou sélection sont déjà établi en amont.
+
+2.  **Disponibilité des ressources**. Une recherche doit faire face à des limitations de temps, de ressources humaines et temporelles. On peut donc justifier le nombre de participant-es en termes de *faisabilité* pratique. Par exemple, les chercheurs ont à disposition un instrument de mesure partagé avec d'autres équipes seulement pour quelques semaines, ou ont réussi à obtenir des fonds pour payer correctement seulement un nombre spécifique de participantes.
+
+3.  **Précision dans l'estimation d'un effet.** Les chercheurs veulent quantifier de manière précise les effets d'une intervention. Par exemple, des chercheurs peuvent s'intéresser à quantifier exactement combien de nouveau mots un-e élève de 7 ans peut apprendre sur une semaine selon que la classe utilise un livre papier ou un livre éléctronique. À ce moment, les chercheurs calculent le nombre de participant-es nécessaires pour attendre un degré de précision contenu dans des intervalles. Les plus étroites ces intervalles, le plus de participant-es sont nécessaires.
+
+4.  **Analyse de puissance statistique *a priori***. Comme nous le verrons plus bas et encore plus précisement dans les ressources sur les fondements statistiques, la méthode expérimental s'appuie très souvent à des statistiques pour déterminer la présence, la direction, la magnitude et l'incertitude autour d'un effet. Il est possible d'utiliser une technique appelée *puissance statistique* pour déterminer combien de participentes sont nécessaires pour détecter la présence ou décreter l'absence d'un effet selon sa taille. Plus petit l'effet cherché, plus grand la taille de l'échantillon.
+
+5.  **Heuristiques**. Selon les domaines de référence, on peut avoir des *rules of thumb* qui suggèrent un nombre de participant-es préfixé. Par exemple, pour un certain temps en psychologie la règle été de 20 participant-es pour condition expérimentale. L'utilité et fiabilité de ces règles sont souvent mises en question par la communauté scientifique, mais elles peuvent néanmoins représenter une justification potentielle.
+
+6.  **Pas de justification**. Il peut s'avérer aussi que les chercheurs ne disposent pas d'informations suffisantes pour s'exprimer sur le nombre de participant-es nécessaires. À ce moment, ils l'annoncent de manière transparente et honnête.
+
+### Critères de recrutement ou sélection
 
 ## Matériel
 
@@ -717,5 +738,37 @@ ggplot(idealized_experiment, aes(x = condition, y = apprentissage, color = condi
 Le type d'analyse statistique à mener dépend de plusieurs facteurs, notamment le plan expérimental choisi, le nombre des VI et de modalités à l'intérieur de chaque VI, la présence d'autres mesures corollaires, ainsi que la distribution attendue de la VD.
 
 # Inférence
+
+# Apports et limites de la méthode expérimentale
+
+## Isoler l'effet d'intérêt
+
+## Limiter les biais potentiels
+
+## Généralisation au *macro-monde* compliquée
+
+## Difficulté à falsifier une théorie ou hypothèse
+
+De manière plus abstraite, @meehlAppraisingAmendingTheories1990 propose une formule logique lorsque le test d'une théorie/hypothèse est effectué:
+
+$$
+(T/H \cdot A_t \cdot C_p \cdot A_i \cdot C_n) \Longrightarrow (O_1 \subset O_2) 
+$$
+
+Dans cette formule:
+
+$T/H$ représente la théorie ou l'hypothèse d'intérêt du chercheur dans l'expérience en question
+
+$A_t$ représente un set de théories auxiliaires dont l'existence est nécessaire à la théorie/hypothèse en question. Par exemple, on ne peut pas formuler une hypothèse sur l'efficacité d'une technologie éducative par rapport à une autre sur l'apprentissage s'il n'existait pas une ou plusieurs théories qui déterminent que l'apprentissage est possible en premier lieu
+
+$C_p$ concerne le ceteris paribus, c'est à dire l'équivalent en latin de la formule toutes choses étant égales par ailleurs
+
+$A_i$ définit les instruments auxiliaires nécessaire à l'expérience, comme par exemple l'équipement technique ou les instruments de mesure
+
+$C_n$ concerne les conditions spécifiques de l'expérience, comme par exemple les participant-es ou la procédure (voir plus bas)
+
+$O_1 \subset O_2$ signifie qu'on s'attend à une série d'observations qui sont logiquement liés entre elles, comme c'est le cas des observations dans une expérience qui sont liées par le même micro-monde dans lequel elles ont été générées
+
+Le message à tirer de cette formule est que pour établir l'effet de la théorie/hypothèse en question, il faut un complexe emboîtement entre différents éléments. Ceci comporte également la difficulté de falsifier une théorie, c'est-à-dire qu'elle ne produit pas les observations/phénomènes attendus. En effet, si on n'obtient pas ce que l'on s'attend, on peut toujours attribuer la faute à une autre élément de la formule sur la gauche.
 
 # Références {.unnumbered}

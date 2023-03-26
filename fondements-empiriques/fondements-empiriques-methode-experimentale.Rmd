@@ -28,6 +28,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 Sys.setlocale("LC_ALL", "French")
 source(here::here("assets", "settings", "custom.R"))
 source(here::here("fondements-empiriques", "sim_data.R"))
+source(here::here("fondements-empiriques", "pre-post-example.R"))
 library(dagitty)
 library(ggdag)
 library(papaja)
@@ -653,7 +654,13 @@ Une autre caractéristique importante du design expérimental concerne la maniè
 
 Une variante du plan intra-sujet très répandue dans la recherche consiste dans un design expérimental à mesure répétée, également appelé design longitudinal. Dans ce design, le même type de mesure est récolté à différentes intervalles de temps sur les mêmes participant-es. Contrairement au plan intra-sujet décrit plus haut, dans lequel on mesure les participant-es à la suite d'une exposition à une modalité de la VI différente, dans le plan à mesure répétée la VI implicite est le temps qui passe. Par exemple, on peut mesurer la motivation des étudiant-es dans un cours au début du semestre et après chaque 2 semaines pendant un semestre universitaire. Dans ce cas, il n'y a pas une exposition à une différente modalité de la VI *explicite*. Le cours bien évidemment progresse, mais il n'y a aucune manipulation de la part des chercheurs qui vise, par exemple, à rendre les semaines entre 6 et 8 volontairement plus difficiles ou ennuyantes afin de voir si cela a un impact sur la motivation des étudiant-es.
 
-Un design expérimental à mesure répétée très utilisé lorsqu'une expérience vise à déterminer un effet sur les apprentissages consiste dans le plan apellé **avant/après** ou **pré-test/post-test**. Dans ce type de plan, on fait une passation d'un premier test, par exemple sur les connaissances des participant-es sur un sujet, avant d'effectuer l'intervention. Le même test (ou une variante considérée équivalente) est administré après l'intervention. La comparaison porte à ce moment sur le gain d'apprentissage entre l'avant et l'après. Cette technique est souvent combinée avec une VI inter-sujet pour comparer si le gain d'apprentissage dans une modalité de la VI est supérieur à une autre ou aux autres modalités.
+Un design expérimental à mesure répétée très utilisé lorsqu'une expérience vise à déterminer un effet sur les apprentissages consiste dans le plan apellé **avant/après** ou **pré-test/post-test**. Dans ce type de plan, on fait une passation d'un premier test, par exemple sur les connaissances des participant-es sur un sujet, avant d'effectuer l'intervention. Le même test (ou une variante considérée équivalente) est administré après l'intervention. La comparaison porte à ce moment sur le gain d'apprentissage entre l'avant et l'après. Cette technique est souvent combinée avec une VI inter-sujet pour comparer si le gain d'apprentissage dans une modalité de la VI est supérieur à une autre ou aux autres modalités. Le graphique ci-dessous montre les résultats d'une expérience avec de design.
+
+```{r pre-post-graph, fig.align="center", fig.cap="Exemple des résultats d'un plan inter-sujets avec pré-test et post-test", fig.height=3}
+pre_post_plot
+```
+
+On peut noter comme les deux groupes $X_0$ et $X_1$ sont plutôt équivalente en pré-test, avec une moyenne autour de 100. Au contraire, dans le post-test la performance du groupe $X_1$ augmente de manière plus prononcée par rapport au groupe $X_0$. On parle à ce moment d'un effet d'interaction.
 
 ## Participant-es
 

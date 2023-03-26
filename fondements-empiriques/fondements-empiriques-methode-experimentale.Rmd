@@ -667,7 +667,7 @@ Un autre élément important du *micro-monde* concerne les entités qui sont obs
 
 Comme il a été indiqué dans la partie sur la justification éthique, la recherche menée avec la participations d'êtres humains est réglée par des lois (par exemple, en Suisse, la [Loi fédérale relative à la recherche sur l'être humain](https://www.fedlex.admin.ch/eli/cc/2013/617/fr)) et doit être soumise en amont à l'approbation d'une commission éthique. Les droits des participant-es s'expriment surtout -- mais pas exclusivement -- au niveau du *micro-monde* dans lequel la recherche aura lieu. Ce *micro-monde* peut être plus ou moins étendu, plus proche d'une expérience standardisé en *laboratoire* ou appliquée à un contexte écologique. Dans tous les cas, les actions demandées aux participant-es, ainsi que la manière dont les données sont récoltées, analysées et par la suite utilisées doit être bien communiquée aux participant-es.
 
-Sur le plan de la composition de l'échantillon qui participe à la recherche, il y a au moins deux aspects qu'il faut considérer attentivement: (1) le nombre de participant-es, et (2) les critères de recrutement ou sélection. Ces deux aspects s\'influencent mutuellement, car par exemple la difficulté à trouver des participant-es qui répondent à certaines critères de sélection peut contribuer à limiter le nombre de participant-es envisagés. Dans cette partie, les deux aspects sont néanmoins abordés de manière distincte pour faciliter l'exposition.
+Sur le plan de la composition de l'échantillon qui participe à la recherche, il y a au moins deux aspects qu'il faut considérer attentivement: (1) le nombre de participant-es, et (2) les critères de recrutement ou sélection. Ces deux aspects s'influencent mutuellement, car par exemple la difficulté à trouver des participant-es qui répondent à certaines critères de sélection peut contribuer à limiter le nombre de participant-es envisagés. Dans cette partie, les deux aspects sont néanmoins abordés de manière distincte pour faciliter l'exposition.
 
 ### Nombre de participant-es
 
@@ -686,6 +686,8 @@ Combien de participant-es sont nécessaires pour mener une recherche ? C'est l'u
 6.  **Pas de justification**. Il peut s'avérer aussi que les chercheurs ne disposent pas d'informations suffisantes pour s'exprimer sur le nombre de participant-es nécessaires. À ce moment, ils l'annoncent de manière transparente et honnête.
 
 ### Critères de recrutement ou sélection
+
+Il existe à présent plusieurs possibilités pour mener une recherche expérimentale, notamment grâce aux plateformes de recrutement en ligne qui permettent non seulement d'avoir accès à un plus large nombre de personnes et de diminuer temps et coûts, mais également pour les possibilités de *screening* proposées. La décision sur les participant-es à prendre en compte pour une recherche peut être divisée en deux parties: (1) la modalité de recrutement, et (2) les critères de sélection. Encore une fois, les deux parties s'influencent mutuellement, car par exemple selon les profils des participant-es il se peut qu'un recrutement en ligne ne soit pas adapté (e.g. personnes avec peu d'expérience avec les applications web). Mais la distinction est utilisée pour faciliter l'exposition.
 
 ## Matériel
 

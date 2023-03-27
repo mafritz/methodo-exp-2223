@@ -2,6 +2,16 @@
 \usepackage{truncate}
 \pagestyle{fancy}
 
+% Clear the header and footer
+\fancyhf{}
+
+% Define the header
+\fancyhead[L]{\truncate{0.5\headwidth}\leftmark}
+\fancyhead[R]{\truncate{0.5\headwidth}\rightmark}
+
+% Define the footer
+\fancyfoot[C]{\thepage}
+
 \usepackage[font=small,labelfont=bf,width=0.8\textwidth]{caption}
 
 \usepackage{etoolbox}

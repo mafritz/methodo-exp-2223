@@ -761,11 +761,11 @@ Enfin, le protocole expérimental joue un rôle très important d'un point de vu
 
 -   Expliciter le cadre conceptuel et opérationnel de la recherche
 
--   Délimiter les contraintes déontologiques
+-   Favoriser la reproductibilité et la replicabilité des expériences
 
 Le protocole expérimental force les chercheurs à expliciter le cadre conceptuel et opérationnel de la recherche. En effet, ces deux niveaux peuvent différer considérablement de recherche à recherche. Imaginons deux expériences qui s'intéressent aux effets des émotions sur l'apprentissage médiatisé par ordinateur. Il peut tout à fait être le cas que les deux contributions partagent dans l'introduction et dans le cadre théorique les mêmes principes de base et objectifs. Dans la section méthodologique, en revanche, on découvre que les deux contributions manifestent en réalité des profondes différences sur qu'est-ce qu'une émotion et comment la mesurer [@schererWhatAreEmotions2005; @pekrunIntroductionEmotionsEducation2014; @linnenbrink-garciaAdaptiveMotivationEmotion2016; @scherer2022].
 
-D'un point de vue déontologique, le protocole expérimental est censé aussi garantir que la recherche puissent être reproduite ou répliquée par d'autres chercheurs [@chambersSevenDeadlySins2017; @Nosek1422; @nosekWhatReplication2020; @fritzOverviewReplicationCrisis2019]. La reproduction concerne la possibilité d'obtenir les mêmes résultats aux analyses avec les données originales, tandis que la réplication concerne l'obtention de nouvelles données avec le même protocole. Pour garantir qu'une expérience génère effectivement les données et les résultats décrits par les chercheurs, il y a de plus en plus la tendance de pré-enregistrer le protocole expérimental -- y compris les hypothèses et les modalités d'analyse -- avant la passation de l'expérience [@nosekPreregistrationHardWorthwhile2019; @simmonsPreregistrationWhyHow2021; @loggPreregistrationWeighingCosts2021]. Ce mécanisme peut s'appliquer même à la publication de l'article, avec une procédure appelée *registered reports* [@chambersPresentFutureRegistered2022]. Avec cette démarche, une expérience est soumise à un journal avant que la récolte des données est entamée. Le journal, donc, évalue la recherche exclusivement sur la base de l'intérêt et de la qualité des ces propos, illustrés justement en forme de protocole expérimental complet. Si le protocole expérimental est accepté, le journal s'engage à publier l'article indépendamment des résultats obtenus (e.g. corroboration ou pas des hypothèses).
+Le protocole expérimental est censé aussi garantir que la recherche puissent être reproduite ou répliquée par d'autres chercheurs [@chambersSevenDeadlySins2017; @Nosek1422; @nosekWhatReplication2020; @fritzOverviewReplicationCrisis2019]. La reproduction concerne la possibilité d'obtenir les mêmes résultats aux analyses avec les données originales, tandis que la réplication concerne l'obtention de nouvelles données avec le même protocole. Pour garantir qu'une expérience génère effectivement les données et les résultats décrits par les chercheurs, il y a de plus en plus la tendance de pré-enregistrer le protocole expérimental -- y compris les hypothèses et les modalités d'analyse -- avant la passation de l'expérience [@nosekPreregistrationHardWorthwhile2019; @simmonsPreregistrationWhyHow2021; @loggPreregistrationWeighingCosts2021]. Ce mécanisme peut s'appliquer même à la publication de l'article, avec une procédure appelée *registered reports* [@chambersPresentFutureRegistered2022]. Avec cette démarche, une expérience est soumise à un journal avant que la récolte des données est entamée. Le journal, donc, évalue la recherche exclusivement sur la base de l'intérêt et de la qualité des ces propos, illustrés justement en forme de protocole expérimental complet. Si le protocole expérimental est accepté, le journal s'engage à publier l'article indépendamment des résultats obtenus (e.g. corroboration ou pas des hypothèses).
 
 ## Analyse des données et hypothèses opérationnelles
 
@@ -777,7 +777,7 @@ Un dernier élément important dans le *micro-monde* consiste dans la manière d
 
 Ces aspects sont traités de manière plus approfondie dans la ressource sur les fondements statistiques de la méthode expérimentale. Ici, il sera le cas d'illustrer brièvement une situation assez fréquente en technologie éducative et qui s'applique lorsque les chercheurs ont émis des hypothèses théoriques ordinales. Il est en effet assez fréquent que les chercheurs s'attendent à une meilleure efficacité d'une intervention par rapport à une autre (ou à des autres) sur le phénomène d'intérêt. Dans le *micro-monde*, les hypothèses théoriques doivent être elles aussi *opérationnalisées*, c'est-à-dire formulées en termes de l'effet des modalités de la VI sur la VD. Ce changement implique une *concrétisation* des hypothèses sur la métrique choisi pour la VD de référence.
 
-On peut imaginer que dans une expérience qui porte sur l'effet du support vidéo sur l'apprentissage, l'hypothèse théorique sera exprimée sur la base de l'effet des modalités/conditions de la VI (lecture d'un texte, enregistrement d'un cours ex-cathedra de 30 minutes, et vision de 3 capsules vidéos de 5 minutes chaque) sur la mesure de l'apprentissage identifiée comme le score à un quiz sur le contenu du support. Une hypothèse opérationnelle possible consisterait par exemple à l'attente d'une distribution des scores au test de compréhension (VD) autour de moyennes ordonnée de la manière suivante:
+On peut imaginer que dans une expérience qui porte sur l'effet du support vidéo sur l'apprentissage, l'hypothèse théorique sera traduite sur la base de l'effet des modalités/conditions de la VI (lecture d'un texte, enregistrement d'un cours ex-cathedra de 30 minutes, et vision de 3 capsules vidéos de 5 minutes chaque) sur la mesure de l'apprentissage identifiée comme le score à un quiz de compréhension sur les contenus. Une hypothèse opérationnelle possible consisterait par exemple à l'attente d'une distribution des scores au test de compréhension (VD) autour de moyennes ordonnée de la manière suivante:
 
 -   La moyenne des scores de compréhension dans la modalité *capsules* est plus élevée de la moyenne dans la modalités *texte*
 
@@ -835,19 +835,49 @@ Pour faire ce passage du *micro-* au *macro-monde* on peut distinguer deux types
 
 ## Inférence statistique
 
-## Inférence pratique 
+L'inférence statistique sert à évaluer l'adéquation entre les données générées par le *micro-monde* et les attentes opérationnelles des chercheurs. Le plus ces attentes ont été explicitées de manière claire et précise -- par exemple à travers une hypothèse directionnelle $\mathbb{P}({VD}\space|\space{X_1}) > \mathbb{P}({VD}\space|\space{X_0})$ -- le plus l'inférence statistique peut contribuer à évaluer la validité interne de la manipulation expérimentale.
+
+L'inférence statistique dépend étroitement de l'approche statistique envisagée par les chercheurs. Néanmoins, indépendamment de ce choix, il faut bien considérer que l'inférence statistique:
+
+-   Est fondée sur des modèles et théories mathématiques qui sont de quelque sorte indépendantes de la spécificité de l'expérience elle-même. Par exemple, on peut avoir un même test statistique pour une VD qui mesure le sentiment d'auto-efficacité d'une étudiant-e et pour une VD qui mesure le temps de réaction avant de cliquer sur un bouton dans une interface logiciel.
+
+-   Est étroitement liée à la philosophie/approche épistémologique qui est consacrée au rapport entre probabilité et connaissance/réalité. Les deux philosophies plus répandue à présent -- l'approche fréquentiste [@lakensPracticalAlternativeValue2021; @nickersonNullHypothesisSignificance2000] et l'approche Bayésienne [@mcelreathStatisticalRethinkingBayesian2020; @wagenmakersBayesianInferencePsychology2018a; @wagenmakersBayesianInferencePsychology2018; @matzkeBayesianInferencePsychology2018; @rouderBayesianInferencePsychology2018] -- utilisent des postulats et confèrent aux résultats statistiques des interprétations différentes.
+
+-   Est limitée au *micro-monde* de la relation entre VI et VD. La représentativité de l'intervention de la part de la VI et/ou du phénomène d'intérêt de la part de la VD ne peuvent pas être confirmée/infirmée par le résultat d'une analyse inférentielle.
+
+## Inférence *pratique*
+
+L'inférence pratique, au contraire, concerne le rapport avec le *macro-monde*. Elle détermine à quel point l'expérience permet (ou pas) de contribuer à répondre à la question de recherche, par exemple à travers la corroboration ou le rejet des hypothèses théoriques. Ce type d'inférence est plus articulée et moins *mécanique* de l'inférence statistique [@meehlAppraisingAmendingTheories1990; @scheelWhyHypothesisTesters2021; @mayoStatisticalInferenceSevere2018]. En effet, l'inférence pratique:
+
+-   Est fondée sur les connaissances du domaine de recherche spécifique. L'intermédiation des chercheurs dans l'analyse des résultats est toujours nécessaires, indépendamment des résultats statistiques obtenus.
+
+-   Utilise l'inférence statistique pour aider l'interprétation, mais reste critique vis-à-vis de celle-ci, en identifiant par exemple des limitations ou des explications alternatives aux résultats statistiques obtenus.
+
+-   Vise le *macro-monde*, mais est en même temps contrainte par les spécificités de l'opérationalisation du *micro-monde*.
+
+-   S'adresse de manière plus large, si possible et jugée adéquat par les chercheurs, à la question de recherche et aux éventuels mécanismes causaux postulés par les hypothèses théoriques.
 
 # Apports et limites de la méthode expérimentale
 
-## Isoler l'effet d'intérêt
+Cette section propose une brève et incomplète analyse critique des avantages et limites de la méthode expérimentale.
 
-## Limiter les biais potentiels
+## Délimiter l'effet d'intérêt et limiter les biais potentiels
 
-## Généralisation au *macro-monde* compliquée
+L'intervention active en forme de manipulation expérimentale planifiée et opérationnalisée dans le *micro-monde,* combinée à la perspective contre-factuelle de comparer avec un *univers parallèle,* permettent à la méthode expérimentale de délimiter clairement l'effet d'intérêt. Lorsque les VI sont (a) bien décrites, (b) bien différenciées entre elles, et (c) représentatives d'interventions potentielles, la méthode expérimentale permet de quantifier l'efficacité d'une intervention comparée à une autre ou à des autres.
 
-## Difficulté à falsifier une théorie ou hypothèse
+Surtout en combinaison avec l'attribution aléatoire des entités/participant-es aux conditions expérimentales, la délimitation comporte également la réduction de biais ou variables parasites qui pourraient *expliquer autrement* la relation entre l'intervention et l'efficacité sur le phénomène d'intérêt. Ceci concerne également les attentes des chercheurs eux-mêmes. Par exemple, lorsqu'il est possible, il faudrait idéalement que ni les chercheurs, ni les participant-es soient au courant de la condition expérimentale attribuée. En sachant la condition, en effet, les chercheurs pourraient -- volontairement ou inconsciemment -- guider les participant-es vers une meilleure performance dans la condition qui reflète l'hypothèse opérationnelle et, par extension, corrobore les attentes théoriques/causales de la recherche.
 
-De manière plus abstraite, @meehlAppraisingAmendingTheories1990 propose une formule logique lorsque le test d'une théorie/hypothèse est effectué:
+De plus, une utilisation attentive et avertie de l'inférence statistique avec la méthode expérimentale peut contribuer à *néutraliser* la prédisposition des êtres humains à déceler un ordre dans un pattern qui en réalité n'est que du bruit. Le recours à la précision et démontrabilité mathématique des probabilités peut augmenter les chances de construire un corpus d'évidences partagées au sein de la communauté scientifique.
+
+## Toutes choses *n'étant jamais* égales par ailleurs
+
+En même temps, même si la méthode expérimentale permet de limiter des biais potentiels, il est impossible de construire un univers parallèle dans lequel *toutes choses étant égales par ailleurs*, sauf en ce qui concerne la manipulation expérimentale. Ceci est déjà valable dans le *micro-monde*, dans lequel la randomisation permet de *mieux* *balancer* d'autres variables grâce à une répartition plus équitable entre conditions expérimentales, mais ne garantit pas l'équivalence absolues si ce n'est à partir d'un large nombre de participant-es.
+
+Par conséquent, la problématique est ultérieurement accentuée dans le *macro-monde*, dans lequel l'attribution aléatoire n'est souvent pas une option. Neutraliser les biais par *diffusion équitable* ne les fait pas disparaître. Dans une démarche explicative, il faudrait pouvoir tenir compte des biais potentiels présents dans le *macro-monde* et les contraster de manière pragmatique, plutôt que de les disperser équitablement. Avec ce processus, il serait également plus simple d'évaluer la capacité des résultats produits dans un environnement plus ou moins contrôlés dans un environnement écologique complexe comme celui dans lequel la technologie éducative est souvent déployée.
+
+## Impossibilité à corroborer ou falsifier *seulement* de manière expérimentale
+
+La méthode expérimentale est souvent prise à exemple comme la méthode phare dans une perspective de corroboration ou de falsification d'une théorie ou d'une hypothèse [@tuncEpistemicPragmaticFunction; @meehlAppraisingAmendingTheories1990; @mayoStatisticalInferenceSevere2018; @maxwell2017]. C'est-à-dire que, grâce à la comparaison systématique entre deux ou plusieurs *univers contre-factuels*, on peut établir à quel point les résultats renforcent ou contredisent des postulats théoriques/causaux. Cette capacité doit néanmoins être pondérée par les nombreuses implications sous-jacentes une expérience avec valence théorique. Par exemple, @meehlAppraisingAmendingTheories1990 propose une formule logique lorsque le test d'une théorie/hypothèse est effectué:
 
 $$
 (T/H \cdot A_t \cdot C_p \cdot A_i \cdot C_n) \Longrightarrow (O_1 \subset O_2) 
@@ -855,18 +885,30 @@ $$
 
 Dans cette formule:
 
-$T/H$ représente la théorie ou l'hypothèse d'intérêt du chercheur dans l'expérience en question
+-   $T/H$ représente la théorie ou l'hypothèse d'intérêt du chercheur dans l'expérience en question
 
-$A_t$ représente un set de théories auxiliaires dont l'existence est nécessaire à la théorie/hypothèse en question. Par exemple, on ne peut pas formuler une hypothèse sur l'efficacité d'une technologie éducative par rapport à une autre sur l'apprentissage s'il n'existait pas une ou plusieurs théories qui déterminent que l'apprentissage est possible en premier lieu
+-   $A_t$ représente un set de théories auxiliaires dont l'existence est nécessaire à la théorie/hypothèse en question. Par exemple, on ne peut pas formuler une hypothèse sur l'efficacité d'une technologie éducative par rapport à une autre sur l'apprentissage s'il n'existait pas une ou plusieurs théories qui déterminent que l'apprentissage est possible en premier lieu
 
-$C_p$ concerne le ceteris paribus, c'est à dire l'équivalent en latin de la formule toutes choses étant égales par ailleurs
+-   $C_p$ concerne le *ceteris paribus*, c'est à dire l'équivalent en latin de la formule toutes choses étant égales par ailleurs
 
-$A_i$ définit les instruments auxiliaires nécessaire à l'expérience, comme par exemple l'équipement technique ou les instruments de mesure
+-   $A_i$ définit les instruments auxiliaires nécessaire à l'expérience, comme par exemple l'équipement technique ou les instruments de mesure
 
-$C_n$ concerne les conditions spécifiques de l'expérience, comme par exemple les participant-es ou la procédure (voir plus bas)
+-   $C_n$ concerne les conditions spécifiques de l'expérience, comme par exemple les participant-es ou la procédure (voir plus bas)
 
-$O_1 \subset O_2$ signifie qu'on s'attend à une série d'observations qui sont logiquement liés entre elles, comme c'est le cas des observations dans une expérience qui sont liées par le même micro-monde dans lequel elles ont été générées
+-   $O_1 \subset O_2$ signifie qu'on s'attend à une série d'observations qui sont logiquement liées entre elles, comme c'est le cas des observations dans une expérience qui sont liées par le même micro-monde dans lequel elles ont été générées
 
-Le message à tirer de cette formule est que pour établir l'effet de la théorie/hypothèse en question, il faut un complexe emboîtement entre différents éléments. Ceci comporte également la difficulté de falsifier une théorie, c'est-à-dire qu'elle ne produit pas les observations/phénomènes attendus. En effet, si on n'obtient pas ce que l'on s'attend, on peut toujours attribuer la faute à une autre élément de la formule sur la gauche.
+Pour établir l'effet de la théorie/hypothèse en question, il faut donc un complexe emboîtement entre différents éléments. Ceci implique que si les observations corroborent la théorie ou l'hypothèse, on ne peut jamais être sûr que cela est vraiment dû à $T/H$. Il se peut que les observations sont en réalité le résultats d'une autre composante sur la gauche de la formule. Le même principe s'applique au rejet d'une théorie ou hypothèse. Même dans ce cas, il n'est pas possible d'établir si le *coupable* est vraiment $T/H$ ou une autre composante. Cette difficulté est notamment l'une des raisons pour lesquelles il existent un large nombre de théorie qui ne sont considérées ni *vraies*, ni *fausses* [@fergusonVastGraveyardUndead2012]. Pour *accepter* ou *réfuter* une théorie ou une hypothèse, il faut en effet l'accord de la communauté scientifique sur plusieurs postulats et considérations auxiliaires. Dans cette perspective, l'utilisation d'un modèle structurel causal en forme de DAG [@pearlCausalInferenceStatistics2016; @pearl2018book; @mcelreathStatisticalRethinkingBayesian2020] et la *fusion* de différentes sources d'informations de manière systématique @bareinboimCausalInferenceDatafusion2016 peuvent contribuer à mieux évaluer $T/H$ .
+
+# Conclusion
+
+Ce document a présenté un survol de la méthode expérimentale appliquée à la technologie éducative organisée en quatre étapes principales. La première étape consiste à justifier une question de recherche d'un point de vue scientifique et éthique qui puisse tirer avantage de la méthode expérimentale. La deuxième concerne la formulation d'un hypothèse théorique qui détermine, de manière causale, la relation entre l'intervention et le phénomène d'intérêt. La troisième prévoit la création d'un *micro-monde* dans lequel les chercheurs *opérationnalisent* les conditions nécessaires et suffisantes pour transformer l'intervention dans une variable indépendante à manipuler et la phénomène d'intérêt dans une variable dépendante à mesurer. Enfin, la quatrième étape, concerne les inférences statistique et pratique qu'on peut tirer du *micro-monde* et l'évaluation critique de si et à quel point ces inférences peuvent s'appliquer au *macro-monde* de la question de recherche et de l'hypothèse théorique.
+
+La maîtrise conceptuelle et technique des tousles aspects inhérent à la méthode expérimentale nécessite au moins de trois types de connaissances:
+
+1.  Les mécanismes propres à la mise en place et l\'exécution d'une expérience
+2.  Les potentielles relations causales dans le domaine d'intérêt qui puissent expliquer les effets d'une variable sur une autre
+3.  La planification et l'exécution d'analyse statistiques adéquates aux caractéristiques et finalités de la recherche
+
+\markboth{RÉFÉRENCES}{}
 
 # Références {.unnumbered}

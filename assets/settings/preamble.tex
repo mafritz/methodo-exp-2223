@@ -4,16 +4,6 @@
 
 \usepackage[font=small,labelfont=bf,width=0.8\textwidth]{caption}
 
-\renewcommand{\topfraction}{.85}
-\renewcommand{\bottomfraction}{.7}
-\renewcommand{\textfraction}{.15}
-\renewcommand{\floatpagefraction}{.66}
-\setcounter{topnumber}{3}
-\setcounter{bottomnumber}{3}
-\setcounter{totalnumber}{4}
-
-
-
 \usepackage{etoolbox}
 \ifundef{\abstract}{}{\patchcmd{\abstract}%
     {\quotation}{\quotation\noindent\ignorespaces}{}{}}

@@ -479,17 +479,9 @@ Même s'il serait potentiellement possible de manipuler une variable sur un nomb
 
 Lorsqu'on implémente deux ou plusieurs VIs on à faire à un design dit **factoriel**, car le plan implique l'étude de l'effet de différents facteurs chacun avec au moins deux modalités/niveaux différents. Un plan factoriel très célèbre est le plan 2x2, dans lequel on étudie l'effet de deux VIs chacune avec deux modalités/niveaux. Le croisement des quatre modalités/niveaux crée ce plan 2x2 avec 4 **conditions expérimentales** différentes. Par exemple, les chercheurs peuvent manipuler simultanément:
 
-1.  VI1 = support de lecture, avec modalités:
+-   VI1 = support de lecture, avec modalités: (a) Livre papier ou (b) E-book
 
-    1.  Livre papier
-
-    2.  E-book
-
-2.  VI2 = difficulté du texte, avec modalités:
-
-    1.  Facile
-
-    2.  Difficile
+-   VI2 = difficulté du texte, avec modalités: (a) Facile ou (b) Difficile
 
 À ce moment, on obtient quatre conditions expérimentales, représentées dans le tableau ci-dessous.
 
@@ -633,7 +625,7 @@ Une variante du plan intra-sujet très répandue dans la recherche consiste dans
 
 Un design expérimental à mesure répétée très utilisé lorsqu'une expérience vise à déterminer un effet sur les apprentissages consiste dans le plan apellé **avant/après** ou **pré-test/post-test**. Dans ce type de plan, on fait une passation d'un premier test, par exemple sur les connaissances des participant-es sur un sujet, avant d'effectuer l'intervention. Le même test (ou une variante considérée équivalente) est administré après l'intervention. La comparaison porte à ce moment sur le gain d'apprentissage entre l'avant et l'après. Cette technique est souvent combinée avec une VI inter-sujet pour comparer si le gain d'apprentissage dans une modalité de la VI est supérieur à une autre ou aux autres modalités. Le graphique ci-dessous montre les résultats d'une expérience avec de design.
 
-```{r pre-post-graph, fig.align="center", fig.cap="Exemple des résultats d'un plan inter-sujets avec pré-test et post-test", fig.height=3}
+```{r pre-post-graph, fig.align="center", fig.cap="Exemple des résultats d'un plan inter-sujets avec pré-test et post-test", fig.height=4}
 pre_post_plot
 ```
 
@@ -759,7 +751,7 @@ D'un point de vue déontologique, le protocole expérimental est censé aussi ga
 
 ## Analyse des données et hypothèses opérationnelles
 
-L'analyse des données sera traitée de manière plus détaillée dans les fondements statistiques de la méthode expérimentale. Mais d'un point de vue empirique, l'analyse des données est également liée à ce qu'on appelle des hypothèses opérationnelles. Ces hypothèses sont l'application au *micro-monde* des éventuelles explications causales potentielles exprimées à travers les hypothèses théoriques. La différence concerne le fait que les hypothèses opérationnelles sont exprimées sur la base des variables indépendantes et dépandantes retenues pour représenter l'intervention et le phénomène d'intérêt.
+L'analyse des données sera traitée de manière plus détaillée dans les fondements statistiques de la méthode expérimentale. Mais d'un point de vue empirique, l'analyse des données est également liée à ce qu'on appelle des hypothèses opérationnelles. Ces hypothèses sont l'application au *micro-monde* des éventuelles explications causales potentielles exprimées à travers les hypothèses théoriques. La différence concerne le fait que les hypothèses opérationnelles sont exprimées sur la base des variables indépendantes et dépendantes retenues pour représenter l'intervention et le phénomène d'intérêt.
 
 Donc dans l'exemple sur l'effet du support vidéo sur l'apprentissage, l'hypothèse théorique sera exprimée sur la base de l'effet des modalités/conditions de la VI (lecture d'un texte, enregistrement d'un cours ex-cathedra de 30 minutes, et vision de 3 capsules vidéos de 5 minutes chaque) sur la mesure de l'apprentissage identifiée comme le score à un quizz sur le contenu du support. Une hypothèse opérationnelle possible consisterait par exemple à avancer prévoir/s'attendre à distribution des scores au test de compréhension (VD) autour de moyennes ordonnées de la manière suivante:
 

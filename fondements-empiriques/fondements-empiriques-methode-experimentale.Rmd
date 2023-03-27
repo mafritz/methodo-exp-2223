@@ -685,6 +685,78 @@ D'autres aspects concernant la modalité de recrutement et les critères de sél
 
 ## Procédure et matériel
 
+Tout ce qui se passe à l'intérieur du *micro-monde* doit être planifié et reporté attentivement par les chercheurs. La procédure et le matériel concernent en effet toutes les actions et tous les artéfacts (instruments de mesures, questionnaires, ...) qui sont censés permettre au *micro-monde* de générer, récolter et analyser des données d'intérêt. Cette activité de représentation fidèle de la réalité du *micro-monde* a une triple fonction :
+
+1.  Pour les chercheurs eux-mêmes
+2.  Pour les participant-es
+3.  Pour la communauté scientifique
+
+### Pour les chercheurs eux-mêmes
+
+Les chercheurs doivent attentivement planifier les caractéristiques et le déroulement des interactions dans le *micro-monde* expérimental. Il s'agit en effet de la source des données qui leur permettent de répondre à la question de recherche et, plus largement, d'améliorer leur propre connaissance du domaine d'intérêt. En effet, à travers la planification d'une expérience on peut s'apercevoir d'éléments manquants ou découvrir des procédures et matériaux utilisés par d'autres contributions scientifiques qui portent sur le même sujet ou des sujets adjacents.
+
+Afin de garantir une passation de l'expérience précise et uniforme entre participant-es, les chercheurs développent ce qu'on appelle un **protocole expérimental**. Ce protocole peut être plus ou moins standardisé, au point qu'il existe même des logiciels qui permettent aux chercheurs de structurer le protocole de manière détaillée et non ambiguë (e.g. [le site protocols.io](https://www.protocols.io/)).
+
+Le protocole sert aux chercheurs pour déterminer trois aspects liés aux données qui s'influencent mutuellement : (1) la génération des données, (2) la récolte des données, et (3) l'analyse des données.
+
+![Le protocole expérimental détermine comment les données sont générées, récoltées et analysées.](images/cycle-generation-recolte-analyse.png){width="80%"}
+
+**Génération des données.** La génération des données concernent toutes les éléments qui permettent aux conditions expérimentales (i.e. le VIs et leurs modalités) de s'exprimer concrètement et de produire, donc, les effets attendus sur les phénomènes d'intérêts (les VD). Les éléments qui ont généralement le plus d'impact sur la générations des données sont :
+
+-   Les entités/participant-es déjà illustrés plus haut
+
+-   Une activité ou tâche expérimentale que les participant-es doivent mener (e.g. tâche de résolution de problèmes, collaboration médiatisée par ordinateur, évaluation esthétique de matériel pédagogique, suivre une formation pendant un certain temps, etc.)
+
+-   Les manipulations expérimentales qui permettent par exemple de cacher des informations aux participant-es (e.g. faire croire que les participant-es collaborent avec une personne tandis que c'est un script automatisé ou l'un des chercheurs) ou induire des situations d'intérêt pour les finalités de la recherche (e.g. produire de la confusion avec un texte reportant des informations contrastantes).
+
+**Récolte des données.** La récolte des données concerne l'*enregistrement* du *micro-monde* dans un format quantitative et/ou qualitative qui permet ensuite l'analyse. Il existe en effet différents manières d'*encoder* la *réalité* produite par l'expérience. Parmi les chois relatifs à la récolte des données figurent:
+
+-   Le format avec lequel les données sont représentées. Par exemple sous forme de réponses à un questionnaire papier/en ligne, à travers des mesures physiologiques, ou encore des enregistrement audio/vidéo d'une situation écologique (e.g. déroulement d'une séquence pédagogique).
+
+-   Les instruments qui permettent la récolte des données. Par exemple un dispositif d'oculométrie qui permet de tracer le regard des participant-es, les manipulations sur une tablette effectuées par des élèves, ou encore logiciel qui permet de créer des sondages en ligne.
+
+-   La situation et le contexte de récolte des données. Par exemple si l'expérience se déroulent en présence ou en ligne, si les participant-es effectuent l'expérience complètement en autonomie ou si le chercheur les accompagnent dans les étapes, si les participant-es passent l'expérience isolé-es ou en groupes (e.g. classes, groupes de travail, ...)
+
+**Analyse des données.** L'analyse des données, traitées de manière plus approfondie plus bas dans cette section, concerne toutes les manipulations qui sont effectuées sur les données afin d'en tirer des informations utiles. Parmi les choix relatives à l'analyse des données figurent:
+
+-   Les logiciels utilisés pour mener les analyses, car selon le type et/ou la version des logiciels les résultats peuvent présenter des différences
+
+-   L'approche statistique envisagée par les chercheurs (e.g. *fréquentiste* ou Bayésienne)
+
+-   Les représentations graphiques de support pour une meilleure compréhension des données à disposition
+
+### Pour les participant-es
+
+Le protocole expérimental détermine également ce qui est attendu par les participant-es. Il doit donc respecter les droits des participant-es en termes de participation à une recherche (i.e. justification/commission éthique).
+
+Disposer d'un protocole expérimental détaillé permet également de s'assurer de dévoiler seulement les informations nécessaires et exactement au moment propice. En effet, dans la méthode expérimental il arrive souvent que les finalités de l'expérience et même des détails importants sont cachées aux participant-es. Avec un protocole expérimental, les chercheurs maximise les chances que les participant-es sont exposé-es exactement aux même informations dictées par exemple par la condition expérimental spécifique qui leur a été attribuée.
+
+Du point de vue des participant-es, un protocole expérimentale prévoit en général les étapes prototypiques suivantes (qui s'adaptent évidemment au contexte de passation) :
+
+1.  Accueil des participant-es et explication sur le déroulement de l'expérience
+
+2.  Formulaire de consentement pour la participation à la recherche avec informations sur les droits des participant-es et sur l'engagement des chercheurs
+
+3.  Opérations préliminaire à la tâche expérimentale (e.g. pré-test, découverte d'un environnement techno-pédagogique, ...)
+
+4.  Tâche expérimentale. Cette étape peut concerner une passation relativement courte (20-30 minutes) ou une situation écologique qui s'étale sur plusieurs semaines, mois ou, parfois, même années !
+
+5.  Opérations successives à la tâche (e.g. post-test, passation d'un questionnaire, ...)
+
+6.  Débrifieng avec dévoilement complet des objectifs de la recherche et d'éventuelles manipulations expérimentales. À ce moment un deuxième formulaire de consentement pour l'utilisation des données peut être nécessaire en raison de la manipulation expérimentale.
+
+### Pour la communauté scientifique
+
+Enfin, le protocole expérimental joue un rôle très important d'un point de vue scientifique, car il contribue à déterminer l'intérêt et la fiabilité de la contribution expérimentale pour la communauté scientifique. On peut diviser, encore une fois pour faciliter l'exposition, l'importance du protocole expérimental en deux aspects qui s'influencent mutuellement:
+
+-   Expliciter le cadre conceptuel et opérationnel de la recherche
+
+-   Délimiter les contraintes déontologiques
+
+Le protocole expérimental force les chercheurs à expliciter le cadre conceptuel et opérationnel de la recherche. En effet, ces deux niveaux peuvent différer considérablement de recherche à recherche. Imaginons deux expériences qui s'intéressent aux effets des émotions sur l'apprentissage médiatisé par ordinateur. Il peut tout à fait être le cas que les deux contributions partagent dans l'introduction et dans le cadre théorique les mêmes principes de base et objectifs. Dans la section méthodologique, en revanche, on découvre que les deux contributions manifestent en réalité des profondes différences sur qu'est-ce qu'une émotion et comment la mesurer [@schererWhatAreEmotions2005; @pekrunIntroductionEmotionsEducation2014; @linnenbrink-garciaAdaptiveMotivationEmotion2016; @scherer2022].
+
+D'un point de vue déontologique, le protocole expérimental est censé aussi garantir que la recherche puissent être reproduite ou répliquée par d'autres chercheurs [@chambersSevenDeadlySins2017; @Nosek1422; @nosekWhatReplication2020; @fritzOverviewReplicationCrisis2019]. La reproduction concerne la possibilité d'obtenir les mêmes résultats aux analyses avec les données originales, tandis que la réplication concerne l'obtention de nouvelles données avec le même protocole. Pour garantir qu'une expérience génère effectivement les données et les résultats décrits par les chercheurs, il y a de plus en plus la tendance de pré-enregistrer le protocole expérimental -- y compris les hypothèses et les modalités d'analyse -- avant la passation de l'expérience [@nosekPreregistrationHardWorthwhile2019; @simmonsPreregistrationWhyHow2021; @loggPreregistrationWeighingCosts2021]. Ce mécanisme peut s'appliquer même à la publication de l'article, avec une procédure appelée *registered reports* [@chambersPresentFutureRegistered2022]. Avec cette démarche, une expérience est soumise à un journal avant que la récolte des données est entamée. Le journal, donc, évalue la recherche exclusivement sur la base de l'intérêt et de la qualité des ces propos, illustrés justement en forme de protocole expérimental complet. Si le protocole expérimental est accepté, le journal s'engage à publier l'article indépendamment des résultats obtenus (e.g. corroboration ou pas des hypothèses).
+
 ## Analyse des données et hypothèses opérationnelles
 
 L'analyse des données sera traitée de manière plus détaillée dans les fondements statistiques de la méthode expérimentale. Mais d'un point de vue empirique, l'analyse des données est également liée à ce qu'on appelle des hypothèses opérationnelles. Ces hypothèses sont l'application au *micro-monde* des éventuelles explications causales potentielles exprimées à travers les hypothèses théoriques. La différence concerne le fait que les hypothèses opérationnelles sont exprimées sur la base des variables indépendantes et dépandantes retenues pour représenter l'intervention et le phénomène d'intérêt.

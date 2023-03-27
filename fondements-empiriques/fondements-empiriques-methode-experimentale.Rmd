@@ -627,11 +627,11 @@ Une autre caractéristique importante du design expérimental concerne la maniè
 
 **Design inter-sujets.** Dans ce type de design, les entités/participant-es sont assigné-es à des modalités de la VI différentes. Par exemple, dans le cas d'une seule VI avec deux modalités, moitié des participant-es sont attribué-es à la première modalité $X_0$ et l'autre moitié à la modalité $X_1$. Cela signifie que les participant-es $X_0$ ne sont exposé-es que à cette modalité et, idéalement, ne sont même pas à connaissance pendant l'expérience de l'existence d'une autre modalité. Cette information est en général dévoilée à la fin de l'étude pour éviter des biais. Par exemple, si on communiquait aux participant-es $X_0$ que dans la version $X_1$ les participant-es ont accès à une version plus récente d'un environnement techno-pédagogique, leur motivation et engagement pourraient diminuer simplement parce que les participant-es estiment avoir été placée dans une condition moins intéressante. Dans le design inter-sujet il est donc important de construire les groupes/conditions expérimentales afin de maximiser leur équivalence. Même avec l'utilisation de la randomisation, en effet, il peut y avoir des situations dans lesquels les attributions ne sont pas vraiment balancées, notamment avec un faible nombre de participant-es globalement.
 
-![Design inter-sujets. Les participant-es sont exposé-es seulement à une modalité de la VI ou des VIs.](images/design-inter-sujets.png){width="50%"}
+![Design inter-sujets. Les participant-es sont exposé-es seulement à une modalité de la VI ou des VIs.](images/design-inter-sujets.png){width="30%"}
 
 **Design intra-sujets.** Dans ce type de design, chaque participant-e est exposé-e à toutes les conditions expérimentales. Dans le cas d'une seule VI avec trois modalités, par exemple, chaque participant-e sera exposé-e aux trois modalités, souvent dans une séquence différente pour éviter des effets d'ordre. Imaginons que l'expérience vise tester trois design graphiques différents d'un site web pédagogique. Si les participant-es testaient toujours les trois versions dans le même ordre, le dernier design pourrait bénéficier d'un effet de familiarité (on a la tendance à apprécier plus ce qu'on a déjà vu auparavant) ou, au contraire, être pénalisé par un effet de fatigue dû à l'exposition aux deux designs précédents. Le plan intra-sujet présente l'avantage de réduire la variabilité due à des facteurs externes aux VI, car les caractéristiques de la personne qui est exposée aux modalités sont exactement les mêmes. En revanche, le plan intra-sujet présente plus de risques au niveau des connaissances et de la compréhension des participant-es des objectifs expérimentaux. En effet, en ayant accès à l'ensemble du design expérimental, les participant-es peuvent plus facilement comprendre les objectifs de la recherche et risquent, même inconsciemment, de se conformer aux résultats attendus.
 
-![Design intra-sujets. Les participant-es sont exoposé-es à toutes les modalités de la VI ou des VIs, souvent dans une séquence différente pour éviter des effets d'ordre.](images/design-intra-sujets.png){width="60%"}
+![Design intra-sujets. Les participant-es sont exoposé-es à toutes les modalités de la VI ou des VIs, souvent dans une séquence différente pour éviter des effets d'ordre.](images/design-intra-sujets.png){width="40%"}
 
 **Design mixe inter-intra.** Ce type de design combine les deux types de design précédents. Pour mettre en place ce design, le plan expérimental doit prévoir au moins deux VI, car il est nécessaire qu'au moins une VI soit inter-sujets et au moins une VI soit intra-sujet. Par exemple, on peut imaginer un design expérimental avec une VI inter-sujet qui détermine si les participant-es allument ou pas leur caméra lors d'une tâche collaborative médiatisée par ordinateur. À l'intérieur de cette répartition inter-sujet, une VI intra-sujet expose les participant-es à une tâche collaborative facile et à une difficile. Moitié des participant-es commence avec la tâche facile et l'autre avec la tâche difficile pour éviter l'effet d'ordre. À ce moment, les deux groupes indépendants sur la VI de la webcam peuvent être comparés sur la différence intra-sujet entre la performance à la tâche facile et à celle difficile.
 
@@ -643,7 +643,7 @@ Une variante du plan intra-sujet très répandue dans la recherche consiste dans
 
 Un design expérimental à mesure répétée très utilisé lorsqu'une expérience vise à déterminer un effet sur les apprentissages consiste dans le plan apellé **avant/après** ou **pré-test/post-test**. Dans ce type de plan, on fait une passation d'un premier test, par exemple sur les connaissances des participant-es sur un sujet, avant d'effectuer l'intervention. Le même test (ou une variante considérée équivalente) est administré après l'intervention. La comparaison porte à ce moment sur le gain d'apprentissage entre l'avant et l'après. Cette technique est souvent combinée avec une VI inter-sujet pour comparer si le gain d'apprentissage dans une modalité de la VI est supérieur à une autre ou aux autres modalités. Le graphique ci-dessous montre les résultats d'une expérience avec de design.
 
-```{r pre-post-graph, fig.align="center", fig.cap="Exemple des résultats d'un plan inter-sujets avec pré-test et post-test", fig.height=4}
+```{r pre-post-graph, fig.align="center", fig.cap="Exemple des résultats d'un plan inter-sujets avec pré-test et post-test", fig.height=3}
 pre_post_plot
 ```
 
@@ -769,9 +769,15 @@ D'un point de vue déontologique, le protocole expérimental est censé aussi ga
 
 ## Analyse des données et hypothèses opérationnelles
 
-L'analyse des données sera traitée de manière plus détaillée dans les fondements statistiques de la méthode expérimentale. Mais d'un point de vue empirique, l'analyse des données est également liée à ce qu'on appelle des hypothèses opérationnelles. Ces hypothèses sont l'application au *micro-monde* des éventuelles explications causales potentielles exprimées à travers les hypothèses théoriques. La différence concerne le fait que les hypothèses opérationnelles sont exprimées sur la base des variables indépendantes et dépendantes retenues pour représenter l'intervention et le phénomène d'intérêt.
+Un dernier élément important dans le *micro-monde* consiste dans la manière dont le données seront analysées pour essayer de répondre à la question de recherche expérimentale. Le type d'analyse à mener dépend étroitement de trois aspects:
 
-Donc dans l'exemple sur l'effet du support vidéo sur l'apprentissage, l'hypothèse théorique sera exprimée sur la base de l'effet des modalités/conditions de la VI (lecture d'un texte, enregistrement d'un cours ex-cathedra de 30 minutes, et vision de 3 capsules vidéos de 5 minutes chaque) sur la mesure de l'apprentissage identifiée comme le score à un quizz sur le contenu du support. Une hypothèse opérationnelle possible consisterait par exemple à avancer prévoir/s'attendre à distribution des scores au test de compréhension (VD) autour de moyennes ordonnées de la manière suivante:
+1.  Le type de question de recherche, notamment en fonction de la présence et précision des hypothèses théoriques et d'un modèle structurel causal
+2.  L'approche philosophique ou épistémologique à l'analyse des données adoptée par les chercheurs
+3.  Le degré de précision des hypothèses qui peuvent, par exemple, se limiter à tester des hypothèses ordinales génériques (e.g., $X_1$ \> $X_0$) ou essayer de quantifier de manière plus détaillée l'effet (e.g., $X_1$ - $X_0$ $\geq$ 5 unités de la VD).
+
+Ces aspects sont traités de manière plus approfondie dans la ressource sur les fondements statistiques de la méthode expérimentale. Ici, il sera le cas d'illustrer brièvement une situation assez fréquente en technologie éducative et qui s'applique lorsque les chercheurs ont émis des hypothèses théoriques ordinales. Il est en effet assez fréquent que les chercheurs s'attendent à une meilleure efficacité d'une intervention par rapport à une autre (ou à des autres) sur le phénomène d'intérêt. Dans le *micro-monde*, les hypothèses théoriques doivent être elles aussi *opérationnalisées*, c'est-à-dire formulées en termes de l'effet des modalités de la VI sur la VD. Ce changement implique une *concrétisation* des hypothèses sur la métrique choisi pour la VD de référence.
+
+On peut imaginer que dans une expérience qui porte sur l'effet du support vidéo sur l'apprentissage, l'hypothèse théorique sera exprimée sur la base de l'effet des modalités/conditions de la VI (lecture d'un texte, enregistrement d'un cours ex-cathedra de 30 minutes, et vision de 3 capsules vidéos de 5 minutes chaque) sur la mesure de l'apprentissage identifiée comme le score à un quiz sur le contenu du support. Une hypothèse opérationnelle possible consisterait par exemple à l'attente d'une distribution des scores au test de compréhension (VD) autour de moyennes ordonnée de la manière suivante:
 
 -   La moyenne des scores de compréhension dans la modalité *capsules* est plus élevée de la moyenne dans la modalités *texte*
 
@@ -779,7 +785,9 @@ Donc dans l'exemple sur l'effet du support vidéo sur l'apprentissage, l'hypoth�
 
 -   La moyenne des scores de compréhension dans la modalité *capsules* est plus élevée de la moyenne dans la modalité *texte*
 
-```{r idealized-experiment, fig.height=3, fig.width=5, fig.cap="Données simulées sur une potentielle expérience idéalisée. Les barres représentent des intervalles de confiance à 95%."}
+Le graphique suivant montrent la distribution de la VD conditionnelle aux trois modalités de la VI $\mathbb{P}({Score_{compr.}}\space|\space{Support})$ compatible avec les hypothèses opérationnelles émises.
+
+```{r idealized-experiment, fig.height=3, fig.width=5, fig.cap="Données simulées sur une potentielle expérience avec un plan inter-sujets comprenant 3 modalités de la VI et une VD. Les barres représentent des intervalles de confiance à 95%."}
 sans <- tibble(
   condition = "Texte",
   apprentissage = rnorm(200, 80, 35)
@@ -805,13 +813,13 @@ ggplot(idealized_experiment, aes(x = condition, y = apprentissage, color = condi
   geom_jitter(alpha = 0.1) +
     stat_summary(fun.data = mean_cl_normal, geom = "errorbar", width = 0.3, position = position_dodge(width = 0.1)) +
   stat_summary(fun = mean, geom = "point", size = 3, shape = 15, position = position_dodge(width = 0.6)) +
-  labs(x = "Conditions idéalisées", y = "Apprentissage idéalisé") +
+  labs(x = "Modalités de la VI", y = "Mesure de la VD") +
   theme(legend.position = "none")
-  
-
 ```
 
-Le type d'analyse statistique à mener dépend de plusieurs facteurs, notamment le plan expérimental choisi, le nombre des VI et de modalités à l'intérieur de chaque VI, la présence d'autres mesures corollaires, ainsi que la distribution attendue de la VD.
+Pour corroborer les hypothèses il serait néanmoins nécessaire un test statistique, dont les détails dépendent de l'approche statistique envisagée. Comme indiqué plus haut dans la partie sur le protocole expérimental, il est encore une fois de plus en plus de bonne pratique de fournir les détails précis des analyses à mener dans le pré-enregistrement de l'expérience. Par exemple, les chercheurs peuvent simuler des données compatibles avec leurs hypothèses et fournir en même temps le code informatique (e.g. un script dans le langage de programmation R) qui défini en amont les détails du modèle statistique qui sera utilisé.
+
+La combinaison entre le pré-enregistrement du protocole expérimental, incluant les hypothèses et le code d'analyse statistique, peut en effet contribuer à limiter des *questionable research practices* comme par exemple le *HARKing*, acronyme anglais de *Hypothesizing After the Results are Known* [@kerrHARKingHypothesizingResults1998; @johnMeasuringPrevalenceQuestionable2012]. Cette pratique consiste dans l'adéquation des hypothèses après que les résultats ont été analysées.
 
 # Inférence
 

@@ -315,6 +315,7 @@ Des éléments corollaires à tenir en compte concernent des éventuelles probl�
 
 Ce document a fourni des informations utiles pour s'initier à la lecture et interprétation de contributions expérimentales primaires. D'abord, la structure *classique* des contributions a été illustrées en fonction des objectifs et des pratiques courantes dans l'exposition des contenus pour chaque section. Ensuite, la méthode QALMRI a été proposée en tant que pratique systématique pour lire et interpréter (et éventuellement planifier) des contributions expérimentales.
 
+\markboth{RÉFÉRENCES}{}
 # Références {.unnumbered}
 
 [^1]: L'ordre peut varier et parfois deux sections sont groupées, par exemple "Participants et design expérimental" ou "Design expérimental et variables"

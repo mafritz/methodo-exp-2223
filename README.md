@@ -82,8 +82,6 @@ Le cours est organisé sur deux périodes du Master MALTT (P5 et P6), avec deux 
 | 11h30 - 12h15 | Pré-enregistrement d'une recherche expérimentale      |
 | 12h15 - 12h30 | Illustration des livrables pour le travail à distance |
 
-: Répartition horaire de la demi-journée de mardi 29 mars
-
 ### Introduction aux périodes 5 et 6 sur la méthode expérimentale
 
 Cette partie du cours introduit les contenus, objectifs et l'environnement d'apprentissage de la partie du cours METHODO consacrée à la méthode expérimentale :

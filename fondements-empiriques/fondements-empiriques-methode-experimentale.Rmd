@@ -787,7 +787,7 @@ On peut imaginer que dans une expérience qui porte sur l'effet du support vidé
 
 Le graphique suivant montrent la distribution de la VD conditionnelle aux trois modalités de la VI $\mathbb{P}({Score_{compr.}}\space|\space{Support})$ compatible avec les hypothèses opérationnelles émises.
 
-```{r idealized-experiment, fig.height=3, fig.width=5, fig.cap="Données simulées sur une potentielle expérience avec un plan inter-sujets comprenant 3 modalités de la VI et une VD. Les barres représentent des intervalles de confiance à 95%."}
+```{r idealized-experiment, fig.height=3, fig.width=5, fig.cap="Données simulées pour une potentielle expérience avec un plan inter-sujets comprenant 3 modalités de la VI et une VD. Les barres représentent des intervalles de confiance à 95%."}
 sans <- tibble(
   condition = "Texte",
   apprentissage = rnorm(200, 80, 35)
@@ -817,11 +817,25 @@ ggplot(idealized_experiment, aes(x = condition, y = apprentissage, color = condi
   theme(legend.position = "none")
 ```
 
-Pour corroborer les hypothèses il serait néanmoins nécessaire un test statistique, dont les détails dépendent de l'approche statistique envisagée. Comme indiqué plus haut dans la partie sur le protocole expérimental, il est encore une fois de plus en plus de bonne pratique de fournir les détails précis des analyses à mener dans le pré-enregistrement de l'expérience. Par exemple, les chercheurs peuvent simuler des données compatibles avec leurs hypothèses et fournir en même temps le code informatique (e.g. un script dans le langage de programmation R) qui défini en amont les détails du modèle statistique qui sera utilisé.
+Pour corroborer les hypothèses il faudra effectuer un test statistique, dont les détails dépendent de l'approche statistique envisagée. Comme indiqué plus haut dans la partie sur le protocole expérimental, il est de plus en plus de bonne pratique de fournir les détails précis des analyses à mener dans le pré-enregistrement de l'expérience. Par exemple, les chercheurs peuvent simuler des données compatibles avec leurs hypothèses et fournir en même temps le code informatique (e.g. un script dans le langage de programmation R) qui défini en amont les détails du modèle statistique.
 
 La combinaison entre le pré-enregistrement du protocole expérimental, incluant les hypothèses et le code d'analyse statistique, peut en effet contribuer à limiter des *questionable research practices* comme par exemple le *HARKing*, acronyme anglais de *Hypothesizing After the Results are Known* [@kerrHARKingHypothesizingResults1998; @johnMeasuringPrevalenceQuestionable2012]. Cette pratique consiste dans l'adéquation des hypothèses après que les résultats ont été analysées.
 
 # Inférence
+
+La quatrième étape qui concerne l'inférence n'est en réalité pas la dernière, mais plus précisément la la clé de voûte qui permet de revenir sur les trois autres étapes, comme indiqué dans la figure de présentation des étapes plus haut dans le texte. D'un point de vue conceptuel, en effet, l'étape de l'inférence consiste à déterminer si et à quel point les données générées dans le *micro-monde* peuvent s'appliquer à un *macro-monde potentiel*. En d'autres termes, on prend les résultats du *micro-monde* relatifs à la relation entre VI et VD pour établir le potentiel de l'intervention $X$ sur le phénomène $Y$.
+
+![L'inférence d'un point de vue conceptuel.](images/inference-micro-macro.png){width="80%"}
+
+Pour faire ce passage du *micro-* au *macro-monde* on peut distinguer deux types d'inférences qui, encore une fois, s'influencent mutuellement, mais qu'il faut bien faire attention à ne pas confondre [@meehlAppraisingAmendingTheories1990; @yarkoniGeneralizabilityCrisis2022; @shadishExperimentalQuasiexperimentalDesigns2002]:
+
+-   L'inférence statistique
+
+-   L'inférence *pratique*
+
+## Inférence statistique
+
+## Inférence pratique 
 
 # Apports et limites de la méthode expérimentale
 

@@ -64,21 +64,21 @@ Les connaissances empiriques sont basées sur trois sources:
 
 Il y a eu dans le passé la tendance à séparer nettement les trois sources, notamment au niveau de la distinction entre observations et expériences selon le principe "*correlation is not causation"*. Dans ce sens, les expériences sont identifiées comme le *golden standard* pour établir des mécanismes causaux. Plus récemment, il y a la tendance à voir la causalité comme un effet émergent qui peut être établi également lorsque l'intervention n'est pas effectuée de manière active, mais inférer depuis des situations qui répondent à des critères spécifiques [@pearl2000; @pearlCausalInferenceStatistics2016; @pearl2018book; @rohrer2018].
 
-De plus, il existe des recouvrements entre les trois sources qui sont souvent utilisées de manière complémentaires pour maximiser la connaissance qu'on peut avoir sur un sujet. Le reste de cette section s'intéresse néanmoins aux expériences de manière plutôt *classique* [@maxwell2017], afin de fournir un aperçu conceptuel qui peut être ensuite décliné dans des *formats hybrides* plus complexes.
+De plus, il existe des recouvrements entre les trois sources qui sont souvent utilisées de manière complémentaires pour maximiser la connaissance qu'on peut avoir sur un sujet [@mcelreathStatisticalRethinkingBayesian2020; @bareinboimCausalInferenceDatafusion2016]. Ce document s'intéresse néanmoins aux expériences de manière plutôt *classique* [@maxwell2017], afin de fournir un aperçu conceptuel qui peut être ensuite décliné dans des *formats hybrides* plus articulés.
 
 # Les étapes d'une expérience
 
-Une expérience est un écosystème complexe d'éléments qui doivent coexister et s'influence mutuellement. On peut identifier 4 étapes principales dans une expérience:
+Une expérience est un écosystème complexe d'éléments qui s'influencent mutuellement. On peut identifier 4 étapes principales dans une expérience:
 
-1.  La **justification** qui consiste à établir la *raison d'être* d'une intervention active pour en étudier l'effet sur un ou plusieurs phénomènes d'intérêt
+1.  La **justification** qui consiste à établir la *raison d'être* d'une intervention active pour en étudier l'effet sur un ou plusieurs phénomènes d'intérêt;
 
-2.  L'**explication causale potentielle** qui consiste à émettre des hypothèses --avec différents niveaux de précision possibles -- sur le mécanisme causale qui détermine/explique l'effet de l'intervention
+2.  L'**explication causale potentielle** qui consiste à émettre des hypothèses --avec différents niveaux de précision possibles -- sur le mécanisme causal qui détermine/explique l'effet de l'intervention;
 
-3.  Le **processus génératif de données** qui consiste à créer un micro-monde dans lequel l'intervention puisse être menée dans des conditions qui visent à exclure, idéalement, toute autre source de variabilité potentielle
+3.  Le **processus génératif de données** qui consiste dans la création d'un *micro-monde* qui produit les conditions nécessaires et suffisantes pour atteindre les objectifs de la recherche;
 
-4.  L'**inférence** qui combine des outils statistiques et des connaissances dans le domaine pour déterminer à quel point le processus génératif de données (le micro-monde) fourni des éléments utiles et fiables qu'on peut généraliser au contexte plus large (le macro-monde/la réalité)
+4.  L'**inférence** qui combine des outils statistiques et des connaissances dans le domaine pour déterminer à quel point le processus génératif de données (le *micro-monde*) fourni des éléments utiles et fiables qu'on peut généraliser au contexte plus large (le *macro-monde*/la réalité).
 
-L'image suivante illustre le 4 étapes en signalant la présence de *rétro-feedback* depuis la dernière étape de l'inférence aux étapes précédentes. En effet, après l'étape d'inférence les étapes précédentes sont réévaluées de manière critique suite à l'inférence qui est tirée depuis les résultats de l'expérience.
+L'image suivante illustre le 4 étapes en signalant la présence de *rétro-feedbacks* depuis la dernière étape de l'inférence aux étapes précédentes. En effet, après l'étape d'inférence, les étapes précédentes sont réévaluées de manière critique suite à l'inférence qui est tirée depuis les résultats produits dans le *micro-monde* expérimental.
 
 ![Les 4 étapes d'une recherche expérimentale](images/etapes-methode-experimentale.png "Les 4 étaptes d'une recherche expérimentale"){width="80%"}
 
@@ -86,23 +86,23 @@ L'image suivante illustre le 4 étapes en signalant la présence de *rétro-feed
 
 Les expériences impliquent une forme d'action -- l'intervention -- qui est susceptible d'avoir un effet sur la réalité à travers au moins un phénomène identifiable:
 
--   Par **intervention**, on se réfère de manière très flexible à une action qui modifie la « réalité », y compris de manière épistémique (i.e. ce que l'on sait sur un sujet). L'action peut être concrète et appliquée (e.g. introduire une technologie en salle de classe, proposer un scénario pédagogique innovant, mettre à jour une interface utilisateur, ...) ou plus abstraite et théorique (e.g. un principe ou une théorie pédagogique, un référentiel de compétences, un plan d'études, ...).
+-   Par **intervention**, on se réfère de manière très flexible à une action qui modifie la « réalité », y compris de manière épistémologique (i.e. ce que l'on sait sur un sujet). L'action peut être concrète et appliquée (e.g. introduire une technologie en salle de classe, proposer un scénario pédagogique innovant, mettre à jour une interface utilisateur, ...) ou plus abstraite et théorique (e.g. un principe ou une théorie pédagogique, un référentiel de compétences, un plan d'études, ...).
 
--   Par **phénomène**, on se réfère de manière très fléxible à un pattern d'événements qui se répète de manière congruente, par exemple dans des conditions similaires. Le pattern peut être concret et appliqué (e.g. la rétention mnésique d'éléments dans une liste, la perception d'utilité d'un artefact technologique, ...) ou plus abstrait et théorique (e.g. la compréhension de texte, la collaboration, le bien-être des étudiant-es, ...).
+-   Par **phénomène**, on se réfère de manière très flexible à un pattern d\'évènements qui se répète de manière congruente, par exemple dans des conditions similaires. Le pattern peut être concret et appliqué (e.g. la rétention mnésique d'éléments dans une liste, la perception d'utilité d'un artéfact technologique, ...) ou plus abstrait et théorique (e.g. la compréhension de texte, la collaboration, le bien-être des étudiant-es, ...).
 
 De ce fait, les expériences doivent être planifiées et pondérées attentivement selon au moins deux principes phares:
 
--   Quel serait le bénéfice à appliquer l'intervention, comparé à ne pas l'appliquer
+-   Quel serait le bénéfice à appliquer l'intervention, comparé à ne pas l'appliquer;
 
--   Quel serait la perte potentielle à appliquer l'intervention, comparé à ne pas l'appliquer
+-   Quel serait la perte potentielle à appliquer l'intervention, comparé à ne pas l'appliquer.
 
-Si on prend l'exemple de l'introduction d'une technologie éducative pendant un cours, les deux questions à se poser seront donc (1) qu'est-ce que les étudiant-es obtiennent *en plus* par l'introduction de la technologie ; et (2) qu'est-ce que les étudiant-es *risquent de perdre* à cause de l'introduction de la technologie. Les étudiant-es pourraient gagner en interactivité, collaboration, maîtrise technique, etc. ; et en même temps risquer de perdre en termes de temps nécessaire pour apprendre à utiliser la technologie, en charge cognitive pour articuler plusieurs environnements de travail, etc.
+Si on prend l'exemple de l'introduction d'une technologie éducative pendant un cours, les deux questions à se poser seront donc (1) qu'est-ce que les étudiant-es obtiennent *en plus* par l'introduction de la technologie; et (2) qu'est-ce que les étudiant-es *risquent de perdre* à cause de l'introduction de la technologie. Les étudiant-es pourraient gagner en interactivité, collaboration, maîtrise technique, etc. En même temps, ils pourraient risquer de perdre du temps à consacer à la maîtrise de la technologie, voir leurs charge cognitive augmentée par l'articulation de plusieurs environnements de travail, etc.
 
 Dans le domaine de la recherche, en plus, l'introduction d'une intervention doit aussi respecter une double justification:
 
-1.  **Scientifique**: est-ce que l'intervention est pertinente par rapport aux connaissances disponibles dans le domaine de référence ?
+1.  **Scientifique**: est-ce que l'intervention est pertinente par rapport aux connaissances disponibles dans le domaine de référence?
 
-2.  **Éthique**: est-ce que l'intervention considère attentivement le rapport entre bénéfices et risques potentiels, notamment au niveau des participant-es ?
+2.  **Éthique**: est-ce que l'intervention considère attentivement le rapport entre bénéfices et risques potentiels, notamment au niveau des participant-es?
 
 La combinaison entre les deux justifications jettent les bases pour une question de recherche à laquelle on peut essayer de répondre à travers une expérience.
 
@@ -113,10 +113,10 @@ La justification scientifique est représentée dans les articles ou contributio
 L'introduction illustre la problématique, sa pertinence par rapport aux connaissances actuelles ou phénomènes émergents. La problématique peut être abordée idéalement dans un espace défini par deux continuum:
 
 1.  **Exploratoire vs. Confirmatoire\
-    **Dans une expérience exploratoire, les connaissances actuelles sont jugées encore incomplètes ou trop fragiles/contradictoires pour formuler une explication causale potentielle précise (voir point suivant). L'objectif de l'expérience est principalement celui de mettre en relief des effets potentiels qui pourraient justifier l'intérêt pour des recherches ultérieurs. Au contraire, les expériences confirmatoires cibles de manière précise une intervention, qui peut être aussi une théorie, avec l'objectif d'en corroborer la validité ou d'en remettre en question la pertinence (e.g. la rejeter). Ce mécanisme en technologie éducative -- et plus en général dans les sciences sociales -- est très complèxe, car les phénomènes sont souvent articulés [@meehlAppraisingAmendingTheories1990; @scheelWhyHypothesisTesters2021].
+    **Dans une expérience exploratoire, les connaissances actuelles sont jugées encore incomplètes ou trop fragiles/contradictoires pour formuler une explication causale potentielle précise (voir point suivant). L'objectif de l'expérience est principalement celui de mettre en relief des effets potentiels qui pourraient justifier l'intérêt pour des recherches ultérieurs. Au contraire, les expériences confirmatoires ciblent de manière précise une intervention, qui peut être aussi une théorie, avec l'objectif d'en corroborer la validité ou d'en remettre en question la pertinence (e.g. la rejeter). Ce mécanisme en technologie éducative -- et plus en général dans les sciences sociales -- est très complexe, car les phénomènes sont souvent articulés [@meehlAppraisingAmendingTheories1990; @scheelWhyHypothesisTesters2021].
 
 2.  **Fondamentale vs. Appliquée\
-    **La recherche fondamentale s'intéresse à la compréhension de phénomènes de manière transversale et indépendante à des applications concrètes, tandis que la recherche appliquée vise généralement un contexte et un cadre d'intervention plus spécifique. La distinction est néanmoins délicate et avec plusieurs recouvrements possibles. On peut retenir généralement l'intention de la recherche: est-ce qu'elle vise à apporter des contributions sur un large domaine d'application ou plutôt sur un cadre plus restreint et spécifique ?
+    **La recherche fondamentale s'intéresse à la compréhension des phénomènes de manière transversale et indépendante à des applications concrètes, tandis que la recherche appliquée vise généralement un contexte et un cadre d'intervention plus spécifique. La distinction est néanmoins délicate et avec plusieurs recouvrements possibles. On peut retenir généralement l'intention de la recherche: est-ce qu'elle vise à apporter des contributions sur un large domaine d'application ou plutôt sur un cadre plus restreint et spécifique?
 
 Le cadre théorique articule ce que la communauté scientifique connait (ou ne connait pas encore) à propos d'un sujet et comment ces connaissances ont été acquises: observations, simulations, expériences, mais aussi raisonnement, argumentation, synthèse de connaissances actuelles avec des revues de la littérature ou méta-analyses. Le cadre théorique met en général en relief des manques ou évidences ambivalentes qui justifient la nécessité de proposer une nouvelle expérience ou de répliquer une expérience déjà menée afin de *contrôler* la fiabilité et robustesse des résultats.
 
@@ -126,7 +126,7 @@ La justification scientifique dépend des connaissances du domaine ou des domain
 
 La justification éthique considère l'ensemble des implications internes et externes à l'expérience, surtout d'un point de vue des entités impliquées (e.g. les participant-es, les écoles, ...). Outre à la sensibilité des données recueillies qui est partagée aussi avec les études de type observation, les expériences sont caractérisées par une intervention active, décidée en amont par les chercheurs, qui peut par exemple être appliquée seulement à une partie des participant-es. Il faut donc pondérer à quel point l'intervention peut produire des effets *objectivement* ou *subjectivement* négatifs pour les participant-es.
 
-De plus, les implications éthiques ne concernent pas seulement ce qui est fait, mais également ce qui n'est pas fait (et aurait pu être fait). Si on imagine une intervention techno-pédagogique qui est censée apporter des avantages énormes au groupe qui peut en bénéficier, est-il acceptable d'un point de vue éthique d'avoir un *groupe contrôle* sous forme d'une classe qui n'aura pas accès à cette technologie ?
+De plus, les implications éthiques ne concernent pas seulement ce qui est fait, mais également ce qui n'est pas fait (et aurait pu être fait). Si on imagine une intervention techno-pédagogique qui est censée apporter des avantages énormes au groupe qui peut en bénéficier, est-il acceptable d'un point de vue éthique d'avoir un *groupe contrôle* qui n'aura pas accès à cette technologie?
 
 Ce type de dilemmes étant très délicats, les expériences doivent être acceptées par une commission éthique, à laquelle les chercheurs doivent fournir toute information utile, comme le public cible, le type d'intervention envisagée, la présence d'éventuels mécanismes cachés aux participant-es, etc.
 
@@ -148,15 +148,15 @@ L'explication causale potentielle est la seule étape du processus qui n'est pas
 
 ## L'effet de *X* sur *Y*
 
-La plupart des recherches qui adoptent la méthode expérimentale s'intéressent donc à des mécanismes causaux potentiels qui pourraient expliquer l'effet de l'intervention *X* sur un phénomène *Y*.
+La plupart des recherches qui adoptent la méthode expérimentale s'intéressent donc à des mécanismes causaux potentiels qui pourraient expliquer l'effet de l'intervention $X$ sur un phénomène $Y$.
 
 $$
 X \rightarrow Y
 $$
 
-D'un point de vue logique, on essaie d'établir une *fonction causale* selon laquelle le phénomène Y *écoute* l'intervention X pour déterminer son état. Nous avons donc une sorte de *fonction* similaire au principe de Input-Output en programmation:
+D'un point de vue logique, on essaie d'établir une *chaîne causale* selon laquelle le phénomène $Y$ *écoute* l'intervention $X$ pour déterminer son état. Nous avons donc une sorte de *fonction* similaire au principe de Input-Output en programmation:
 
-$$Y = f(X)$$La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique [@pearlCausalInferenceStatistics2016; @pearl2000; @rodgersEpistemologyMathematicalStatistical2010; @maxwell2017], sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène Y (e.g. le résultat à un examen) est une *fonction* de l'intervention X (e.g. est-ce que l'étudiant-e a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel ?). En d'autres termes, on peut s'attendre à un *pattern* dans la *distribution* du phénomène Y qui dépend/est fonction de l'intervention X. Par exemple: on s'attend à un effet de la modalité avec laquelle les notes d'un cours sont résumées (carte conceptuelle vs. résumé textuel) sur les notes obtenus à l'examen. Le *pattern* attendu consiste dans une distribution des notes obtenues par les étudiant-es ayant utilisé les cartes conceptuelles autour d'une moyenne plus élevée par rapport à la distribution des notes obtenues par les étudiant-es ayant utilisé le résumé textuel.
+$$Y = f(X)$$La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique [@pearlCausalInferenceStatistics2016; @pearl2000; @rodgersEpistemologyMathematicalStatistical2010; @maxwell2017], sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène $Y$ (e.g. le résultat à un examen) est une *fonction* de l'intervention $X$ (e.g. est-ce que l'étudiant-e a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel?). En d'autres termes, on peut s'attendre à un *pattern* dans la *distribution* du phénomène $Y$ qui dépend/est fonction de l'intervention $X$. Par exemple: on s'attend à un effet de la modalité avec laquelle les notes d'un cours sont résumées (carte conceptuelle vs. résumé textuel) sur les notes obtenus à l'examen. Le *pattern* attendu consiste dans une distribution des notes obtenues par les étudiant-es ayant utilisé les cartes conceptuelles autour d'une moyenne plus élevée par rapport à la distribution des notes obtenues par les étudiant-es ayant utilisé le résumé textuel.
 
 D'un point de vue logique, la fonction causale est simple à déclarer en termes formels. En revanche, dans la pratique, déterminer un effet causal dans un environnement complexe est très difficile.
 
@@ -172,11 +172,11 @@ La recherche expérimentale en technologie éducative consiste donc principaleme
 
 ## Difficulté à établir des relations causales
 
-À l'intérieur d'un système complexe, dans lequel les relations entre concepts peuvent s'influencer mutuellement, réussir à détecter un mécanisme causal qui détermine la direction d'un effet (i.e. c'est l'intervention X qui détermine le phénomène Y) s'avère très difficile [@mackieCausesConditions1965; @pearl2000; @pearlCausalInferenceStatistics2016; @pearl2018book]. Il existe différents mécanismes qui peuvent rendre la détection d'une mécanisme de cause à effet compliquée. Cette liste, adaptée des travaux de Pearl [@pearl2000; @pearlCausalInferenceStatistics2016; @pearl2018book] -- voir aussi @mcelreathStatisticalRethinkingBayesian2020 -- en propose 4: un mécanisme de relation inverse, la présence d'une cause commune, la présence d'un médiateur, et la présence d'un effet de *collision*.
+À l'intérieur d'un système complexe, dans lequel les relations entre concepts peuvent s'influencer mutuellement, réussir à détecter un mécanisme causal qui détermine la direction d'un effet (i.e. c'est l'intervention $X$ qui détermine le phénomène $Y$) s'avère très difficile [@mackieCausesConditions1965; @pearl2000; @pearlCausalInferenceStatistics2016; @pearl2018book]. Il existe différents mécanismes qui peuvent rendre la détection d'une mécanisme de cause à effet compliquée. Cette liste, adaptée des travaux de Pearl [@pearl2000; @pearlCausalInferenceStatistics2016; @pearl2018book] -- voir aussi @mcelreathStatisticalRethinkingBayesian2020 -- en propose 4: un mécanisme de relation inverse, la présence d'une cause commune, la présence d'un médiateur, et la présence d'un effet de *collision*.
 
 ### Un mécanisme de relation inverse
 
-Ce phénomène s'avère si on attribut un effet de X sur Y, lorsqu'en vérité c'est Y qui a un effet sur X.
+Ce phénomène s'avère si on attribut un effet de $X$ sur $Y$, lorsqu'en vérité c'est $Y$ qui a un effet sur $X$.
 
 $$X \leftarrow Y$$
 
@@ -184,7 +184,7 @@ On peut imaginer que l'utilisation de technologies de conception et fabrication 
 
 ### La présence d'une cause commune
 
-Ce phénomène s'avère si on attribut un effet de X sur Y, lorsqu'en vérité X et Y n'est sont pas en relation causale, mais l'illusion d'un effet émerge à cause de la présence d'un troisième facteur qui influence à la fois X et Y.
+Ce phénomène s'avère si on attribut un effet de $X$ sur $Y$, lorsqu'en vérité $X$ et $Y$ n'est sont pas en relation causale, mais l'illusion d'un effet émerge à cause de la présence d'un troisième facteur $Z$ qui influence à la fois $X$ et $Y$.
 
 $$X \leftarrow Z \rightarrow Y$$
 
@@ -198,11 +198,11 @@ Le fait d'avoir des stickers et d'avoir des compétences en programmation dériv
 
 ### La présence d'un médiateur
 
-Ce phénomène s'avère quand X et Y sont vraiment dans une relation causale, mais le mécanisme est transmis à travers un troisième facteur Z. À ce moment, le risque est que l'effet causale entre X et Y peut disparaître si le facteur Z n'est pas représenté correctement.
+Ce phénomène s'avère quand $X$ et $Y$ sont vraiment dans une relation causale, mais le mécanisme est transmis à travers un troisième facteur $Z$. À ce moment, le risque est que l'effet causale entre $X$ et $Y$ peut disparaître si le facteur $Z$ n'est pas pris en compte correctement.
 
 $$X \rightarrow Z \rightarrow Y$$
 
-Imaginons que les responsables d'une formation en technologie éducative se questionnent sur l'opportunité d'assigner aux étudiant-es des livrables intensifs d'un point de vue computationnel comme par exemple le montage vidéo, le rendering 3D, ou la modélisation de phénomène complexe avec des simulations Markov Chain Monte-Carlo ($X$). Ces livrables risque d'augmenter le temps de latence que les étudiant-es passe en attendant la fin des processus computationnels, ce qui les obligent à diminuer leur temps libre ($Y$). Cette relation est néanmoins médiée par la puissance des ordinateurs des étudiant-es ($Z$).
+Imaginons que les responsables d'une formation en technologie éducative se questionnent sur l'opportunité d'assigner aux étudiant-es des livrables intensifs d'un point de vue computationnel ($X$), par exemple le montage vidéo, le rendering 3D, ou la modélisation de phénomène complexe avec des simulations Markov Chain Monte-Carlo. Ces livrables risque d'augmenter le temps de latence que les étudiant-es passe en attendant la fin des processus computationnels, ce qui les obligent à diminuer leur temps libre ($Y$). Cette relation est néanmoins médiée par la puissance des ordinateurs des étudiant-es ($Z$).
 
 $$
 Livrable \rightarrow Puissance \rightarrow Temps
@@ -212,7 +212,7 @@ Or, si les responsables de la formation prenaient en considération dans un test
 
 ### La présence d'un effet de *collision*
 
-Ce phénomène s'avère lorsque X et Y ne sont pas en relation causale, mais les deux influencent le même facteur. Il peut s'avérer que sous certaines conditions spécifiques de Z, X et Y résultent associés.
+Ce phénomène s'avère lorsque $X$ et $Y$ ne sont pas en relation causale, mais les deux influencent le même facteur. Il peut s'avérer que sous certaines conditions spécifiques de Z, X et Y résultent associés.
 
 $$X \rightarrow Z \leftarrow Y$$
 

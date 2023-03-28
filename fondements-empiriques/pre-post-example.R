@@ -19,13 +19,13 @@ theme_set(theme_modern())
 moyenne_groupe_0_0 <- 100
 ecart_type_groupe_0_0 <- 15
 
-moyenne_groupe_0_1 <- 105
+moyenne_groupe_0_1 <- 97
 ecart_type_groupe_0_1 <- 15
 
-moyenne_groupe_1_0 <- 115
+moyenne_groupe_1_0 <- 110
 ecart_type_groupe_1_0 <- 15
 
-moyenne_groupe_1_1 <- 130
+moyenne_groupe_1_1 <- 140
 ecart_type_groupe_1_1 <- 15
 
 # Paramètres du micro-monde
@@ -126,7 +126,10 @@ pre_post_plot <- afex_plot(model, x = "pre_post", trace = "VI") +
   theme(
     axis.title.x = element_blank()
   ) +
-  theme_apa(box = TRUE)
+  theme_apa(box = TRUE) +
+  theme(
+    axis.title.x = element_blank(),
+  )
 
 
 # Comparaisons/contrasts Pre effet de l'interaction ----------------------

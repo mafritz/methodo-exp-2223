@@ -906,9 +906,10 @@ La maîtrise conceptuelle et technique des tous les aspects inhérent à la mét
 2.  Les potentielles relations causales dans le domaine d'intérêt qui puissent expliquer les effets d'une variable sur une autre;
 3.  La planification et l'exécution d'analyse statistiques adéquates aux caractéristiques et finalités de la recherche.
 
+```{=tex}
 \newpage
 \markboth{RÉFÉRENCES}{}
-
+```
 # Références {.unnumbered}
 
 [^1]: Pour une introduction accessible voir @pearlCausalInferenceStatistics2016 et @pearl2018book, ou l'[enregistrement d'un workshop](https://www.youtube.com/watch?v=KNPYUVmY3NM) donnée par Richard McElreath du Max Planck Institute de Leipzig.

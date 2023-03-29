@@ -4,7 +4,9 @@ author:
   - Mattia A. Fritz
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
 lang: fr
-linestretch: 1.15
+linestretch: 1.2
+fontsize: 12pt
+urlcolor: blue
 output:
   pdf_document:
     toc: false
@@ -16,8 +18,8 @@ output:
       in_header: "assets/settings/preamble.tex"
       before_body: "assets/settings/before-body.tex"
       #after_body: "doc-suffix.tex"
-bibliography: bib/references.bib
-csl: settings/apa.csl
+bibliography: ../assets/bib/references.bib
+csl: ../assets/settings/apa.csl
 #abstract: "This is my abstract."
 ---
 

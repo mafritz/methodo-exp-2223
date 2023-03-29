@@ -6,6 +6,7 @@ date: "`r format(Sys.time(), '%d/%m/%Y')`"
 lang: fr
 linestretch: 1.2
 fontsize: 12pt
+urlcolor: blue
 output:
   pdf_document:
     toc: false

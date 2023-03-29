@@ -3,15 +3,15 @@ library(here)
 library(knitr)
 library(kableExtra)
 library(papaja)
-library(ggokabeito)
 library(effectsize)
 library(scales)
+library(RColorBrewer)
 
 ## Graphics
 theme_set(theme_apa(box = TRUE))
 
-scale_colour_discrete <- function(...) scale_colour_okabe_ito()
-scale_fill_discrete <- function(...) scale_fill_okabe_ito()
+scale_colour_discrete <- function(...) scale_colour_brewer(palette = "Dark2")
+scale_fill_discrete <- function(...) scale_fill_brewer(palette = "Dark2")
 
 ## Table
 custom_table <- function(data = NULL, caption_text = NULL, col_names = NULL, digits = 3) {

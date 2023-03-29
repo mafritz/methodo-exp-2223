@@ -21,7 +21,7 @@ output:
 bibliography: ../assets/bib/references.bib
 csl: ../assets/settings/apa.csl
 abstract: |
-  Ce document propose des informations utiles pour s'initier à la compréhension des contributions expérimentales *primaires*, c'est-à-dire réportant l'ensemble du processus de génération, récolte, et analyse de données expérimentales. La première partie du document aborde la structure *standard* des contributions expérimentales primaires : Introduction, Méthode, Résultats, et Discussion. La deuxième partie introduit une méthode systèmatique pour lire, interpréter et éventuellement planifier une recherche expérimentale : la méthode QALMRI, acronyme de Question, Alternatives, Logique, Méthode, Résultats et Inférences.
+  Ce document propose des informations utiles pour s'initier à la compréhension des contributions expérimentales *primaires*, c'est-à-dire réportant l'ensemble du processus de génération, récolte, et analyse de données expérimentales. La première partie du document aborde la structure *standard* des contributions expérimentales primaires: Introduction, Méthode, Résultats, et Discussion. La deuxième partie introduit une méthode systèmatique pour lire, interpréter et éventuellement planifier une recherche expérimentale: la méthode QALMRI, acronyme de Question, Alternatives, Logique, Méthode, Résultats et Inférences.
 ---
 
 ```{r setup, include=FALSE}
@@ -32,18 +32,18 @@ source(here::here("assets", "settings", "custom.R"))
 
 # Introduction {.unnumbered}
 
-Malgré le fait que les contributions scientifiques adoptant la méthode expérimentale partagent souvent la même structure et des informations similaires, lire, comprendre et interpréter le contenu de ces sources dites *primaires* reste un exercice difficile [@kershaw2018]. Ce document illustre les caractéristiques communes aux contributions expérimentales et propose une méthode pour en faciliter la lecture, l'interprétation et la planification : la méthode QALMRI [@brosowsky2020], acronyme anglais de *Question, Alternatives, Logic, Method, Results and Inferences*.
+Malgré le fait que les contributions scientifiques adoptant la méthode expérimentale partagent souvent la même structure et des informations similaires, lire, comprendre et interpréter le contenu de ces sources dites *primaires* reste un exercice difficile [@kershaw2018]. Ce document illustre les caractéristiques communes aux contributions expérimentales et propose une méthode pour en faciliter la lecture, l'interprétation et la planification: la méthode QALMRI [@brosowsky2020], acronyme anglais de *Question, Alternatives, Logic, Method, Results and Inferences*.
 
 ## Crédits {.unnumbered}
 
-Ce document reprend et adapte des contenus présents dans d'autres ressources en anglais déjà disponibles sur le sujet, voir par exemple :
+Ce document reprend et adapte des contenus présents dans d'autres ressources en anglais déjà disponibles sur le sujet, voir par exemple:
 
 -   [*Learning To Read Scientific Journal Articles*](https://bartlettje.github.io/2021-10-06-learning-to-read-scientific-journal-articles/)de James Bartlett
 -   [*Research Methods: Lab Manual*](https://www.crumplab.com/ResearchMethodsLab/qalmri.html) de Matthew J. C. Crump
 
 # Sources expérimentales primaires
 
-On peut diviser les contributions expérimentales en deux catégories :
+On peut diviser les contributions expérimentales en deux catégories:
 
 -   Dans une contribution de type *source primaire*, les chercheurs reportent directement l'ensemble du processus expérimental qui a caractérisé l'expérience.
 
@@ -51,33 +51,33 @@ On peut diviser les contributions expérimentales en deux catégories :
 
 ## Structure d'une source expérimentale primaire
 
-Les contributions expérimentales *primaires* sont assez facilement reconnaissables grâce à une structure qui est très similaire dans les différents domaines/disciplines scientifiques. Cette structure a été adoptée de manière consistante depuis les années 1980 [@sollaci2004] et est parfois identifiée avec l'acronyme anglais IMRAD : *Introduction, Method(s), Results And Discussion*. Les contributions présentent en général aussi une section *Conclusion* à la fin du texte. De plus en plus souvent, elles proposent également du matériel supplémentaire, incluant par exemple les données récoltées, le code pour traiter ces mêmes données, ou le matériel expérimental adopté (e.g. stimuli, test, ...).
+Les contributions expérimentales *primaires* sont assez facilement reconnaissables grâce à une structure qui est très similaire dans les différents domaines/disciplines scientifiques. Cette structure a été adoptée de manière consistante depuis les années 1980 [@sollaci2004] et est parfois identifiée avec l'acronyme anglais IMRAD: *Introduction, Method(s), Results And Discussion*. Les contributions présentent en général aussi une section *Conclusion* à la fin du texte. De plus en plus souvent, elles proposent également du matériel supplémentaire, incluant par exemple les données récoltées, le code pour traiter ces mêmes données, ou le matériel expérimental adopté (e.g. stimuli, test, ...).
 
 ## Introduction
 
-L'introduction sert à justifier la recherche en termes de sa contribution au réseau de connaissances qui composent la littérature scientifique. On peut résumer l'introduction en deux éléments étroitement liées :
+L'introduction sert à justifier la recherche en termes de sa contribution au réseau de connaissances qui composent la littérature scientifique. On peut résumer l'introduction en deux éléments étroitement liées:
 
 1.  **Qu'est-ce qu'on sait déjà et comment on le sait\
-    **Les contribution proposent un aperçu plus ou moins étendu de la littérature existante sur le même axe/sujet de recherche. Si l'introduction prévoit de sous-sections, ces informations se trouvent souvent dans des sous-sections telles que :
+    **Les contribution proposent un aperçu plus ou moins étendu de la littérature existante sur le même axe/sujet de recherche. Si l'introduction prévoit de sous-sections, ces informations se trouvent souvent dans des sous-sections telles que:
 
-    -   *Theoretical Background* / Cadre théorique : résumé/synthèse des éléments théoriques pertinents dans la recherche, par exemple la définition de concepts mobilisés, des modèles théoriques de références, etc.
+    -   *Theoretical Background* / Cadre théorique: résumé/synthèse des éléments théoriques pertinents dans la recherche, par exemple la définition de concepts mobilisés, des modèles théoriques de références, etc.
 
-    -   *Related Works* / Contributions de référence : liste de contributions expérimentales qui partagent des éléments sémantiques avec la contribution en objet, souvent selon une approche similarité/contraste. L'objectif est de mettre en évidence des lacunes ou des divergences dans les contributions existantes pour mieux situer l'apport de l'expérience menée.
+    -   *Related Works* / Contributions de référence: liste de contributions expérimentales qui partagent des éléments sémantiques avec la contribution en objet, souvent selon une approche similarité/contraste. L'objectif est de mettre en évidence des lacunes ou des divergences dans les contributions existantes pour mieux situer l'apport de l'expérience menée.
 
 2.  **Qu'est-ce qu'on veut savoir en plus**\
-    Les contributions doivent également illustrer leur apport spécifique, ce qu'elles sont censées amener au(x) domaine(s) de recherche. Ces informations se trouvent en général au tout début de l'article, sous la forme d'une problématique/axe de recherche générale, et à la fin de l'introduction. Au début, on défini la *grande question/problématique* de recherche à laquelle plusieurs chercheurs essaient de contribuer et pour laquelle une seule expérience ne peut sûrement pas proposer une réponse à elle toute seule. À la fin de l'introduction, après donc le cadre théorique et les contributions en lien, la contribution spécifie la *question/problématique spécifique* à travers laquelle les chercheurs pensent pouvoir contribuer à la *grande question/problématique*. Souvent, les informations à ce propos se trouvent dans une sous-section nommée :
+    Les contributions doivent également illustrer leur apport spécifique, ce qu'elles sont censées amener au(x) domaine(s) de recherche. Ces informations se trouvent en général au tout début de l'article, sous la forme d'une problématique/axe de recherche générale, et à la fin de l'introduction. Au début, on défini la *grande question/problématique* de recherche à laquelle plusieurs chercheurs essaient de contribuer et pour laquelle une seule expérience ne peut sûrement pas proposer une réponse à elle toute seule. À la fin de l'introduction, après donc le cadre théorique et les contributions en lien, la contribution spécifie la *question/problématique spécifique* à travers laquelle les chercheurs pensent pouvoir contribuer à la *grande question/problématique*. Souvent, les informations à ce propos se trouvent dans une sous-section nommée:
 
-    -   *Research Question(s) (and Hypotheses)* / Question(s) de recherche (et hypothèses) : les objectifs spécifiques de la contribution sont définis souvent même en forme interrogative. Si les chercheurs avancent des explications causales potentielles, celles-ci sont formulées en tant qu'hypothèses théoriques.
+    -   *Research Question(s) (and Hypotheses)* / Question(s) de recherche (et hypothèses): les objectifs spécifiques de la contribution sont définis souvent même en forme interrogative. Si les chercheurs avancent des explications causales potentielles, celles-ci sont formulées en tant qu'hypothèses théoriques.
 
 ### Exemple de *mini*-introduction
 
-La pensée computationnelle est un terme se référant, de manière plutôt flexible, à un ensemble d'habiletés, compétences et procédures qui facilitent la résolution de problèmes en s'appuyant sur des principes tirés des sciences informatiques [@denning2019computational; @wing2008; @fritzPenseeComputationnelleAvec2019; @guzdial2008]. Dans les 20 dernières années, la pensée computationnelle est de plus en plus considérée en tant que sujet à enseigner déjà lors de la scolarisation primaire et secondaire [@bocconi2016; @computer2018; @grover2013; @resnick2017]. Les activités prévues à cet effet sont souvent divisées en deux catégories : (1) les activités débranchées qui n'utilisent pas des dispositifs numériques mais des modélisations abstraites dérivées d'objets tangibles; et (2) les activités branchées qui, au contraire, s'appuient sur des dispositifs numériques et, souvent, des technologies de l'information et de la communication appliquées à l'enseignement (ibid.). Il n'existe pour l'instant que peu d'études qui comparent directement les bénéfices des deux approches, et ces études s'intéressent principalement aux effets au niveau des apprentissages [@thecamb2019; @guzdial2015].
+La pensée computationnelle est un terme se référant, de manière plutôt flexible, à un ensemble d'habiletés, compétences et procédures qui facilitent la résolution de problèmes en s'appuyant sur des principes tirés des sciences informatiques [@denning2019computational; @wing2008; @fritzPenseeComputationnelleAvec2019; @guzdial2008]. Dans les 20 dernières années, la pensée computationnelle est de plus en plus considérée en tant que sujet à enseigner déjà lors de la scolarisation primaire et secondaire [@bocconi2016; @computer2018; @grover2013; @resnick2017]. Les activités prévues à cet effet sont souvent divisées en deux catégories: (1) les activités débranchées qui n'utilisent pas des dispositifs numériques mais des modélisations abstraites dérivées d'objets tangibles; et (2) les activités branchées qui, au contraire, s'appuient sur des dispositifs numériques et, souvent, des technologies de l'information et de la communication appliquées à l'enseignement (ibid.). Il n'existe pour l'instant que peu d'études qui comparent directement les bénéfices des deux approches, et ces études s'intéressent principalement aux effets au niveau des apprentissages [@thecamb2019; @guzdial2015].
 
 Dans cette contribution, l'accent est plutôt porté sur l'intérêt que les types d'activités peuvent susciter à propos d'une éventuelle carrière dans l'un de domaines communément identifiés avec l'acronyme STEM (*Science, Technology, Engineering, and Mathematics*). Nous formulons à cet effet l'hypothèse que des activités branchées peuvent susciter plus d'intérêt, comparé aux activités débranchées, en raison de l'inter-médiation d'un dispositif numérique.
 
 ## Méthode
 
-La section sur la méthode concerne le micro-monde créé par les chercheurs afin de répondre à la question de recherche spécifique, et tester éventuellement les hypothèses théoriques avancées. La section méthode a deux fonctions principales :
+La section sur la méthode concerne le micro-monde créé par les chercheurs afin de répondre à la question de recherche spécifique, et tester éventuellement les hypothèses théoriques avancées. La section méthode a deux fonctions principales:
 
 1.  Fournir aux lecteurs des informations utiles à évaluer à quel point le micro-monde est suffisamment sensible, fiable et valide pour *produire/représenter* l'effet de l'intervention expérimentale sur le(s) phénomène(s) d'intérêt.
 2.  Donner tous les détails utiles à répliquer l'expérience par d'autres chercheurs intéressés à refaire exactement la même expérience (dans la perspective de corroborer ou remettre en questions les résultats obtenus) ou des expériences avec quelques variations qui permettent de contribuer d'avantage à la *grande question/problématique*.
@@ -90,11 +90,11 @@ Les chercheurs fournissent des informations à propos des participant-es à l'ex
 
 ### Design expérimental
 
-Les chercheurs indiquent par exemple s'il s'agit d'un plan expérimental ou quasi-expérimental ; intra-sujets, inter-sujets, ou mixte ; à mesure unnique ou répétée ; etc. La répartition des participant-es (e.g. aléatoire complète, aléatoire par blocs, ...) est également indiquée. Cette section -- ou éventuellement la section sur les participant-es ou sur l'analyse statistique -- présente de plus en plus souvent aussi une justification de la taille de l'échantillon. Cette justification peut s'appuyer sur des calcules de puissance statistique pour le type d'analyse à mener (voir plus bas) ou d'autres critères comme le budget ou le temps à disposition [@lakens2022].
+Les chercheurs indiquent par exemple s'il s'agit d'un plan expérimental ou quasi-expérimental; intra-sujets, inter-sujets, ou mixte; à mesure unnique ou répétée; etc. La répartition des participant-es (e.g. aléatoire complète, aléatoire par blocs, ...) est également indiquée. Cette section -- ou éventuellement la section sur les participant-es ou sur l'analyse statistique -- présente de plus en plus souvent aussi une justification de la taille de l'échantillon. Cette justification peut s'appuyer sur des calcules de puissance statistique pour le type d'analyse à mener (voir plus bas) ou d'autres critères comme le budget ou le temps à disposition [@lakens2022].
 
 ### Matériel
 
-Les chercheurs illustrent tout le matériel expérimental déployé dans l'expérience, par exemple des instruments de mesure (e.g. eye-tracker, ...) ; des échelles ou questionnaires ; des stimuli ; etc.
+Les chercheurs illustrent tout le matériel expérimental déployé dans l'expérience, par exemple des instruments de mesure (e.g. eye-tracker, ...); des échelles ou questionnaires; des stimuli; etc.
 
 ### Procédure
 
@@ -102,7 +102,7 @@ Le processus de génération/récolte des données de l'expérience est décrit 
 
 ### Variables
 
-Dans cette sous-section, les chercheurs illustrent clairement :
+Dans cette sous-section, les chercheurs illustrent clairement:
 
 -   la ou les variables indépendantes (VI), c'est--à-dire l'*opérationnalisation* de l'intervention, avec les différentes modalités, ainsi que les différences entre celles-ci.
 
@@ -110,7 +110,7 @@ Dans cette sous-section, les chercheurs illustrent clairement :
 
 ### Analyse des données (et hypothèses opérationnelles)
 
-Les chercheurs indiquent comment ils vont traiter les données récoltées : quel type de test statistique est prévu, avec quelles critères d'inférences statistiques ; quel logiciel est utilisés ; quelles données vont être considérées inutilisables ; etc.
+Les chercheurs indiquent comment ils vont traiter les données récoltées: quel type de test statistique est prévu, avec quelles critères d'inférences statistiques; quel logiciel est utilisés; quelles données vont être considérées inutilisables; etc.
 
 Si des hypothèses théoriques ont été émises dans l'introduction à complément de la question de recherche spécifique, les chercheurs illustrent les résultats attendus, par exemple en termes de différences entre moyennes (e.g. la modalité A produira un effet plus grand sur la VD par rapport à la modalité B).
 
@@ -141,9 +141,9 @@ model <- t.test(stem_cis ~ groupe, data = data)
 ef_model <- effectsize(model)
 ```
 
-Les $N$ = `r nrow(data)` participant-es ont manifesté un intérêt moyen pour la sous-échelle *technology* du questionnaire STEM-CIS [@kier2014] de $M$ = `r data$stem_cis |> mean() |> printnum()` ($SD$ = `r data$stem_cis |> sd() |> printnum()`). Un résultat similaire au score observé par Kier et collègues (*ibid.*) qui a été de $M$ = 26.27 ($SD$=10.41). Dans le groupe branché, les participant-es ont manifesté un intérêt avec $M$ = `r data |> filter(groupe == "B") |> pull(stem_cis) |> mean() |> printnum()` ($SD$ = `r data |> filter(groupe == "B") |> pull(stem_cis) |> sd() |> printnum()`) ; dans le groupe débranché avec $M$ = `r data |> filter(groupe == "D") |> pull(stem_cis) |> mean() |> printnum()` ($SD$ = `r data |> filter(groupe == "D") |> pull(stem_cis) |> sd() |> printnum()`).
+Les $N$ = `r nrow(data)` participant-es ont manifesté un intérêt moyen pour la sous-échelle *technology* du questionnaire STEM-CIS [@kier2014] de $M$ = `r data$stem_cis |> mean() |> printnum()` ($SD$ = `r data$stem_cis |> sd() |> printnum()`). Un résultat similaire au score observé par Kier et collègues (*ibid.*) qui a été de $M$ = 26.27 ($SD$=10.41). Dans le groupe branché, les participant-es ont manifesté un intérêt avec $M$ = `r data |> filter(groupe == "B") |> pull(stem_cis) |> mean() |> printnum()` ($SD$ = `r data |> filter(groupe == "B") |> pull(stem_cis) |> sd() |> printnum()`); dans le groupe débranché avec $M$ = `r data |> filter(groupe == "D") |> pull(stem_cis) |> mean() |> printnum()` ($SD$ = `r data |> filter(groupe == "D") |> pull(stem_cis) |> sd() |> printnum()`).
 
-Un *t*-test de Welch a été mené avec le score à la sous-échelle *technology* du questionnaire STEM-CIS (*ibid.*) comme variable dépendante et le type d'activité proposé à l'élève comme variable indépendante (branchée vs. débranchée). Les résultats au test unilatéral indiquent que le groupe activité *branchée* a manifesté un mineur intérêt pour une carrière dans le domaine STEM comparé au groupe *activité débranchée* : `r apa_print(model)$full_result`. La différence d'environ 3 points sur la sous-échelle STEM-CIS correspond à une taille de l'effet de Cohen's $d$ = `r printnum(ef_model$d)` [`r printnum(ef_model$CI_low)`; `r printnum(ef_model$CI_high)`].
+Un *t*-test de Welch a été mené avec le score à la sous-échelle *technology* du questionnaire STEM-CIS (*ibid.*) comme variable dépendante et le type d'activité proposé à l'élève comme variable indépendante (branchée vs. débranchée). Les résultats au test unilatéral indiquent que le groupe activité *branchée* a manifesté un mineur intérêt pour une carrière dans le domaine STEM comparé au groupe *activité débranchée*: `r apa_print(model)$full_result`. La différence d'environ 3 points sur la sous-échelle STEM-CIS correspond à une taille de l'effet de Cohen's $d$ = `r printnum(ef_model$d)` [`r printnum(ef_model$CI_low)`; `r printnum(ef_model$CI_high)`].
 
 ```{r t-test-graph, fig.align="center", fig.cap="Résultats du questionnaire STEM-CIS pour la sous-échelle technology en fonction du type d'activité branchée (B) ou débranchée (D). Les barres représentent les intervalles de confiance à 95 pourcent.", out.width="80%"}
 
@@ -186,7 +186,7 @@ Cette expérience s'est intéressée à l'effet du type d'activité pédagogique
 
 La méthode QALMRI [@brosowsky2020] préconise une manière systématique de penser aux expériences. Cette méthode peut s'appliquer à la lecture et planification des contributions scientifiques primaires surtout de type expérimentale, mais peut s'adapter également aux études basées sur des observations et éventuellement aux méta-analyses.
 
-L'acronyme QALMRI correspond à 6 critères d'analyse d'une contribution expérimentale, c'est-à-dire *Questions, Alternatives, Logic, Method(s), Results and Inferences*. Les mots qui compose l'acronyme sont très proches au français, ce qui permet de le garder sans la nécessité de convertir des lettres : Questions, Alternatives, Logique, Méthode, Résultats et Inférences.
+L'acronyme QALMRI correspond à 6 critères d'analyse d'une contribution expérimentale, c'est-à-dire *Questions, Alternatives, Logic, Method(s), Results and Inferences*. Les mots qui compose l'acronyme sont très proches au français, ce qui permet de le garder sans la nécessité de convertir des lettres: Questions, Alternatives, Logique, Méthode, Résultats et Inférences.
 
 La liste suivant -- librement traduite et adaptée de Brosowsky et collègues [-@brosowsky2020] -- propose un aperçu des 6 critères, qui seront ensuite abordés de manière plus détaillée. Pour faciliter la lecture, les différentes *entités* sont indiquées aux singulier (question, hypothèse, intervention, phénomène, ...), mais la même contribution expérimentale présente souvent plusieurs *entités*, parfois même plusieurs expériences à la fois.
 
@@ -234,13 +234,13 @@ La condition naturelle d'un chercheur est le doute, et le doute se traduit par d
 
 La méthode expérimentale *attaque* les *grandes questions/problématiques de recherche* avec des *questions/problématiques spécifiques* qui se traduisent par la mise en place d'une expérience. L'expérience est censée donner une réponse *spécifique* qui représente un pas en avant dans la direction de la *grande réponse*.
 
-Dans une contribution expérimentale il est important d'identifier les deux niveaux des questions :
+Dans une contribution expérimentale il est important d'identifier les deux niveaux des questions:
 
 -   La *grande question/problématique de recherche* est en général liée à un domaine/axe de recherche -- uni-, multi- ou inter-disciplinaire -- poursuivi par plusieurs chercheurs.
 
--   Si on considère la grande question comme un édifice, alors la *question/problématique spécifique* peut-être considérée comme une brique. En combinant plusieurs questions spécifiques, on essaie d'ériger l'édifice qui sera d'autant plus solide si (1) les briques sont bien intégrées les unes avec les autres ; et (2) des tests sévères ont été menés pour s'assurer que l'édifice ne s'écroule pas -- ce qui implique qu'on doit de quelque sorte essayer de le faire écrouler [@mayo2018].
+-   Si on considère la grande question comme un édifice, alors la *question/problématique spécifique* peut-être considérée comme une brique. En combinant plusieurs questions spécifiques, on essaie d'ériger l'édifice qui sera d'autant plus solide si (1) les briques sont bien intégrées les unes avec les autres; et (2) des tests sévères ont été menés pour s'assurer que l'édifice ne s'écroule pas -- ce qui implique qu'on doit de quelque sorte essayer de le faire écrouler [@mayo2018].
 
-Identifier la grande question/problématique de recherche et la question/problématique de recherche spécifique permet de :
+Identifier la grande question/problématique de recherche et la question/problématique de recherche spécifique permet de:
 
 -   Connaître les intentions de la recherche
 
@@ -250,7 +250,7 @@ Identifier la grande question/problématique de recherche et la question/problé
 
 ## Alternatives
 
-Le doute qui amène des chercheurs à concevoir une expérience doit être *plausible*; c'est-à-dire que la réponse ne doit pas être trivial. Par exemple si on s'attend à un effet de l'intervention $X_1$ plus élevé par rapport à l'intervention $X_0$, au moins l'une des alternatives possibles devrait être plausible :
+Le doute qui amène des chercheurs à concevoir une expérience doit être *plausible*; c'est-à-dire que la réponse ne doit pas être trivial. Par exemple si on s'attend à un effet de l'intervention $X_1$ plus élevé par rapport à l'intervention $X_0$, au moins l'une des alternatives possibles devrait être plausible:
 
 -   Les deux interventions produisent des effets plus ou moins similaire, ou dont la différence peut être considérée négligeable d'un point de vue *pratique*, c'est-à-dire $X_0 \approx X_1$
 
@@ -262,17 +262,17 @@ Dans les alternatives on peut également considérer d'autres facteurs potentiel
 
 ## Logique
 
-La partie logique d'une contribution expérimentale concerne :
+La partie logique d'une contribution expérimentale concerne:
 
 -   L'identification claire et précise des alternatives/différences dans les interventions $X_0$, $X_1$, $X_2$, ... $X_j$
 
 -   La raison, en termes d'explication causale potentielle, pour laquelle les interventions produisent des effets différents, des effets similaires, ou pas d'effet du tout.
 
-L'analyse logique d'une contribution expérimentale peut se faire à l'aide d'opérateurs logiques utilisés également dans la programmation :
+L'analyse logique d'une contribution expérimentale peut se faire à l'aide d'opérateurs logiques utilisés également dans la programmation:
 
 > Si $p$ alors $q$
 
-Par exemple :
+Par exemple:
 
 -   ***Si*** les cartes conceptuelles renforcent davantage les liens sémantiques entre concepts comparé à une synthèse écrite, ***alors*** les participant-es dans la condition $X_{carte}$ auront des meilleures performances au test de compréhension par rapport aux participant-es dans la condition $X_{synthèse}$
 
@@ -280,7 +280,7 @@ Par exemple :
 
 ## Méthodes
 
-Le critère relatif à la méthode correspond à une comrpéhension/description du micro-monde dans lequel :
+Le critère relatif à la méthode correspond à une comrpéhension/description du micro-monde dans lequel:
 
 -   L'intervention $X$ devient la variable indépendante (VI) avec les différents facteurs/modalités
 
@@ -290,13 +290,13 @@ Les informations saillantes qui caractérisent le micro-monde sont également à
 
 ## Résultats
 
-Les résultats des expériences sont généralement divisés en deux types :
+Les résultats des expériences sont généralement divisés en deux types:
 
 -   La description de l'échantillon, c'est-à-dire les données observées/mesurées dans l'expérience
 
 -   Les statistiques inférentielles qui *généralisent* le micro-monde au macro-monde
 
-Dans les deux cas, l'analyse de résultats essaie d'établir :
+Dans les deux cas, l'analyse de résultats essaie d'établir:
 
 -   La présence de patterns dans les données au niveau de l'échantillon général et des stratifications/groupements par facteurs/conditions
 

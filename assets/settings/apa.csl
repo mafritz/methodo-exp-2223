@@ -707,7 +707,7 @@
     <group prefix="(" suffix=")">
       <choose>
         <if type="patent">
-          <!-- authority: U.S. ; genre: patent ; number: 123,445 -->
+          <!-- authority: U.S.; genre: patent; number: 123,445 -->
           <group delimiter=" ">
             <text variable="authority" form="short"/>
             <choose>

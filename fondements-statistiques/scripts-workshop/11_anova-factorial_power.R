@@ -6,7 +6,7 @@ theme_set(theme_modern())
 
 # Puissance statistique ANOVA factorielle --------------------
 
-# Le calcul de puissance statistique est plus compliqué, cela dépend qu'est-ce qu'on veut détecter :
+# Le calcul de puissance statistique est plus compliqué, cela dépend qu'est-ce qu'on veut détecter:
 # 1. Les effets "simples"
 # 2. Les effets "principaux"
 # 3. Les effets d'interactions ?

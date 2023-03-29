@@ -267,7 +267,7 @@ ggplot(correlations, aes(x = x, y = y)) +
 
 On peut en effet calculer la corrélation entre deux phénomènes mesurés quantitativement sur une échelle dans laquelle:
 
--   Un score s'approchant de -1 témoigne d'une corrélation négative, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière opposée: une valeur élevée de $X$ est associée à une faible valeur de $Y$ (et vice-versa) ; ou une valeur faible de $X$ est associée à une valeur élevée de $Y$ (et vice-versa).
+-   Un score s'approchant de -1 témoigne d'une corrélation négative, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière opposée: une valeur élevée de $X$ est associée à une faible valeur de $Y$ (et vice-versa); ou une valeur faible de $X$ est associée à une valeur élevée de $Y$ (et vice-versa).
 
 -   Un score s'approchant de 0 présuppose l'absence d'une corrélation, c'est-à-dire que les deux phénomène ont la tendance à varier sans un pattern identifiable (e.g. si l'un est élevé, l'autre peut être parfois élevé, parfois faible, et parfois moyen).
 
@@ -329,9 +329,9 @@ En maintenant l'exemple de l'enseignant-e qui met à disposition l'enregistremen
 
 -   Qu'est-ce qui se serait passé si les étudiant-es avaient accès à des capsules vidéos plutôt que à l'intégralité des enregistrement?
 
-On ne peut pas répondre à ces questions directement avec des faits, car les étudiant-es ont terminé leur cours avec l'enregistrement intégrale et donc on ne peut pas savoir comment *ces étudiant-es là* auraient réagi dans des conditions différentes. On pourrait donc imaginer de diviser les étudiant-es de la prochaine volée en trois groupes différents: (1) aucun accès à l'enregistrement vidéo ; (2) accès à l'intégralité de l'enregistrement ; (3) accès à des capsules vidéos. Cependant, cette expérience aurait les limitations suivantes:
+On ne peut pas répondre à ces questions directement avec des faits, car les étudiant-es ont terminé leur cours avec l'enregistrement intégrale et donc on ne peut pas savoir comment *ces étudiant-es là* auraient réagi dans des conditions différentes. On pourrait donc imaginer de diviser les étudiant-es de la prochaine volée en trois groupes différents: (1) aucun accès à l'enregistrement vidéo; (2) accès à l'intégralité de l'enregistrement; (3) accès à des capsules vidéos. Cependant, cette expérience aurait les limitations suivantes:
 
-1.  D'un point de vue éthique, cette répartition serait contraire au principe d'égalité de traitement des étudiant-es ;
+1.  D'un point de vue éthique, cette répartition serait contraire au principe d'égalité de traitement des étudiant-es;
 
 2.  D'un point de vue scientifique, on ne pourrait pas généraliser les résultats obtenus dans le cours en dehors du cadre spécifique. Par exemple, il serait difficile d'évaluer des éléments comme: est-ce que le matériel du cours est bien fait? Est-ce qu'il permet vraiment d'apprendre quelque chose? Est-ce le système de notation de l'enseignant-e est fiable et objectif? Etc.
 
@@ -576,7 +576,7 @@ sim_data |>
   custom_table(caption_text = "Aperçu des 10 premiers participants dans un jeu de données de 500", digits = 2)
 ```
 
-En conséquence de cette simulation, les participantes ont la tendance ou prédisposition à privilégier l'intervention $X_1$ comparé à l'intervention $X_0$. À ce point, on peut simuler l'attribution de chaque participante à une modalité de la VI selon deux mécanismes :
+En conséquence de cette simulation, les participantes ont la tendance ou prédisposition à privilégier l'intervention $X_1$ comparé à l'intervention $X_0$. À ce point, on peut simuler l'attribution de chaque participante à une modalité de la VI selon deux mécanismes:
 
 -   Dans le premier mécanisme, les participant-es choisissent volontairement de *s'auto-attribuer* à la modalité $X_0$ ou $X_1$ selon leur propre prédisposition. En d'autres termes, si leur intérêt pour $X_0$ est majeur ou égale à l'intérêt pour $X_1$, alors les participant-es sont attribué-es à $X_0$. Si par contre leur intérêt est majeur pour $X_1$ comparé à $X_0$, alors les participant-es sont attribué-es à $X_1$.
 
@@ -612,7 +612,7 @@ Cet exemple permet également d'aborder différentes modalités d'attribution al
 
 ### Design inter-sujet, intra-sujet ou mixte
 
-Une autre caractéristique importante du design expérimental concerne les conditions expérimentales qui sont créées en fonction du nombre et de la répartition des entités/participant-es aux modalités des variables indépendantes. Il existe principalement trois types de design :
+Une autre caractéristique importante du design expérimental concerne les conditions expérimentales qui sont créées en fonction du nombre et de la répartition des entités/participant-es aux modalités des variables indépendantes. Il existe principalement trois types de design:
 
 1.  Inter-sujets
 2.  Intra-sujets
@@ -704,7 +704,7 @@ Les chercheurs doivent attentivement planifier les caractéristiques et le déro
 
 Afin de garantir une passation de l'expérience précise et uniforme entre participant-es, les chercheurs développent ce qu'on appelle un **protocole expérimental**. Ce protocole peut être plus ou moins standardisé, au point qu'il existe même des logiciels qui permettent aux chercheurs de structurer le protocole de manière détaillée et non ambiguë (e.g. [le site protocols.io](https://www.protocols.io/)).
 
-Le protocole sert aux chercheurs pour déterminer trois aspects liés aux données qui s'influencent mutuellement : (1) la génération des données, (2) la récolte des données, et (3) l'analyse des données.
+Le protocole sert aux chercheurs pour déterminer trois aspects liés aux données qui s'influencent mutuellement: (1) la génération des données, (2) la récolte des données, et (3) l'analyse des données.
 
 ![Le protocole expérimental détermine comment les données sont générées, récoltées et analysées.](images/cycle-generation-recolte-analyse.png){width="80%"}
 

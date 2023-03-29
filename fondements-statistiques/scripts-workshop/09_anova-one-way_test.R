@@ -154,7 +154,7 @@ plot(check_normality(model), type = "qq", detrend = TRUE)
 comparaisons <- emmeans(
   object = model,
   spec = pairwise ~ groupe,
-  adjust = "tukey" # Contrôler test multiples. Autre possibilité : "bonferroni"
+  adjust = "tukey" # Contrôler test multiples. Autre possibilité: "bonferroni"
 )
 
 # Voir moyennes marginales et contrastes inférentiels

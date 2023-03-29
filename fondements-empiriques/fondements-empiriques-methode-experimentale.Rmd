@@ -43,27 +43,15 @@ Ce document offre un survol des fondements empiriques de la méthode expériment
 
 Ce document est destiné à des étudiant-es sans une expérience préalable en recherche expérimentale. Il s'intéresse principalement aux fondements empiriques de la méthode expérimentale, c'est-à-dire la logique épistémologique qui confère aux expériences la capacité -- sous certaines conditions et lorsque plusieurs expériences sont cumulées -- d'évaluer/expliquer l'effet d'une intervention sur un phénomène d'intérêt.
 
-Le document est complété par trois autres ressources:
-
--   Fondements statistiques de la méthode expérimentale
-
--   Lire et interpréter des contributions expérimentales *primaires*
-
--   Introduction au pré-enregistrement d'une recherche expérimentale
-
 # Sources de la connaissance empirique
 
 Les connaissances empiriques sont basées sur trois sources:
 
-1.  **Les observations**\
-    La « réalité » est observée de manière plutôt passive, en exploitant des phénomènes qui se manifestent spontanément
-2.  **Les simulations**\
-    La « réalité » est (re)construite à travers des mécanismes computationnels qui illustrent l'évolution d'un phénomène
-3.  **Les expériences**\
-    La « réalité » est sollicitée par une intervention active, pondérée et planifiée, dont l'effet est évalué sur un phénomène d'intérêt
+1.  **Les observations.** La *réalité* est observée de manière plutôt passive, en exploitant des phénomènes qui se manifestent spontanément
+2.  **Les simulations.** La *réalité* est (re)construite à travers des mécanismes computationnels qui illustrent l'évolution d'un phénomène
+3.  **Les expériences.** La *réalité* est sollicitée par une intervention active, pondérée et planifiée, dont l'effet est évalué sur un phénomène d'intérêt
 
-Il y a eu dans le passé la tendance à séparer nettement les trois sources, notamment au niveau de la distinction entre observations et expériences selon le principe "*correlation is not causation"*. Dans ce sens, les expériences sont identifiées comme le *golden standard* pour établir des mécanismes causaux. Plus récemment, il y a la tendance à voir la causalité comme un effet émergent qui peut être établi également lorsque l'intervention n'est pas effectuée de manière active, mais inférer depuis des situations qui répondent à des critères spécifiques [@pearl2000; @pearlCausalInferenceStatistics2016; @pearl2018book;
-@rohrerThinkingClearlyCorrelations2018].
+Il y a eu dans le passé la tendance à séparer nettement les trois sources, notamment au niveau de la distinction entre observations et expériences selon le principe "*correlation is not causation"*. Dans ce sens, les expériences sont identifiées comme le *golden standard* pour établir des mécanismes causaux. Plus récemment, il y a la tendance à voir la causalité comme un effet émergent qui peut être établi également lorsque l'intervention n'est pas effectuée de manière active, mais inférer depuis des situations qui répondent à des critères spécifiques [@pearl2000; @pearlCausalInferenceStatistics2016; @pearl2018book; @rohrerThinkingClearlyCorrelations2018].
 
 De plus, il existe des recouvrements entre les trois sources qui sont souvent utilisées de manière complémentaires pour maximiser la connaissance qu'on peut avoir sur un sujet [@mcelreathStatisticalRethinkingBayesian2020; @bareinboimCausalInferenceDatafusion2016]. Ce document s'intéresse néanmoins aux expériences de manière plutôt *classique* [@maxwell2017], afin de fournir un aperçu conceptuel qui peut être ensuite décliné dans des *formats hybrides* plus articulés.
 
@@ -81,7 +69,7 @@ Une expérience est un écosystème complexe d'éléments qui s'influencent mutu
 
 L'image suivante illustre le 4 étapes en signalant la présence de *rétro-feedbacks* depuis la dernière étape de l'inférence aux étapes précédentes. En effet, après l'étape d'inférence, les étapes précédentes sont réévaluées de manière critique suite à l'inférence qui est tirée depuis les résultats produits dans le *micro-monde* expérimental.
 
-![Les 4 étapes d'une recherche expérimentale](images/etapes-methode-experimentale.png "Les 4 étaptes d'une recherche expérimentale"){width="80%"}
+![Les 4 étapes d'une recherche expérimentale](images/etapes-methode-experimentale.png "Les 4 étaptes d'une recherche expérimentale"){width="100%"}
 
 # Justification
 
@@ -89,7 +77,7 @@ Les expériences impliquent une forme d'action -- l'intervention -- qui est susc
 
 -   Par **intervention**, on se réfère de manière très flexible à une action qui modifie la « réalité », y compris de manière épistémologique (i.e. ce que l'on sait sur un sujet). L'action peut être concrète et appliquée (e.g. introduire une technologie en salle de classe, proposer un scénario pédagogique innovant, mettre à jour une interface utilisateur, ...) ou plus abstraite et théorique (e.g. un principe ou une théorie pédagogique, un référentiel de compétences, un plan d'études, ...).
 
--   Par **phénomène**, on se réfère de manière très flexible à un pattern d\'évènements qui se répète de manière congruente, par exemple dans des conditions similaires. Le pattern peut être concret et appliqué (e.g. la rétention mnésique d'éléments dans une liste, la perception d'utilité d'un artéfact technologique, ...) ou plus abstrait et théorique (e.g. la compréhension de texte, la collaboration, le bien-être des étudiant-es, ...).
+-   Par **phénomène**, on se réfère de manière très flexible à un pattern d'évènements qui se répète de manière congruente, par exemple dans des conditions similaires. Le pattern peut être concret et appliqué (e.g. la rétention mnésique d'éléments dans une liste, la perception d'utilité d'un artéfact technologique, ...) ou plus abstrait et théorique (e.g. la compréhension de texte, la collaboration, le bien-être des étudiant-es, ...).
 
 De ce fait, les expériences doivent être planifiées et pondérées attentivement selon au moins deux principes phares:
 
@@ -97,7 +85,7 @@ De ce fait, les expériences doivent être planifiées et pondérées attentivem
 
 -   Quel serait la perte potentielle à appliquer l'intervention, comparé à ne pas l'appliquer.
 
-Si on prend l'exemple de l'introduction d'une technologie éducative pendant un cours, les deux questions à se poser seront donc (1) qu'est-ce que les étudiant-es obtiennent *en plus* par l'introduction de la technologie; et (2) qu'est-ce que les étudiant-es *risquent de perdre* à cause de l'introduction de la technologie. Les étudiant-es pourraient gagner en interactivité, collaboration, maîtrise technique, etc. En même temps, ils pourraient risquer de perdre du temps à consacer à la maîtrise de la technologie, voir leurs charge cognitive augmentée par l'articulation de plusieurs environnements de travail, etc.
+Si on prend l'exemple de l'introduction d'une technologie éducative pendant un cours, les deux questions à se poser seront donc (1) qu'est-ce que les étudiant-es obtiennent *en plus* par l'introduction de la technologie; et (2) qu'est-ce que les étudiant-es *risquent de perdre* à cause de l'introduction de la technologie. Les étudiant-es pourraient gagner en interactivité, collaboration, maîtrise technique, etc. En même temps, ils pourraient risquer de perdre du temps à consacer à la maîtrise de la technologie, voir leur charge cognitive augmentée par l'articulation de plusieurs environnements de travail, etc.
 
 Dans le domaine de la recherche, en plus, l'introduction d'une intervention doit aussi respecter une double justification:
 
@@ -109,19 +97,19 @@ La combinaison entre les deux justifications jettent les bases pour une question
 
 ## Justification scientifique
 
-La justification scientifique est représentée dans les articles ou contributions scientifiques en général par l'introduction et le cadre théorique.
+La justification scientifique est représentée dans les articles ou contributions scientifiques en général par l'introduction, le cadre théorique, et l'éventuelle illustration d'expérience en relation avec celle proposée. C'est à ces endroits que les chercheurs justifient la pertinence de la recherche expérimentale menée et proposent des liens avec la littérature scientifique existante.
 
-L'introduction illustre la problématique, sa pertinence par rapport aux connaissances actuelles ou phénomènes émergents. La problématique peut être abordée idéalement dans un espace défini par deux continuum:
+L'introduction illustre la problématique, sa pertinence par rapport aux connaissances actuelles ou phénomènes émergents. La problématique peut être abordée idéalement dans un espace défini par deux continuum: exploratoire vs. confirmatoire, et fondamentale vs. appliquée.
 
-1.  **Exploratoire vs. Confirmatoire\
-    **Dans une expérience exploratoire, les connaissances actuelles sont jugées encore incomplètes ou trop fragiles/contradictoires pour formuler une explication causale potentielle précise (voir point suivant). L'objectif de l'expérience est principalement celui de mettre en relief des effets potentiels qui pourraient justifier l'intérêt pour des recherches ultérieurs. Au contraire, les expériences confirmatoires ciblent de manière précise une intervention, qui peut être aussi une théorie, avec l'objectif d'en corroborer la validité ou d'en remettre en question la pertinence (e.g. la rejeter). Ce mécanisme en technologie éducative -- et plus en général dans les sciences sociales -- est très complexe, car les phénomènes sont souvent articulés [@meehlAppraisingAmendingTheories1990; @scheelWhyHypothesisTesters2021].
+![Espace conceptuel dans lequel placer la justification scientifique d'une nouvelle expérience ou d'une expérience à répliquer.](images/justification-scientifique.png){width="60%"}
 
-2.  **Fondamentale vs. Appliquée\
-    **La recherche fondamentale s'intéresse à la compréhension des phénomènes de manière transversale et indépendante à des applications concrètes, tandis que la recherche appliquée vise généralement un contexte et un cadre d'intervention plus spécifique. La distinction est néanmoins délicate et avec plusieurs recouvrements possibles. On peut retenir généralement l'intention de la recherche: est-ce qu'elle vise à apporter des contributions sur un large domaine d'application ou plutôt sur un cadre plus restreint et spécifique?
+**Exploratoire vs. Confirmatoire.** Dans une expérience exploratoire, les connaissances actuelles sont jugées encore incomplètes ou trop fragiles/contradictoires pour formuler une explication causale potentielle précise (voir point suivant). L'objectif de l'expérience est principalement celui de mettre en relief des effets potentiels qui pourraient justifier l'intérêt pour des recherches ultérieurs. Au contraire, les expériences confirmatoires ciblent de manière précise une intervention, qui peut être aussi une théorie, avec l'objectif d'en corroborer la validité ou d'en remettre en question la pertinence (e.g. la rejeter). Ce mécanisme en technologie éducative -- et plus en général dans les sciences sociales -- est très complexe, car les phénomènes sont souvent articulés [@meehlAppraisingAmendingTheories1990; @scheelWhyHypothesisTesters2021].
+
+**Fondamentale vs. Appliquée.** La recherche fondamentale s'intéresse à la compréhension des phénomènes de manière transversale et indépendante à des applications concrètes, tandis que la recherche appliquée vise généralement un contexte et un cadre d'intervention plus spécifique. La distinction est néanmoins délicate et avec plusieurs recouvrements possibles. On peut retenir généralement l'intention de la recherche: est-ce qu'elle vise à apporter des contributions sur un large domaine d'application ou plutôt sur un cadre plus restreint et spécifique?
 
 Le cadre théorique articule ce que la communauté scientifique connait (ou ne connait pas encore) à propos d'un sujet et comment ces connaissances ont été acquises: observations, simulations, expériences, mais aussi raisonnement, argumentation, synthèse de connaissances actuelles avec des revues de la littérature ou méta-analyses. Le cadre théorique met en général en relief des manques ou évidences ambivalentes qui justifient la nécessité de proposer une nouvelle expérience ou de répliquer une expérience déjà menée afin de *contrôler* la fiabilité et robustesse des résultats.
 
-La justification scientifique dépend des connaissances du domaine ou des domaines spécifiques desquels l'intervention s'inspire et/ou dans lesquels elle s'applique.
+La justification scientifique dépend donc des connaissances dans les domaines depuis lesquels l'intervention s'inspire et/ou dans lesquels elle compte s'appliquer. Le plus l'expérience est en rapport avec les théories, les résultats préalables, ainsi que les méthodes et instruments déjà répertoriés dans la littérature scientifique, le plus l'expérience sera considérée pertinente et justifiée. Il faut noter que *en rapport avec* ne signifie pas forcément *en accord avec*. Au contraire, les expériences peuvent contribuer aux débats entre approches ou théories alternatives, à corroborer ou remettre en question des résultats préalables, à faire émerger de méthodes et instruments ou améliorer ceux couramment adoptés.
 
 ## Justification éthique
 
@@ -141,7 +129,13 @@ Comparé à une question de recherche scientifique au sens plus large, une quest
 -   Collaboration en environnement médiatisé par ordinateur: Des usages et de l'impact d'un outil de feedback émotionnel ([Perrier, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Perrier2017.pdf))
 -   Étude de l'effet de l'esthétique sur l'utilisabilité d'une interface lors d'une tâche de recherche d'informations sur un site Internet ([Venni, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Venni2017.pdf))
 
-La recherche expérimentale se traduit souvent par des formulations qui suggèrent -- avec différents degrés de *précaution* selon le caractère exploratoire ou confirmatoire vu plus haut -- des mécanismes causaux potentiels entre l'intervention et l'évolution du phénomène d'intérêt.
+La recherche expérimentale se traduit souvent par des formulations des questions de recherche qui suggèrent -- avec différents degrés de *précaution* selon le caractère exploratoire ou confirmatoire vu plus haut -- des mécanismes causaux potentiels entre l'intervention et l'évolution du phénomène d'intérêt. Dans une question de recherche expérimentale, il est important de prêter une attention particulière aux caractéristiques suivantes:
+
+1.  **Clarté**: la question doit identifier de manière précise et non ambiguë les variables concernées au niveau de l'intervention et du phénomène d'intérêt;
+2.  **Faisabilité**: l'effet d'intérêt doit être réaliste, c'est-à-dire que l'expérience doit avoir des *vraies* chances de pouvoir créer les conditions pour potentiellement le déclencher et le mesurer;
+3.  **Testabilité**: si la question formule une ou plusieurs explications causales potentielles en forme d'hypothèses, elle doit définir de la manière la plus rigoureuse possibles comment elle vise mettre ces hypothèses à l'épreuve des données expérimentales.
+
+La prochaine étape s'intéresse plus spécifiquement à ce dernier point.
 
 # Explication causale potentielle
 
@@ -235,15 +229,7 @@ Dans ces travaux à propos de la causalité, Pearl [@pearl2000; @pearlCausalInfe
 
 La première marche en bas de l'échelle consiste dans l'association de deux (ou plusieurs) phénomènes qui ont la tendance à se manifester selon des patterns récurrents. Comme indiqué plus haut dans la section consacrée aux difficultés dans l'établissement d'un mécanisme causal, une *simple* association ne permet cependant pas ni de déterminer si un phénomène est la cause de l'autre (ou vice-versa), ni d'exclure d'autres facteurs potentiels qui pourraient expliquer l'association (e.g. cause commune, médiateur ou effet de *collision*).
 
-Une association peut être déterminée de manière systématique par exemple à travers un sondage, comme dans l'exemple de l'image: 6 étudiant-es sur 10 demandent l'enregistrement vidéo des cours. On peut inférer depuis cette information que les étudiant-es associent l'enregistrement vidéo du cours à quelques formes de bénéfice pour leur apprentissage.
-
-Une autre manière de déterminer systématiquement une association consiste dans les études dites *corrélationnelles*, dans lesquelles le terme *association* est remplacé justement par le terme *corrélation* qui présente une connotation statistique précise. On peut en effet calculer la corrélation entre deux phénomènes mesurés quantitativement sur une échelle dans laquelle:
-
--   Un score s'approchant de -1 témoigne d'une corrélation *négative*, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière opposée: une valeur élevée de $X$ est associée à une faible valeur de $Y$ (et vice-versa) ; ou une valeur faible de $X$ est associée à une valeur élevée de $Y$ (et vice-versa).
-
--   Un score s'approchant de 0 présuppose l'absence d'une corrélation, c'est-à-dire que les deux phénomène ont la tendance à varier sans un pattern identifiable (e.g. si l'un est élevé, l'autre peut être parfois élevé, parfois faible, et parfois moyen).
-
--   Un score s'approchant de 1 témoigne d'une corrélation *positive*, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière spéculaire: une valeur élevée de $X$ est associée à une valeur élevée de $Y$ (et vice-versa) et une faible valeur de $X$ est associée à une faible valeur de $Y$ (et vice-versa).
+Une association peut être déterminée de manière systématique par exemple à travers un sondage, comme dans l'exemple de l'image: 6 étudiant-es sur 10 demandent l'enregistrement vidéo des cours. On peut inférer depuis cette information que les étudiant-es associent l'enregistrement vidéo du cours à quelques formes de bénéfice pour leur apprentissage. Une autre manière de déterminer systématiquement une association consiste dans les études dites *corrélationnelles*, dans lesquelles le terme *association* est remplacé justement par le terme *corrélation* qui présente une connotation statistique précise.
 
 ```{r correlations-examples, fig.height=3, fig.width=6, fig.cap="Exemple de corrélations"}
 set.seed(3)
@@ -278,6 +264,14 @@ ggplot(correlations, aes(x = x, y = y)) +
   facet_wrap(~type)
 
 ```
+
+On peut en effet calculer la corrélation entre deux phénomènes mesurés quantitativement sur une échelle dans laquelle:
+
+-   Un score s'approchant de -1 témoigne d'une corrélation négative, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière opposée: une valeur élevée de $X$ est associée à une faible valeur de $Y$ (et vice-versa) ; ou une valeur faible de $X$ est associée à une valeur élevée de $Y$ (et vice-versa).
+
+-   Un score s'approchant de 0 présuppose l'absence d'une corrélation, c'est-à-dire que les deux phénomène ont la tendance à varier sans un pattern identifiable (e.g. si l'un est élevé, l'autre peut être parfois élevé, parfois faible, et parfois moyen).
+
+-   Un score s'approchant de 1 témoigne d'une corrélation positive, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière spéculaire: une valeur élevée de $X$ est associée à une valeur élevée de $Y$ (et vice-versa) et une faible valeur de $X$ est associée à une faible valeur de $Y$ (et vice-versa).
 
 À ce stade de l'échelle, donc, l'activité typique du chercheur est d'observer/regarder attentivement le contexte ou les phénomènes d'intérêt et se poser des questions telles que:
 
@@ -353,7 +347,7 @@ La question contre-factuel à laquelle ce type d'expérience essaie de répondre
 
 -   Sans $X$, est-ce $Y$ se serait manifesté également?
 
-## Hypothèses théoriques et modèles structurels causaux
+## Hypothèses théoriques et modèles structurels de causalité
 
 L'échelle de causalité permet de penser en termes d'effets et maximise donc la possibilité de pouvoir distinguer des mécanismes causaux à travers une démarche contre-factuelle. Dans cette perspective, les chercheurs émettent souvent -- mais pas toujours -- des hypothèses théoriques/causales qui essayent d'expliquer pourquoi et comment l'intervention peut avoir un effet sur le phénomène. Il s'agit d'identifier des mécanismes, comme par exemple des principes, qui s'appliquent dans des conditions, idéalement les plus généralisées possibles, et qui permettent à l'effet de se manifester.
 
@@ -373,12 +367,10 @@ Il existe donc différents éléments à prendre en ligne de compte pour tester 
 
 -   **Modérer l'effet de la vidéo sur les apprentissage**. Un effet de modération s'avère lorsque l'effet de l'intervention sur un phénomène dépend de la valeur d'un autre phénomène (i.e. d'une autre variable). Par exemple, on peut imaginer que les étudiant-es plus en difficulté dans le cours peuvent bénéficier de manière plus conséquente de la présence des vidéos par rapport aux étudiant-es qui ont déjà bien compris les contenus du cours pendant les leçons synchrones. En termes concrets, on peut imaginer que la note d'une étudiant-e en difficulté puisse s'améliorer de 1 points (e.g. passer de 3 à 4) grâce à la vidéo, tandis que le gain pour un-e étudiant-e sans difficulté soit plus mitigé (e.g. passer de 5.25 à 5.5).
 
-Une manière de prendre en considération les différents facteurs qui peuvent influencer l'effet d'une intervention sur un ou plusieurs phénomènes d'intérêt consiste à utiliser un **Modèle Structurel Causal**, notamment sous la forme d'un ***Directed Acyclic Graph*** (DAG), c'est-à-dire une représentation graphique de la relation entre variables [@pearlCausalInferenceStatistics2016; @pearl2018book;
-@rohrerThinkingClearlyCorrelations2018;
-@mcelreathStatisticalRethinkingBayesian2020]. Un DAG, représenté dans l'image ci-dessous, consiste dans une série de nœuds (les variables), reliés ou pas à travers des flèches directionnelles (les relations).
+Une manière de prendre en considération les différents facteurs qui peuvent influencer l'effet d'une intervention sur un ou plusieurs phénomènes d'intérêt consiste à utiliser un **Modèle Structurel de Causalité**, notamment sous la forme d'un ***Directed Acyclic Graph*** (DAG), c'est-à-dire une représentation graphique de la relation entre variables [@pearlCausalInferenceStatistics2016; @pearl2018book; @rohrerThinkingClearlyCorrelations2018; @mcelreathStatisticalRethinkingBayesian2020]. Un DAG, représenté dans l'image ci-dessous, consiste dans une série de nœuds (les variables), reliés ou pas à travers des flèches directionnelles (les relations).
 
 ```{r example-dag}
-#| fig.cap="Exemple générique d'un Direct Acyclic Graph (DAG)",
+#| fig.cap="Exemple générique d'un Directed Acyclic Graph (DAG)",
 #| out.width="60%",
 #| fig.align="center"
 example_dag <- dagitty('dag {
@@ -438,11 +430,13 @@ Grâce à un DAG bien défini, les chercheurs se mettent dans une meilleure posi
 
 # Processus génératif des données
 
-Le processus génératif des données est l'étape *concrète* d'une expérience. Jusqu'à maintenant, l'expérience a été d'abord justifiée d'un point de vue scientifique et éthique, et ensuite définie en termes de relations causales et hypothèses théoriques. En d'autres termes, pour l'instant l'expérience reste dans le domaine de l'imagé ou de l'idéalisé: selon les connaissances dont nous disposons et une chaîne de dérivations causales sur les relations entre une intervention et un phénomène d'intérêt, nous nous attendons à ce que l'intervention produit un certain effet.
+Le processus génératif des données est l'étape *concrète* d'une expérience. Jusqu'à maintenant, l'expérience a été d'abord justifiée d'un point de vue scientifique et éthique, et ensuite définie en termes de relations causales et hypothèses théoriques. En d'autres termes, pour l'instant l'expérience reste dans le domaine de l'imagé ou de l'idéalisé: selon les connaissances dont nous disposons et une chaîne de dérivations causales sur les relations entre une intervention et un phénomène d'intérêt, nous nous attendons à ce que l'intervention produit un certain effet. À ce moment, il faut tester si ce raisonnement imagé et idéalisé peut se produire dans la réalité. Pour ce faire, les chercheurs créent un *micro-monde* dans lequel produire les **conditions nécessaires et suffisantes** [@mackieCausesConditions1965; @bareinboimCausalInferenceDatafusion2016; @maxwell2017] à déclencher d'abord et mesurer ensuite l'effet de l'intervention sur le phénomène d'intérêt.
 
-À ce moment, il faut tester si ce raisonnement imagé et idéalisé peut se produire dans la réalité. Pour ce faire, les chercheurs créent un *micro-monde* dans lequel produire les **conditions nécessaires et suffisantes** [@mackieCausesConditions1965; @bareinboimCausalInferenceDatafusion2016; @maxwell2017] à déclencher d'abord et mesurer ensuite l'effet de l'intervention sur le phénomène d'intérêt. Le *micro-monde* vise à trouver un équilibre entre la représentativité de la *réalité* d'une parte, et la réduction de la complexité nécessaire pour pouvoir isoler l'effet de l'intervention d'autres effets potentiels. La réduction de la complexité ne concerne pas, en effet, seulement le fait qu'on a accès, souvent, seulement à un petit échantillon par rapport à la *population* de référence (e.g. les êtres humains en général, les étudiant-es en technologie éducative, les enseignant-es du primaire, etc.). La réduction concerne également des tâches définies ou simplifiées; des processus cognitifs, sociaux ou affectifs délimités; des interactions pré-établies; etc. Les choix concernant le *micro-monde* sont donc essentielles aux finalités de la recherche (validité interne), mais également à la possibilité de généraliser les résultats aux *macro-monde* (validité externe) [@shadishExperimentalQuasiexperimentalDesigns2002; @yarkoniGeneralizabilityCrisis2022; @vazireCredibilityReplicabilityImproving2022].
+![Le micro-monde vise à produire les conditions nécessaires et suffisantes aux objectifs de la recherche expérimentale.](images/macro-vs-micro-monde.png){width="80%"}
 
-![Le micro-monde vise à produire les conditions nécessaires et suffisantes aux objectifs de l'expérience.](images/macro-vs-micro-monde.png){width="80%"}
+aux objectifs de l'expérience.
+
+Le *micro-monde* vise à trouver un équilibre entre la représentativité de la *réalité* d'une parte, et la réduction de la complexité nécessaire pour pouvoir isoler l'effet de l'intervention d'autres effets potentiels. La réduction de la complexité ne concerne pas, en effet, seulement le fait qu'on a accès, souvent, seulement à un petit échantillon par rapport à la *population* de référence (e.g. les êtres humains en général, les étudiant-es en technologie éducative, les enseignant-es du primaire, etc.). La réduction concerne également des tâches définies ou simplifiées; des processus cognitifs, sociaux ou affectifs délimités; des interactions pré-établies; etc. Les choix concernant le *micro-monde* sont donc essentielles aux finalités de la recherche (validité interne), mais également à la possibilité de généraliser les résultats aux *macro-monde* (validité externe) [@shadishExperimentalQuasiexperimentalDesigns2002; @yarkoniGeneralizabilityCrisis2022; @vazireCredibilityReplicabilityImproving2022].
 
 Le rôle concret du *micro-monde* consiste dans la génération, la récolté et analysé des données empiriques. Le *micro-monde* est donc le résultat des choix épistémologiques et méthodologiques des chercheurs. Ces choix s'articulent principalement dans les éléments suivants:
 
@@ -626,11 +620,11 @@ Une autre caractéristique importante du design expérimental concerne les condi
 
 **Design inter-sujets.** Dans ce type de design, les entités/participant-es sont assigné-es à des modalités uniques et distinctes à l'intérieur de chaque VI. Par exemple, dans le cas d'une seule VI avec deux modalités, moitié des participant-es sont attribué-es à la première modalité $X_0$ et l'autre moitié à la modalité $X_1$. Cela signifie que les participant-es $X_0$ ne sont exposé-es que à cette modalité et, idéalement, ne sont même pas à connaissance pendant l'expérience de l'existence d'une autre modalité. Cette information est en général dévoilée à la fin de l'étude pour éviter des biais. Par exemple, si on communiquait aux participant-es $X_0$ que dans la version $X_1$ les participant-es ont accès à une version plus récente d'un environnement techno-pédagogique, leur motivation et engagement pourraient diminuer simplement parce que les participant-es estiment avoir été placée dans une condition moins intéressante de l'autre groupe. Dans le design inter-sujet, il est donc important de construire les groupes/conditions expérimentales afin de maximiser leur équivalence. Même avec l'utilisation de la randomisation, en effet, il peut y avoir des situations dans lesquels les attributions ne sont pas vraiment balancées, notamment avec un faible nombre global de participant-es.
 
-![Design inter-sujets. Les participant-es sont exposé-es seulement à une modalité de la VI ou des VIs.](images/design-inter-sujets.png){width="30%"}
+![Design inter-sujets. Les participant-es sont exposé-es seulement à une modalité de la VI ou des VIs.](images/design-inter-sujets.png){width="45%"}
 
 **Design intra-sujets.** Dans ce type de design, chaque participant-e est exposé-e à toutes les modalités de chaque variable indépendante. Dans le cas d'une seule VI avec trois modalités, par exemple, chaque participant-e sera exposé-e à chacune des modalités, souvent dans une séquence différente pour éviter des effets d'ordre. Imaginons que l'expérience vise à tester trois design graphiques différents d'un site web pédagogique. Si les participant-es testaient toujours les trois versions dans le même ordre, le dernier design pourrait bénéficier d'un effet de familiarité (on a la tendance à apprécier plus ce qu'on a déjà vu auparavant) ou, au contraire, être pénalisé par un effet de fatigue dû à l'exposition aux deux designs précédents. Le plan intra-sujet présente l'avantage de réduire la variabilité due à des facteurs externes aux VI, car les caractéristiques de la personne qui est exposée aux modalités sont exactement les mêmes. En revanche, le plan intra-sujet présente plus de risques au niveau des connaissances et de la compréhension des participant-es des objectifs expérimentaux. En effet, en ayant accès à l'ensemble du design expérimental, les participant-es peuvent plus facilement comprendre les objectifs de la recherche et risquent, même inconsciemment, de se conformer aux résultats attendus.
 
-![Design intra-sujets. Les participant-es sont exoposé-es à toutes les modalités de la VI ou des VIs, souvent dans une séquence différente pour éviter des effets d'ordre.](images/design-intra-sujets.png){width="40%"}
+![Design intra-sujets. Les participant-es sont exoposé-es à toutes les modalités de la VI ou des VIs, souvent dans une séquence différente pour éviter des effets d'ordre.](images/design-intra-sujets.png){width="60%"}
 
 **Design mixte inter-intra.** Ce type de design combine les deux types de design précédents. Pour mettre en place ce design, le plan expérimental doit prévoir au moins deux VI, car il est nécessaire qu'au moins une VI soit inter-sujets et au moins une VI soit intra-sujet. Par exemple, on peut imaginer un design expérimental avec une VI inter-sujet qui détermine si les participant-es allument ou pas leur caméra lors d'une tâche collaborative médiatisée par ordinateur. À l'intérieur de cette répartition inter-sujet, une VI intra-sujet expose les participant-es à une tâche collaborative facile et à une difficile. Moitié des participant-es commence avec la tâche facile et l'autre avec la tâche difficile pour éviter l'effet d'ordre. À ce moment, les deux groupes indépendants sur la VI de la webcam peuvent être comparés sur la différence intra-sujet entre la performance à la tâche facile et à celle difficile.
 
@@ -824,9 +818,9 @@ La combinaison entre le pré-enregistrement du protocole expérimental, incluant
 
 # Inférence
 
-La quatrième étape qui concerne l'inférence n'est en réalité pas la dernière, mais plus précisément la la clé de voûte qui permet de revenir sur les trois autres étapes, comme indiqué dans la figure de présentation des étapes plus haut dans le texte. Cette étape est étroitement liée à l'approche ou philosophie statistique et les détails de la modélisation des données adoptés. Comme déjà mentionné, ces aspects seront traités dans les fondements statistiques de la méthode expérimentale.
+La quatrième étape qui concerne l'inférence n'est en réalité pas la dernière, mais plus précisément la clé de voûte qui permet de revenir sur les trois autres étapes, comme indiqué dans la figure de présentation des étapes plus haut dans le texte. Cette étape est étroitement liée à l'approche ou philosophie statistique et les détails de la modélisation des données adoptés. Comme déjà mentionné, ces aspects seront traités dans les fondements statistiques de la méthode expérimentale. Il est néanmoins possible de trouver des éléments communs au rôle de l'inférence indépendamment de ces choix.
 
-D'un point de vue plus abstrait et conceptuel, néanmoins, l'étape de l'inférence consiste à déterminer si et à quel point les données générées dans le *micro-monde* peuvent s'appliquer à un *macro-monde potentiel*. En d'autres termes, on prend les résultats du *micro-monde* relatifs à la relation entre VI et VD pour établir le potentiel de l'intervention $X$ sur le phénomène $Y$.
+D'un point de vue plus abstrait et conceptuel, en effet, l'étape de l'inférence consiste à déterminer en premier lieu *si* et succésivement *à quel point* les données générées dans le *micro-monde* peuvent s'appliquer à un *macro-monde potentiel*. En d'autres termes, on prend les résultats du *micro-monde* relatifs à la relation entre VI et VD pour établir le potentiel de l'intervention $X$ sur le phénomène d'intérêt $Y$.
 
 ![L'inférence d'un point de vue conceptuel.](images/inference-micro-macro.png){width="80%"}
 
@@ -912,6 +906,7 @@ La maîtrise conceptuelle et technique des tous les aspects inhérent à la mét
 2.  Les potentielles relations causales dans le domaine d'intérêt qui puissent expliquer les effets d'une variable sur une autre;
 3.  La planification et l'exécution d'analyse statistiques adéquates aux caractéristiques et finalités de la recherche.
 
+\newpage
 \markboth{RÉFÉRENCES}{}
 
 # Références {.unnumbered}

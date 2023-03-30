@@ -1,4 +1,4 @@
-set.seed(6263)
+set.seed(6167)
 library(tidyverse)
 library(broom)
 library(see)
@@ -8,36 +8,55 @@ library(scales)
 library(equatiomatic)
 library(afex)
 library(ids)
-theme_set(theme_modern(base_size = 30, axis.title.size = 20, plot.title.size = 30))
+library(papaja)
+theme_set(theme_apa(box = TRUE))
 
 
-# Principe de base de la régression linéaire ------------------------------
+# Principe de base de la regression lineaire ------------------------------
 
-n_points = 100
+n_points_lm = 9
 
-data <- tibble(
-  x = rnorm(n_points, 100, 40),
-  y = x + rnorm(n_points, 0, 15),
-  groupe = sample(c("A", "B"), n_points, replace = TRUE)
+data_lm <- tibble(
+  x = rnorm(n_points_lm, 100, 40),
+  y = x + rnorm(n_points_lm, 0, 15)
+) |> add_row(
+  x = 130,
+  y = 210
 ) |> mutate(
-  x = rescale(x, to = c(0, 20)),
-  y = rescale(y, to = c(30, 130))
+  x = rescale(x, to = c(10, 20)),
+  y = rescale(y, to = c(50, 200))
 )
 
-data <- data |>
-  add_row(
-    x = 19,
-    y = 210,
-    groupe = "B"
+model_lm <- lm(y ~ x, data_lm)
+summary(model_lm)
+
+
+data_lm_plus <- augment(model_lm) |>
+  transmute(
+    i = 1:nrow(data_lm),
+    x = x,
+    y = y,
+    .fitted = .fitted,
+    diff = y - .fitted,
+    diff_squared = (y - .fitted)^2
   )
 
-model <- lm(y ~ x, data)
+data_lm_mean <- data_lm |>
+  transmute(
+    i = 1:nrow(data_lm),
+    x = x,
+    y = y,
+    mean_y = mean(data_lm$y),
+    diff = y - mean_y,
+    diff_squared = (y - mean_y)^2
+  )
 
-data_plus <- augment(model)
+equation_lm <- equatiomatic::extract_eq(model_lm, intercept = "beta")
+equation_lm_coeff <- equatiomatic::extract_eq(model_lm, use_coefs = TRUE, intercept = "beta")
 
-ggplot(data_plus, aes(x = x, y = y)) +
-  geom_smooth(method = "lm", se = FALSE, formula = y ~ x, color = "blue", size = 2) +
+graph_lm <- ggplot(data_lm_plus, aes(x = x, y = y)) +
+  geom_smooth(method = "lm", se = FALSE, formula = y ~ x, color = "blue", linewidth = 1) +
   geom_segment(aes(xend = x, yend = .fitted), color = "#970000", size = 1) +
-  geom_point(size = 5, color = "#44546A") +
+  geom_point(size = 3, color = "black") +
   labs(x = "X", y = "Y") +
   NULL

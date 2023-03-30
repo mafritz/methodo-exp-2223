@@ -1,0 +1,362 @@
+---
+title: "Fondements statistiques de la méthode expérimentale en technologie éducative"
+author:
+  - Mattia A. Fritz
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+lang: fr
+linestretch: 1.2
+fontsize: 12pt
+urlcolor: blue
+output:
+  pdf_document:
+    toc: false
+    toc_depth: 1
+    number_sections: true
+    latex_engine: xelatex
+    extra_dependencies: ["flafter"]
+    includes:
+      in_header: "../assets/settings/preamble.tex"
+      before_body: "../assets/settings/before-body.tex"
+      #after_body: "doc-suffix.tex"
+bibliography: ../assets/bib/references.bib
+csl: ../assets/settings/apa.csl
+abstract: |
+  La méthode expérimentale est étroitement liée à la modélisation des données notamment avec des finalités d'inférence statistique. Le rapport entre les données, la modélisation de celles-ci, et les conclusions qu'on peut tirer des tests statistiques effectués est cependant complexe et régit par différentes approches philosophiques et méthodologiques. À complement du document sur les fondements empiriques de la méthode expérimentale, ce document s'intéresse donc aux fondements statistiques de cette méthode. Il propose d'abord une brève introduction à la modélisation des données et aux probabilités. Ensuite, les statistiques *fréquentistes* (ou *classiques*) et les statistiques Bayésiennes sont illustrées dans les grandes lignes. En guise de conclusion, le document propose une brève analyse sur les avantages des statistiques Bayésiennes dans un contexte pédagogique.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+#Sys.setlocale("LC_ALL", "French")
+library(dagitty)
+library(ggdag)
+library(papaja)
+library(here)
+library(kableExtra)
+library(tidyverse)
+
+theme_set(theme_apa(box = TRUE))
+
+source(here::here("assets", "settings", "custom.R"))
+source(here::here("fondements-statistiques", "scripts-illustration", "01_linear-regression.R"))
+source(here::here("fondements-statistiques", "scripts-illustration", "04_multiple-regression.R"))
+source(here::here("fondements-statistiques", "scripts-illustration", "05_model_fit.R"))
+```
+
+# Introduction {.unnumbered}
+
+Très peu des chercheurs en sciences sociales s'intéressent aux statistiques. Elles sont souvent vécues comme un *mal nécessaire* pour pouvoir bénéficier des avantages épistémologiques fournis par la méthode expérimentale. Cette perspective se reflète souvent dans les manuels de méthode expérimentale qui associent les différents design expérimentaux avec les tests statistiques correspondantes, afin d'illustrer comment les résultats de ces tests doivent être interprétés en relation aux hypothèses opérationnelles d'abord, et théoriques ensuite. Il en suit que les statistiques ressortent de cette démarche comme une liste de recettes à appliquer machinalement selon les *ingrédients* du plan expérimental: si j'ai $n$ variables indépendantes de type $t$ et $m$ variables dépendantes de type $u$, alors il faut utiliser le test $x$. Cette démarche mécanique est d'ailleurs corroborée par des diagrammes qu'on peut facilement trouver dans des manuels ou en ligne, dont l'objectif est précisément d'accompagner les chercheurs à travers un nombre de bifurcations avant de trouver, enfin, le test nécessaire à leurs besoin. Malheureusement, cette approche ne semble pas donner ses fruits, car il existe désormais plusieurs témoignages dans la littérature scientifique qui montrent comme les statistiques sont mal comprises et utilisées dans les contributions expérimentales [@nuijtenPrevalenceStatisticalReporting2016; @greenlandStatisticalTestsValues2016; @bakkerMisReportingStatistical2011; @singmannStatisticsServiceScience2023; @nickersonNullHypothesisSignificance2000]. Même les ressources pédagogiques qui sont censées former les nouveaux chercheurs présentent souvent des erreurs dans l'exposition de concepts clé [@doi:10.1080/00031305.2018.1537890; @cobbIntroductoryStatisticsCourse2007; @mcelreathStatisticalRethinkingBayesian2020].
+
+Cette contribution utilise une approche différente caractérisée en premier lieu par la séparation entre les fondements empiriques et les fondements statistiques de la méthode expérimentale. Ce document s'intéresse à ces dernier et le fait de manière à dévoiler des concepts importants qui, dans une approche machinale, sont cachés ou traités comme s'il n'existaient pas d'alternatives [@mcelreathStatisticalRethinkingBayesian2020; @rodgersEpistemologyMathematicalStatistical2010; @lakensPracticalAlternativeValue2021]. L'objectif de cette contribution est de sensibiliser des étudiant-es en technologie éducative sans un background en méthode expérimentale à l'importance que les statistiques jouent dans la démarche expérimentale. Pour ce faire, le texte présente d'abord une brève introduction à la modélisation des données, c'est-à-dire à l'utilisation de techniques mathématiques et probabilistes pour manier et représenter des données empiriques. Ensuite, le document illustre deux approches et philosophies différentes aux statistiques: l'approche *fréquentiste* ou *classique*, dominante en sciences sociales depuis plusieurs décennies, et l'approche Bayésienne, qui commencent à s'introduire dans certaines contributions. Les deux approches sont illustrées dans les grandes lignes avec l'objectif de formuler qu'est-ce qu'on peut *vraiment* demander aux tests statistiques, et comment leur réponses peuvent nous aider dans la démarche explicative de la méthode expérimentale. En guise de conclusion, ce document prend position par rapport aux deux approches et suggère que les statistiques Bayésienne devraient être enseignées en priorités dans les cours de méthodologie. Cette position est brièvement argumentée.
+
+# Modélisation des données
+
+Les chercheurs récoltent des données empiriques dans la tentative de pouvoir en tirer des informations utiles qui, souvent, dépassent le cadre spécifique des données récoltées et visent plutôt à des affirmations ou principes avec une portée plus étendue. Ce mécanisme qui permet de passer du particulier à un cadre plus généralisé est souvent identifié avec le terme d'**inférence**. On peut identifier différents objectifs relatifs à l'inférence [@gelmanRegressionOtherStories2021; @mcelreathStatisticalRethinkingBayesian2020; @rodgersEpistemologyMathematicalStatistical2010].
+
+**Réduction des données à des indicateurs représentatifs.** Grâce à la représentation en forme d'indicateurs on peut *inférer* des caractéristiques d'un ensemble de données. Un exemple d'inférence de ce type sont la moyenne et l'écart type tirés d'un nombre d'observations. Quand on indique que les notes obtenues dans un cours ont une moyenne de $M=3.5$ ($SD = 0.8$) on peut par exemple inférer que la plupart des étudiant-es n'ont pas validé le cours, car la moyenne est inférieur au barème de 4. En même temps, l'écart type qui est représentatif de la dispersion des données indique que certain-es étudiant-es ont sûrement dépassé ce barème, car si on ajoute un écart type à la moyenne, on obtient 4.3, et en ajoutant deux écarts types on obtient 5.1. Avec ce calcul on peut également inférer que le système de notation de l'enseignant-e est assez sévère, car il y a peu de chances qu'une étudiant-e ait obtenu une très bonne note.
+
+**Évaluer le degré d'association entre des variables.** On peut utiliser un jeu de données pour établir une mesure d'intérêt et utiliser d'autres variables récoltées pour faire des comparaisons depuis lesquelles inférer, par exemple, si les observations avec un certain type de valeurs sur une variable sont associées à des valeurs différentes sur la mesure d'intérêt. Par exemple, dans un jeu de données qui s'intéresse à la mesure du sentiment de bien être des étudiant-es dans un cursus de bachelor, on peut comparer si la perception de bien être diffère entre la première, la deuxième et la troisième année. Si c'est le cas, on peut inférer la présence d'une association entre les deux variables.
+
+**Prédire des évènements futurs.** Des données récoltées peuvent être utilisées pour produire un *algorithme* qui prend des variables comme Input et produisent la mesure d'intérêt comme Output. Une fois cet algorithme de conversion obtenu avec les données observées, on peut entrer des nouvelles données pour estimer la mesure d'intérêt. Dans ce mécanisme, on infère que le comportement des nouvelles données sera similaire au *comportement* des données observées. Cette inférence est traduite par l'algorithme lui-même. Ce principe est notamment à la base des techniques de *machine learning*.
+
+**Déterminer l'effet d'une intervention.** À travers des données qui varient systématiquement sur une ou plusieurs variables dont les valeurs ont été fixées par les chercheurs, on peut inférer des mécanismes contre-factuels du type: que se serait-il passé si la personne avait été attribuée à une autre valeur/modalité de l'intervention? Dans ce contexte, l'objectif de l'inférence est en général double: (1) déterminer si l'effet est présent dans le *micro-monde* des données observées, et (2) éstimer à quel point on peut être confiant que l'effet puisse se réproduire au *macro-monde*.
+
+Comme il a été indiqué dans les fondements empiriques de la méthode expérimentale, les expériences appartiennent donc à ce dernier cas de figure. Cependant, l'inférence depuis des données empiriques s'appuie en général sur les mêmes instruments: des **modèles mathématiques**. Ceci est souvent source de confusion, surtout dans un contexte introductif aux méthodes dits *quantitatifs*. En effet, très concrètement, on utilise souvent les mêmes logiciels et les mêmes *fonctions/tests* à l'intérieur de ces logiciels indépendamment de comment les données ont été créées (e.g. observation, simulation ou expérience). Il en résulte une compréhensible difficulté à cerner les différences qui ne résident en effet pas dans les modèles eux-mêmes, mais plutôt dans les connaissances scientifiques relatives à:
+
+-   Les relations causales entre les variables impliquées dans le modèle, qui peuvent notamment être explicitées avec un modèle structurel de causalité sous forme de *Directed Acyclic Graph* (DAG) [@pearlCausalInferenceStatistics2016; @pearl2000; @pearl2018book; @bareinboimCausalInferenceDatafusion2016; @cinelliCrashCourseGood2020a];
+
+-   Le processus génératif des données, c'est-à-dire sous quelles conditions les données ont été produites [@maxwell2017; @mcelreathStatisticalRethinkingBayesian2020].
+
+Sur la base de ces informations, les modèles mathématiques et les indicateurs que ces modèles produisent doivent être interprétés de manière conforme à ce qu'ils permettent ou ne permettent pas d'inférer. À ce propos, cette section illustre d'abord en quoi consiste la modélisation des données et quels sont ces avantages. L'étape suivante indroduit la *famille* de modèles la plus fréquente en science sociale: la modélisation linéaire. Ensuite, cette famille de modèle sera centrée plus spécifiquement dans le cadre des expériences, notamment en ce qui concerne la perspective contre-factuelle. Enfin, elle introduit le concept d'inférence statistique qui sera ensuite décliné dans les deux approches fréquentiste et Bayésien.
+
+## Pourquoi modéliser des données?
+
+L'une des questions souvent inexplorée dans les manuels de méthodologie *quantitative* est la suivante: pourquoi avons-nous besoins des statistiques en premier lieu? La vie des chercheurs -- et des étudiant-es! -- seraient tellement plus simple sans elles. Il est donc légitime de s'attendre à ce que leur association pratiquement indissoluble avec la recherche *quantitative* soit justifiée par un apport exceptionnel en termes épistémologiques.
+
+Malheureusement, ce n'est pas vraiment le cas, au moins selon cette contribution qui adopte une attitude désenchantée. Le rôle prépondérant des statistiques dans la recherche s'explique principalement par deux raisons:
+
+-   La complexité des phénomènes étudiées qui sont souvent dépendantes d'un large éventail de facteurs qui s'influencent mutuellement. Dans cette complexité, même des patterns *stables* peuvent ne pas se produire à chaque fois, mais seulement *la plupart des fois*. Par exemple, il existe un lien de causalité stable entre les heures passées à étudier et la réussite à un examen. Mais il se peut que, parfois, un-e étudiant-e qui a beaucoup étudié rencontre un échec, et un-e étudiant-e qui n'a pas beaucoup étudié réussisse néanmoins l'examen.
+
+-   La tendance intrinsèque aux êtres humains à voir des liens de cause à effet lorsqu'en réalité il ne s'agit que d'épiphénomènes circonstantielles, dont l'occurrence est indépendant des causes supposées par la personne.
+
+Ces deux raisons sont brièvement développées par la suite. En guise de conclusion de cette partie introductive sur la modélisation, une définition formelle d'un modèle applicable dans le contexte statistique sera fournie.
+
+### Vivre -- et faire de la recherche -- dans un monde pseudo-déterministe
+
+### Se protéger de ses propres biais
+
+### Qu'est-ce qu'un modèle statistique
+
+## La modélisation linéaire
+
+Il existe différentes manières pour modéliser des données. Dans les sciences sociales, les modèles les plus utilisés appartiennent à la *famille* des modélisations linéaires. Ces modèles se caractérisent par le fait que la variable d'intérêt (le outcome ou la mesure) peut être représenté par ce qu'on appelle une équation de régression. L'équation de régression dans les modèles linéaires correspond à l'équation représentant une pente dans un plan cartésien:
+
+$$
+Y = {Intercepte}\space + \space{Peinte} \times X 
+$$
+
+Dans les manuels statistiques cette équation est plus souvent représentée de la manière suivante:
+
+$$
+\operatorname{y_i} = \beta_{0} + \beta_{1}(\operatorname{x_i}) + \epsilon_i
+$$
+
+L'explication des composantes de cette version de l'équation est la suivante:
+
+-   $\operatorname{y_i}$ est la mesure de la variable $Y$ pour l'observation $\operatorname{i}$ dans le jeu de données, c'est-à-dire $\operatorname{y_1}$, $\operatorname{y_2}$, ... $\operatorname{y_n}$. Malheureusement, en statistique on fait souvent la distinction entre notations qui pour les non-statisticiens ne sont pas très marquée, comme la distinction entre minuscule et majuscule ou entre lettre latine et grecque.
+
+-   $\beta_0$ correspond à l'intercepte, c'est-à-dire la valeur de $Y$ lorsque toutes les éventuelles variables sur la droite de l'équation (dans ce cas seulement $X$) équivalent à 0.
+
+-   $\beta_{1}$ correspond au paramètre (ou coefficient de régression) pour la variable $X$. Ce coefficient est commun à toutes les valeurs observées pour $X$, c'est-à-dire $\operatorname{x_i}$.
+
+-   $\epsilon_i$ correspond à ce qu'on appelle le résidu de l'équation. Il s'agit d'une valeur de *compensation* dû au fait que les paramètres $\beta_0$ et $\beta_1$ sont communs à toutes les observations, mais pratiquement jamais les paramètres du modèles permettent d'arriver *exactement* à la valeur de $\operatorname{y_i}$ correspondante.
+
+Contrairement à ce qui est souvent indiqué, une régression linéaire ne veut pas forcément dire *rectilinéaire*. En effet, on peut par exemple créer des courbes en ajoutant des valeurs exponentielles aux variables prédictives:
+
+$$
+\color{green}\checkmark \operatorname{y_i} = \beta_{0} + \beta_{1}(\operatorname{x_i^2}) + \epsilon_i
+$$
+
+Par contre, il n'est pas possible d'utiliser des exponentiels pour les coefficients de régression. Par exemple, cette équation ne serait pas considérée comme un modèle linéaire:
+
+$$
+\color{red}\times \operatorname{y_i} = \beta_{0} + \beta_{1}^{\operatorname{x_i}} + \epsilon_i
+$$
+
+Ce préambule très technique, qui sera développé davantage dans les exemples plus bas, sert à ce point pour indiquer que les modèles linéaires sont des modèles qu'on peut facilement accommoder pour prendre en ligne de compte plusieurs types de relations entre les variables prédictives et la mesure de outcome. Cette flexibilité se traduit malheureusement dans la littérature scientifique avec des noms d'analyses différentes qui sont en réalité de cas spéciaux de la modélisation linéraire. Ce tableau propose une liste de ces *cas spéciaux*.
+
+```{r lm-special-cases}
+special_cases <- tibble::tribble(
+  ~`Nom de l'analyse`,
+  ~Outome,
+  ~`Variable prédictive`,
+  "Régression simple",
+  "1 continue",
+  "1 continue",
+  "Régression multiple",
+  "1 continue",
+  "1 continue ou plus",
+  "t-test à groupes indépendants",
+  "1 continue",
+  "1 catégorielle avec 2 modalités",
+  "ANOVA simple",
+  "1 continue",
+  "1 catégorielle avec plus de 2 modalités",
+  "ANOVA factorielle",
+  "1 continue",
+  "2 catégorielles ou plus",
+  "ANCOVA",
+  "1 continue",
+  "1 catégorielle ou plus et 1 continue ou plus",
+  "Corrélation de Pearson",
+  "1 continue standardisée",
+  "1 continue standardisée",
+  "t-test avec un seul groupe",
+  "1 continue",
+  "Intercepte seulement",
+  "t-test apparié",
+  "Différence entre 2 continues",
+  "Intercepte seulement",
+  "t-test de Hotelling",
+  "2 continues ou plus",
+  "1 catégorielle avec 2 modalités",
+  "MANOVA",
+  "2 continues ou plus",
+  "1 catégorielle avec plus de 2 catégorielles",
+  "Régression multiple multivariée",
+  "2 continues ou plus",
+  "1 catégorielle ou plus et 1 continue ou plus"
+)
+
+# Calculate column width for equal-sized columns on A4 paper
+a4_width <- 21 - 2*2.54 # Width in cm (subtracting 2.54 cm margins on both sides)
+column_width <- a4_width / 3 # Divide by the number of columns
+
+special_cases |> 
+  custom_table(
+    caption_text = "Cas spéciaux de la modélisation linéaire présents dans la littérature scientifique"
+  ) |> 
+  column_spec(column = 1, width = paste0(column_width, "cm")) |> 
+  column_spec(column = 2, width = paste0(column_width, "cm")) |> 
+  column_spec(column = 3, width = paste0(column_width, "cm"))
+  
+```
+
+Comme le tableau l'indique, ces cas spécieaux présupposent que la mesure soient toujours représentée sur une échelle continue poténtiellement infinie sur les côtés. Ceci n'est cependant pas toujours le cas, par exemple lorsque la mesure est exprimée sur des échèlles de Lickert ou sur une échelle avec des limites inférieurs et/ou supérieurs. Dans le reste de cette partie, le texte propose des exemples concrets de différentes typologies de modèles linéaires dans lesquels le modèle suivante est une version plus flexible du précédent et peut donc être appliqué à des données plus complexes. Les modèles sont dans l'ordre:
+
+-   Modèle linéaire simple
+
+-   Modèle linéaire multiple
+
+-   Modèle linéaire généralisée
+
+-   Modèle linéaire généralisée mixte
+
+### Modèle linéaire simple
+
+Comme indiqué plus haut, le modèle linéaire simple présuppose que la variable outcome est le résultat de l'addition entre l'intercepte, la peinte d'une variable prédictive, et le résidu:
+
+$$
+\operatorname{y_i} = \beta_0 + \beta_1(\operatorname{x_i}) + \epsilon_i 
+$$
+
+Voici un jeu de données avec `r nrow(data_lm)` observations. Chaque observation se compose simplement de la variable prédictive $x$ et de la variable outcome $y$.
+
+```{r lm-sim-data}
+data_lm |>
+  mutate(
+    `i` = 1:nrow(data_lm) , .before = 1L
+  ) |> 
+  custom_table(
+    caption_text = "Jeu de données pour une régression linéaire simple.",
+    digits = 2
+  )
+```
+
+Lorsqu'on demande à un logiciel d'analyse statistique comme par exemple R de mener une régression linéaire simple sur ces données, le résultat qu'on obtient sera le suivant.
+
+```{r lm-table}
+apa_table(
+  apa_print(model_lm)$table, 
+  caption = "Tableau des paramètres d'une régression linéaire simple dans une perspective fréquentiste.",
+  placement = "h"
+)
+```
+
+Le résultat se réfère à une analyse de type fréquentiste, mais pour l'instant cet aspect n'a pas d'importance. Ce qui est à noter depuis les résultats sont les deux coefficients attribués aux paramètres $\beta_0$ = `r printnum(model_lm$coefficients[1])` et $\beta_1$ = `r  printnum(model_lm$coefficients[2])`. Il en résulte qu'on peut écrire les résultats de notre modèle également sous forme d'équation, mais cette fois-ci avec les coefficients intégrés.
+
+```{r lm-equation}
+equation_lm_coeff
+```
+
+Cette équation diffère de celle générique présentée plus haut de deux manières. En premier lieu, $\operatorname{y}$ a été remplacé par $\operatorname{\widehat{y}}$. Lorsque un élément à un *chapeau* en statistique, cela signifie qu'il s'agit d'une estimation liée à l'utilisation d'un modèle. Donc $\operatorname{\widehat{y}}$ n'est pas une valeur observée, mais une valeur calculée sur la base des paramètres inférés par le modèle. La deuxième différence consiste dans la disparition du résidu $\epsilon$. En effet, en s'agissant d'une prédiction, on ne peut pas savoir à quel point ce valeur s'éloigne de la *vraie* valeur. Par contre, on peut calculer cette distance si on compare les valeurs observées du jeu de données avec les valeurs qui seraient prédites par le modèle lorsque $x$ a exactement la même valeur de l'observation dans le jeu de données. La figure suivante montre ce principe graphiquement.
+
+```{r lm-figure, fig.height=3}
+#| fig.cap = "Représentation graphique d'une régression linéaire simple. La ligne bleu représente les valeurs prédites par le modèle. Les segments rouges entre les points et la ligne bleu sont les résidus des données observées.",
+graph_lm 
+```
+
+En faites, c'est exactement avec ce type de processus que les paramètres du modèle linéaire sont calculés en premier lieu. En effet, la régression linéaire simple consiste à trouver la *ligne* qui passe à travers les observations et minimisent la distance avec toutes les observations du jeu de données. Le tableau suivant reprend à ce propos les observations, mais ajoute trois autres colonnes:
+
+-   $\operatorname{\widehat{y}}$: la valeur prédite par le modèle pour une observation $x$ avec la même valeur du jeu de donnée
+
+-   $\operatorname{y} - \operatorname{\widehat{y}}$: la différence entre la valeur observée et la valeur prédite
+
+-   $(\operatorname{y} - \operatorname{\widehat{y}})^2$: la différence élevée au carré. L'utilisation de l'exponentiel sert deux objectifs: (1) éviter que dans la somme de toutes les différences les valeurs positives et négatives s'annulent, et (2) donner plus de poids aux distances plus extrêmes, comme par exemple la dernière, dont la différence de 47.56 unités devient de 2262.41.
+
+```{r lm-table-fitted}
+data_lm_plus |> 
+  custom_table(
+    caption_text = "Jeu de données avec valeur prédite et différence (normale et au carré) entre la valeur observée et prédite",
+    escape = FALSE,
+    digits = 2,
+    col_names = c(
+      "i", 
+      "x", 
+      "y", 
+      "$\\operatorname{\\widehat{y}}$",
+      "$\\operatorname{y} - \\operatorname{\\widehat{y}}$",
+      "$(\\operatorname{y} - \\operatorname{\\widehat{y}})^2$"
+    )
+  )
+```
+
+La somme de $(\operatorname{y} - \operatorname{\widehat{y}})^2$ est notamment utilisée comme mesure pour établir à quel point le modèle s'encastre avec les données observées. Le plus cette somme est élevée, le moins le modèle est en adéquation avec les données. Est-ce que la somme de `r printnum(sum(data_lm_plus$diff_squared))` est élevée? C'est difficile à dire sans une mesure de comparaison. À cet effet, on peut par exemple utiliser la moyenne $\overline{Y}$ = `r printnum(mean(data_lm$y))` comme modèle linéaire alternative. La moyenne peut être tout à fait considérée un modèle linéaire qui a seulement l'intercepte. L'intercepte correspond justement à la moyenne de la variable considérée. Le tableau suivant reprend la même structure du précédent, mais en utilisant la valeur fixe de la moyenne pour calculer la distance des observations.
+
+```{r lm-table-fitted-mean}
+data_lm_mean |> 
+  custom_table(
+    caption_text = "Jeu de données avec valeur prédite et différence (normale et au carré) entre la valeur observée et la moyenne de Y",
+    escape = FALSE,
+    digits = 2,
+    col_names = c(
+      "i", 
+      "x", 
+      "y", 
+      "$\\operatorname{\\widehat{y}}$",
+      "$\\operatorname{y} - \\overline{Y}$",
+      "$(\\operatorname{y} - \\overline{Y})^2$"
+    )
+  )
+```
+
+La somme des distances au carré en utilisant $\overline{Y}$ comme modèle linéaire est de `r printnum(sum(data_lm_mean$diff_squared))`, c'est à dire `r printnum(sum(data_lm_mean$diff_squared) - sum(data_lm_plus$diff_squared))` plus du modèle dérivé de la régression linéaire simple. On peut notamment inférer depuis cette différence qu'en connaissant la valeur de $x$, on peut avoir une meilleure idée de la valeur de $y$. En termes formelles: $\mathbb{P}(Y|X) \neq \mathbb{P}(Y)$.
+
+### Modèle linéaire multiple
+
+Le modèle linéaire multiple, connu aussi comme modéle linéaire général, est simplement une extension de la régression linéaire simple à plusieurs variables prédictives. Dans l'exemple précédent, le modèle consistait dans une seule variable numérique, mais le modèle linéaire multiple accepte également des variables prédictives binaires ou catégorielles. Par exemple, dans le jeu de données suivante, la variable outcome $Y$ est calculée sur la base de l'effet additive entre les variables numériques $X$ et $W$, plus la variable catégorielle $Z$ qui possède trois modalités: *Faible*, *Moyenne* et *Forte*. L'équation de la régression linéaire multiple est donc la suivante:
+
+$$
+\operatorname{y_i} = \beta_{0} + \beta_{1}(\operatorname{x_i}) + \beta_{2}(\operatorname{w_i}) + \beta_{3}(\operatorname{z_i}_{\operatorname{Moyenne}}) + \beta_{4}(\operatorname{z_i}_{\operatorname{Forte}}) + \epsilon_i
+$$Il est utile de remarquer comme dans cette équation n'apparaît pas la modalité faible de la variable $Z$. Ceci s'explique par un mécanisme adopté souvent en régression linéaire qui consiste à attribuer à la première modalité d'une variable catégorielle une sorte de valeur de base. Ensuite, on attribue aux autres modalités une *dummy* variable, c'est-à-dire une variable qui assume les valeurs 0 ou 1. Dans ce cas, si l'observation appartient à la modalité *Moyenne*, alors $\operatorname{z_i}_{\operatorname{Moyenne}}$ sera 1 et $\operatorname{z_i}_{\operatorname{Forte}}$ sera 0. Si la variable appartient au contraire à *Forte*, les valeurs seront inversés. Ceci à la conséquence d\'additionner dans le calcul seulement le coefficient de la variable avec valeur 1 et d'annuler le coefficient de la variable avec valeur 0. En effet, multiplier n'importe quel coefficient par 1 signifie ajouter une fois ce coefficient au calcul, tandis que le multiplier par 0 signifie ajouter 0 au calcul. Le tableau suivant montre les premières 10 observations d'un jeu de données qui compte $N$ = `r nrow(data_lm_multiple)`.
+
+```{r data-lm-multiple}
+data_lm_multiple |>
+  mutate(
+    i = 1:nrow(data_lm_multiple), .before = 1L
+  ) |> 
+  head(10) |> 
+  custom_table(
+    caption_text = "Extrait des premières 10 observations d'un jeu de données avec plusieurs variables prédictives."
+  )
+```
+
+Le tableau de la régression multiple doit à ce moment proposer les coefficients pour $X$, $Y$, ainsi que pour les deux modalités *Moyenne* et *Forte* de $Z$.
+
+```{r lm-multiple-table}
+apa_table(
+  apa_print(model_lm_multiple)$table, 
+  caption = "Tableau des paramètres d'une régression linéaire multiple dans une perspective fréquentiste.",
+  placement = "h"
+)
+```
+
+Encore une fois, les résultats de ce tableau font référence à l'approche fréquentiste, mais ces sont seulement les coefficients qui nous intéressent pour le moment. L'équation de régression avec les coefficients estimés sera donc la suivante:
+
+```{r lm-multiple-equation}
+equation_lm_multiple_coeff
+```
+
+Un élément d'intérêt particulier dans la régression linéaire multiple concerne l\'interprétation des coefficients les uns par rapport aux autres. En effet, dans ce type de modèle, la contribution additive de chaque coefficient est à interpréter comme une contribution unique par rapport aux autres coefficients. Voici comment interpréter chaque coefficient en termes de changements sur la variable outcome $Y$:
+
+-   $\beta_0$ Intercept(`r printnum(model_lm_multiple$coefficients[1])`) : Lorsque toutes les variables prédictives ($X$, $W$ et $Z$) sont égales à zéro, la valeur prédite de la variable $Y$ est de -3,25. Cependant, cette interprétation peut ne pas être saillante si la valeur zéro pour l'une des variables prédictives n'est pas plausible dans le contexte des données, ou même si une variable négative de l'outcome $Y$ ne fait pas de sens (e.g. temps négatif).
+
+-   $\beta_1$ x(`r printnum(model_lm_multiple$coefficients[2])`) : Deux observations qui diffèrent d'une unité sur la variable $X$, tout en maintenant les autres variables (w et z) constantes, diffèrent sur la variable outcome $Y$ de 4,73 unités.
+
+-   $\beta_2$ w(`r printnum(model_lm_multiple$coefficients[3])`) : Deux observations qui diffèrent d'une unité sur la variable $W$, les autres variables (x et z) restant constantes, diffèrent de 0,11 unité sur la variable outcome $Y$.
+
+-   $\beta_3$ zMoyenne(`r printnum(model_lm_multiple$coefficients[4])`) : Il s'agit d'une variable catégorielle avec comme catégorie de référence la modalité *Faible*. Dans ce cas, une observation avec modalité *Moyenne* diffère d'une observation avec modalité *Faible* de 5,13 unités sur la variable outcome $Y$, tout en maintenant les autres variables ($X$ et $W$) constantes.
+
+-   $\beta_4$ zForte(`r printnum(model_lm_multiple$coefficients[5])`) : De même, le coefficient de 7,69 représente la différence sur la variable outcome $Y$ entre une observation avec modalité *Forte* et une avec modalité *Faible*, tout en gardant les autres variables ($X$ et $W$) constantes.
+
+-   On peut récupérer le coefficient qui détermine la différence entre une observation avec modalité *Forte* et une avec modalité *Moyenne* à travers la substraction 7.69 (zForte) - 5.13 (zMoyenne) = 2.56. En d'autres termes, deux observations qui gardent $X$ et $W$ constantes diffèrent de 2.56 unités sur la variable outcome $Y$ lorsque l'une est avec modalité *Forte* et l'autre modalité *Moyenne*.
+
+La comparaison entre les modalités de $Z$ est de quelque sorte plus compliquée à comprendre, car la valeur de *Faible* n'est pas vraiment explicitée. En effet, la valeur de $Y$ pour les observations avec modalité *Faible* correspond tout simplement à l'effet additive de $X$ et $W$, car zMoyenne et zForte sont annulés par la multiplication par 0.
+
+L'interprétation des coefficients d'une régression linéaire multiple nécessite de beaucoup de pratique avant d'être maîtrisée. Mais ces coefficients jouent un rôle fondamental dans l'inférence et il était donc nécessaire d'en illustrer le mécanisme. D'ailleurs, une régression linéaire multiple est également plus difficile à visualiser graphiquement par rapport à la régression linéaire simple. Ici nous proposons un graphique qui ne prend pas en compte la variable $W$ juste pour des propos illustratifs. Le graphique propose trois lignes de régression en correspondance aux trois modalités de la variable $Z$.
+
+```{r lm-multiple-figure, fig.height=3}
+#|fig.cap = "Représentation graphique d'une régression linéaire multiple. Les trois lignes correspondent aux trois modalités de la variable Z. La variable W a été enlevée pour rendre la représentation possible.",
+graph_lm_multiple
+```
+
+Nous verrons par la suite que l'interprétation de ces coefficients sera plus saillante lorsque les données seront issues d'une expérience, tandis que dans cette partie nous nous référons de manière générale aux modèles linéaires indépendemmant de leur application concrète. Avec des exemples dans lesquels les variables assument des connotations plus concrètes (e.g. heures d'études, attribution à des interfaces différentes d'un logiciel, etc.), aussi l'interprétation des coefficients en résultera facilitée.
+
+### Modèle linéaire généralisée
+
+### Modèle linéaire généralisée mixte
+
+## La modélisation d'outcomes potentielles
+
+## L'inférence statistique
+
+# Statistiques *fréquentistes*
+
+# Statistiques Bayésiennes
+
+# Conclusion
+
+```{=tex}
+\newpage
+\markboth{RÉFÉRENCES}{}
+```
+# Références {.unnumbered}

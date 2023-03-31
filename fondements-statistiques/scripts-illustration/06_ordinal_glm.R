@@ -8,13 +8,13 @@ library(emmeans)
 
 theme_set(theme_apa(box = TRUE))
 
-set.seed(123)
-n_points <- 200
+set.seed(2524)
+n_points <- 20
 
 # Create a dataset with a clear effect of the predictor x
 x <- sample(c("A", "B"), n_points, replace = TRUE)
 w <- runif(n_points, min = 10, max = 30)
-latent_y <- ifelse(x == "A", rnorm(n_points, mean = 0, sd = 1), rnorm(n_points, mean = 1, sd = 1)) + w / 10
+latent_y <- ifelse(x == "A", rnorm(n_points, mean = 0, sd = 1.5), rnorm(n_points, mean = 1.5, sd = 1.5)) + w / 10
 outcome <- cut(latent_y, breaks = quantile(latent_y, probs = seq(0, 1, length.out = 6)), include.lowest = TRUE, labels = 1:5, ordered_result = TRUE)
 
 data_glm <- data.frame(x, w, outcome)
@@ -64,3 +64,18 @@ equation_glm_coeff <- equatiomatic::extract_eq(model_glm, use_coefs = TRUE, inte
 
 model_glm_contrast <- emmeans(model_glm, ~x | w) |> pairs()
 
+# Create a new data frame with the values of x and w for which we want to predict probabilities
+new_data_glm <- expand.grid(x = c("A", "B"), w = 19.8)
+
+# Obtain predicted probabilities for each level of the outcome variable under both conditions A and B
+predicted_probs_glm <- predict(model_glm, newdata = new_data_glm, type = "probs")
+
+# Calculate expected values for each condition
+expected_A <- sum(predicted_probs_glm[1, ] * 1:5)
+expected_B <- sum(predicted_probs_glm[2, ] * 1:5)
+
+# Find the difference between the expected values of conditions A and B
+difference_glm = expected_A - expected_B
+
+# Compare ols regression
+model_glm_vs_lm <- lm(as.numeric(outcome) ~ x + w, data_glm)

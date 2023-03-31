@@ -408,6 +408,16 @@ Graphique de la régression ordinale.
 graph_glm
 ```
 
+Comparaison avec le même modèle qui utilise une régression linéaire multiple.
+
+```{r glm-vs-lm}
+apa_table(
+  apa_print(model_glm_vs_lm)$table, 
+  caption = "Tableau des paramètres d'une régression linéaire multiple lorsque la variable outcome ordinale est considéré comme continue",
+  placement = "h"
+)
+```
+
 ### Modèle linéaire généralisée mixte
 
 ## La modélisation d'outcomes potentielles

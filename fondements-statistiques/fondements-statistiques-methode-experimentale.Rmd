@@ -373,7 +373,7 @@ Cette flexibilité garantie par le modèle linéaire généralisé comporte néa
 equation_glm
 ```
 
-Tableau avec les données.
+Le tableau suivant affiche les premières 10 observations d'un jeu de données avec ces cractéristiques.
 
 ```{r data-glm-table}
 data_glm |>
@@ -386,10 +386,26 @@ data_glm |>
   )
 ```
 
+Tableau des résultats de la régression ordinale.
+
+```{r model-glm-table}
+results_glm |> 
+  custom_table(
+    caption_text = "Résultats de la régression ordinale avec coefficients pour les variables prédictives et les interceptes pour les réponses possibles"
+  )
+```
+
 Équation avec coefficients, mais à ne pas évaluer individuellement comme dans le cas de la régression linéaire multiple.
 
 ```{r}
 equation_glm_coeff
+```
+
+Graphique de la régression ordinale.
+
+```{r fig.height=6}
+#| fig.cap = "Représentation graphique d'une regréssion ordinale dans laquel les log-odds de la variable outcome ont été rétransformées en probabilité de choisir une réponse entre 1 et 5 en fonction des variables prédictives X et W"
+graph_glm
 ```
 
 ### Modèle linéaire généralisée mixte

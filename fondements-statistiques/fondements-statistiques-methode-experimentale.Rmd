@@ -365,15 +365,15 @@ $$
 g(Y) = X\beta
 $$
 
-La fonction $g()$ est celle qui s'occupe de transformer le lien entre les variables prédictives, représentée ici par un *set* $X$ qui correspond à {$X_0, X_1, X_2, … X_n$}, et la variable outcome $Y$ dans un format propice à la modélisation linéaire, quand cette relation, sans la fonction $g()$ ne serait pas linéaire. Cette équation nous permet également d'identifier comme la régression linéaire multiple est en effet un cas particulier du modèle linéaire généralisé qui s'avère lorsque $g(Y) = Y$, c'est-à-dire quand il n'y a pas de transformation de la variable outcome $Y$.
+La fonction $g()$ est celle qui s'occupe de transformer le lien entre les variables prédictives, représentée ici par un *set* $X$ qui correspond à {$X_0, X_1, X_2, … X_n$}, et la variable outcome $Y$ dans un format propice à la modélisation linéaire, quand cette relation, sans la fonction $g()$ ne serait pas linéaire. Cette équation permet également d'identifier comme la régression linéaire multiple est en effet un cas particulier du modèle linéaire généralisé qui s'avère lorsque $g(Y) = Y$, c'est-à-dire quand il n'y a pas de transformation de la variable outcome $Y$.
 
-Cette flexibilité garantie par le modèle linéaire généralisé comporte néanmoins certaines conséquences qu'il faut considérer pour pouvoir utiliser ce modèle est interpréter correctement les résultats qu'on peut obtenir. Dans le reste de cette partie, nous proposons à cet effet un exemple avec la variable outcome $Y$ de type catégorille ordinale, plus spécifiquement une échelle de Lickert de 1 à 5. Dans l'équation générique suivante, la variable outcome $Y$ est en lien avec deux variables prédictives $X$ (catégorielle avec deux modalités A et B) et $W$ qui est continue.
+Cette flexibilité garantie par le modèle linéaire généralisé comporte néanmoins certaines conséquences qu'il faut considérer pour pouvoir utiliser ce modèle est interpréter correctement les résultats qu'on peut obtenir. Dans le reste de cette partie, nous proposons à cet effet un exemple avec la variable outcome $Y$ de type catégorielle ordinale, plus spécifiquement une échelle de Lickert de 1 à 5. Dans l'équation générique suivante, la variable outcome $Y$ est en lien avec deux variables prédictives $X$ (catégorielle avec deux modalités A et B) et $W$ qui est continue.
 
 ```{r}
 equation_glm
 ```
 
-Le tableau suivant affiche les premières 10 observations d'un jeu de données avec ces cractéristiques.
+Le tableau suivant affiche les premières 10 observations d'un jeu de données simulé. Le nombre d'observations totales est de $N$ = `r nrow(data_glm)`.
 
 ```{r data-glm-table}
 data_glm |>
@@ -386,7 +386,7 @@ data_glm |>
   )
 ```
 
-Tableau des résultats de la régression ordinale.
+En appliquant une régression logistique ordinale aux données on obtient les coefficients de la régression suivants.
 
 ```{r model-glm-table}
 results_glm |> 
@@ -395,20 +395,32 @@ results_glm |>
   )
 ```
 
-Équation avec coefficients, mais à ne pas évaluer individuellement comme dans le cas de la régression linéaire multiple.
+Comparé au tableau de la régression linéaire multiple, on s'aperçoit surtout de la présence des 4 *seuils de coupure* entre les 5 options de l'échelle de Lickert. Ces valeurs n'ont pas une application directe dans l'interprétation des coefficients, mais sont importantes pour déterminer l'ensemble du modèle, ainsi que pour définir la probabilité que chaque catégorie de l'échelle soit choisi. En effet, il y a une forme d'effet d'accumulation entre les catégories ordinales, car la catégorie précédente est de quelque sorte *contenue* dans la suivante. Pour cette raison, le modèle calcule les *seuils* pour définir à quel moment c'est plus probable qu'une observation *passe à la vitesse supérieure*.
+
+Au contraire, les deux variables prédictive obtiennent un coefficient tout à fait similaire à la régression linéaire multiple. En ayant $X$ seulement deux modalités, le coefficient concerne la modalité B, tandis que la modalité A est prise comme ligne de base. Il faut cependant faire attention à interpréter ces coefficients exactement de la même manière que dans le cadre de la régression linéaire multiple. En effet, dans le modèle linéaire généralisé la fonction de transformation de la variable outcome $X$ est valable sur l'ensemble des variables prédictive. Par conséquent, il faut prendre en compte l'ensemble du modèle, car les coefficients individuellement ne produise pas la même information que dans la régression linéaire multiple. L'équation avec les coefficients qui résulte de la modélisation des données prend donc en compte à la fois les coefficients des variables prédictives et les 4 seuils entre les catégories ordinales de l'échelle de Lickert.
 
 ```{r}
 equation_glm_coeff
 ```
 
-Graphique de la régression ordinale.
+La valeur des coefficients également plus difficile à interpréter, car il ne sont pas en unité de la variable outcome $Y$. Dans le cas spécifique de la régression logistique ordinale, les coefficients sont exprimées en *log-odds.* En français on les appellent plutôt "logarithme des cotes" ou "logarithme des rapports de probabilité".Il s'agit d*'*une transformation mathématique qui sert pour définir la probabilité d'un évènement par rapport à son contraire. Un *log-odds* de 0 correspond à une probabilité équitable entre l\'évènement et son contraire. Une valeur de 1 donne plus de chances à l\'évènement, tandis qu'une valeur de -1 donne plus de chance à son contraire. On peut donc transformer les *log-odds* dans des probabilité qui sont plus simple à cerner, comme c'est le cas dans le graphique suivant.
 
-```{r fig.height=6}
+```{r model-glm-figure, fig.height=3.8}
 #| fig.cap = "Représentation graphique d'une regréssion ordinale dans laquel les log-odds de la variable outcome ont été rétransformées en probabilité de choisir une réponse entre 1 et 5 en fonction des variables prédictives X et W"
 graph_glm
 ```
 
-Comparaison avec le même modèle qui utilise une régression linéaire multiple.
+Dans cette représentation graphique on peut noter plusieurs éléments d'intérêts au niveau de l'inférence depuis les données:
+
+-   Pour chacune des valeurs de l'échelle de Lickert on peut voir la probabilité qu'elle ait été choisi en fonction des deux modalités de $X$. De plus, la variable $W$, étant continue, est stratifiée en trois valeurs, une faible (rouge), une moyenne (bleu) et un élevée (verte). Ces trois valeurs sont ensuite disposées pour chaque modalité de $X$.
+
+-   D'après la répartition des catégories en fonction de $X$, on peut noter comme pour les valeurs 1 et 2 de l'échelle de Lickert, en général il y a une probabilité plus élevé d'avoir ces valeurs avec la modalité A. Cela signifie que dans cette modalité, les personnes ont choisi plus souvent ces deux valeurs faibles. En ce qui concerne la valeur neutrale 3, les proportions sont plus ou moins les mêmes dans les deux conditions. Enfin, pour les valeurs 4 ou 5, la probabilité est plus élevée pour la modalité B. Depuis cette représentation on peut corroborer pourquoi le coefficient $X_B$ dans le tableau de la régression est positif.
+
+-   Pour chaque modalité de $X$, en même temps, il y a trois probabilités pour les valeurs faible, moyenne et élevé de $W$. Dans ce cas également on peut voir comme la valeur faible de $W$ (rouge) a des probabilités plus élevée dans les évaluations de 1 et 2 sur l'échelle de Lickert, tandis que ces probabilités sont plus élevée sur les valeurs de 4 et 5 pour la valeur élevée de $W$ (verte). Cette répartition corrobore donc la valeur positive du coefficient de $W$.
+
+Depuis ces informations on peut donc inférer que l'évaluation des personnes dans la modalité B de $X$ a été plus positive que pour la modalité A, et que cette évaluation a été d'autant plus positive si la valeur sur la variable $W$ était élevée. Dans un exemple concret, on peut imaginer que $X$ correspond à deux versions d'une interface de logiciel et que $W$ correspond au temps en minutes passées par les personnes à utiliser l'interface. La variable $Y$ pourrait être l'évaluation utilisabilité sur une échelle UX avec un seul item. À ce moment, on peut inférer que l'interface B est jugée meilleure, surtout lorsque les participantes l'ont explorée pour plus longtemps.
+
+Une fois que les grandes lignes du modèle linéaire générale ont été abordées, il est utile de faire une comparaison avec le même modèle qui utilise une régression linéaire multiple. Il arrive souvent dans les contributions *quantitatives* en sciences sociales de voir que des mesures de type Lickert sont analysées avec des cas spéciaux de la régression linéaire multiple (*t*-test, ANOVA, ...). À cet effet, avec quelques passages techniques épargnés ici dans l'explication mais disponible dans le code source du document, il a été possible de récupérer pour des finalités purement pédagogiques la différence entre les évaluations des modalités A et B de $X$ sur la même échelle de Lickert. La différence obtenue est de `r printnum(abs(difference_glm))` points. Deux personnes qui ont passé le même temps sur l'interface, donc, diffèrent de plus d'un point d'évaluation sur l'échelle de Lickert. À titre de comparaison, le tableau suivant montre les résultats du tableau de régression linaire multiple avec les mêmes données utilisées plus haut.
 
 ```{r glm-vs-lm}
 apa_table(
@@ -417,6 +429,8 @@ apa_table(
   placement = "h"
 )
 ```
+
+On peut noter comme le coefficient appliqué à la variable $X$, qui est dans ce cas dans la même métrique de la variable outcome $Y$, est de `r printnum(model_glm_vs_lm$coefficients[2])`. Si cette différence d'environ 0.1 peut faire la différence dépend en réalité des objectifs de la recherche et du degré de précision souhaité par les chercheurs. Si vous avez néanmoins l'habitude fréquentiste de regarder la p-valeur associée aux coefficients, vous aurez probablement remarqué que dans cette analyse la p-valeur \> 0.05. Au contraire, dans la régression logistique ordinale, le même coefficient apparaît à p-valeur \< 0.05. Il s'agit en toute vérité d'une coincidence issue de la simulation, mais il se peut en effet qu'une application d'un modèle plus appropriée pour le type de données puisse proposer des avantages dans la précision des estimations. Bien évidemment, ceci s'applique comme principe général est non pas exclusivement si on *flirte* avec le seuil conventionnel de p \< 0.05.
 
 ### Modèle linéaire généralisée mixte
 

@@ -21,7 +21,7 @@ output:
 bibliography: ../assets/bib/references.bib
 csl: ../assets/settings/apa.csl
 abstract: |
-  La méthode expérimentale est étroitement liée à la modélisation des données notamment avec des finalités d'inférence statistique. Le rapport entre les données, la modélisation de celles-ci, et les conclusions qu'on peut tirer des tests statistiques effectués est cependant complexe et régit par différentes approches philosophiques et méthodologiques. À complement du document sur les fondements empiriques de la méthode expérimentale, ce document s'intéresse donc aux fondements statistiques de cette méthode. Il propose d'abord une brève introduction à la modélisation des données et aux probabilités. Ensuite, les statistiques *fréquentistes* (ou *classiques*) et les statistiques Bayésiennes sont illustrées dans les grandes lignes. En guise de conclusion, le document propose une brève analyse sur les avantages des statistiques Bayésiennes dans un contexte pédagogique.
+  La méthode expérimentale est étroitement liée à la modélisation des données notamment avec des finalités d'inférence statistique. Le rapport entre les données, la modélisation de celles-ci, et les conclusions qu'on peut tirer des tests statistiques effectués est cependant complexe et régit par différentes approches philosophiques et méthodologiques. À complement du document sur les fondements empiriques de la méthode expérimentale, ce document s'intéresse donc aux fondements statistiques de cette méthode. Il propose d'abord une introduction à la modélisation des données et aux probabilités. Ensuite, les statistiques *fréquentistes* (ou *classiques*) et les statistiques Bayésiennes sont illustrées dans les grandes lignes. En guise de conclusion, le document propose une brève analyse sur les avantages des statistiques Bayésiennes dans un contexte pédagogique.
 ---
 
 ```{r setup, include=FALSE}
@@ -40,6 +40,7 @@ source(here::here("assets", "settings", "custom.R"))
 source(here::here("fondements-statistiques", "scripts-illustration", "01_linear-regression.R"))
 source(here::here("fondements-statistiques", "scripts-illustration", "04_multiple-regression.R"))
 source(here::here("fondements-statistiques", "scripts-illustration", "05_model_fit.R"))
+source(here::here("fondements-statistiques", "scripts-illustration", "06_ordinal_glm.R"))
 ```
 
 # Introduction {.unnumbered}
@@ -281,13 +282,20 @@ data_lm_mean |>
 
 La somme des distances au carré en utilisant $\overline{Y}$ comme modèle linéaire est de `r printnum(sum(data_lm_mean$diff_squared))`, c'est à dire `r printnum(sum(data_lm_mean$diff_squared) - sum(data_lm_plus$diff_squared))` plus du modèle dérivé de la régression linéaire simple. On peut notamment inférer depuis cette différence qu'en connaissant la valeur de $x$, on peut avoir une meilleure idée de la valeur de $y$. En termes formelles: $\mathbb{P}(Y|X) \neq \mathbb{P}(Y)$.
 
+Comme indiqué plus haut, le modèle linéaire permet de prendre en compte d'autres *formes* de régression, comme par exemple une courbe. Cependant, il faut considérer deux aspects très importants dans la modélisation: le sous-ajustement et le sur-ajustement d'un modèle. La figure ci-dessous montre, sur la gauche, un modèle qui est bien ajusté aux données, car la ligne passe bien au milieu des différents points. Sur la droite, en revanche, la ligne rouge est *sous-ajustée* car elle infère une association linéaire qui, dans les données, ne semblent pas être présente. La ligne violet, au contraire, est très probablement sur-ajustée, car elle se superpose parfaitement aux données. Il est difficile de croire, cependant, que ce modèle puisse s'adapter à d'autres données que celles-ci. La modélisation doit toujours faire face à un équilibre précaire entre la précision *in-sample* et l'utilité *out-of-sample* [@mcelreathStatisticalRethinkingBayesian2020].
+
+```{r model-fits-figure, fig.height=3}
+#| fig.cap = "Représentation graphique d'un modèle qui est bien ajusté (gauche), un modèle sous-ajusté (ligne rouge à droite) et sur-ajusté (ligne violet à droite)"
+model_fits_graphs
+```
+
 ### Modèle linéaire multiple
 
 Le modèle linéaire multiple, connu aussi comme modéle linéaire général, est simplement une extension de la régression linéaire simple à plusieurs variables prédictives. Dans l'exemple précédent, le modèle consistait dans une seule variable numérique, mais le modèle linéaire multiple accepte également des variables prédictives binaires ou catégorielles. Par exemple, dans le jeu de données suivante, la variable outcome $Y$ est calculée sur la base de l'effet additive entre les variables numériques $X$ et $W$, plus la variable catégorielle $Z$ qui possède trois modalités: *Faible*, *Moyenne* et *Forte*. L'équation de la régression linéaire multiple est donc la suivante:
 
 $$
 \operatorname{y_i} = \beta_{0} + \beta_{1}(\operatorname{x_i}) + \beta_{2}(\operatorname{w_i}) + \beta_{3}(\operatorname{z_i}_{\operatorname{Moyenne}}) + \beta_{4}(\operatorname{z_i}_{\operatorname{Forte}}) + \epsilon_i
-$$Il est utile de remarquer comme dans cette équation n'apparaît pas la modalité faible de la variable $Z$. Ceci s'explique par un mécanisme adopté souvent en régression linéaire qui consiste à attribuer à la première modalité d'une variable catégorielle une sorte de valeur de base. Ensuite, on attribue aux autres modalités une *dummy* variable, c'est-à-dire une variable qui assume les valeurs 0 ou 1. Dans ce cas, si l'observation appartient à la modalité *Moyenne*, alors $\operatorname{z_i}_{\operatorname{Moyenne}}$ sera 1 et $\operatorname{z_i}_{\operatorname{Forte}}$ sera 0. Si la variable appartient au contraire à *Forte*, les valeurs seront inversés. Ceci à la conséquence d\'additionner dans le calcul seulement le coefficient de la variable avec valeur 1 et d'annuler le coefficient de la variable avec valeur 0. En effet, multiplier n'importe quel coefficient par 1 signifie ajouter une fois ce coefficient au calcul, tandis que le multiplier par 0 signifie ajouter 0 au calcul. Le tableau suivant montre les premières 10 observations d'un jeu de données qui compte $N$ = `r nrow(data_lm_multiple)`.
+$$Il est utile de remarquer comme dans cette équation n'apparaît pas la modalité faible de la variable $Z$. Ceci s'explique par un mécanisme adopté souvent en régression linéaire qui consiste à attribuer à la première modalité d'une variable catégorielle une sorte de valeur de base. Ensuite, on attribue aux autres modalités une *dummy* variable, c'est-à-dire une variable qui assume les valeurs 0 ou 1. Dans ce cas, si l'observation appartient à la modalité *Moyenne*, alors $\operatorname{z_i}_{\operatorname{Moyenne}}$ sera 1 et $\operatorname{z_i}_{\operatorname{Forte}}$ sera 0. Si la variable appartient au contraire à *Forte*, les valeurs seront inversés. Ceci à la conséquence d'additionner dans le calcul seulement le coefficient de la variable avec valeur 1 et d'annuler le coefficient de la variable avec valeur 0. En effet, multiplier n'importe quel coefficient par 1 signifie ajouter une fois ce coefficient au calcul, tandis que le multiplier par 0 signifie ajouter 0 au calcul. Le tableau suivant montre les premières 10 observations d'un jeu de données qui compte $N$ = `r nrow(data_lm_multiple)`.
 
 ```{r data-lm-multiple}
 data_lm_multiple |>
@@ -316,7 +324,7 @@ Encore une fois, les résultats de ce tableau font référence à l'approche fr�
 equation_lm_multiple_coeff
 ```
 
-Un élément d'intérêt particulier dans la régression linéaire multiple concerne l\'interprétation des coefficients les uns par rapport aux autres. En effet, dans ce type de modèle, la contribution additive de chaque coefficient est à interpréter comme une contribution unique par rapport aux autres coefficients. Voici comment interpréter chaque coefficient en termes de changements sur la variable outcome $Y$:
+Un élément d'intérêt particulier dans la régression linéaire multiple concerne l'interprétation des coefficients les uns par rapport aux autres. En effet, dans ce type de modèle, la contribution additive de chaque coefficient est à interpréter comme une contribution unique par rapport aux autres coefficients. Voici comment interpréter chaque coefficient en termes de changements sur la variable outcome $Y$:
 
 -   $\beta_0$ Intercept(`r printnum(model_lm_multiple$coefficients[1])`) : Lorsque toutes les variables prédictives ($X$, $W$ et $Z$) sont égales à zéro, la valeur prédite de la variable $Y$ est de -3,25. Cependant, cette interprétation peut ne pas être saillante si la valeur zéro pour l'une des variables prédictives n'est pas plausible dans le contexte des données, ou même si une variable négative de l'outcome $Y$ ne fait pas de sens (e.g. temps négatif).
 
@@ -339,9 +347,50 @@ L'interprétation des coefficients d'une régression linéaire multiple nécessi
 graph_lm_multiple
 ```
 
-Nous verrons par la suite que l'interprétation de ces coefficients sera plus saillante lorsque les données seront issues d'une expérience, tandis que dans cette partie nous nous référons de manière générale aux modèles linéaires indépendemmant de leur application concrète. Avec des exemples dans lesquels les variables assument des connotations plus concrètes (e.g. heures d'études, attribution à des interfaces différentes d'un logiciel, etc.), aussi l'interprétation des coefficients en résultera facilitée.
+Nous verrons par la suite que l'interprétation de ces coefficients sera plus saillante lorsque les données seront issues d'une expérience, tandis que dans cette partie nous nous référons de manière générale aux modèles linéaires indépendamment de leur application concrète. Avec des exemples dans lesquels les variables assument des connotations plus concrètes (e.g. heures d'études, attribution à des interfaces différentes d'un logiciel, etc.), aussi l'interprétation des coefficients en résultera facilitée.
 
-### Modèle linéaire généralisée
+### Modèle linéaire généralisé
+
+Le modèle linéaire généralisé est plus flexible du modèle linéaire de la régression multiple car il arrive à mieux accomoder des variables outcomes $Y$ de différentes types. En effet, grâce à ce modèle plus flexible, on peut notamment dépasser certaines limites sur la mesure d'intérêt notamment sur les aspects suivants.
+
+**Utiliser des mesures avec des bornes.** La régression linéaire multiple présuppose que, au moins potentiellement, la variable outcome peut assumer toute valeur de $-\infty$ à $\infty$. Cependant, on peut s'intéresser à des mesures qui ont des limites inférieure et/ou supérieure, par exemple lorsqu'on s'intéresse à un évènement qui s'avère ou pas (variable binaire). Dans ce cas, le modèle linéaire généralisé permet d'effectuer une régression linéaire dite logistique.
+
+**Utiliser des mesures discrètes.** Encore une fois au moins sur la carte, la régression linéaire multiple s'attend à ce que la variable d'outcome dispose d'une fonction de densité de probabilité, c'est-à-dire que ses valeurs s'étalent sur un continuum. Ceci n'est notamment pas le cas dans des mesures de type décompte, comme le nombre d'erreurs dans une dictée ou le nombre de phonèmes émis par un-e élève pendant une scéance. Le modèle linéaire généralisée permet de modéliser la variable outcome par exemple avec une distribution de Poisson, utilisée souvent avec des décomptes.
+
+**Utiliser des mesures ordinales.** Un cas particulier des mesures discrètes consiste dans les échelles ordinales, par exemple les échelles de Lickert qui représente souvent le degré d'accord sur une échelle de 1 à 5 (ou de 1 à 7) dans laquelle une extrémité représente *pas d'accord du tout* et l'autre *tout à fait d'accord*. Ce cas, qui sera abordé dans l'exemple plus bas, peut s'appuyer dans le modèle linéaire généralisé sur une régression ordinale.
+
+Cette flexibilité est rendue possible par le fait que le modèle linéaire généralisé utilise une fonction de transformation (une fonction de *link* en jargon statistique) qui permet de faire passer la variable d'outcome dans un format continu et potentiellement infini. De manière formelle, le modèle s'exprime de la manière suivante:
+
+$$
+g(Y) = X\beta
+$$
+
+La fonction $g()$ est celle qui s'occupe de transformer le lien entre les variables prédictives, représentée ici par un *set* $X$ qui correspond à {$X_0, X_1, X_2, … X_n$}, et la variable outcome $Y$ dans un format propice à la modélisation linéaire, quand cette relation, sans la fonction $g()$ ne serait pas linéaire. Cette équation nous permet également d'identifier comme la régression linéaire multiple est en effet un cas particulier du modèle linéaire généralisé qui s'avère lorsque $g(Y) = Y$, c'est-à-dire quand il n'y a pas de transformation de la variable outcome $Y$.
+
+Cette flexibilité garantie par le modèle linéaire généralisé comporte néanmoins certaines conséquences qu'il faut considérer pour pouvoir utiliser ce modèle est interpréter correctement les résultats qu'on peut obtenir. Dans le reste de cette partie, nous proposons à cet effet un exemple avec la variable outcome $Y$ de type catégorille ordinale, plus spécifiquement une échelle de Lickert de 1 à 5. Dans l'équation générique suivante, la variable outcome $Y$ est en lien avec deux variables prédictives $X$ (catégorielle avec deux modalités A et B) et $W$ qui est continue.
+
+```{r}
+equation_glm
+```
+
+Tableau avec les données.
+
+```{r data-glm-table}
+data_glm |>
+  mutate(
+    i = 1:nrow(data_glm), .before = 1L
+  ) |> 
+  head(10) |> 
+  custom_table(
+    caption_text = "Aperçu de 10 observations dans un jeu de données avec la variable outcome Y en forme d'échelle de Lickert (de 1 à 5)"
+  )
+```
+
+Équation avec coefficients, mais à ne pas évaluer individuellement comme dans le cas de la régression linéaire multiple.
+
+```{r}
+equation_glm_coeff
+```
 
 ### Modèle linéaire généralisée mixte
 

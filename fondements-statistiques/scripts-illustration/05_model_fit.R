@@ -1,6 +1,7 @@
 # Load required libraries
 library(ggplot2)
 library(tidyr)
+library(cowplot)
 
 # Set seed for reproducibility
 set.seed(42)
@@ -20,9 +21,9 @@ model_goodfit <- lm(y_goodfit ~ x_goodfit, data = data_goodfit)
 
 # Create plot
 plot_goodfit <- ggplot(data_goodfit, aes(x = x_goodfit, y = y_goodfit)) +
-  geom_point() +
+  geom_point(size = 2) +
   geom_smooth(method = "lm", se = FALSE, linetype = "solid", color = "blue") +
-  ggtitle("Good Fit Model")
+  labs(color = "Variable", shape = "Variable", linetype = "Variable", x = NULL, y = "Measure")
 
 # ---- Overfitted Model ----
 
@@ -46,11 +47,10 @@ data_long_under_over_fit <- gather(data_under_over_fit, key = "variable", value 
 
 # Create plot
 plot_under_over_fit <- ggplot(data_long_under_over_fit, aes(x = x_under_over_fit, y = value)) +
-  geom_point(size = 3) +
-  geom_smooth(method = "loess", color = "blue") +
-  geom_smooth(method = "lm", se = FALSE, color = "red") +
-  labs(title = "Overfitted Model", color = "Variable", shape = "Variable", linetype = "Variable")
+  geom_point(size = 2) +
+  geom_smooth(method = "loess", color = "darkviolet") +
+  geom_smooth(method = "lm", se = FALSE, color = "darkred") +
+  labs(color = "Variable", shape = "Variable", linetype = "Variable", x = NULL, y = "Measure")
 
 # Display plots
-plot_goodfit
-plot_under_over_fit
+model_fits_graphs <- cowplot::plot_grid(plot_goodfit, plot_under_over_fit)

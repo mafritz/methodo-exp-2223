@@ -1,7 +1,8 @@
 ---
 title: "Fondements empiriques de la méthode expérimentale en technologie éducative"
-author:
-  - Mattia A. Fritz
+author: |
+  | **Mattia A. Fritz**
+  | \small TECFA, Université de Genève
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
 lang: fr
 linestretch: 1.2

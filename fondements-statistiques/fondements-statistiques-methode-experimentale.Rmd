@@ -109,21 +109,21 @@ L'explication des composantes de cette version de l'équation est la suivante:
 
 -   $\beta_{1}$ correspond au paramètre (ou coefficient de régression) pour la variable $X$. Ce coefficient est commun à toutes les valeurs observées pour $X$, c'est-à-dire $\operatorname{x_i}$.
 
--   $\epsilon_i$ correspond à ce qu'on appelle le résidu de l'équation. Il s'agit d'une valeur de *compensation* dû au fait que les paramètres $\beta_0$ et $\beta_1$ sont communs à toutes les observations, mais pratiquement jamais les paramètres du modèles permettent d'arriver *exactement* à la valeur de $\operatorname{y_i}$ correspondante.
+-   $\epsilon_i$ correspond à ce qu'on appelle le résidu de l'équation. Il s'agit d'une valeur de *compensation* dû au fait que l'addition entre les paramètres $\beta_0$ et $\beta_1$ ne permettent pas de modéliser (e.g. de *calculer*) exactement tous les $\operatorname{y_i}$ correspondants.
 
 Contrairement à ce qui est souvent indiqué, une régression linéaire ne veut pas forcément dire *rectilinéaire*. En effet, on peut par exemple créer des courbes en ajoutant des valeurs exponentielles aux variables prédictives:
 
 $$
-\color{green}\checkmark \operatorname{y_i} = \beta_{0} + \beta_{1}(\operatorname{x_i^2}) + \epsilon_i
+{\color{green}\checkmark} \operatorname{y_i} = \beta_{0} + \beta_{1}(\operatorname{x_i^2}) + \epsilon_i
 $$
 
-Par contre, il n'est pas possible d'utiliser des exponentiels pour les coefficients de régression. Par exemple, cette équation ne serait pas considérée comme un modèle linéaire:
+Ce modèle serait considéré linéaire, même s'il existe des techniques plus performantes pour modéliser des données de manière plus complexe. Par contre, il n'est pas possible d'utiliser des exponentiels pour les coefficients de régression. Par exemple, cette équation ne serait pas considérée comme un modèle linéaire:
 
 $$
-\color{red}\times \operatorname{y_i} = \beta_{0} + \beta_{1}^{\operatorname{x_i}} + \epsilon_i
+{\color{red}\times} \operatorname{y_i} = \beta_{0} + \beta_{1}^{\operatorname{x_i}} + \epsilon_i
 $$
 
-Ce préambule très technique, qui sera développé davantage dans les exemples plus bas, sert à ce point pour indiquer que les modèles linéaires sont des modèles qu'on peut facilement accommoder pour prendre en ligne de compte plusieurs types de relations entre les variables prédictives et la mesure de outcome. Cette flexibilité se traduit malheureusement dans la littérature scientifique avec des noms d'analyses différentes qui sont en réalité de cas spéciaux de la modélisation linéraire. Ce tableau propose une liste de ces *cas spéciaux*.
+Ce préambule très technique, qui sera développé davantage dans les exemples plus bas, sert à ce point pour indiquer que les modèles linéaires sont des modèles qu'on peut facilement accommoder pour prendre en ligne de compte plusieurs types de relations entre les variables prédictives et la mesure de outcome. Cette flexibilité se traduit malheureusement dans la littérature scientifique avec des noms d'analyses différentes qui sont en réalité de cas spéciaux de la modélisation linéaire. Ce tableau propose une liste de ces *cas spéciaux*.
 
 ```{r lm-special-cases}
 special_cases <- tibble::tribble(
@@ -190,7 +190,7 @@ Comme le tableau l'indique, ces cas spécieaux présupposent que la mesure soien
 
 -   Modèle linéaire généralisée
 
--   Modèle linéaire généralisée mixte
+-   Modèle linéaire généralisé mixte
 
 ### Modèle linéaire simple
 
@@ -403,7 +403,7 @@ Au contraire, les deux variables prédictive obtiennent un coefficient tout à f
 equation_glm_coeff
 ```
 
-La valeur des coefficients également plus difficile à interpréter, car il ne sont pas en unité de la variable outcome $Y$. Dans le cas spécifique de la régression logistique ordinale, les coefficients sont exprimées en *log-odds.* En français on les appellent plutôt "logarithme des cotes" ou "logarithme des rapports de probabilité".Il s'agit d*'*une transformation mathématique qui sert pour définir la probabilité d'un évènement par rapport à son contraire. Un *log-odds* de 0 correspond à une probabilité équitable entre l\'évènement et son contraire. Une valeur de 1 donne plus de chances à l\'évènement, tandis qu'une valeur de -1 donne plus de chance à son contraire. On peut donc transformer les *log-odds* dans des probabilité qui sont plus simple à cerner, comme c'est le cas dans le graphique suivant.
+La valeur des coefficients également plus difficile à interpréter, car il ne sont pas en unité de la variable outcome $Y$. Dans le cas spécifique de la régression logistique ordinale, les coefficients sont exprimées en *log-odds.* En français on les appellent plutôt "logarithme des cotes" ou "logarithme des rapports de probabilité".Il s'agit d*'*une transformation mathématique qui sert pour définir la probabilité d'un évènement par rapport à son contraire. Un *log-odds* de 0 correspond à une probabilité équitable entre l'évènement et son contraire. Une valeur de 1 donne plus de chances à l'évènement, tandis qu'une valeur de -1 donne plus de chance à son contraire. On peut donc transformer les *log-odds* dans des probabilité qui sont plus simple à cerner, comme c'est le cas dans le graphique suivant.
 
 ```{r model-glm-figure, fig.height=3.8}
 #| fig.cap = "Représentation graphique d'une regréssion ordinale dans laquel les log-odds de la variable outcome ont été rétransformées en probabilité de choisir une réponse entre 1 et 5 en fonction des variables prédictives X et W"
@@ -432,7 +432,7 @@ apa_table(
 
 On peut noter comme le coefficient appliqué à la variable $X$, qui est dans ce cas dans la même métrique de la variable outcome $Y$, est de `r printnum(model_glm_vs_lm$coefficients[2])`. Si cette différence d'environ 0.1 peut faire la différence dépend en réalité des objectifs de la recherche et du degré de précision souhaité par les chercheurs. Si vous avez néanmoins l'habitude fréquentiste de regarder la p-valeur associée aux coefficients, vous aurez probablement remarqué que dans cette analyse la p-valeur \> 0.05. Au contraire, dans la régression logistique ordinale, le même coefficient apparaît à p-valeur \< 0.05. Il s'agit en toute vérité d'une coincidence issue de la simulation, mais il se peut en effet qu'une application d'un modèle plus appropriée pour le type de données puisse proposer des avantages dans la précision des estimations. Bien évidemment, ceci s'applique comme principe général est non pas exclusivement si on *flirte* avec le seuil conventionnel de p \< 0.05.
 
-### Modèle linéaire généralisée mixte
+### Modèle linéaire généralisé mixte
 
 ## La modélisation d'outcomes potentielles
 

@@ -52,7 +52,7 @@ Les connaissances empiriques sont basées sur trois sources:
 2.  **Les simulations.** La *réalité* est (re)construite à travers des mécanismes computationnels qui illustrent l'évolution d'un phénomène
 3.  **Les expériences.** La *réalité* est sollicitée par une intervention active, pondérée et planifiée, dont l'effet est évalué sur un phénomène d'intérêt
 
-Il y a eu dans le passé la tendance à séparer nettement les trois sources, notamment au niveau de la distinction entre observations et expériences selon le principe "*correlation is not causation"*. Dans ce sens, les expériences sont identifiées comme le *golden standard* pour établir des mécanismes causaux. Plus récemment, il y a la tendance à voir la causalité comme un effet émergent qui peut être établi également lorsque l'intervention n'est pas effectuée de manière active, mais inférer depuis des situations qui répondent à des critères spécifiques [@pearl2000; @pearlCausalInferenceStatistics2016; @pearl2018book; @rohrerThinkingClearlyCorrelations2018].
+Il y a eu dans le passé la tendance à séparer nettement les trois sources, notamment au niveau de la distinction entre observations et expériences selon le principe "*correlation is not causation"*. Dans ce sens, les expériences sont identifiées comme le *golden standard* pour établir des mécanismes de causalité. Plus récemment, il y a la tendance à voir la causalité comme un effet émergent qui peut être établi également lorsque l'intervention n'est pas effectuée de manière active, mais inférer depuis des situations qui répondent à des critères spécifiques [@pearl2000; @pearlCausalInferenceStatistics2016; @pearl2018book; @rohrerThinkingClearlyCorrelations2018].
 
 De plus, il existe des recouvrements entre les trois sources qui sont souvent utilisées de manière complémentaires pour maximiser la connaissance qu'on peut avoir sur un sujet [@mcelreathStatisticalRethinkingBayesian2020; @bareinboimCausalInferenceDatafusion2016]. Ce document s'intéresse néanmoins aux expériences de manière plutôt *classique* [@maxwell2017], afin de fournir un aperçu conceptuel qui peut être ensuite décliné dans des *formats hybrides* plus articulés.
 
@@ -130,7 +130,7 @@ Comparé à une question de recherche scientifique au sens plus large, une quest
 -   Collaboration en environnement médiatisé par ordinateur: Des usages et de l'impact d'un outil de feedback émotionnel ([Perrier, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Perrier2017.pdf))
 -   Étude de l'effet de l'esthétique sur l'utilisabilité d'une interface lors d'une tâche de recherche d'informations sur un site Internet ([Venni, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Venni2017.pdf))
 
-La recherche expérimentale se traduit souvent par des formulations des questions de recherche qui suggèrent -- avec différents degrés de *précaution* selon le caractère exploratoire ou confirmatoire vu plus haut -- des mécanismes causaux potentiels entre l'intervention et l'évolution du phénomène d'intérêt. Dans une question de recherche expérimentale, il est important de prêter une attention particulière aux caractéristiques suivantes:
+La recherche expérimentale se traduit souvent par des formulations des questions de recherche qui suggèrent -- avec différents degrés de *précaution* selon le caractère exploratoire ou confirmatoire vu plus haut -- des mécanismes de causalité potentiels entre l'intervention et l'évolution du phénomène d'intérêt. Dans une question de recherche expérimentale, il est important de prêter une attention particulière aux caractéristiques suivantes:
 
 1.  **Clarté**: la question doit identifier de manière précise et non ambiguë les variables concernées au niveau de l'intervention et du phénomène d'intérêt;
 2.  **Faisabilité**: l'effet d'intérêt doit être réaliste, c'est-à-dire que l'expérience doit avoir des *vraies* chances de pouvoir créer les conditions pour potentiellement le déclencher et le mesurer;
@@ -144,7 +144,7 @@ L'explication causale potentielle est la seule étape du processus qui n'est pas
 
 ## L'effet de *X* sur *Y*
 
-La plupart des recherches qui adoptent la méthode expérimentale s'intéressent donc à des mécanismes causaux potentiels qui pourraient expliquer l'effet de l'intervention $X$ sur un phénomène $Y$.
+La plupart des recherches qui adoptent la méthode expérimentale s'intéressent donc à des mécanismes de causalité potentiels qui pourraient expliquer l'effet de l'intervention $X$ sur un phénomène $Y$.
 
 $$
 X \rightarrow Y
@@ -356,7 +356,7 @@ La question contre-factuel à laquelle ce type d'expérience essaie de répondre
 
 ## Hypothèses théoriques et modèles structurels de causalité
 
-L'échelle de causalité permet de penser en termes d'effets et maximise donc la possibilité de pouvoir distinguer des mécanismes causaux à travers une démarche contre-factuelle. Dans cette perspective, les chercheurs émettent souvent -- mais pas toujours -- des hypothèses théoriques/causales qui essayent d'expliquer pourquoi et comment l'intervention peut avoir un effet sur le phénomène. Il s'agit d'identifier des mécanismes, comme par exemple des principes, qui s'appliquent dans des conditions, idéalement les plus généralisées possibles, et qui permettent à l'effet de se manifester.
+L'échelle de causalité permet de penser en termes d'effets et maximise donc la possibilité de pouvoir distinguer des mécanismes de causalité à travers une démarche contre-factuelle. Dans cette perspective, les chercheurs émettent souvent -- mais pas toujours -- des hypothèses théoriques/causales qui essayent d'expliquer pourquoi et comment l'intervention peut avoir un effet sur le phénomène. Il s'agit d'identifier des mécanismes, comme par exemple des principes, qui s'appliquent dans des conditions, idéalement les plus généralisées possibles, et qui permettent à l'effet de se manifester.
 
 Dans l'exemple utilisé plus haut sur la mise à disposition des vidéos aux étudiant-es, on peut s'appuyer notamment sur des [principes de design multimédia applicables à la vidéo](https://edutechwiki.unige.ch/fr/Principes_de_design_multim%C3%A9dia_applicables_%C3%A0_la_vid%C3%A9o). Ces principes visent à maximiser l'efficacité de la vidéo comme instrument pédagogique en identifiant trois axes sur lesquels les caractéristiques de la vidéo peuvent agir:
 
@@ -859,7 +859,7 @@ L'inférence pratique, au contraire, concerne le rapport avec le *macro-monde*. 
 
 -   Vise le *macro-monde*, mais est en même temps est contrainte par les spécificités de l'opérationnalisation du *micro-monde*.
 
--   S'adresse de manière plus large à la question de recherche et aux éventuels mécanismes causaux postulés par les hypothèses théoriques.
+-   S'adresse de manière plus large à la question de recherche et aux éventuels mécanismes de causalité postulés par les hypothèses théoriques.
 
 # Apports et limites de la méthode expérimentale
 
@@ -881,7 +881,7 @@ Par conséquent, la problématique est ultérieurement accentuée dans le *macro
 
 ## Impossibilité à corroborer ou falsifier *seulement* de manière expérimentale
 
-La méthode expérimentale est souvent prise à exemple comme la méthode phare dans une perspective de corroboration ou de falsification d'une théorie ou d'une hypothèse [@uyguntuncEpistemicPragmaticFunction2023; @meehlAppraisingAmendingTheories1990; @mayoStatisticalInferenceSevere2018; @maxwell2017]. Grâce à la comparaison systématique entre deux ou plusieurs *univers contre-factuels*, on peut établir à quel point les résultats renforcent ou contredisent des postulats théoriques/causaux. Cette capacité doit néanmoins être pondérée en fonction des nombreuses implications enchaînées par une expérience avec valence théorique. Par exemple, @meehlAppraisingAmendingTheories1990 propose une formule logique lorsque le test d'une théorie/hypothèse est effectué:
+La méthode expérimentale est souvent prise à exemple comme la méthode phare dans une perspective de corroboration ou de falsification d'une théorie ou d'une hypothèse [@uyguntuncEpistemicPragmaticFunction2023; @meehlAppraisingAmendingTheories1990; @mayoStatisticalInferenceSevere2018; @maxwell2017]. Grâce à la comparaison systématique entre deux ou plusieurs *univers contre-factuels*, on peut établir à quel point les résultats renforcent ou contredisent des postulats théoriques. Cette capacité doit néanmoins être pondérée en fonction des nombreuses implications enchaînées par une expérience avec valence théorique. Par exemple, @meehlAppraisingAmendingTheories1990 propose une formule logique lorsque le test d'une théorie/hypothèse est effectué:
 
 $$
 (T/H \cdot A_t \cdot C_p \cdot A_i \cdot C_n) \rightarrow (O_1 \subset O_2) 

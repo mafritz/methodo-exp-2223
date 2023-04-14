@@ -62,7 +62,7 @@ Une expérience est un écosystème complexe d'éléments qui s'influencent mutu
 
 1.  La **justification** qui consiste à établir la *raison d'être* d'une intervention active pour en étudier l'effet sur un ou plusieurs phénomènes d'intérêt;
 
-2.  L'**explication causale potentielle** qui consiste à émettre des hypothèses --avec différents niveaux de précision possibles -- sur le mécanisme causal qui détermine/explique l'effet de l'intervention;
+2.  L'**explication causale potentielle** qui consiste à émettre des hypothèses -- avec différents niveaux de précision possibles -- sur le mécanisme causal qui détermine/explique l'effet de l'intervention;
 
 3.  Le **processus génératif de données** qui consiste dans la création d'un *micro-monde* qui produit les conditions nécessaires et suffisantes pour atteindre les objectifs de la recherche;
 
@@ -74,7 +74,7 @@ L'image suivante illustre le 4 étapes en signalant la présence de *rétro-feed
 
 # Justification
 
-Les expériences impliquent une forme d'action -- l'intervention -- qui est susceptible d'avoir un effet sur la réalité à travers au moins un phénomène identifiable:
+Les expériences impliquent une forme d'action, l'intervention, qui est susceptible d'avoir un effet sur la réalité à travers au moins un phénomène identifiable:
 
 -   Par **intervention**, on se réfère de manière très flexible à une action qui modifie la « réalité », y compris de manière épistémologique (i.e. ce que l'on sait sur un sujet). L'action peut être concrète et appliquée (e.g. introduire une technologie en salle de classe, proposer un scénario pédagogique innovant, mettre à jour une interface utilisateur, ...) ou plus abstraite et théorique (e.g. un principe ou une théorie pédagogique, un référentiel de compétences, un plan d'études, ...).
 
@@ -140,7 +140,7 @@ La prochaine étape s'intéresse plus spécifiquement à ce dernier point.
 
 # Explication causale potentielle
 
-L'explication causale potentielle est la seule étape du processus qui n'est pas formellement indispensable à la méthode expérimentale. On peut tout à fait imaginer de mener des expériences dans lesquelles les chercheurs n'émettent pas d'hypothèses sur les mécanismes qui déterminent l'effet de l'intervention sur le phénomène d'intérêt. Cette utilisation non-explicative ou a-théorique s'applique notamment dans certaines type de test A/B utilisés en expérience utilisateur (est-ce que le bouton vert génère plus d'inscriptions du bouton bleu ?) ou dans les environnements productifs (le matériel A est plus résistent du matériel B). Cependant, même lorsqu'une hypothèse causale n'est pas formellement testée dans une expérience, l'expérience en elle-même est soutenue au moins par une réflexion de causalité potentielle (j'imagine que le bouton vert peut attirer d'avantage le regard, ou avoir une meilleure lisibilité, ou les deux en même temps). Si ce n'était pas le cas, alors on devrait tester indistinctement toutes les combinaisons potentielles entre éléments, avec des coûts et pertes de temps exorbitants.
+L'explication causale potentielle est la seule étape du processus qui n'est pas formellement indispensable à la méthode expérimentale. On peut tout à fait imaginer de mener des expériences dans lesquelles les chercheurs n'émettent pas d'hypothèses sur les mécanismes qui déterminent l'effet de l'intervention sur le phénomène d'intérêt. Cette utilisation non-explicative ou a-théorique s'applique notamment dans certaines type de test A/B utilisés en expérience utilisateur (est-ce que le bouton vert génère plus d'inscriptions du bouton bleu?) ou dans les environnements productifs (le matériel A est plus résistant du matériel B). Cependant, même lorsqu'une hypothèse causale n'est pas formellement testée dans une expérience, l'expérience en elle-même est soutenue au moins par une réflexion de causalité potentielle (j'imagine que le bouton vert peut attirer d'avantage le regard, ou avoir une meilleure lisibilité, ou les deux en même temps). Si ce n'était pas le cas, alors on devrait tester indistinctement toutes les combinaisons potentielles entre éléments, avec des coûts et pertes de temps exorbitants.
 
 ## L'effet de *X* sur *Y*
 
@@ -154,7 +154,7 @@ D'un point de vue logique, on essaie d'établir une *chaîne causale* selon laqu
 
 $$Y = f(X)$$La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique [@pearlCausalInferenceStatistics2016; @pearl2000; @rodgersEpistemologyMathematicalStatistical2010; @maxwell2017], sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène $Y$ (e.g. le résultat à un examen) est une *fonction* de l'intervention $X$ (e.g. est-ce que l'étudiant-e a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel?). En d'autres termes, on peut s'attendre à un *pattern* dans la *distribution* du phénomène $Y$ qui dépend/est fonction de l'intervention $X$. Par exemple: on s'attend à un effet de la modalité avec laquelle les notes d'un cours sont résumées (carte conceptuelle vs. résumé textuel) sur les notes obtenus à l'examen. Le *pattern* attendu consiste dans une distribution des notes obtenues par les étudiant-es ayant utilisé les cartes conceptuelles autour d'une moyenne plus élevée par rapport à la distribution des notes obtenues par les étudiant-es ayant utilisé le résumé textuel.
 
-D'un point de vue logique, la fonction causale est simple à déclarer en termes formels. En revanche, dans la pratique, déterminer un effet causal dans un environnement complexe est très difficile. On peut notamment distinguer deux types d'effets: l'**effet direct** de $X$ sur $Y$ et l'**effet indirect** de $X$ sur $Y$. L'effet directe se manifeste lorsqu'on arrive à déterminer précisément la fonction $f(X) = Y$. L'effet indirect, au contraire, ne permet pas d'isoler l'apport de $X$ de l'apport d'autres potentiels facteurs intervenants qui se manifestent irrémédiablement dans des ecosystèmes complexes comme ceux qui se créent en technologie éducative.
+D'un point de vue logique, la fonction causale est simple à déclarer en termes formels. En revanche, dans la pratique, déterminer un effet causal dans un environnement complexe est très difficile. On peut notamment distinguer deux types d'effets: l'**effet direct** de $X$ sur $Y$ et l'**effet indirect** de $X$ sur $Y$. L'effet directe se manifeste lorsqu'on arrive à déterminer précisément la fonction $f(X) = Y$. L'effet indirect, au contraire, ne permet pas d'isoler l'apport de $X$ de l'apport d'autres potentiels facteurs intervenants qui se manifestent irrémédiablement dans des écosystèmes complexes comme ceux qui se créent en technologie éducative.
 
 ## Causalité en technologie éducative
 

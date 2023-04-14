@@ -426,7 +426,7 @@ $$
 
 Dans ce cas, même en sachant la valeur de la variable $B$, nous n'arrivons pas à en savoir davantage sur la probabilité d'obtenir une certaine valeur pour la variable $A$. Par exemple, même si on connaissait la taille d'un-e étudiant-e adulte, cela nous ne permettrait très probablement pas d'avoir une meilleure estimation de la note à un examen.
 
-L'avantage d'un DAG consiste à combiner une représentation graphique intuitive des relations entre variables avec des dérivations mathématiques axiomatiques qui permettent d'inférer les facteurs qui peuvent influencer le rapport entre deux variables d'intérêt. Dans l'exemple de DAG proposé plus haut, par exemple, on s'intéresse à l'effet direct de la variable $X$ sur la variable $Y$. Grâce à la structure spécifique du DAG en question, on peut par exemple savoir que les variables $A$, $F$, et $M$ influencent l'effet direct $X \rightarrow Y$. Au contraire, les variables $C$ et $B$ n'influencent pas cet effet direct. Donc si les chercheurs s'intéressent à l'effet directe $X \rightarrow Y$, il est nécessaire d'ajuster/contrôler sûrement pour $F$ et $M$. Si ce contrôle n'était pas possible, alors l'estimation ne pourrait concerner que l'effet total de $X$ sur $Y$, c'est-\$-dire l'effet direct plus l'effet indirecte qui passe à travers $F$ et $M$. En ce qui concerne $A$, au contraire, l'ajustement dépend du type de recherche menée. Dans le cas d'une recherche qui utilise un design expérimental *complet* (voir plus bas), l'effet de $A$ serait balancé/bloqué/neutralisé par l'attribution aléatoire à $X$.
+L'avantage d'un DAG consiste à combiner une représentation graphique intuitive des relations entre variables avec des dérivations mathématiques axiomatiques qui permettent d'inférer les facteurs qui peuvent influencer le rapport entre deux variables d'intérêt. Dans l'exemple de DAG proposé plus haut, par exemple, on s'intéresse à l'effet direct de la variable $X$ sur la variable $Y$. Grâce à la structure spécifique du DAG en question, on peut par exemple savoir que les variables $A$, $F$, et $M$ influencent l'effet direct $X \rightarrow Y$. Au contraire, les variables $C$ et $B$ n'influencent pas cet effet direct. Donc si les chercheurs s'intéressent à l'effet directe $X \rightarrow Y$, il est nécessaire d'ajuster/contrôler sûrement pour $M$. Si ce contrôle n'était pas possible, alors l'estimation ne pourrait concerner que l'effet total de $X$ sur $Y$, c'est-à-dire l'effet direct plus l'effet indirecte qui passe à travers $M$. En ce qui concerne $A$ et $F$, au contraire, l'ajustement dépend du type de recherche menée. Dans le cas d'une recherche qui utilise un design expérimental *complet* (voir plus bas), l'effet de $A$ serait balancé/bloqué/neutralisé par l'attribution aléatoire à $X$. En ce qui concerne $F$, le même principe s'applique pour l'effet sur $X$, mais on peut considérer d'ajuster pour avoir une meilleure estimation de l'effet sur $Y$, tout comme pour la variable $B$ d'ailleurs.
 
 Les potentialités et le fonctionnement d'un DAG dépasse le cadre introductif de ce document. Mais il est important de retenir qu'un DAG peut contribuer énormément à savoir quel type de variable il faut prendre en compte dans une expérience afin de pouvoir détecter l'effet d'une intervention sur un phénomène d'intérêt. En particulier, un DAG permet:
 
@@ -905,13 +905,37 @@ Pour établir l'effet de la théorie/hypothèse en question, il faut donc un com
 
 # Conclusion
 
-Ce document a présenté un survol de la méthode expérimentale appliquée à la technologie éducative organisée en quatre étapes principales. La première étape consiste à justifier une question de recherche d'un point de vue scientifique et éthique. La deuxième concerne la formulation d'un hypothèse théorique qui détermine, de manière causale, la relation entre l'intervention et le phénomène d'intérêt. La troisième prévoit la création d'un *micro-monde* dans lequel les chercheurs *opérationnalisent* les conditions nécessaires et suffisantes pour transformer l'intervention dans une variable indépendante à manipuler et la phénomène d'intérêt dans une variable dépendante à mesurer. Enfin, la quatrième étape, concerne les inférences statistique et pratique qu'on peut tirer du *micro-monde* et l'évaluation critique concernant si et à quel point ces inférences peuvent s'appliquer au *macro-monde* de la question de recherche et de l'hypothèse théorique.
-
-La maîtrise conceptuelle et technique des tous les aspects inhérent à la méthode expérimentale nécessite au moins de trois types de connaissances:
+Ce document a présenté un survol de la méthode expérimentale appliquée à la technologie éducative organisée en quatre étapes principales. La première étape consiste à justifier une question de recherche d'un point de vue scientifique et éthique. La deuxième concerne la formulation d'un hypothèse théorique qui détermine, de manière causale, la relation entre l'intervention et le phénomène d'intérêt. La troisième prévoit la création d'un *micro-monde* dans lequel les chercheurs *opérationnalisent* les conditions nécessaires et suffisantes pour transformer l'intervention dans une variable indépendante à manipuler et la phénomène d'intérêt dans une variable dépendante à mesurer. Enfin, la quatrième étape, concerne les inférences statistique et pratique qu'on peut tirer du *micro-monde* et l'évaluation critique concernant si et à quel point ces inférences peuvent s'appliquer au *macro-monde* de la question de recherche et de l'hypothèse théorique. La maîtrise conceptuelle et technique des ces quatre étapes nécessite au moins trois types de connaissances:
 
 1.  Les mécanismes propres à la mise en place et l'exécution d'une expérience;
 2.  Les potentielles relations causales dans le domaine d'intérêt qui puissent expliquer les effets d'une variable sur une autre;
-3.  La planification et l'exécution d'analyse statistiques adéquates aux caractéristiques et finalités de la recherche.
+3.  La planification et l'exécution d'analyses statistiques adéquates aux caractéristiques et finalités de la recherche.
+
+Ces trois composantes peuvent s'articuler en fonction des étapes identifiées dans cette contribution de la manière suivante.
+
+```{r conclusion-table}
+steps_competences <- tribble(
+  ~`Étape`, ~`Action`, ~`Connaissance`,
+  "Justification scientifique et éthique", "Question de recherche", "Domaine",
+  "Explication causale potentielle", "Hypothèse théorique", "Domaine",
+  "Génération des données", "Hypothèse opérationnelle", "Expérimentale",
+  "Inférence statistique", "Effet VI sur VD", "Statistique",
+  "Inférence pratique", "Effet intervention sur phénomène", "Domaine"
+)
+
+steps_competences |> 
+  custom_table(
+    caption_text = "Correspondance entre les étapes, l'action principale effectuée, et le type de connaissance nécessaire"
+  )
+```
+
+Cette répartition illustre comme les connaissances du domaine sont indispensables à plusieurs endroits, tandis que les connaissances expérimentales et statistiques sont plus localisées. Néanmoins, on peut adopter la métaphore du sablier pour placer ces connaissances exactement à l'endroit de passage entre les deux ampoules. Sans des connaissances expérimentales et statistiques adéquates, en effet, on peut créer un blocage dans les allées et retours entre le *micro-* et le *macro-monde.*
+
+![Métaphore du sablier dans laquelle les connaissances expérimentales et statistiques représentent le point de passage dans les allées et retours entre le micro- et le macro-monde](images/metaphore-sablier.png){width="50%"}
+
+In en résulte que les connaissances expérimentales et statistiques sont indispensables pour pouvoir contribuer au domaine d'intérêt en utilisant une expérience comme instrument épistémologique. Cette contribution s'est donc intéressée aux premières connaissances, tandis que les connaissances statistiques sont traitées dans une autre contribution. Ceci est un choix dictée en premier lieu par l'existence de différentes approches philosophiques aux statistiques. En deuxième lieu, la logique expérimentale et la logique statistique s'influencent mutuellement, mais peuvent être gardées distinctes d'un point de vue conceptuel. Les informations illustrées dans ce document peuvent s'appliquer indépendamment du type de test statistique qui est mené. La présence même d'un test statistique est le résultat d'une posture partagée dans la communauté scientifique qui déroge aux statistiques le rôle privilégié de dériver des conclusions scientifiques depuis des données empiriques.
+
+L'intérêt de la méthode expérimentale réside donc principalement dans la manière dont ces données sont générées, plutôt que traitées. Dans ce sens, cette méthode est caractérisée principalement par (1) la planification d'une intervention, déclinée dans des conditions expérimentales soigneusement définies par le chercheur, qui vise à produire un effet sur un phénomène d'intêret; (2) la cération d'un *micro-monde* à travers lequel créer les conditions nécessaires et suffisante pour opérationnaliser l'intervention (variable indépendante) et le phénomène d'intérêt (variable dépendante); et (3) un mécanisme d'évaluation contre-factuel qui détermine si et dans quel mesure l'intervention peut être généralisé à un *macro-monde* potentiel.
 
 ```{=tex}
 \newpage

@@ -170,9 +170,9 @@ L'effet de la technologie éducative sur l'apprentissage peut enfin être déter
 
 La recherche expérimentale en technologie éducative consiste donc principalement à formuler des hypothèses sur les relations causales entre des implémentations de la technologie éducative et les processus d'apprentissage, ainsi que sur les effets de facteurs qui peuvent faciliter, entraver, médier ou modérer ces effets. Le schéma proposé ici est seulement indicatif, car le même phénomène peut assumer, selon la question de recherche envisagée, le rôle d'intervention, de facteur intervenant, ou de phénomène d'intérêt. Par exemple, la présence sociale -- qu'on peut définir de mainière approximative comme la perception des autres parties prenantes dans une formation à distance en absence de la présence physique [@lowenthalSearchBetterUnderstanding2017; @jezegouCreerPresenceDistance2010] -- peut tout à fait joueur les trois rôles:
 
-1.  Intervention: on peut imaginer un environnement médiatisé par ordinateur qui possède ou pas des fonctionnalités qui permettent de *percevoir* la présence des autres apprenant-es
-2.  Facteur intervenant: dans certains conditions, la présence d'autres personnes dans le même environnement est une condition nécessaire au design techno-pédagogique (e.g. collaboration médiatisée par ordinateur)
-3.  Phénomène d'intérêt: la présence sociale peut enfin représenter la *mesure* de l'efficacité d'une intervention techno-pédagogique dont l'objectif pourrait consister justement dans une meilleure perception de la présence des autres dans un environnement médiatisé.
+-   Intervention. On peut imaginer un environnement médiatisé par ordinateur qui possède ou pas des fonctionnalités favorisant la perception de la présence des autres apprenant-es.
+-   Facteur intervenant. Dans certaines scénarios, la présence d'autres personnes dans le même environnement est une condition nécessaire au design techno-pédagogique (e.g. collaboration médiatisée par ordinateur) et doit donc être implémentée si on s'intéresse à un phénomène en lien.
+-   Phénomène d'intérêt. La présence sociale peut enfin représenter la *mesure* de l'efficacité d'une intervention techno-pédagogique dont l'objectif consisterait justement à améliorer la perception de la présence des autres dans un environnement médiatisé.
 
 ## Difficulté à établir des relations causales
 
@@ -184,7 +184,11 @@ Ce phénomène s'avère si on attribut un effet de $X$ sur $Y$, lorsqu'en vérit
 
 $$X \leftarrow Y$$
 
-On peut imaginer que l'utilisation de technologies de conception et fabrication assistées par ordinateur (CFAO) -- imprimantes 3D, broderie numérique, ... -- ont un effet sur la créativité des étudiant-es, mais il peut également être le cas que des étudiant-es avec à la base une créativité plus prononcée s'intéressent davantage à ce type de technologies.
+On peut imaginer que l'utilisation de technologies de conception et fabrication assistées par ordinateur (CFAO) -- imprimantes 3D, broderie numérique, découpeuse laser, etc. -- ont un effet sur la créativité des étudiant-es. Mais il peut également être le cas que des étudiant-es avec à la base une créativité plus prononcée s'intéressent davantage à ce type de technologies.
+
+$$
+{CFAO} \leftarrow {Cr\acute{e}ativit\acute{e}}
+$$
 
 ### La présence d'une cause commune
 
@@ -195,7 +199,7 @@ $$X \leftarrow Z \rightarrow Y$$
 Par exemple, le fait qu'un-e étudiant-e ait ou pas des stickers sur son ordinateur portable ($X$) n'a en soi aucun effet sur ses capacités en programmation ($Y$). Cependant, les programmateurs, qui ont donc des connaissances en programmation, ont souvent la tendance à mettre sur leurs propres ordinateurs des stickers des technologies ou langages de programmation adoptés ($Z$).
 
 $$
-Stickers \leftarrow Programmeur \rightarrow  Compétences
+Stickers \leftarrow Programmeur \rightarrow  Comp\acute{e}tences
 $$
 
 Le fait d'avoir des stickers et d'avoir des compétences en programmation dérivent de la même cause: être programmeur. En revanche, si on ne considère pas cette cause commune et on se limite à observer que les étudiant-es avec les stickers ont des bonnes compétences en programmation, on pourrait faire l'hypothèse que les stickers ont un effet sur les connaissances en programmation (e.g. motivation, rappel, ...).

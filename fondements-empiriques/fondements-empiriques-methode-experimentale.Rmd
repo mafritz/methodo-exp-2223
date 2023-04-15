@@ -196,7 +196,7 @@ Ce phénomène s'avère si on attribut un effet de $X$ sur $Y$, lorsqu'en vérit
 
 $$X \leftarrow Z \rightarrow Y$$
 
-Par exemple, le fait qu'un-e étudiant-e ait ou pas des stickers sur son ordinateur portable ($X$) n'a en soi aucun effet sur ses capacités en programmation ($Y$). Cependant, les programmateurs, qui ont donc des connaissances en programmation, ont souvent la tendance à mettre sur leurs propres ordinateurs des stickers des technologies ou langages de programmation adoptés ($Z$).
+Par exemple, le fait qu'un-e étudiant-e ait ou pas des stickers sur son ordinateur portable ($X$) n'a en soi aucun effet sur ses compétences en programmation ($Y$). Cependant, les programmeurs, qui ont donc des connaissances en programmation, ont souvent la tendance à mettre sur leurs propres ordinateurs des stickers des technologies ou langages de programmation adoptés ($Z$).
 
 $$
 Stickers \leftarrow Programmeur \rightarrow  Comp\acute{e}tences
@@ -206,11 +206,11 @@ Le fait d'avoir des stickers et d'avoir des compétences en programmation dériv
 
 ### La présence d'un médiateur
 
-Ce phénomène s'avère quand $X$ et $Y$ sont vraiment dans une relation causale, mais le mécanisme est transmis à travers un troisième facteur $Z$. À ce moment, le risque est que l'effet causale entre $X$ et $Y$ peut disparaître si le facteur $Z$ n'est pas pris en compte correctement.
+Ce phénomène s'avère quand $X$ et $Y$ sont vraiment dans une relation causale, mais le mécanisme est médié par un troisième facteur $Z$. À ce moment, le risque est que l'effet causal entre $X$ et $Y$ peut disparaître si le facteur $Z$ n'est pas pris en compte correctement.
 
 $$X \rightarrow Z \rightarrow Y$$
 
-Imaginons que les responsables d'une formation en technologie éducative se questionnent sur l'opportunité d'assigner aux étudiant-es des livrables intensifs d'un point de vue computationnel ($X$), par exemple le montage vidéo, le rendering 3D, ou la modélisation de phénomène complexe avec des simulations Markov Chain Monte-Carlo. Ces livrables risque d'augmenter le temps de latence que les étudiant-es passe en attendant la fin des processus computationnels, ce qui les obligent à diminuer leur temps libre ($Y$). Cette relation est néanmoins médiée par la puissance des ordinateurs des étudiant-es ($Z$).
+Imaginons que les responsables d'une formation en technologie éducative se questionnent sur l'opportunité d'assigner aux étudiant-es des livrables intensifs d'un point de vue computationnel ($X$) comme le montage vidéo ou le rendering 3D. Ces livrables risque d'augmenter le temps de latence que les étudiant-es passent en attendant la fin des processus computationnels, ce qui les obligent à diminuer leur temps libre ($Y$). Cette relation est néanmoins médiée par la puissance des ordinateurs des étudiant-es ($Z$).
 
 $$
 Livrable \rightarrow Puissance \rightarrow Temps
@@ -224,17 +224,17 @@ Ce phénomène s'avère lorsque $X$ et $Y$ ne sont pas en relation causale, mais
 
 $$X \rightarrow Z \leftarrow Y$$
 
-Imaginons que pour être accepté-es dans un Master ($Z$) il faut soit avoir suivi un bachelor ($X$) ou avoir une idée de projet pertinente avec le type de formation dispensée ($Y$). Les deux variables ne sont pas liées: on peut avoir une bonne idée avec ou sans bachelor, et on peut avoir un bachelor avec ou sans une bonne idée de projet.
+Imaginons que pour être accepté-es dans un Master ($Z$), il faut soit avoir obtenu un bachelor ($X$), soit avoir une idée de projet pertinente avec le type de formation dispensée ($Y$). Les deux variables ne sont pas liées: on peut avoir une bonne idée avec ou sans bachelor, et on peut avoir un bachelor avec ou sans une bonne idée de projet.
 
 $$
 Bachelor \rightarrow Admission \leftarrow Projet
 $$
 
-Imaginons que les responsables du Master émettent l'hypothèse que l'obtention du bachelor détermine la qualité du projet proposé: ${Bachelor} \rightarrow {Projet}$. Pour cela, ils ne prennent en considération que les étudiant-es qui ont été admis-es. À ce moment, les responsables inféreraient qu'il y a un effet, lorsqu'en réalité cet effet n'existe pas quand l'ensemble des étudiant-es est pris en considération. Lorsque deux phénomène sont indépendants, la probabilité que l'un **et** l'autre se manifestent est plus faible par rapport à la manifestation de l'un **ou** l'autre individuellement. Si l'étudiant-e a un Bachelor, il/elle est admis-e même sans un projet intéressant. Il y a donc plus de chances que les étudiant-es avec bachelor aient proposé un projet moins intéressant. La même chose s'applique par reflet aux étudiant-es admis-es avec un projet intéressant: ils ont moins de chances d'avoir un bachelor. En combinant les deux choses, il semble émerger un effet négatif du bachelor sur la qualité du projet, mais qui est dû à la sélection seulement des étudiant-es admis-es.
+Imaginons que les responsables du Master émettent l'hypothèse que l'obtention du bachelor détermine la qualité du projet proposé: ${Bachelor} \rightarrow {Projet}$. Pour cela, les responsables ne prennent en considération que les dossiers des étudiant-es qui ont été admis-es. À ce moment, les responsables inféreraient qu'il y a un effet, lorsqu'en réalité cet effet n'existe pas quand l'ensemble des étudiant-es est pris en considération. Lorsque deux phénomènes sont indépendants, la probabilité que l'un **et** l'autre se manifestent est plus faible par rapport à la manifestation de l'un **ou** l'autre individuellement. Si l'étudiant-e a obtenu un Bachelor, l'admission s'avère même en absence d'un projet intéressant. Il y a donc plus de chances que les étudiant-es avec bachelor aient proposé un projet moins intéressant. La même chose s'applique par reflet aux étudiant-es admis-es avec un projet intéressant: ils ont moins de chances d'avoir un bachelor. En combinant les deux choses, il semble émerger un effet négatif du bachelor sur la qualité du projet, mais qui est dû à la sélection seulement des étudiant-es admis-es.
 
 ## L'échelle de causalité
 
-Dans ces travaux à propos de la causalité, Pearl [@pearl2000; @pearlCausalInferenceStatistics2016; @pearl2018book] propose d'imaginer une échelle avec trois marches nommées dans l'ordre depuis le bas de l'échelle: **association**, **intervention**, et **contre-factuels**. Chaque marche qui est montée permet de s'approcher davantage à l'explication d'un mécanisme causal à travers des activités, questions et réponses potentielles différentes, comme illustré dans l'image ci-dessous.
+Dans ces travaux à propos de la causalité, Pearl [@pearl2000; @pearlCausalInferenceStatistics2016; @pearl2018book] propose d'imaginer une échelle avec trois marches: **association**, **intervention**, et **contre-factuels**. Chaque marche qui est montée permet de s'approcher davantage à l'explication d'un mécanisme causal à travers différentes activités, questions et réponses potentielles, comme illustré dans l'image ci-dessous.
 
 ![L'échelle de causalité avec trois marches. Adapté de @pearl2018book](images/echelle-causalite.png "L'échelle de causalité avec trois marches. Adapté de @pearl2018book"){width="80%"}
 
@@ -278,15 +278,15 @@ ggplot(correlations, aes(x = x, y = y)) +
 
 ```
 
-On peut en effet calculer la corrélation entre deux phénomènes mesurés quantitativement sur une échelle dans laquelle:
+On peut calculer la corrélation entre deux phénomènes mesurés quantitativement sur une échelle dans laquelle:
 
--   Un score s'approchant de -1 témoigne d'une corrélation négative, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière opposée: une valeur élevée de $X$ est associée à une faible valeur de $Y$ (et vice-versa); ou une valeur faible de $X$ est associée à une valeur élevée de $Y$ (et vice-versa).
+-   Un score s'approchant de -1 indique une corrélation négative, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière opposée: une valeur élevée de $X$ est associée à une faible valeur de $Y$ (et vice-versa); ou une valeur faible de $X$ est associée à une valeur élevée de $Y$ (et vice-versa).
 
 -   Un score s'approchant de 0 présuppose l'absence d'une corrélation, c'est-à-dire que les deux phénomène ont la tendance à varier sans un pattern identifiable (e.g. si l'un est élevé, l'autre peut être parfois élevé, parfois faible, et parfois moyen).
 
 -   Un score s'approchant de 1 témoigne d'une corrélation positive, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière spéculaire: une valeur élevée de $X$ est associée à une valeur élevée de $Y$ (et vice-versa) et une faible valeur de $X$ est associée à une faible valeur de $Y$ (et vice-versa).
 
-À ce stade de l'échelle, donc, l'activité typique du chercheur est d'observer/regarder attentivement le contexte ou les phénomènes d'intérêt et se poser des questions telles que:
+À ce stade de l'échelle, donc, l'activité typique des chercheurs est d'observer/regarder attentivement le contexte ou les phénomènes d'intérêt et se poser des questions telles que:
 
 -   Que se passe-t-il si je vois/observe ...?
 -   De quelle manière les phénomènes sont-ils reliées?
@@ -296,9 +296,9 @@ On peut en effet calculer la corrélation entre deux phénomènes mesurés quant
 
 La deuxième marche de l'échelle concerne les intervenions. Une intervention est une action pondérée et planifiée qui est exécutée sur la réalité afin de produire un effet sur le phénomène d'intérêt. Contrairement à l'association qui peut être potentiellement *bi-directionnelle*, l'intervention vise à séparer ce qui déclenche le mécanisme causal (l'intervention $X$) de ce qui est le résultat de ce déclenchement (le phénomène d'intérêt $Y$). Comme indiqué plus haut, l'intervention peut-être interprétée de manière très flexible: elle peut concerner des aspects spécifiques et localisés (e.g. la position d'une image dans un document de texte) ou des aspects plus généraux et holistiques (e.g. une théorie de l'apprentissage).
 
-En reprenant les exemples dans l'image de l'échelle de causalité, on peut imaginer qu'un-e enseignant-e décide de mettre à disposition des étudiant-es l'enregistrement de l'intégralité de ses cours. Cette intervention est une action, pondérée et planifiée, qui vise modifier la réalité, c'est-à-dire obtenir un effet d'intérêt -- dans ce cas, faciliter l'apprentissage des contenus du cours.
+En reprenant les exemples dans l'image de l'échelle de causalité, on peut imaginer qu'un-e enseignant-e décide de mettre à disposition des étudiant-es l'enregistrement de l'intégralité de ses cours. Cette intervention est une action, pondérée et planifiée, qui vise modifier la réalité, c'est-à-dire obtenir un effet d'intérêt: dans ce cas, faciliter l'apprentissage des contenus du cours.
 
-On peut imaginer que l'enseignant-e essaie d'évaluer l'effet de l'intervention en utilisant l'un des questionnaires standard d'évaluation des cours qui demandent aux étudiant-es de quantifier leurs connaissances avant et après le cours. On peut considérer en effet le cours comme une forme d'intervention.
+On peut imaginer que l'enseignant-e essaie d'évaluer l'effet de l'intervention en utilisant l'un des questionnaires standard d'évaluation des cours qui demandent aux étudiant-es de quantifier leurs connaissances avant et après la formation. On peut considérer en effet le cours comme une forme d'intervention.
 
 ```{r intervention-before-after, fig.height=2.5, fig.width=4, fig.cap="Données simulées sur les connaissances avant et après le cours (intervention). Les barres représentent des intervalles de confiance à 95%."}
 before_after <- tibble(
@@ -322,7 +322,7 @@ before_after |>
     
 ```
 
-Les deux distributions de données obtenues suggèrent qu'il existe un effet entre avant et après. Cependant, il n'est pas possible de déterminer si cet effet est dû à l'intervention *mettre à disposition l'enregistrement des cours*. On ne peut en réalité pas distinguer l'intervention d'autres facteurs. Le gain de connaissance pourrait être dû au cours en général, mais également à d'autres cours dans la même formation. On ne peut paradoxalement même pas écarter la possibilité que l'effet aurait été plus grand si les enregistrements vidéos n'étaient pas à disposition. Les étudiant-es auraient pu perdre du temps à regarder l'intégralité des enregistrement au lieu d'utiliser ce temps pour faire d'autres activités plus propices à l'apprentissage.
+Les deux distributions de données obtenues suggèrent qu'il existe une différence entre avant et après. Cependant, il n'est pas possible de déterminer si cette différence est due à l'intervention *mettre à disposition l'enregistrement intégral des cours*. On ne peut pas distinguer l'intervention d'autres facteurs qui peuvent *expliquer autrement* cette amélioration. Le gain de connaissance pourrait être dû au cours en général, mais également à d'autres cours dans la même formation. On ne peut paradoxalement même pas écarter la possibilité que l'effet aurait été plus grand si les enregistrements vidéos n'étaient pas à disposition. Les étudiant-es auraient pu perdre du temps à regarder l'intégralité des enregistrement au lieu d'utiliser ce temps pour faire d'autres activités plus propices à l'apprentissage.
 
 Cette marche de l'échelle est donc caractérisée par l'action planifiée et pondérée. Les questions qu'on peut se poser à ce stade sont par exemple:
 
@@ -342,11 +342,11 @@ En maintenant l'exemple de l'enseignant-e qui met à disposition l'enregistremen
 
 -   Qu'est-ce qui se serait passé si les étudiant-es avaient accès à des capsules vidéos plutôt que à l'intégralité des enregistrement?
 
-On ne peut pas répondre à ces questions directement avec des faits, car les étudiant-es ont terminé leur cours avec l'enregistrement intégrale et donc on ne peut pas savoir comment *ces étudiant-es là* auraient réagi dans des conditions différentes. On pourrait donc imaginer de diviser les étudiant-es de la prochaine volée en trois groupes différents: (1) aucun accès à l'enregistrement vidéo; (2) accès à l'intégralité de l'enregistrement; (3) accès à des capsules vidéos. Cependant, cette expérience aurait les limitations suivantes:
+On ne peut pas répondre à ces questions directement avec des faits, car les étudiant-es ont terminé leur cours avec l'enregistrement intégrale et donc on ne peut pas savoir comment *ces étudiant-es là* auraient réagi dans des conditions différentes. On pourrait donc imaginer de diviser les étudiant-es de la prochaine volée en trois groupes différents: (1) aucun accès à l'enregistrement vidéo; (2) accès à l'intégralité de l'enregistrement; (3) accès à des capsules vidéos. Cependant, cette division aurait les limitations suivantes:
 
 1.  D'un point de vue éthique, cette répartition serait contraire au principe d'égalité de traitement des étudiant-es;
 
-2.  D'un point de vue scientifique, on ne pourrait pas généraliser les résultats obtenus dans le cours en dehors du cadre spécifique. Par exemple, il serait difficile d'évaluer des éléments comme: est-ce que le matériel du cours est bien fait? Est-ce qu'il permet vraiment d'apprendre quelque chose? Est-ce le système de notation de l'enseignant-e est fiable et objectif? Etc.
+2.  D'un point de vue scientifique, on ne pourrait pas généraliser les résultats obtenus dans le cours en dehors du cadre spécifique. Par exemple, il serait difficile d'évaluer des éléments comme: est-ce que le matériel du cours est bien fait? Est-ce qu'il permet vraiment d'apprendre quelque chose? Est-ce que les capsules vidéos sont de qualité? Etc.
 
 Ce qui serait utile à cet effet serait plutôt un *principe* qui nous indique si et sous quelles conditions les capsules vidéos sont plus propices à l'apprentissage par rapport à un enregistrement vidéos d'un cours ex-cathedra ou à pas de vidéos de support du tout. Pour obtenir ce type de principe, une manière de procéder est celle de mener une expérience *idéalisée* qui soit (1) représentative de la problématique qu'on veut aborder, et (2) présente des éléments *prototypiques* qui puissent être généralisés à un maximum de situations similaires.
 
@@ -376,11 +376,11 @@ Il existe donc différents éléments à prendre en ligne de compte pour tester 
 
 -   **Neutraliser l'effet de la vidéo sur les apprentissage**. Par exemple, si les étudiant-es n'ont pas le temps de regarder les vidéos chez eux, leur qualité intrinsèque n'aura aucun effet.
 
--   **Médier l'effet de la vidéo sur les apprentissage**. Comme on l'a vu plus haut, un effet de médiation s'avère lorsque une troisième variable se place entre l'intervention et le phénomène. Par exemple, on peut imaginer que la qualité de la connexion internet d'un-e étudiant-e joue un rôle très important dans l'exploitation des vidéos pédagogiques. Si la vidéo est interrompue ou de mauvaise qualité, ses effets sur les apprentissages seront mitigés indépendamment de la qualité intrinsèque de la vidéo.
+-   **Médier l'effet de la vidéo sur les apprentissage**. Comme on l'a vu plus haut, un effet de médiation s'avère lorsque une troisième variable se place entre l'intervention et le phénomène. Par exemple, on peut imaginer que la qualité de la connexion internet d'un-e étudiant-e joue un rôle important dans l'exploitation des vidéos pédagogiques. Si la vidéo est interrompue ou de mauvaise qualité, ses effets sur les apprentissages seront mitigés indépendamment de la qualité intrinsèque de la vidéo.
 
--   **Modérer l'effet de la vidéo sur les apprentissage**. Un effet de modération s'avère lorsque l'effet de l'intervention sur un phénomène dépend de la valeur d'un autre phénomène (i.e. d'une autre variable). Par exemple, on peut imaginer que les étudiant-es plus en difficulté dans le cours peuvent bénéficier de manière plus conséquente de la présence des vidéos par rapport aux étudiant-es qui ont déjà bien compris les contenus du cours pendant les leçons synchrones. En termes concrets, on peut imaginer que la note d'une étudiant-e en difficulté puisse s'améliorer de 1 points (e.g. passer de 3 à 4) grâce à la vidéo, tandis que le gain pour un-e étudiant-e sans difficulté soit plus mitigé (e.g. passer de 5.25 à 5.5).
+-   **Modérer l'effet de la vidéo sur les apprentissage**. Un effet de modération s'avère lorsque l'effet de l'intervention sur un phénomène dépend de la valeur d'un autre phénomène (i.e. d'une autre variable). Par exemple, on peut imaginer que les étudiant-es plus en difficulté dans le cours peuvent bénéficier de manière plus conséquente de la présence des vidéos par rapport aux étudiant-es qui ont déjà bien compris les contenus du cours pendant les leçons synchrones. En termes concrets, on peut imaginer que la note d'une étudiant-e en difficulté puisse s'améliorer de 1 points (e.g. passer de 3 à 4) grâce à la vidéo, tandis que le gain pour un-e étudiant-e sans difficultés soit plus mitigé (e.g. passer de 5.25 à 5.5).
 
-Une manière de prendre en considération les différents facteurs qui peuvent influencer l'effet d'une intervention sur un ou plusieurs phénomènes d'intérêt consiste à utiliser un **modèle structurel de causalité**, notamment sous la forme d'un ***Directed Acyclic Graph*** (DAG) qui permet d'illustrer graphiquement la relation entre variables [@pearlCausalInferenceStatistics2016; @pearl2018book; @rohrerThinkingClearlyCorrelations2018; @mcelreathStatisticalRethinkingBayesian2020]. Un DAG, représenté dans l'image ci-dessous, consiste dans une série de nœuds (les variables), reliés ou pas à travers des flèches directionnelles (les relations).
+Une manière de prendre en considération les différents facteurs qui peuvent influencer l'effet d'une intervention sur un ou plusieurs phénomènes d'intérêt consiste à utiliser un **modèle structurel de causalité**, notamment sous la forme d'un ***Directed Acyclic Graph*** (DAG) qui permet d'illustrer graphiquement la relation entre variables [@pearlCausalInferenceStatistics2016; @pearl2018book; @rohrerThinkingClearlyCorrelations2018; @mcelreathStatisticalRethinkingBayesian2020]. Un DAG, représenté dans l'image ci-dessous, consiste dans une série de nœuds (les variables), reliés (ou pas) à travers des flèches directionnelles (les relations).
 
 ```{r example-dag}
 #| fig.cap="Exemple générique d'un Directed Acyclic Graph (DAG)",
@@ -432,14 +432,14 @@ $$
 
 Dans ce cas, même en sachant la valeur de la variable $B$, nous n'arrivons pas à en savoir davantage sur la probabilité d'obtenir une certaine valeur pour la variable $A$. Par exemple, même si on connaissait la taille d'un-e étudiant-e adulte, cela nous ne permettrait très probablement pas d'avoir une meilleure estimation de la note à un examen.
 
-L'avantage d'un DAG consiste à combiner une représentation graphique intuitive des relations entre variables avec des dérivations mathématiques axiomatiques qui permettent d'inférer les facteurs qui peuvent influencer le rapport entre deux variables d'intérêt. Dans l'exemple de DAG proposé plus haut, par exemple, on s'intéresse à l'effet direct de la variable $X$ sur la variable $Y$. Grâce à la structure spécifique du DAG en question, on peut par exemple savoir que les variables $A$, $F$, et $M$ influencent l'effet direct $X \rightarrow Y$. Au contraire, les variables $C$ et $B$ n'influencent pas cet effet direct. Donc si les chercheurs s'intéressent à l'effet directe $X \rightarrow Y$, il est nécessaire d'ajuster/contrôler sûrement pour $M$. Si ce contrôle n'était pas possible, alors l'estimation ne pourrait concerner que l'effet total de $X$ sur $Y$, c'est-à-dire l'effet direct plus l'effet indirecte qui passe à travers $M$. En ce qui concerne $A$ et $F$, au contraire, l'ajustement dépend du type de recherche menée. Dans le cas d'une recherche qui utilise un design expérimental *complet* (voir plus bas), l'effet de $A$ serait balancé/bloqué/neutralisé par l'attribution aléatoire à $X$. En ce qui concerne $F$, le même principe s'applique pour l'effet sur $X$, mais on peut considérer d'ajuster pour avoir une meilleure estimation de l'effet sur $Y$, tout comme pour la variable $B$ d'ailleurs.
+L'avantage d'un DAG consiste à combiner une représentation graphique intuitive des relations entre variables avec des dérivations mathématiques qui permettent d'inférer les facteurs pouvant influencer le rapport entre deux variables d'intérêt. Dans l'exemple de DAG proposé plus haut, par exemple, on s'intéresse à l'effet direct de la variable $X$ sur la variable $Y$. Grâce à la structure spécifique du DAG en question, on peut par exemple savoir que les variables $A$, $F$, et $M$ influencent l'effet direct $X \rightarrow Y$. Au contraire, les variables $C$ et $B$ n'influencent pas cet effet direct. Donc si les chercheurs s'intéressent à l'effet directe $X \rightarrow Y$, il est nécessaire d'ajuster/contrôler sûrement pour $M$. Si ce contrôle n'était pas possible, alors l'estimation ne pourrait concerner que l'effet total de $X$ sur $Y$, c'est-à-dire l'effet direct plus l'effet indirecte qui passe à travers $M$. En ce qui concerne $A$ et $F$, au contraire, l'ajustement dépend du type de recherche menée. Dans le cas d'une recherche qui utilise un design expérimental *complet* (voir plus bas), l'effet de $A$ serait balancé/bloqué/neutralisé par l'attribution aléatoire à $X$. En ce qui concerne $F$, le même principe s'applique pour l'effet sur $X$, mais on peut considérer d'ajuster pour avoir une meilleure estimation de l'effet sur $Y$, tout comme pour la variable $B$ d'ailleurs.
 
-Les potentialités et le fonctionnement d'un DAG dépasse le cadre introductif de ce document. Mais il est important de retenir qu'un DAG peut contribuer énormément à savoir quel type de variable il faut prendre en compte dans une expérience afin de pouvoir détecter l'effet d'une intervention sur un phénomène d'intérêt. En particulier, un DAG permet:
+Les potentialités et le fonctionnement d'un DAG dépasse le cadre introductif de ce document. Mais il est important de retenir qu'un DAG peut contribuer à déterminer quelle variable il faut prendre en compte dans une expérience afin de pouvoir détecter l'effet d'une intervention sur un phénomène d'intérêt. En particulier, un DAG permet:
 
 1.  De définir une hypothèse théorique/causale en termes explicites et non ambigus. Dans l'exemple du DAG on émet explicitement l'hypothèse que la variable $X$ détermine de manière causale la variable $Y$.
 2.  De manifester les potentiels facteurs qui peuvent neutraliser, médier ou modérer cette relation causale. Ceci est très utile notamment pour savoir si on doit contrôler/ajuster empiriquement ou statistiquement pour certains variables afin d'éviter des potentiels facteurs parasites dans la chaîne causale qu'on veut tester [@cinelliCrashCourseGood2020a; @rohrerThinkingClearlyCorrelations2018]. Nous verrons plus bas la définition formelle d'un facteur parasite.
 
-Grâce à un DAG bien défini, les chercheurs se mettent dans une meilleure position pour créer le *micro-monde* dans lequel leur hypothèse théorique/causale peut être testée.
+Grâce à un DAG bien défini, les chercheurs se mettent dans une meilleure position pour créer le *micro-monde* dans lequel leur hypothèse théorique/causale peut être testée à travers les données générées par l'expérience.
 
 # Processus génératif des données
 
@@ -449,7 +449,7 @@ Le processus génératif des données est l'étape *concrète* d'une expérience
 
 Le *micro-monde* vise à trouver un équilibre entre la représentativité de la *réalité* d'une parte, et la réduction de la complexité nécessaire pour pouvoir isoler l'effet de l'intervention d'autres effets potentiels. La réduction de la complexité ne concerne pas, en effet, seulement le fait qu'on a accès, souvent, seulement à un petit échantillon par rapport à la *population* de référence (e.g. les êtres humains en général, les étudiant-es en technologie éducative, les enseignant-es du primaire, etc.). La réduction concerne également des tâches définies ou simplifiées; des processus cognitifs, sociaux ou affectifs délimités; des interactions pré-établies; etc. Les choix concernant le *micro-monde* sont donc essentielles aux finalités de la recherche (validité interne), mais également à la possibilité de généraliser les résultats aux *macro-monde* (validité externe) [@shadishExperimentalQuasiexperimentalDesigns2002; @yarkoniGeneralizabilityCrisis2022; @vazireCredibilityReplicabilityImproving2022].
 
-Le rôle concret du *micro-monde* consiste dans la génération, la récolté et analysé des données empiriques. Le *micro-monde* est donc le résultat des choix épistémologiques et méthodologiques des chercheurs. Ces choix s'articulent principalement dans les éléments suivants:
+Le rôle concret du *micro-monde* consiste dans la génération, la récolté et analysé des données empiriques. Le *micro-monde* est donc le résultat des choix épistémologiques et méthodologiques des chercheurs. Ces choix s'expriment principalement dans les éléments suivants:
 
 1.  l'*opérationnalisation* des variables concernées;
 

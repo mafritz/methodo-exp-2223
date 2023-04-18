@@ -89,7 +89,7 @@ La section sur la méthode concerne le micro-monde créé par les chercheurs afi
 
 Pour atteindre les deux objectifs, la section sur la méthode propose souvent les sous-sections suivantes, même si l'ordre peut varier et parfois deux sections sont groupées, par exemple *Participant-es et design expérimental* ou *Design expérimental et variables*.
 
-### Participants
+### Participant-es
 
 Les chercheurs fournissent des informations à propos des participant-es à l'expérience. Traditionnellement, on indique le nombre total de participant-es, l'âge moyen, le nombre d'hommes/femmes, l'appartenance à une catégorie professionnel/niveau scolaire, ... D'autres informations plus spécifiques peuvent être illustrées, mais les tendances actuelles sont plus inclines à dévoiler les informations selon une évaluation éthique/scientifique à propos de la pertinence de ces informations (i.e. la possibilité qu'elles influencent les résultats). Dans la sous-section figurent également les modalités de recrutement et l'éventuelle rémunération.
 

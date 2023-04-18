@@ -84,8 +84,8 @@ Dans cette contribution, l'accent est plutôt porté sur l'intérêt que les typ
 
 La section sur la méthode concerne le micro-monde créé par les chercheurs afin de répondre à la question de recherche spécifique, et tester éventuellement les hypothèses théoriques avancées. La section méthode a deux fonctions principales:
 
-1.  Fournir aux lecteurs des informations utiles à évaluer à quel point le micro-monde est suffisamment sensible, fiable et valide pour *produire* les conditions nécessaires et suffisantes à l'effet de l'intervention expérimentale sur le(s) phénomène(s) d'intérêt.
-2.  Donner tous les détails utiles à répliquer l'expérience par d'autres chercheurs intéressés à refaire exactement la même expérience (dans la perspective de corroborer ou remettre en questions les résultats obtenus) ou des expériences avec quelques variations qui permettent de contribuer d'avantage à la *grande question/problématique*.
+1.  Fournir les informations utiles à évaluer à quel point le micro-monde est sensible, fiable et valide pour *produire* les conditions nécessaires et suffisantes à l'effet de l'intervention expérimentale sur le(s) phénomène(s) d'intérêt.
+2.  Donner tous les détails utiles à répliquer l'expérience par d'autres chercheurs intéressés à refaire exactement la même expérience (dans la perspective de corroborer ou remettre en questions les résultats obtenus) ou des expériences avec quelques variations qui permettent de contribuer davantage à la *grande question/problématique*.
 
 Pour atteindre les deux objectifs, la section sur la méthode propose souvent les sous-sections suivantes[^1].
 

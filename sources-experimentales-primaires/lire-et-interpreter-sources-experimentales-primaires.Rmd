@@ -87,7 +87,7 @@ La section sur la méthode concerne le micro-monde créé par les chercheurs afi
 1.  Fournir les informations utiles à évaluer à quel point le micro-monde est sensible, fiable et valide pour *produire* les conditions nécessaires et suffisantes à l'effet de l'intervention expérimentale sur le(s) phénomène(s) d'intérêt.
 2.  Donner tous les détails utiles à répliquer l'expérience par d'autres chercheurs intéressés à refaire exactement la même expérience (dans la perspective de corroborer ou remettre en questions les résultats obtenus) ou des expériences avec quelques variations qui permettent de contribuer davantage à la *grande question/problématique*.
 
-Pour atteindre les deux objectifs, la section sur la méthode propose souvent les sous-sections suivantes[^1].
+Pour atteindre les deux objectifs, la section sur la méthode propose souvent les sous-sections suivantes, même si l'ordre peut varier et parfois deux sections sont groupées, par exemple *Participant-es et design expérimental* ou *Design expérimental et variables*.
 
 ### Participants
 
@@ -323,5 +323,3 @@ Ce document a fourni des informations utiles pour s'initier à la lecture et int
 \markboth{RÉFÉRENCES}{}
 
 # Références {.unnumbered}
-
-[^1]: L'ordre peut varier et parfois deux sections sont groupées, par exemple "Participants et design expérimental" ou "Design expérimental et variables"

@@ -1,5 +1,5 @@
 ---
-title: "Lire et interpréter des contributions expérimentales *primaires*"
+title: "Lire et interpréter des contributions expérimentales *primaires* en technologie éducative"
 author: |
   | **Mattia A. Fritz**
   | \small TECFA, Université de Genève
@@ -22,7 +22,7 @@ output:
 bibliography: ../assets/bib/references.bib
 csl: ../assets/settings/apa.csl
 abstract: |
-  Ce document propose des informations utiles pour s'initier à la compréhension des contributions expérimentales *primaires*, c'est-à-dire réportant l'ensemble du processus de génération, récolte, et analyse de données expérimentales. La première partie du document aborde la structure *standard* des contributions expérimentales primaires: Introduction, Méthode, Résultats, et Discussion. La deuxième partie introduit une méthode systèmatique pour lire, interpréter et éventuellement planifier une recherche expérimentale: la méthode QALMRI, acronyme de Question, Alternatives, Logique, Méthode, Résultats et Inférences.
+  Ce document propose des informations utiles pour s'initier à la compréhension des contributions expérimentales *primaires*, c'est-à-dire réportant l'ensemble du processus de génération, récolte, et analyse de données expérimentales. La première partie du document aborde la structure *standard* des contributions expérimentales primaires: Introduction, Méthode, Résultats, et Discussion. La deuxième partie introduit une méthode systèmatique pour lire, interpréter et éventuellement planifier une recherche expérimentale: la méthode QALMRI, acronyme de Question, Alternatives, Logique, Méthode, Résultats et Inférences. Le document propose des exemples en lien surtout avec la technologie éducative, mais le document peut s'adapter à différentes domaines en sciences sociales.
 ---
 
 ```{r setup, include=FALSE}
@@ -33,7 +33,11 @@ source(here::here("assets", "settings", "custom.R"))
 
 # Introduction {.unnumbered}
 
-Malgré le fait que les contributions scientifiques adoptant la méthode expérimentale partagent souvent la même structure et des informations similaires, lire, comprendre et interpréter le contenu de ces sources dites *primaires* reste un exercice difficile [@kershaw2018]. Ce document illustre les caractéristiques communes aux contributions expérimentales et propose une méthode pour en faciliter la lecture, l'interprétation et la planification: la méthode QALMRI [@brosowsky2020], acronyme anglais de *Question, Alternatives, Logic, Method, Results and Inferences*.
+Malgré le fait que les contributions scientifiques adoptant la méthode expérimentale partagent souvent la même structure et des informations similaires, lire, comprendre et interpréter le contenu de ces sources dites *primaires* reste un exercice difficile [@kershaw2018]. Ce document propose des informations utiles pour s'initier à la lecture et interprétation des ces contributions. Ces informations sont organisées en deux parties.
+
+La première partie du document illustre les caractéristiques communes aux contributions expérimentales, notamment au niveau à la structure des sources expérimentales primaires et à la manière de présenter les contenus. Chaque section présente d'une contribution expérimental (introduction, méthode, résultat, discussion) est brièvement abordée et un exemple de *mini*-section est proposé sur une thématique en lien avec la technologie éducative. L'objectif de cette section est de produire une description fonctionnelle des sources expérimentales primaires et donner aux lecteurs novices des repères pour s'orienter dans le texte.
+
+La deuxième partie du document propose et illustre une méthode pour faciliter la lecture, l'interprétation et la planification des contributions expérimentales primaires: la méthode QALMRI [@brosowsky2020], acronyme anglais de *Question, Alternatives, Logic, Method, Results and Inferences*. Cette méthode propose des questions clés à se poser sur une contribution expérimentale afin d'en maximiser la compréhension. L'objectif de la méthode consiste également à fournir des critères d'analyse qui permettent d'évaluer la qualité et la pertinence de ces contributions. Ces critères peuvent s'appliquer également à la conception et planification d'une expérience.
 
 ## Crédits {.unnumbered}
 

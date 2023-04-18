@@ -59,11 +59,11 @@ Les contributions expérimentales *primaires* sont assez facilement reconnaissab
 L'introduction sert à justifier la recherche en termes de sa contribution au réseau de connaissances qui composent la littérature scientifique. On peut résumer l'introduction en deux éléments étroitement liées:
 
 1.  **Qu'est-ce qu'on sait déjà et comment on le sait\
-    **Les contribution proposent un aperçu plus ou moins étendu de la littérature existante sur le même axe/sujet de recherche. Si l'introduction prévoit de sous-sections, ces informations se trouvent souvent dans des sous-sections telles que:
+    **Les contribution proposent un aperçu plus ou moins étendu de la littérature existante sur le même axe/sujet de recherche. Si l'introduction prévoit une organisation, les informations se trouvent souvent dans des sous-sections telles que:
 
     -   *Theoretical Background* / Cadre théorique: résumé/synthèse des éléments théoriques pertinents dans la recherche, par exemple la définition de concepts mobilisés, des modèles théoriques de références, etc.
 
-    -   *Related Works* / Contributions de référence: liste de contributions expérimentales qui partagent des éléments sémantiques avec la contribution en objet, souvent selon une approche similarité/contraste. L'objectif est de mettre en évidence des lacunes ou des divergences dans les contributions existantes pour mieux situer l'apport de l'expérience menée.
+    -   *Related Works* / Contributions de référence: liste de contributions (surtout expérimentales) qui partagent des éléments sémantiques avec la contribution en objet, souvent selon une analyse de similarité/contraste. L'objectif est de mettre en évidence des lacunes ou des divergences, mais également des éléments de continuité avec les contributions existantes pour mieux situer l'apport de l'expérience menée.
 
 2.  **Qu'est-ce qu'on veut savoir en plus**\
     Les contributions doivent également illustrer leur apport spécifique, ce qu'elles sont censées amener au(x) domaine(s) de recherche. Ces informations se trouvent en général au tout début de l'article, sous la forme d'une problématique/axe de recherche générale, et à la fin de l'introduction. Au début, on défini la *grande question/problématique* de recherche à laquelle plusieurs chercheurs essaient de contribuer et pour laquelle une seule expérience ne peut sûrement pas proposer une réponse à elle toute seule. À la fin de l'introduction, après donc le cadre théorique et les contributions en lien, la contribution spécifie la *question/problématique spécifique* à travers laquelle les chercheurs pensent pouvoir contribuer à la *grande question/problématique*. Souvent, les informations à ce propos se trouvent dans une sous-section nommée:
@@ -72,26 +72,26 @@ L'introduction sert à justifier la recherche en termes de sa contribution au r�
 
 ### Exemple de *mini*-introduction
 
-La pensée computationnelle est un terme se référant, de manière plutôt flexible, à un ensemble d'habiletés, compétences et procédures qui facilitent la résolution de problèmes en s'appuyant sur des principes tirés des sciences informatiques [@denning2019computational; @wing2008; @fritzPenseeComputationnelleAvec2019; @guzdial2008]. Dans les 20 dernières années, la pensée computationnelle est de plus en plus considérée en tant que sujet à enseigner déjà lors de la scolarisation primaire et secondaire [@bocconi2016; @computer2018; @grover2013; @resnick2017]. Les activités prévues à cet effet sont souvent divisées en deux catégories: (1) les activités débranchées qui n'utilisent pas des dispositifs numériques mais des modélisations abstraites dérivées d'objets tangibles; et (2) les activités branchées qui, au contraire, s'appuient sur des dispositifs numériques et, souvent, des technologies de l'information et de la communication appliquées à l'enseignement (ibid.). Il n'existe pour l'instant que peu d'études qui comparent directement les bénéfices des deux approches, et ces études s'intéressent principalement aux effets au niveau des apprentissages [@thecamb2019; @guzdial2015].
+La pensée computationnelle est un terme se référant, de manière plutôt flexible, à un ensemble d'habiletés, compétences et procédures qui facilitent la résolution de problèmes en s'appuyant sur des principes tirés des sciences informatiques [@denning2019computational; @wing2008; @fritzPenseeComputationnelleAvec2019; @guzdial2008]. Dans les 20 dernières années, la pensée computationnelle est de plus en plus considérée en tant que sujet à enseigner déjà lors de la scolarisation primaire et secondaire [@bocconi2016; @computer2018; @grover2013; @resnick2017]. Les activités prévues à cet effet sont souvent divisées en deux catégories: (1) les activités débranchées qui n'utilisent pas des dispositifs numériques mais des modélisations abstraites dérivées d'objets tangibles; et (2) les activités branchées qui, au contraire, s'appuient sur des dispositifs numériques et, souvent, des technologies de l'information et de la communication appliquées à l'enseignement (ibid.). Il n'existe cependant pour l'instant que peu d'études qui comparent directement les bénéfices des deux approches, et ces études s'intéressent principalement aux effets au niveau des apprentissages [@thecamb2019; @guzdial2015].
 
-Dans cette contribution, l'accent est plutôt porté sur l'intérêt que les types d'activités peuvent susciter à propos d'une éventuelle carrière dans l'un de domaines communément identifiés avec l'acronyme STEM (*Science, Technology, Engineering, and Mathematics*). Nous formulons à cet effet l'hypothèse que des activités branchées peuvent susciter plus d'intérêt, comparé aux activités débranchées, en raison de l'inter-médiation d'un dispositif numérique.
+Dans cette contribution, l'accent est plutôt porté sur l'intérêt que les types d'activités peuvent susciter à propos d'une éventuelle carrière dans l'un des domaines communément identifiés avec l'acronyme STEM (*Science, Technology, Engineering, and Mathematics*). Nous formulons à cet effet l'hypothèse que des activités branchées peuvent susciter plus d'intérêt, comparé aux activités débranchées, en raison de l'inter-médiation d'un dispositif numérique.
 
 ## Méthode
 
 La section sur la méthode concerne le micro-monde créé par les chercheurs afin de répondre à la question de recherche spécifique, et tester éventuellement les hypothèses théoriques avancées. La section méthode a deux fonctions principales:
 
-1.  Fournir aux lecteurs des informations utiles à évaluer à quel point le micro-monde est suffisamment sensible, fiable et valide pour *produire/représenter* l'effet de l'intervention expérimentale sur le(s) phénomène(s) d'intérêt.
+1.  Fournir aux lecteurs des informations utiles à évaluer à quel point le micro-monde est suffisamment sensible, fiable et valide pour *produire* les conditions nécessaires et suffisantes à l'effet de l'intervention expérimentale sur le(s) phénomène(s) d'intérêt.
 2.  Donner tous les détails utiles à répliquer l'expérience par d'autres chercheurs intéressés à refaire exactement la même expérience (dans la perspective de corroborer ou remettre en questions les résultats obtenus) ou des expériences avec quelques variations qui permettent de contribuer d'avantage à la *grande question/problématique*.
 
 Pour atteindre les deux objectifs, la section sur la méthode propose souvent les sous-sections suivantes[^1].
 
 ### Participants
 
-Les chercheurs fournissent des informations à propos des participant-es à l'expérience. Traditionnellement, on indique le nombre total de participant-es, l'âge moyen, le nombre d'hommes/femmes, l'appartenance à une catégorie professionnel/niveau scolaire, ... D'autres informations plus spécifiques peuvent être illustrés, mais les tendances actuelles sont plus inclines à dévoiler les informations selon une évaluation éthique/scientifique à propos de la pertinence de ces informations (i.e. la possibilité qu'elles influencent les résultats). Dans la sous-section figurent également les modalités de recrutement et l'éventuelle rémunération.
+Les chercheurs fournissent des informations à propos des participant-es à l'expérience. Traditionnellement, on indique le nombre total de participant-es, l'âge moyen, le nombre d'hommes/femmes, l'appartenance à une catégorie professionnel/niveau scolaire, ... D'autres informations plus spécifiques peuvent être illustrées, mais les tendances actuelles sont plus inclines à dévoiler les informations selon une évaluation éthique/scientifique à propos de la pertinence de ces informations (i.e. la possibilité qu'elles influencent les résultats). Dans la sous-section figurent également les modalités de recrutement et l'éventuelle rémunération.
 
 ### Design expérimental
 
-Les chercheurs indiquent par exemple s'il s'agit d'un plan expérimental ou quasi-expérimental; intra-sujets, inter-sujets, ou mixte; à mesure unnique ou répétée; etc. La répartition des participant-es (e.g. aléatoire complète, aléatoire par blocs, ...) est également indiquée. Cette section -- ou éventuellement la section sur les participant-es ou sur l'analyse statistique -- présente de plus en plus souvent aussi une justification de la taille de l'échantillon. Cette justification peut s'appuyer sur des calcules de puissance statistique pour le type d'analyse à mener (voir plus bas) ou d'autres critères comme le budget ou le temps à disposition [@lakens2022].
+Les chercheurs indiquent par exemple s'il s'agit d'un plan expérimental ou quasi-expérimental; intra-sujets, inter-sujets, ou mixte; à mesure unique ou répétée; etc. La répartition des participant-es (e.g. aléatoire complète, aléatoire par blocs, ...) est également indiquée. Cette section -- ou éventuellement la section sur les participant-es ou sur l'analyse statistique -- présente de plus en plus souvent aussi une justification de la taille de l'échantillon. Cette justification peut s'appuyer sur des calcules de puissance statistique pour le type d'analyse à mener (voir plus bas) ou d'autres critères comme le budget ou le temps à disposition [@lakens2022].
 
 ### Matériel
 
@@ -105,7 +105,7 @@ Le processus de génération/récolte des données de l'expérience est décrit 
 
 Dans cette sous-section, les chercheurs illustrent clairement:
 
--   la ou les variables indépendantes (VI), c'est--à-dire l'*opérationnalisation* de l'intervention, avec les différentes modalités, ainsi que les différences entre celles-ci.
+-   la ou les variables indépendantes (VI), c'est--à-dire l'*opérationnalisation* de l'intervention, avec les différentes modalités, ainsi que les différences entre celles-ci;
 
 -   toutes les variables mesurées -- variables dépendantes (VD), variables contrôlées, ... -- et la manière dont elles ont été mesurées (e.g. par rapport au matériel et à la procédure).
 
@@ -144,7 +144,7 @@ ef_model <- effectsize(model)
 
 Les $N$ = `r nrow(data)` participant-es ont manifesté un intérêt moyen pour la sous-échelle *technology* du questionnaire STEM-CIS [@kier2014] de $M$ = `r data$stem_cis |> mean() |> printnum()` ($SD$ = `r data$stem_cis |> sd() |> printnum()`). Un résultat similaire au score observé par Kier et collègues (*ibid.*) qui a été de $M$ = 26.27 ($SD$=10.41). Dans le groupe branché, les participant-es ont manifesté un intérêt avec $M$ = `r data |> filter(groupe == "B") |> pull(stem_cis) |> mean() |> printnum()` ($SD$ = `r data |> filter(groupe == "B") |> pull(stem_cis) |> sd() |> printnum()`); dans le groupe débranché avec $M$ = `r data |> filter(groupe == "D") |> pull(stem_cis) |> mean() |> printnum()` ($SD$ = `r data |> filter(groupe == "D") |> pull(stem_cis) |> sd() |> printnum()`).
 
-Un *t*-test de Welch a été mené avec le score à la sous-échelle *technology* du questionnaire STEM-CIS (*ibid.*) comme variable dépendante et le type d'activité proposé à l'élève comme variable indépendante (branchée vs. débranchée). Les résultats au test unilatéral indiquent que le groupe activité *branchée* a manifesté un mineur intérêt pour une carrière dans le domaine STEM comparé au groupe *activité débranchée*: `r apa_print(model)$full_result`. La différence d'environ 3 points sur la sous-échelle STEM-CIS correspond à une taille de l'effet de Cohen's $d$ = `r printnum(ef_model$d)` [`r printnum(ef_model$CI_low)`; `r printnum(ef_model$CI_high)`].
+Un *t*-test de Welch a été mené avec le score à la sous-échelle *technology* du questionnaire STEM-CIS (*ibid.*) comme variable dépendante et le type d'activité proposée à l'élève comme variable indépendante (branchée vs. débranchée). Les résultats au test unilatéral indiquent que le groupe activité *branchée* a manifesté un mineur intérêt pour une carrière dans le domaine STEM comparé au groupe *activité débranchée*: `r apa_print(model)$full_result`. La différence d'environ 3 points sur la sous-échelle STEM-CIS correspond à une taille de l'effet de Cohen's $d$ = `r printnum(ef_model$d)` [`r printnum(ef_model$CI_low)`; `r printnum(ef_model$CI_high)`].
 
 ```{r t-test-graph, fig.align="center", fig.cap="Résultats du questionnaire STEM-CIS pour la sous-échelle technology en fonction du type d'activité branchée (B) ou débranchée (D). Les barres représentent les intervalles de confiance à 95 pourcent.", out.width="80%"}
 
@@ -166,14 +166,13 @@ ggplot(aes(x = groupe, y = stem_cis, color = groupe)) +
   NULL
 ```
 
-
 ## Discussion
 
-La discussion intègre les résultats en relation avec la question de recherche et les éventuelles hypothèses émises par les chercheurs. Les chercheurs discutent à quel point les inférences statistiques permettent de répondre à la *question de recherche spécifique*, par exemple en corroborant ou en rejetant les hypothèses. Dans cette section il y a également un retour ou une ouverture sur la littérature scientifique qui essaie de placer les résultats par comparaison/contrastes avec d'autres recherches dans le domaine.
+La discussion intègre les résultats en relation avec la question de recherche et les éventuelles hypothèses émises par les chercheurs. Les chercheurs discutent à quel point les inférences statistiques permettent de répondre à la *question de recherche spécifique*, par exemple en corroborant ou en rejetant les hypothèses. Dans cette section il y a également un retour ou une ouverture sur la littérature scientifique qui essaie de placer les résultats par comparaison/contraste avec d'autres recherches dans le domaine.
 
 ### Exemple de *mini*-discussion
 
-Contrairement à notre hypothèse, les élèves ayant suivi des activités débranchées ont manifesté un plus grand intérêt pour une carrière dans le domaine STEM comparé aux élèves ayant suivi des activités branchées. Notre hypothèses est donc rejetée, avec des résultats qui vont à l'encontre de notre prévision. Cependant, les activités branchés prévues dans notre protocole expérimental ont été perçues comme étant trop difficiles, affectant ainsi très probablement le sentiment d'acceptabilité de la technologie [@venkateshUserAcceptanceInformation2003; @scherer2019] de la part des élèves. Par reflet, cette difficulté pourrait avoir influencé négativement l'intérêt pour une future carrière dans la sphère technologique des STEM.
+Contrairement à notre hypothèse, les élèves ayant suivi des activités débranchées ont manifesté un plus grand intérêt pour une carrière dans le domaine STEM comparé aux élèves ayant suivi des activités branchées. Notre hypothèses est donc rejetée, avec des résultats qui vont à l'encontre de notre prévision. Cependant, les activités branchées prévues dans notre protocole expérimental ont été perçues comme étant trop difficiles, affectant ainsi très probablement le sentiment d'acceptabilité de la technologie [@venkateshUserAcceptanceInformation2003; @scherer2019] de la part des élèves. Par reflet, cette difficulté pourrait avoir influencé négativement l'intérêt pour une future carrière dans la sphère technologique des STEM.
 
 ## Conclusion
 
@@ -193,45 +192,45 @@ La liste suivant -- librement traduite et adaptée de Brosowsky et collègues [-
 
 1.  **Questions**
 
-    -   Quelle est la question/problématique générale proposée ?
+    -   Quelle est la question/problématique générale proposée?
 
-    -   Quelle est la question/problématique spécifique proposée ?
+    -   Quelle est la question/problématique spécifique proposée?
 
 2.  **Alternatives**
 
-    -   Quelle est l'hypothèse/explication causale potentielle de l'effet de l'intervention sur le phénomène d'intérêt ?
+    -   Quelle est l'hypothèse/explication causale potentielle de l'effet de l'intervention sur le phénomène d'intérêt?
 
-    -   Quelle hypothèse/explication causale potentielle pourrait aussi expliquer/prédire l'effet de l'intervention sur le phénomène d'intérêt ?
+    -   Quelle hypothèse/explication causale potentielle pourrait aussi expliquer/prédire l'effet de l'intervention sur le phénomène d'intérêt?
 
 3.  **Logique**
 
-    -   Quel est le mécanisme causale à la base de l'hypothèse ?
+    -   Quel est le mécanisme causal à la base de l'hypothèse?
 
-    -   Si l'hypothèse est corroborée, qu'est qu'on devrait observer comme résultat ?
+    -   Si l'hypothèse est corroborée, qu'est qu'on devrait observer comme résultat?
 
-    -   Quel résultat pourrait-on obtenir qui ne corroborerait pas l'hypothèse ?
+    -   Quel résultat pourrait-on obtenir qui ne corroborerait pas l'hypothèse?
 
 4.  **Méthodes**
 
-    -   Comment l'expérience a été mise en place ?
+    -   Comment l'expérience a été mise en place?
 
-    -   Quels sont les éléments et les décisions les plus importantes/représentatives ?
+    -   Quels sont les éléments et les décisions les plus importantes/représentatives?
 
 5.  **Résultats**
 
-    -   Comment l'effet de l'intervention a-t-il été évalué/quantifié ?
+    -   Comment l'effet de l'intervention a-t-il été évalué/quantifié?
 
 6.  **Inférences**
 
-    -   Quelle inférence statistique et *pratique* peut-on tirer des résultats ?
+    -   Quelle inférence statistique et *pratique* peut-on tirer des résultats?
 
-    -   Sur la base de quel indice est basée l'inférence ?
+    -   Sur la base de quel indice est basée l'inférence?
 
-    -   Sur la base de quelle logique l'inférence statistique est élargie à l'hypothèse et à la question/problématique de recherche ?
+    -   Sur la base de quelle logique l'inférence statistique est élargie à l'hypothèse et à la question/problématique de recherche?
 
 ## Questions
 
-La condition naturelle d'un chercheur est le doute, et le doute se traduit par des questions. Est-ce que la technologie peut vraiment faciliter l'apprentissage ? Est-ce qu'une synthèse en forme de carte conceptuelle est plus efficace qu'une synthèse textuelle ? Faut-il enseigner aux élèves la programmation pour améliorer leurs compétences numériques ?
+La condition naturelle d'un chercheur est le doute, et le doute se traduit par des questions. Est-ce que la technologie peut vraiment faciliter l'apprentissage? Est-ce qu'une synthèse en forme de carte conceptuelle est plus efficace qu'une synthèse textuelle? Faut-il enseigner aux élèves la programmation pour améliorer leurs compétences numériques?
 
 La méthode expérimentale *attaque* les *grandes questions/problématiques de recherche* avec des *questions/problématiques spécifiques* qui se traduisent par la mise en place d'une expérience. L'expérience est censée donner une réponse *spécifique* qui représente un pas en avant dans la direction de la *grande réponse*.
 
@@ -275,7 +274,7 @@ L'analyse logique d'une contribution expérimentale peut se faire à l'aide d'op
 
 Par exemple:
 
--   ***Si*** les cartes conceptuelles renforcent davantage les liens sémantiques entre concepts comparé à une synthèse écrite, ***alors*** les participant-es dans la condition $X_{carte}$ auront des meilleures performances au test de compréhension par rapport aux participant-es dans la condition $X_{synthèse}$
+-   ***Si*** les cartes conceptuelles renforcent davantage les liens sémantiques entre concepts comparé à une synthèse écrite, ***alors*** les participant-es dans la condition $X_{carte}$ auront des meilleures performances au test de compréhension par rapport aux participant-es dans la condition $X_{synth\grave{e}se}$
 
 -   ***Si*** des vidéos de plus courte durée permettent d'éviter des phénomènes de distraction chez les apprenant-es, ***alors*** les participant-es ayant observé trois vidéos de 5 minutes ($X_{3x5min}$) auront des meilleures performances au test de rétention mnésique par rapport aux participant-es ayant observé le même contenu dans une vidéo de 15 minutes ($X_{1x15min}$).
 
@@ -318,6 +317,7 @@ Des éléments corollaires à tenir en compte concernent des éventuelles probl�
 Ce document a fourni des informations utiles pour s'initier à la lecture et interprétation de contributions expérimentales primaires. D'abord, la structure *classique* des contributions a été illustrées en fonction des objectifs et des pratiques courantes dans l'exposition des contenus pour chaque section. Ensuite, la méthode QALMRI a été proposée en tant que pratique systématique pour lire et interpréter (et éventuellement planifier) des contributions expérimentales.
 
 \markboth{RÉFÉRENCES}{}
+
 # Références {.unnumbered}
 
 [^1]: L'ordre peut varier et parfois deux sections sont groupées, par exemple "Participants et design expérimental" ou "Design expérimental et variables"

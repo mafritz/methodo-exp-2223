@@ -78,7 +78,7 @@ L'image différencie graphiquement entre trois *environnements*. Le *macro-monde
 
 La justification représente la première étape d'une expérience. Les expériences impliquent une forme d'action, l'intervention, qui est susceptible d'avoir un effet sur la réalité à travers au moins un phénomène identifiable:
 
--   Par **intervention**, on se réfère de manière très flexible à une action qui modifie la « réalité », y compris de manière épistémologique (i.e. ce que l'on sait sur un sujet). L'action peut être concrète et appliquée (e.g. introduire une technologie en salle de classe, proposer un scénario pédagogique innovant, mettre à jour une interface utilisateur, ...) ou plus abstraite et théorique (e.g. un principe ou une théorie pédagogique, un référentiel de compétences, un plan d'études, ...).
+-   Par **intervention**, on se réfère de manière très flexible à une action qui modifie la *réalité*, y compris de manière épistémologique (i.e. ce que l'on sait sur un sujet). L'action peut être concrète et appliquée (e.g. introduire une technologie en salle de classe, proposer un scénario pédagogique innovant, mettre à jour une interface utilisateur, ...) ou plus abstraite et théorique (e.g. un principe ou une théorie pédagogique, un référentiel de compétences, un plan d'études, ...).
 
 -   Par **phénomène**, on se réfère de manière très flexible à un pattern d'évènements qui se répète de manière congruente, par exemple dans des conditions similaires. Le pattern peut être concret et appliqué (e.g. la rétention mnésique d'éléments dans une liste, la perception d'utilité d'un artéfact technologique, ...) ou plus abstrait et théorique (e.g. la compréhension de texte, la collaboration, le bien-être des étudiant-es, ...).
 
@@ -88,7 +88,7 @@ De ce fait, les expériences doivent être planifiées et pondérées attentivem
 
 -   Quel serait la perte potentielle à appliquer l'intervention, comparé à ne pas l'appliquer.
 
-Si on prend l'exemple de l'introduction d'une technologie éducative pendant un cours, les deux questions à se poser seront donc (1) qu'est-ce que les étudiant-es obtiennent *en plus* par l'introduction de la technologie; et (2) qu'est-ce que les étudiant-es *risquent de perdre* à cause de l'introduction de la technologie. Les étudiant-es pourraient gagner en interactivité, collaboration, maîtrise technique, etc. En même temps, ils pourraient risquer de perdre du temps à consacer à la maîtrise de la technologie, voir leur charge cognitive augmentée par l'articulation de plusieurs environnements de travail, etc.
+Si on prend l'exemple de l'introduction d'une technologie éducative pendant un cours, les deux questions à se poser seront donc (1) qu'est-ce que les étudiant-es obtiennent *en plus* par l'introduction de la technologie; et (2) qu'est-ce que les étudiant-es *risquent de perdre* à cause de l'introduction de la technologie. Les étudiant-es pourraient gagner en interactivité, collaboration, maîtrise technique, etc. En même temps, il existe le risque de prendre du temps sur le programme nécessaire à la maîtrise de la technologie, d'augementer la charge cognitive à cause de l'articulation de plusieurs environnements de travail, etc.
 
 Dans le domaine de la recherche, en plus, l'introduction d'une intervention doit aussi respecter une double justification:
 
@@ -100,9 +100,7 @@ La combinaison entre les deux justifications jettent les bases pour une question
 
 ## Justification scientifique
 
-La justification scientifique est représentée dans les articles ou contributions scientifiques en général par l'introduction, le cadre théorique, et l'éventuelle illustration d'expérience en relation avec celle proposée. C'est à ces endroits que les chercheurs justifient la pertinence de la recherche expérimentale menée et proposent des liens avec la littérature scientifique.
-
-L'introduction illustre la problématique, sa pertinence par rapport aux connaissances actuelles ou phénomènes émergents. La problématique peut être abordée idéalement dans un espace défini par deux continuum: exploratoire vs. confirmatoire, et fondamentale vs. appliquée.
+La justification scientifique concerne l'articulation de la recherche par rapport aux autres contributions produites et évaluées par la communauté scientifique de référence. La justification est représentée dans les articles ou contributions scientifiques en général par l'introduction, le cadre théorique, et l'éventuelle illustration d'autres travaux en relation avec l'expérience proposée. C'est à ces endroits que les chercheurs justifient la pertinence de la recherche expérimentale menée et proposent des liens avec la littérature scientifique existante. La problématique peut être abordée idéalement dans un espace défini par deux continuum: exploratoire vs. confirmatoire, et fondamentale vs. appliquée.
 
 ![Espace conceptuel dans lequel placer la justification scientifique d'une nouvelle expérience ou d'une expérience à répliquer.](images/justification-scientifique.png){width="60%"}
 

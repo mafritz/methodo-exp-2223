@@ -388,7 +388,7 @@ La période 5 prévoit deux livrables par groupes.
 
 **Délai**:
 
--   Mardi 13 juin à 21h00 (À confirmer !!!)
+-   Mardi 13 juin à 21h00
 
 ## Calcule de la note finale
 
